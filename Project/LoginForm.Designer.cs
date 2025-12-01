@@ -86,6 +86,7 @@
             TextBoxUsername.Name = "TextBoxUsername";
             TextBoxUsername.Size = new Size(230, 23);
             TextBoxUsername.TabIndex = 4;
+            TextBoxUsername.TextChanged += TextBoxUsername_TextChanged;
             // 
             // TextBoxPassword
             // 
@@ -107,7 +108,7 @@
             // LogIn
             // 
             LogIn.AutoSize = true;
-            LogIn.Location = new Point(519, 200);
+            LogIn.Location = new Point(519, 164);
             LogIn.Name = "LogIn";
             LogIn.Size = new Size(0, 15);
             LogIn.TabIndex = 7;
@@ -120,6 +121,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(230, 23);
             comboBox1.TabIndex = 8;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // LoginForm
             // 
