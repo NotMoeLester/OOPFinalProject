@@ -43,6 +43,7 @@
             dataGridView1 = new DataGridView();
             button1 = new Button();
             button2 = new Button();
+            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -186,11 +187,22 @@
             button2.TabIndex = 32;
             button2.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Location = new Point(233, 49);
+            label8.Name = "label8";
+            label8.Size = new Size(135, 32);
+            label8.TabIndex = 33;
+            label8.Text = "Student ID";
+            // 
             // EnrollmentRecord
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label8);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(ButtonView);
@@ -230,5 +242,6 @@
         private DataGridView dataGridView1;
         private Button button1;
         private Button button2;
+        private Label label8;
     }
 }

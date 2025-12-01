@@ -43,7 +43,7 @@
             ButtonEnter.BackColor = Color.DarkBlue;
             ButtonEnter.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ButtonEnter.ForeColor = SystemColors.ControlLightLight;
-            ButtonEnter.Location = new Point(227, 275);
+            ButtonEnter.Location = new Point(263, 273);
             ButtonEnter.Name = "ButtonEnter";
             ButtonEnter.Size = new Size(230, 33);
             ButtonEnter.TabIndex = 0;
@@ -54,7 +54,7 @@
             // LabelName
             // 
             LabelName.AutoSize = true;
-            LabelName.Location = new Point(151, 206);
+            LabelName.Location = new Point(187, 204);
             LabelName.Name = "LabelName";
             LabelName.Size = new Size(60, 15);
             LabelName.TabIndex = 1;
@@ -63,7 +63,7 @@
             // LabelPassword
             // 
             LabelPassword.AutoSize = true;
-            LabelPassword.Location = new Point(151, 239);
+            LabelPassword.Location = new Point(187, 237);
             LabelPassword.Name = "LabelPassword";
             LabelPassword.Size = new Size(57, 15);
             LabelPassword.TabIndex = 2;
@@ -73,7 +73,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(151, 151);
+            label1.Location = new Point(187, 149);
             label1.Name = "label1";
             label1.Size = new Size(169, 32);
             label1.TabIndex = 3;
@@ -81,21 +81,21 @@
             // 
             // TextBoxUsername
             // 
-            TextBoxUsername.Location = new Point(227, 202);
+            TextBoxUsername.Location = new Point(263, 200);
             TextBoxUsername.Name = "TextBoxUsername";
             TextBoxUsername.Size = new Size(230, 23);
             TextBoxUsername.TabIndex = 4;
             // 
             // TextBoxPassword
             // 
-            TextBoxPassword.Location = new Point(227, 234);
+            TextBoxPassword.Location = new Point(263, 232);
             TextBoxPassword.Name = "TextBoxPassword";
             TextBoxPassword.Size = new Size(230, 23);
             TextBoxPassword.TabIndex = 5;
             // 
             // ButtonClear
             // 
-            ButtonClear.Location = new Point(483, 235);
+            ButtonClear.Location = new Point(519, 200);
             ButtonClear.Name = "ButtonClear";
             ButtonClear.Size = new Size(160, 23);
             ButtonClear.TabIndex = 6;
@@ -106,10 +106,9 @@
             // LogIn
             // 
             LogIn.AutoSize = true;
-            LogIn.BorderStyle = BorderStyle.FixedSingle;
-            LogIn.Location = new Point(483, 202);
+            LogIn.Location = new Point(519, 200);
             LogIn.Name = "LogIn";
-            LogIn.Size = new Size(2, 17);
+            LogIn.Size = new Size(0, 15);
             LogIn.TabIndex = 7;
             // 
             // LoginForm
