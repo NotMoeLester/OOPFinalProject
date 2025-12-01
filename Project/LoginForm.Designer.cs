@@ -36,6 +36,7 @@
             TextBoxPassword = new TextBox();
             ButtonClear = new Button();
             LogIn = new Label();
+            comboBox1 = new ComboBox();
             SuspendLayout();
             // 
             // ButtonEnter
@@ -54,11 +55,11 @@
             // LabelName
             // 
             LabelName.AutoSize = true;
-            LabelName.Location = new Point(187, 204);
+            LabelName.Location = new Point(208, 204);
             LabelName.Name = "LabelName";
-            LabelName.Size = new Size(60, 15);
+            LabelName.Size = new Size(36, 15);
             LabelName.TabIndex = 1;
-            LabelName.Text = "Username";
+            LabelName.Text = "Email";
             // 
             // LabelPassword
             // 
@@ -73,11 +74,11 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(187, 149);
+            label1.Location = new Point(263, 110);
             label1.Name = "label1";
-            label1.Size = new Size(169, 32);
+            label1.Size = new Size(144, 32);
             label1.TabIndex = 3;
-            label1.Text = "Admin Log In";
+            label1.Text = "User Log In";
             // 
             // TextBoxUsername
             // 
@@ -111,12 +112,22 @@
             LogIn.Size = new Size(0, 15);
             LogIn.TabIndex = 7;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Student", "Administrator" });
+            comboBox1.Location = new Point(263, 161);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(230, 23);
+            comboBox1.TabIndex = 8;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
             ClientSize = new Size(800, 450);
+            Controls.Add(comboBox1);
             Controls.Add(LogIn);
             Controls.Add(ButtonClear);
             Controls.Add(TextBoxPassword);
@@ -142,5 +153,6 @@
         private TextBox TextBoxPassword;
         private Button ButtonClear;
         private Label LogIn;
+        private ComboBox comboBox1;
     }
 }
