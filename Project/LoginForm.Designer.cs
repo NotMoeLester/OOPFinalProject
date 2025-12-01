@@ -1,6 +1,6 @@
 ﻿namespace Project
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -40,7 +40,7 @@
             // 
             // ButtonEnter
             // 
-            ButtonEnter.Location = new Point(477, 205);
+            ButtonEnter.Location = new Point(483, 202);
             ButtonEnter.Name = "ButtonEnter";
             ButtonEnter.Size = new Size(160, 23);
             ButtonEnter.TabIndex = 0;
@@ -51,7 +51,7 @@
             // LabelName
             // 
             LabelName.AutoSize = true;
-            LabelName.Location = new Point(145, 209);
+            LabelName.Location = new Point(151, 206);
             LabelName.Name = "LabelName";
             LabelName.Size = new Size(60, 15);
             LabelName.TabIndex = 1;
@@ -60,7 +60,7 @@
             // LabelPassword
             // 
             LabelPassword.AutoSize = true;
-            LabelPassword.Location = new Point(145, 242);
+            LabelPassword.Location = new Point(151, 239);
             LabelPassword.Name = "LabelPassword";
             LabelPassword.Size = new Size(57, 15);
             LabelPassword.TabIndex = 2;
@@ -70,7 +70,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(145, 154);
+            label1.Location = new Point(151, 151);
             label1.Name = "label1";
             label1.Size = new Size(169, 32);
             label1.TabIndex = 3;
@@ -78,21 +78,21 @@
             // 
             // TextBoxUsername
             // 
-            TextBoxUsername.Location = new Point(221, 205);
+            TextBoxUsername.Location = new Point(227, 202);
             TextBoxUsername.Name = "TextBoxUsername";
             TextBoxUsername.Size = new Size(230, 23);
             TextBoxUsername.TabIndex = 4;
             // 
             // TextBoxPassword
             // 
-            TextBoxPassword.Location = new Point(221, 237);
+            TextBoxPassword.Location = new Point(227, 234);
             TextBoxPassword.Name = "TextBoxPassword";
             TextBoxPassword.Size = new Size(230, 23);
             TextBoxPassword.TabIndex = 5;
             // 
             // ButtonClear
             // 
-            ButtonClear.Location = new Point(477, 238);
+            ButtonClear.Location = new Point(483, 235);
             ButtonClear.Name = "ButtonClear";
             ButtonClear.Size = new Size(160, 23);
             ButtonClear.TabIndex = 6;
@@ -104,7 +104,7 @@
             // 
             LogIn.AutoSize = true;
             LogIn.BorderStyle = BorderStyle.FixedSingle;
-            LogIn.Location = new Point(221, 280);
+            LogIn.Location = new Point(227, 277);
             LogIn.Name = "LogIn";
             LogIn.Size = new Size(2, 17);
             LogIn.TabIndex = 7;
@@ -113,6 +113,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.WhiteSmoke;
             ClientSize = new Size(800, 450);
             Controls.Add(LogIn);
             Controls.Add(ButtonClear);
@@ -124,6 +125,7 @@
             Controls.Add(ButtonEnter);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }

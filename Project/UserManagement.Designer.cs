@@ -40,14 +40,14 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(104, 75);
+            dataGridView1.Location = new Point(101, 68);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(584, 296);
             dataGridView1.TabIndex = 0;
             // 
             // ButtonView
             // 
-            ButtonView.Location = new Point(104, 394);
+            ButtonView.Location = new Point(101, 387);
             ButtonView.Name = "ButtonView";
             ButtonView.Size = new Size(142, 44);
             ButtonView.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // EditButton
             // 
-            EditButton.Location = new Point(252, 394);
+            EditButton.Location = new Point(249, 387);
             EditButton.Name = "EditButton";
             EditButton.Size = new Size(142, 44);
             EditButton.TabIndex = 2;
@@ -65,7 +65,7 @@
             // 
             // ButtonUpdate
             // 
-            ButtonUpdate.Location = new Point(400, 394);
+            ButtonUpdate.Location = new Point(397, 387);
             ButtonUpdate.Name = "ButtonUpdate";
             ButtonUpdate.Size = new Size(142, 44);
             ButtonUpdate.TabIndex = 3;
@@ -75,7 +75,7 @@
             // 
             // ButtonDelete
             // 
-            ButtonDelete.Location = new Point(546, 394);
+            ButtonDelete.Location = new Point(543, 387);
             ButtonDelete.Name = "ButtonDelete";
             ButtonDelete.Size = new Size(142, 44);
             ButtonDelete.TabIndex = 4;
@@ -86,7 +86,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(104, 28);
+            label1.Location = new Point(101, 21);
             label1.Name = "label1";
             label1.Size = new Size(153, 32);
             label1.TabIndex = 5;

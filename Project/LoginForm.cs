@@ -1,8 +1,8 @@
 namespace Project
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -28,7 +28,7 @@ namespace Project
                 LogIn.Text = "Cannot Leave Blank!";
 
             }
-            else 
+            else
             {
                 if (TextBoxUsername.Text == Username && TextBoxPassword.Text == Password)
                 {
@@ -41,6 +41,11 @@ namespace Project
                     LogIn.Text = "Incorrect Username or Password!";
                 }
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
