@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ButtonView = new Button();
+            ButtonViewFinancialRecord = new Button();
             label6 = new Label();
             label7 = new Label();
             label5 = new Label();
             label4 = new Label();
-            checkBox3 = new CheckBox();
+            checkBoxStudentFullyPaid = new CheckBox();
             label3 = new Label();
             label2 = new Label();
-            checkBox2 = new CheckBox();
-            checkBox1 = new CheckBox();
+            checkBoxStudentNotEnrolled = new CheckBox();
+            checkBoxStudentEnrolled = new CheckBox();
             LabelName = new Label();
             label1 = new Label();
-            dataGridView1 = new DataGridView();
-            button1 = new Button();
-            button2 = new Button();
+            dataGridViewEnrollmentRecords = new DataGridView();
+            ButtonUndo2 = new Button();
+            ButtonRedo2 = new Button();
             label8 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewEnrollmentRecords).BeginInit();
             SuspendLayout();
             // 
-            // ButtonView
+            // ButtonViewFinancialRecord
             // 
-            ButtonView.Location = new Point(532, 235);
-            ButtonView.Name = "ButtonView";
-            ButtonView.Size = new Size(220, 44);
-            ButtonView.TabIndex = 30;
-            ButtonView.Text = "View Financial Record";
-            ButtonView.UseVisualStyleBackColor = true;
+            ButtonViewFinancialRecord.Location = new Point(532, 235);
+            ButtonViewFinancialRecord.Name = "ButtonViewFinancialRecord";
+            ButtonViewFinancialRecord.Size = new Size(220, 44);
+            ButtonViewFinancialRecord.TabIndex = 30;
+            ButtonViewFinancialRecord.Text = "View Financial Record";
+            ButtonViewFinancialRecord.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -92,15 +92,15 @@
             label4.TabIndex = 26;
             label4.Text = "Course :";
             // 
-            // checkBox3
+            // checkBoxStudentFullyPaid
             // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(635, 201);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(77, 19);
-            checkBox3.TabIndex = 25;
-            checkBox3.Text = "Fully Paid";
-            checkBox3.UseVisualStyleBackColor = true;
+            checkBoxStudentFullyPaid.AutoSize = true;
+            checkBoxStudentFullyPaid.Location = new Point(635, 201);
+            checkBoxStudentFullyPaid.Name = "checkBoxStudentFullyPaid";
+            checkBoxStudentFullyPaid.Size = new Size(77, 19);
+            checkBoxStudentFullyPaid.TabIndex = 25;
+            checkBoxStudentFullyPaid.Text = "Fully Paid";
+            checkBoxStudentFullyPaid.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -120,25 +120,25 @@
             label2.TabIndex = 23;
             label2.Text = "Enrollment Records";
             // 
-            // checkBox2
+            // checkBoxStudentNotEnrolled
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(660, 123);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(92, 19);
-            checkBox2.TabIndex = 22;
-            checkBox2.Text = "Not Enrolled";
-            checkBox2.UseVisualStyleBackColor = true;
+            checkBoxStudentNotEnrolled.AutoSize = true;
+            checkBoxStudentNotEnrolled.Location = new Point(660, 123);
+            checkBoxStudentNotEnrolled.Name = "checkBoxStudentNotEnrolled";
+            checkBoxStudentNotEnrolled.Size = new Size(92, 19);
+            checkBoxStudentNotEnrolled.TabIndex = 22;
+            checkBoxStudentNotEnrolled.Text = "Not Enrolled";
+            checkBoxStudentNotEnrolled.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // checkBoxStudentEnrolled
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(587, 123);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(69, 19);
-            checkBox1.TabIndex = 21;
-            checkBox1.Text = "Enrolled";
-            checkBox1.UseVisualStyleBackColor = true;
+            checkBoxStudentEnrolled.AutoSize = true;
+            checkBoxStudentEnrolled.Location = new Point(587, 123);
+            checkBoxStudentEnrolled.Name = "checkBoxStudentEnrolled";
+            checkBoxStudentEnrolled.Size = new Size(69, 19);
+            checkBoxStudentEnrolled.TabIndex = 21;
+            checkBoxStudentEnrolled.Text = "Enrolled";
+            checkBoxStudentEnrolled.UseVisualStyleBackColor = true;
             // 
             // LabelName
             // 
@@ -159,33 +159,33 @@
             label1.TabIndex = 19;
             label1.Text = "Name of User";
             // 
-            // dataGridView1
+            // dataGridViewEnrollmentRecords
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(57, 123);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(457, 295);
-            dataGridView1.TabIndex = 18;
+            dataGridViewEnrollmentRecords.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewEnrollmentRecords.Location = new Point(57, 123);
+            dataGridViewEnrollmentRecords.Name = "dataGridViewEnrollmentRecords";
+            dataGridViewEnrollmentRecords.Size = new Size(457, 295);
+            dataGridViewEnrollmentRecords.TabIndex = 18;
             // 
-            // button1
+            // ButtonUndo2
             // 
-            button1.BackgroundImage = Properties.Resources.left;
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Location = new Point(712, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(33, 23);
-            button1.TabIndex = 31;
-            button1.UseVisualStyleBackColor = true;
+            ButtonUndo2.BackgroundImage = Properties.Resources.left;
+            ButtonUndo2.BackgroundImageLayout = ImageLayout.Stretch;
+            ButtonUndo2.Location = new Point(712, 12);
+            ButtonUndo2.Name = "ButtonUndo2";
+            ButtonUndo2.Size = new Size(33, 23);
+            ButtonUndo2.TabIndex = 31;
+            ButtonUndo2.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // ButtonRedo2
             // 
-            button2.BackgroundImage = Properties.Resources.right;
-            button2.BackgroundImageLayout = ImageLayout.Zoom;
-            button2.Location = new Point(746, 12);
-            button2.Name = "button2";
-            button2.Size = new Size(33, 23);
-            button2.TabIndex = 32;
-            button2.UseVisualStyleBackColor = true;
+            ButtonRedo2.BackgroundImage = Properties.Resources.right;
+            ButtonRedo2.BackgroundImageLayout = ImageLayout.Zoom;
+            ButtonRedo2.Location = new Point(746, 12);
+            ButtonRedo2.Name = "ButtonRedo2";
+            ButtonRedo2.Size = new Size(33, 23);
+            ButtonRedo2.TabIndex = 32;
+            ButtonRedo2.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -203,45 +203,45 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(label8);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(ButtonView);
+            Controls.Add(ButtonRedo2);
+            Controls.Add(ButtonUndo2);
+            Controls.Add(ButtonViewFinancialRecord);
             Controls.Add(label6);
             Controls.Add(label7);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(checkBox3);
+            Controls.Add(checkBoxStudentFullyPaid);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(checkBox2);
-            Controls.Add(checkBox1);
+            Controls.Add(checkBoxStudentNotEnrolled);
+            Controls.Add(checkBoxStudentEnrolled);
             Controls.Add(LabelName);
             Controls.Add(label1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridViewEnrollmentRecords);
             Name = "EnrollmentRecord";
             Text = "EnrollmentRecord";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewEnrollmentRecords).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button ButtonView;
+        private Button ButtonViewFinancialRecord;
         private Label label6;
         private Label label7;
         private Label label5;
         private Label label4;
-        private CheckBox checkBox3;
+        private CheckBox checkBoxStudentFullyPaid;
         private Label label3;
         private Label label2;
-        private CheckBox checkBox2;
-        private CheckBox checkBox1;
+        private CheckBox checkBoxStudentNotEnrolled;
+        private CheckBox checkBoxStudentEnrolled;
         private Label LabelName;
         private Label label1;
-        private DataGridView dataGridView1;
-        private Button button1;
-        private Button button2;
+        private DataGridView dataGridViewEnrollmentRecords;
+        private Button ButtonUndo2;
+        private Button ButtonRedo2;
         private Label label8;
     }
 }
