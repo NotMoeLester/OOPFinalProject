@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ButtonEnter = new Button();
+            ButtonLogIn = new Button();
             LabelName = new Label();
             LabelPassword = new Label();
             label1 = new Label();
@@ -38,18 +38,18 @@
             LogIn = new Label();
             SuspendLayout();
             // 
-            // ButtonEnter
+            // ButtonLogIn
             // 
-            ButtonEnter.BackColor = Color.DarkBlue;
-            ButtonEnter.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ButtonEnter.ForeColor = SystemColors.ControlLightLight;
-            ButtonEnter.Location = new Point(263, 273);
-            ButtonEnter.Name = "ButtonEnter";
-            ButtonEnter.Size = new Size(230, 33);
-            ButtonEnter.TabIndex = 0;
-            ButtonEnter.Text = "Login";
-            ButtonEnter.UseVisualStyleBackColor = false;
-            ButtonEnter.Click += ButtonEnter_Click;
+            ButtonLogIn.BackColor = Color.DarkBlue;
+            ButtonLogIn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ButtonLogIn.ForeColor = SystemColors.ControlLightLight;
+            ButtonLogIn.Location = new Point(263, 273);
+            ButtonLogIn.Name = "ButtonLogIn";
+            ButtonLogIn.Size = new Size(230, 33);
+            ButtonLogIn.TabIndex = 0;
+            ButtonLogIn.Text = "Login";
+            ButtonLogIn.UseVisualStyleBackColor = false;
+            ButtonLogIn.Click += ButtonEnter_Click;
             // 
             // LabelName
             // 
@@ -124,7 +124,7 @@
             Controls.Add(label1);
             Controls.Add(LabelPassword);
             Controls.Add(LabelName);
-            Controls.Add(ButtonEnter);
+            Controls.Add(ButtonLogIn);
             Name = "LoginForm";
             Text = "Form1";
             Load += Form1_Load;
@@ -134,7 +134,7 @@
 
         #endregion
 
-        private Button ButtonEnter;
+        private Button ButtonLogIn;
         private Label LabelName;
         private Label LabelPassword;
         private Label label1;
