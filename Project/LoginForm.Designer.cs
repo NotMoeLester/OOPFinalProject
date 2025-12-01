@@ -40,12 +40,15 @@
             // 
             // ButtonEnter
             // 
-            ButtonEnter.Location = new Point(483, 202);
+            ButtonEnter.BackColor = Color.DarkBlue;
+            ButtonEnter.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ButtonEnter.ForeColor = SystemColors.ControlLightLight;
+            ButtonEnter.Location = new Point(227, 275);
             ButtonEnter.Name = "ButtonEnter";
-            ButtonEnter.Size = new Size(160, 23);
+            ButtonEnter.Size = new Size(230, 33);
             ButtonEnter.TabIndex = 0;
-            ButtonEnter.Text = "Enter";
-            ButtonEnter.UseVisualStyleBackColor = true;
+            ButtonEnter.Text = "Login";
+            ButtonEnter.UseVisualStyleBackColor = false;
             ButtonEnter.Click += ButtonEnter_Click;
             // 
             // LabelName
@@ -104,12 +107,12 @@
             // 
             LogIn.AutoSize = true;
             LogIn.BorderStyle = BorderStyle.FixedSingle;
-            LogIn.Location = new Point(227, 277);
+            LogIn.Location = new Point(483, 202);
             LogIn.Name = "LogIn";
             LogIn.Size = new Size(2, 17);
             LogIn.TabIndex = 7;
             // 
-            // Form1
+            // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -123,7 +126,7 @@
             Controls.Add(LabelPassword);
             Controls.Add(LabelName);
             Controls.Add(ButtonEnter);
-            Name = "Form1";
+            Name = "LoginForm";
             Text = "Form1";
             Load += Form1_Load;
             ResumeLayout(false);
