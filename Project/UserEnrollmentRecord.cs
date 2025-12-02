@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class UserEnrollmentRecord : Form
-    {
-        public UserEnrollmentRecord()
-        {
+    public partial class UserEnrollmentRecord : Form {
+        public UserEnrollmentRecord() {
             InitializeComponent();
         }
 
-        private void ButtonView_Click(object sender, EventArgs e)
-        {
+        private void ButtonView_Click(object sender, EventArgs e) {
+            this.Hide();
+            AccountManagement mainForm = new AccountManagement();
+            mainForm.Show();
+        }
 
+        private void ButtonViewSubjectInformation_Click(object sender, EventArgs e) {
+            this.Hide();
+            EnrollmentInformation mainForm = new EnrollmentInformation();
+            mainForm.Show();
         }
     }
 }

@@ -10,21 +10,41 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class AccountManagement : Form
-    {
-        public AccountManagement()
-        {
+    public partial class AccountManagement : Form {
+        public AccountManagement() {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+        private void label1_Click(object sender, EventArgs e) {
 
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
+        private void label6_Click(object sender, EventArgs e) {
 
+        }
+
+        private void ButtonUndo1_Click(object sender, EventArgs e) {
+            LoginForm registerForm = new LoginForm();
+
+            registerForm.FormClosed += (s, args) => this.Close();
+
+            this.Hide();
+            registerForm.Show();
+        }
+
+        private void checkBoxFullyPaid_CheckedChanged(object sender, EventArgs e) {
+
+
+
+        }
+
+        private void ButtonViewRecords_Click(object sender, EventArgs e) {
+            UserEnrollmentRecord registerForm = new UserEnrollmentRecord();
+
+            registerForm.FormClosed += (s, args) => this.Close();
+
+            this.Hide();
+            registerForm.Show();
         }
     }
 }

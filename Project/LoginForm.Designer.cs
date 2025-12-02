@@ -26,17 +26,18 @@
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             ButtonLogin = new Button();
             LabelName = new Label();
             LabelPassword = new Label();
             label1 = new Label();
-            TextBoxUsername = new TextBox();
+            TextBoxEmail = new TextBox();
             TextBoxPassword = new TextBox();
-            ButtonClear = new Button();
             LogIn = new Label();
-            comboBox1 = new ComboBox();
+            ComboBoxUser = new ComboBox();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            label2 = new Label();
+            LinkLabelSignUp = new LinkLabel();
             SuspendLayout();
             // 
             // ButtonLogin
@@ -44,103 +45,130 @@
             ButtonLogin.BackColor = Color.DarkBlue;
             ButtonLogin.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ButtonLogin.ForeColor = SystemColors.ControlLightLight;
-            ButtonLogin.Location = new Point(263, 273);
+            ButtonLogin.Location = new Point(301, 364);
+            ButtonLogin.Margin = new Padding(3, 4, 3, 4);
             ButtonLogin.Name = "ButtonLogin";
-            ButtonLogin.Size = new Size(230, 33);
+            ButtonLogin.Size = new Size(263, 44);
             ButtonLogin.TabIndex = 0;
             ButtonLogin.Text = "Login";
             ButtonLogin.UseVisualStyleBackColor = false;
-            ButtonLogin.Click += ButtonEnter_Click;
+            ButtonLogin.Click += ButtonLogin_Click;
             // 
             // LabelName
             // 
             LabelName.AutoSize = true;
-            LabelName.Location = new Point(208, 204);
+            LabelName.Location = new Point(238, 272);
             LabelName.Name = "LabelName";
-            LabelName.Size = new Size(36, 15);
+            LabelName.Size = new Size(53, 20);
             LabelName.TabIndex = 1;
-            LabelName.Text = "Email";
+            LabelName.Text = "Email :";
             // 
             // LabelPassword
             // 
             LabelPassword.AutoSize = true;
-            LabelPassword.Location = new Point(187, 237);
+            LabelPassword.Location = new Point(214, 316);
             LabelPassword.Name = "LabelPassword";
-            LabelPassword.Size = new Size(57, 15);
+            LabelPassword.Size = new Size(77, 20);
             LabelPassword.TabIndex = 2;
-            LabelPassword.Text = "Password";
+            LabelPassword.Text = "Password :";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(263, 110);
+            label1.ForeColor = Color.Navy;
+            label1.Location = new Point(301, 121);
             label1.Name = "label1";
-            label1.Size = new Size(144, 32);
+            label1.Size = new Size(177, 41);
             label1.TabIndex = 3;
             label1.Text = "User Log In";
             // 
-            // TextBoxUsername
+            // TextBoxEmail
             // 
-            TextBoxUsername.Location = new Point(263, 200);
-            TextBoxUsername.Name = "TextBoxUsername";
-            TextBoxUsername.Size = new Size(230, 23);
-            TextBoxUsername.TabIndex = 4;
-            TextBoxUsername.TextChanged += TextBoxUsername_TextChanged;
+            TextBoxEmail.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            TextBoxEmail.ForeColor = Color.Gray;
+            TextBoxEmail.Location = new Point(301, 267);
+            TextBoxEmail.Margin = new Padding(3, 4, 3, 4);
+            TextBoxEmail.Name = "TextBoxEmail";
+            TextBoxEmail.Size = new Size(262, 27);
+            TextBoxEmail.TabIndex = 4;
+            TextBoxEmail.Text = "Enter Email";
+            TextBoxEmail.Enter += TextBoxEmail_Enter;
+            TextBoxEmail.Leave += TextBoxEmail_Leave;
             // 
             // TextBoxPassword
             // 
-            TextBoxPassword.Location = new Point(263, 232);
+            TextBoxPassword.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            TextBoxPassword.ForeColor = Color.Gray;
+            TextBoxPassword.Location = new Point(301, 309);
+            TextBoxPassword.Margin = new Padding(3, 4, 3, 4);
             TextBoxPassword.Name = "TextBoxPassword";
-            TextBoxPassword.Size = new Size(230, 23);
+            TextBoxPassword.Size = new Size(262, 27);
             TextBoxPassword.TabIndex = 5;
-            // 
-            // ButtonClear
-            // 
-            ButtonClear.Location = new Point(519, 200);
-            ButtonClear.Name = "ButtonClear";
-            ButtonClear.Size = new Size(160, 23);
-            ButtonClear.TabIndex = 6;
-            ButtonClear.Text = "Clear";
-            ButtonClear.UseVisualStyleBackColor = true;
-            ButtonClear.Click += ButtonClear_Click;
+            TextBoxPassword.Text = "Enter Password";
+            TextBoxPassword.Enter += TextBoxPassword_Enter;
+            TextBoxPassword.Leave += TextBoxPassword_Leave;
             // 
             // LogIn
             // 
             LogIn.AutoSize = true;
-            LogIn.Location = new Point(519, 164);
+            LogIn.Location = new Point(593, 219);
             LogIn.Name = "LogIn";
-            LogIn.Size = new Size(0, 15);
+            LogIn.Size = new Size(0, 20);
             LogIn.TabIndex = 7;
             // 
-            // comboBox1
+            // ComboBoxUser
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Student", "Administrator" });
-            comboBox1.Location = new Point(263, 161);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(230, 23);
-            comboBox1.TabIndex = 8;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            ComboBoxUser.FormattingEnabled = true;
+            ComboBoxUser.Items.AddRange(new object[] { "Student", "Administrator" });
+            ComboBoxUser.Location = new Point(301, 205);
+            ComboBoxUser.Margin = new Padding(3, 4, 3, 4);
+            ComboBoxUser.Name = "ComboBoxUser";
+            ComboBoxUser.Size = new Size(262, 28);
+            ComboBoxUser.TabIndex = 8;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 7F);
+            label2.Location = new Point(299, 185);
+            label2.Name = "label2";
+            label2.Size = new Size(73, 15);
+            label2.TabIndex = 9;
+            label2.Text = "Choose User";
+            // 
+            // LinkLabelSignUp
+            // 
+            LinkLabelSignUp.AutoSize = true;
+            LinkLabelSignUp.LinkColor = Color.Gray;
+            LinkLabelSignUp.Location = new Point(377, 418);
+            LinkLabelSignUp.Name = "LinkLabelSignUp";
+            LinkLabelSignUp.Size = new Size(187, 20);
+            LinkLabelSignUp.TabIndex = 11;
+            LinkLabelSignUp.TabStop = true;
+            LinkLabelSignUp.Text = "Need an account? SIGN UP";
+            LinkLabelSignUp.LinkClicked += LinkLabelSignUp_LinkClicked;
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(800, 450);
-            Controls.Add(comboBox1);
+            BackColor = Color.White;
+            ClientSize = new Size(914, 600);
+            Controls.Add(LinkLabelSignUp);
+            Controls.Add(label2);
+            Controls.Add(ComboBoxUser);
             Controls.Add(LogIn);
-            Controls.Add(ButtonClear);
             Controls.Add(TextBoxPassword);
-            Controls.Add(TextBoxUsername);
+            Controls.Add(TextBoxEmail);
             Controls.Add(label1);
             Controls.Add(LabelPassword);
             Controls.Add(LabelName);
             Controls.Add(ButtonLogin);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "LoginForm";
             Text = "Form1";
-            Load += Form1_Load;
+            Load += LoginForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -151,10 +179,12 @@
         private Label LabelName;
         private Label LabelPassword;
         private Label label1;
-        private TextBox TextBoxUsername;
+        private TextBox TextBoxEmail;
         private TextBox TextBoxPassword;
-        private Button ButtonClear;
         private Label LogIn;
-        private ComboBox comboBox1;
+        private ComboBox ComboBoxUser;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Label label2;
+        private LinkLabel LinkLabelSignUp;
     }
 }

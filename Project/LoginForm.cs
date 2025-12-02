@@ -1,93 +1,86 @@
-using Microsoft.VisualBasic;
 
 namespace Project
 {
-    public partial class LoginForm : Form
-    {
-        public LoginForm()
-        {
+    public partial class LoginForm : Form {
+
+        StudentUserRepository repository = new StudentUserRepository();
+        public LoginForm() {
             InitializeComponent();
         }
 
-        private void ButtonClear_Click(object sender, EventArgs e)
-        {
-
-            TextBoxUsername.Text = string.Empty;
-            TextBoxPassword.Text = string.Empty;
+        private void LoginForm_Load(object sender, EventArgs e) {
+            ComboBoxUser.SelectedIndex = 0;
 
         }
-        
-        //if (comboBox1.selected == "admin"){
-        private void ButtonEnter_Click(object sender, EventArgs e)
-        {
 
-            string UsernameAdmin = "Admin123";
-            string PasswordAdmin = "123456789";
-
-            string PasswordLester = "Lestochs";
-            string UsernameLester = "AdminLester";
-
-            string PasswordLance = "Lanzzzzz";
-            string UsernameLance = "AdminLance";
-
-            string PasswordKirby = "KirbustOnYOu";
-            string UsernameKirby = "AdminKirby";
-
-            string PasswordShadReignerDummac = "Dashadumss";
-            string UsernameShadReignerDummac = "AdminShad";
-
-
-            if (string.IsNullOrWhiteSpace(TextBoxUsername.Text) || string.IsNullOrWhiteSpace(TextBoxPassword.Text))
-            {
-
-                LogIn.Text = "Cannot Leave Blank!";
+        //TEXT BOX UI=============================================================================
+        private void TextBoxEmail_Enter(object sender, EventArgs e) {
+            if (TextBoxEmail.Text == "Enter Email") {
+                TextBoxEmail.Text = string.Empty;
+                TextBoxEmail.ForeColor = Color.Black;
+                TextBoxEmail.Font = new Font("Segoe UI", 9, FontStyle.Regular);
 
             }
-            else
-            {
-                if (TextBoxUsername.Text == UsernameAdmin && TextBoxPassword.Text == PasswordAdmin)
-                {
-
-                    LogIn.Text = "Login Succesfull!";
-
-                }
-                else if (TextBoxUsername.Text == UsernameLester && TextBoxPassword.Text == PasswordLester)
-                {
-                    LogIn.Text = "Login Succesfull!";
-                    MessageBox.Show("Hello Daddy Admin Lester", "Log In Succesful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if (TextBoxUsername.Text == UsernameLance && TextBoxPassword.Text == PasswordLance)
-                {
-                    LogIn.Text = "Login Succesfull!";
-                    MessageBox.Show("Hello Admin Lance", "Log In Succesful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                }
-                else if (TextBoxUsername.Text == UsernameKirby && TextBoxPassword.Text == PasswordKirby)
-                {
-                    LogIn.Text = "Login Succesfull!";
-                    MessageBox.Show("Hello Admin Kirby", "Log In Succesful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                }
-                else
-                {
-                    LogIn.Text = "Incorrect Username or Password!";
-                }
+        }
+        private void TextBoxEmail_Leave(object sender, EventArgs e) {
+            if (TextBoxEmail.Text == string.Empty) {
+                TextBoxEmail.Text = "Enter Email";
+                TextBoxEmail.ForeColor = Color.Gray;
+                TextBoxEmail.Font = new Font("Segoe UI", 9, FontStyle.Italic);
+            }
+        }
+        private void TextBoxPassword_Enter(object sender, EventArgs e) {
+            if (TextBoxPassword.Text == "Enter Password") {
+                TextBoxPassword.Text = string.Empty;
+                TextBoxPassword.UseSystemPasswordChar = true;
+                TextBoxPassword.ForeColor = Color.Black;
+                TextBoxPassword.Font = new Font("Segoe UI", 9, FontStyle.Regular);
+            }
+        }
+        private void TextBoxPassword_Leave(object sender, EventArgs e) {
+            if (TextBoxPassword.Text == string.Empty) {
+                TextBoxPassword.Text = "Enter Password";
+                TextBoxPassword.UseSystemPasswordChar = false;
+                TextBoxPassword.ForeColor = Color.Gray;
+                TextBoxPassword.Font = new Font("Segoe UI", 9, FontStyle.Italic);
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+        //LINK LABEL=============================================================================
+        private void LinkLabelSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+            SignUpForm registerForm = new SignUpForm();
+
+            registerForm.FormClosed += (s, args) => this.Close();
+            this.Hide();
+            registerForm.Show();
+        }
+
+        //LOG IN BUTTON=============================================================================
+        private void ButtonLogin_Click(object sender, EventArgs e) {
+            string email = TextBoxEmail.Text.Trim();
+            string password = TextBoxPassword.Text.Trim();
+
+            if (!Validator.Email(email) || !Validator.Password(password)) {
+                MessageBox.Show("Invalid Email or Password Syntax");
+                return;
+            }
+            StudentUserRepository repository = new StudentUserRepository();
+            if (!repository.IsUser(email)) {
+                MessageBox.Show("Account doesn't exist");
+                return;
+            }
+            StudentUser user = repository.GetUserByEmailAndPassword(email, password);
+            if (user == null) {
+                MessageBox.Show("Incorrect Password");
+                return;
+            }
+
+            this.Hide();
+            UserEnrollmentRecord mainForm = new UserEnrollmentRecord();
+            mainForm.Show();
 
         }
 
-        private void TextBoxUsername_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
