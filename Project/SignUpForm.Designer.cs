@@ -39,7 +39,7 @@
             // LogIn
             // 
             LogIn.AutoSize = true;
-            LogIn.Location = new Point(301, 176);
+            LogIn.Location = new Point(334, 218);
             LogIn.Name = "LogIn";
             LogIn.Size = new Size(0, 15);
             LogIn.TabIndex = 17;
@@ -48,7 +48,7 @@
             // 
             TextBoxEmailSignUp.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             TextBoxEmailSignUp.ForeColor = Color.Gray;
-            TextBoxEmailSignUp.Location = new Point(223, 113);
+            TextBoxEmailSignUp.Location = new Point(256, 155);
             TextBoxEmailSignUp.Name = "TextBoxEmailSignUp";
             TextBoxEmailSignUp.Size = new Size(230, 23);
             TextBoxEmailSignUp.TabIndex = 15;
@@ -62,7 +62,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Navy;
-            label1.Location = new Point(223, 56);
+            label1.Location = new Point(256, 98);
             label1.Name = "label1";
             label1.Size = new Size(159, 32);
             label1.TabIndex = 14;
@@ -71,7 +71,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(154, 176);
+            label2.Location = new Point(187, 218);
             label2.Name = "label2";
             label2.Size = new Size(57, 15);
             label2.TabIndex = 21;
@@ -80,7 +80,7 @@
             // LabelPassword
             // 
             LabelPassword.AutoSize = true;
-            LabelPassword.Location = new Point(147, 147);
+            LabelPassword.Location = new Point(180, 189);
             LabelPassword.Name = "LabelPassword";
             LabelPassword.Size = new Size(63, 15);
             LabelPassword.TabIndex = 13;
@@ -90,7 +90,7 @@
             // 
             TextBoxConfirmPasswordSignUp.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             TextBoxConfirmPasswordSignUp.ForeColor = Color.Gray;
-            TextBoxConfirmPasswordSignUp.Location = new Point(224, 174);
+            TextBoxConfirmPasswordSignUp.Location = new Point(257, 216);
             TextBoxConfirmPasswordSignUp.Name = "TextBoxConfirmPasswordSignUp";
             TextBoxConfirmPasswordSignUp.Size = new Size(230, 23);
             TextBoxConfirmPasswordSignUp.TabIndex = 22;
@@ -101,7 +101,7 @@
             // LabelName
             // 
             LabelName.AutoSize = true;
-            LabelName.Location = new Point(168, 117);
+            LabelName.Location = new Point(201, 159);
             LabelName.Name = "LabelName";
             LabelName.Size = new Size(42, 15);
             LabelName.TabIndex = 12;
@@ -111,7 +111,7 @@
             // 
             LinkLabelLogin.AutoSize = true;
             LinkLabelLogin.LinkColor = Color.Gray;
-            LinkLabelLogin.Location = new Point(316, 254);
+            LinkLabelLogin.Location = new Point(349, 296);
             LinkLabelLogin.Name = "LinkLabelLogin";
             LinkLabelLogin.Size = new Size(124, 15);
             LinkLabelLogin.TabIndex = 23;
@@ -124,7 +124,7 @@
             ButtonLogin.BackColor = Color.DarkBlue;
             ButtonLogin.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ButtonLogin.ForeColor = SystemColors.ControlLightLight;
-            ButtonLogin.Location = new Point(223, 216);
+            ButtonLogin.Location = new Point(256, 258);
             ButtonLogin.Name = "ButtonLogin";
             ButtonLogin.Size = new Size(230, 33);
             ButtonLogin.TabIndex = 11;
@@ -136,7 +136,7 @@
             // 
             TextBoxPasswordSignUp.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             TextBoxPasswordSignUp.ForeColor = Color.Gray;
-            TextBoxPasswordSignUp.Location = new Point(223, 145);
+            TextBoxPasswordSignUp.Location = new Point(256, 187);
             TextBoxPasswordSignUp.Name = "TextBoxPasswordSignUp";
             TextBoxPasswordSignUp.Size = new Size(230, 23);
             TextBoxPasswordSignUp.TabIndex = 16;
@@ -149,7 +149,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(700, 338);
+            ClientSize = new Size(749, 398);
             Controls.Add(LogIn);
             Controls.Add(TextBoxPasswordSignUp);
             Controls.Add(ButtonLogin);

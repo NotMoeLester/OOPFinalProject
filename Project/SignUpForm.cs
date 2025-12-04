@@ -17,6 +17,8 @@ namespace Project {
         public SignUpForm()
         {
             InitializeComponent();
+            this.Size = new Size(816, 489);
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         //TEXT BOX UI=============================================================================

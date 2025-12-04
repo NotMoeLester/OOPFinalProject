@@ -15,6 +15,7 @@ namespace Project
         public EnrollmentInformation()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void ButtonViewSubjectInformation_Click(object sender, EventArgs e)
@@ -29,6 +30,11 @@ namespace Project
             this.Hide();
             AccountManagement mainForm = new AccountManagement();
             mainForm.Show();
+        }
+
+        private void EnrollmentInformation_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -160,6 +160,7 @@
             Controls.Add(dataGridView1);
             Name = "EnrollmentInformation";
             Text = "EnrollmentInformation";
+            Load += EnrollmentInformation_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

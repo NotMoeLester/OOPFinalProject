@@ -13,6 +13,7 @@ namespace Project
     public partial class EnrollmentRecord : Form {
         public EnrollmentRecord() {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void EnrollmentRecord_Load(object sender, EventArgs e) {

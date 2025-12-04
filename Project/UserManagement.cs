@@ -15,9 +15,15 @@ namespace Project
         public UserManagement()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewUserList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

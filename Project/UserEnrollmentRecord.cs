@@ -15,6 +15,7 @@ namespace Project
         public UserEnrollmentRecord()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void ButtonView_Click(object sender, EventArgs e)
