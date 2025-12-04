@@ -97,7 +97,8 @@ namespace Project {
             bool isSaved = repository.Add(userToSave);
 
             if (isSaved) {
-                MessageBox.Show("Account has Been Saved!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Boy na-saved!", "Successful",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
