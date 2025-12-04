@@ -7,7 +7,10 @@ using System.Threading.Tasks;
 namespace Project {
     internal class Validator {
         public static bool Password(string password) {
-            if (string.IsNullOrEmpty(password)) return false;
+            if (string.IsNullOrEmpty(password)) {
+                MessageBox.Show("Field Empty");
+                return false;
+            }
             if (password.Length < 8) {
                 MessageBox.Show("Passsword must me be atleast 8 characters");
                 return false;
@@ -19,12 +22,15 @@ namespace Project {
             return true;
         }
         public static bool Password(string password, string newPassword) {
-            if (password == newPassword) {
-                MessageBox.Show("");
+            if (string.IsNullOrEmpty(password) || string.IsNullOrEmpty(newPassword)) {
+                MessageBox.Show("Field Empty");
                 return false;
             }
-            if (string.IsNullOrEmpty(password)) return false;
-            if (password.Length < 8) {
+            if (password == newPassword) {
+                MessageBox.Show("New passoword cannot be the same as the old password");
+                return false;
+            }
+            if (password.Length < 8 || newPassword.Length < 8) {
                 MessageBox.Show("Passsword must me be atleast 8 characters");
                 return false;
             }
@@ -32,6 +38,11 @@ namespace Project {
                 MessageBox.Show("Passsword must contain atleast one Uppercase character|  Lowercase character | Number | Symbol");
                 return false;
             }
+            if (!newPassword.Any(char.IsLetter) || !newPassword.Any(char.IsDigit) || !newPassword.Any(char.IsUpper) || !newPassword.Any(char.IsLower) || !newPassword.Any(char.IsPunctuation)) {
+                MessageBox.Show("New Passsword must contain atleast one Uppercase character|  Lowercase character | Number | Symbol");
+                return false;
+            }
+
             return true;
         }
 
