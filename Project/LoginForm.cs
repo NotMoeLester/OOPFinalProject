@@ -1,4 +1,6 @@
 
+using Project.AdministratorUserData;
+
 namespace Project
 {
     public partial class LoginForm : Form {
@@ -84,7 +86,21 @@ namespace Project
                 mainForm.Show();
 
             } else if (usertype == "Administrator") {
+                AdministratorRepository repository = new AdministratorRepository();
+                if (!repository.IsUser(email)) {
+                    MessageBox.Show("Account doesn't exist");
+                    return;
+                }
+                AdministratorUser user = repository.GetUserByEmailAndPassword(email, password);
+                if (user == null) {
+                    MessageBox.Show("Incorrect Password");
+                    return;
+                }
 
+                AccountManagement mainForm = new AccountManagement();
+                mainForm.FormClosed += (s, args) => this.Close();
+                this.Hide();
+                mainForm.Show();
             }
         }
 
