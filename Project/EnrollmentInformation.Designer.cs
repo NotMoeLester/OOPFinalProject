@@ -36,13 +36,15 @@
             label2 = new Label();
             label3 = new Label();
             button3 = new Button();
+            ButtonViewSubjectInformation = new Button();
+            ButtonView = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 111);
+            dataGridView1.Location = new Point(12, 88);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(776, 295);
             dataGridView1.TabIndex = 19;
@@ -109,17 +111,45 @@
             // 
             button3.BackgroundImage = Properties.Resources.Screenshot_2025_12_01_172347;
             button3.BackgroundImageLayout = ImageLayout.Zoom;
-            button3.Location = new Point(36, 123);
+            button3.Location = new Point(36, 100);
             button3.Name = "button3";
             button3.Size = new Size(731, 269);
             button3.TabIndex = 39;
             button3.UseVisualStyleBackColor = true;
+            // 
+            // ButtonViewSubjectInformation
+            // 
+            ButtonViewSubjectInformation.BackColor = Color.Navy;
+            ButtonViewSubjectInformation.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            ButtonViewSubjectInformation.ForeColor = Color.White;
+            ButtonViewSubjectInformation.Location = new Point(342, 395);
+            ButtonViewSubjectInformation.Name = "ButtonViewSubjectInformation";
+            ButtonViewSubjectInformation.Size = new Size(220, 27);
+            ButtonViewSubjectInformation.TabIndex = 52;
+            ButtonViewSubjectInformation.Text = "View Subject Information";
+            ButtonViewSubjectInformation.UseVisualStyleBackColor = false;
+            ButtonViewSubjectInformation.Click += ButtonViewSubjectInformation_Click;
+            // 
+            // ButtonView
+            // 
+            ButtonView.BackColor = Color.Navy;
+            ButtonView.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            ButtonView.ForeColor = Color.White;
+            ButtonView.Location = new Point(568, 395);
+            ButtonView.Name = "ButtonView";
+            ButtonView.Size = new Size(220, 27);
+            ButtonView.TabIndex = 51;
+            ButtonView.Text = "View Financial Record";
+            ButtonView.UseVisualStyleBackColor = false;
+            ButtonView.Click += ButtonView_Click;
             // 
             // EnrollmentInformation
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(ButtonViewSubjectInformation);
+            Controls.Add(ButtonView);
             Controls.Add(button3);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -145,5 +175,7 @@
         private Label label2;
         private Label label3;
         private Button button3;
+        private Button ButtonViewSubjectInformation;
+        private Button ButtonView;
     }
 }
