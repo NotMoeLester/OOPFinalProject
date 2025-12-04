@@ -8,17 +8,28 @@ namespace Project {
     internal class Validator {
         public static bool Password(string password) {
             if (string.IsNullOrEmpty(password)) return false;
-            if (password.Length < 8) return false;
-            if (password.All(char.IsLetter) || password.All(char.IsDigit) || password.All(char.IsUpper) || password.All(char.IsLower) || password.Any(char.IsSeparator)) { 
+            if (password.Length < 8) {
+                MessageBox.Show("Passsword must me be atleast 8 characters");
+                return false;
+            }
+            if (!password.Any(char.IsLetter) || !password.Any(char.IsDigit) || !password.Any(char.IsUpper) || !password.Any(char.IsLower) || !password.Any(char.IsPunctuation)) {
+                MessageBox.Show("Passsword must contain atleast one Uppercase character|  Lowercase character | Number | Symbol");
                 return false;
             }
             return true;
         }
         public static bool Password(string password, string newPassword) {
-            if (password == newPassword) return false;
+            if (password == newPassword) {
+                MessageBox.Show("");
+                return false;
+            }
             if (string.IsNullOrEmpty(password)) return false;
-            if (password.Length < 8) return false;
-            if (password.All(char.IsLetter) || password.All(char.IsDigit) || password.All(char.IsUpper) || password.All(char.IsLower) || password.Any(char.IsSeparator)) {
+            if (password.Length < 8) {
+                MessageBox.Show("Passsword must me be atleast 8 characters");
+                return false;
+            }
+            if (!password.Any(char.IsLetter) || !password.Any(char.IsDigit) || !password.Any(char.IsUpper) || !password.Any(char.IsLower) || !password.Any(char.IsPunctuation)) {
+                MessageBox.Show("Passsword must contain atleast one Uppercase character|  Lowercase character | Number | Symbol");
                 return false;
             }
             return true;

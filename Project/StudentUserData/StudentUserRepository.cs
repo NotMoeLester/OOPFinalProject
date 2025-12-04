@@ -21,12 +21,12 @@ namespace Project {
             return true;
         }
 
-        public List<User> GetAll() {
-            return _connection.Table<User>().ToList();
+        public List<StudentUser> GetAll() {
+            return _connection.Table<StudentUser>().ToList();
         }
 
-        public User Get(int id) {S
-            return _connection.Find<User>(id);
+        public StudentUser Get(int id) {
+            return _connection.Find<StudentUser>(id);
         }
 
         public StudentUser GetUserByEmailAndPassword(string email, string password) {

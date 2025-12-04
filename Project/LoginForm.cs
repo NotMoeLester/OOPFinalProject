@@ -48,11 +48,11 @@ namespace Project
 
         //LINK LABEL=============================================================================
         private void LinkLabelSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
-            SignUpForm registerForm = new SignUpForm();
+            SignUpForm signUpForm = new SignUpForm();
 
-            registerForm.FormClosed += (s, args) => this.Close();
+            signUpForm.FormClosed += (s, args) => this.Close();
             this.Hide();
-            registerForm.Show();
+            signUpForm.Show();
         }
 
         //LOG IN BUTTON=============================================================================
@@ -75,8 +75,10 @@ namespace Project
                 return;
             }
 
-            this.Hide();
             UserEnrollmentRecord mainForm = new UserEnrollmentRecord();
+
+            mainForm.FormClosed += (s, args) => this.Close();
+            this.Hide();
             mainForm.Show();
 
         }

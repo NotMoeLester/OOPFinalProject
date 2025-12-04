@@ -63,15 +63,16 @@ namespace Project {
 
         //LINK LABEL=============================================================================
         private void LinkLabelLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
-            LoginForm registerForm = new LoginForm();
-
-            registerForm.FormClosed += (s, args) => this.Close();
+            LoginForm loginForm = new LoginForm();
+            loginForm.FormClosed += (s, args) => this.Close();
             this.Hide();
-            registerForm.Show();
+            loginForm.Show();
         }
 
         //BUTTON LOGIN=============================================================================
         private void ButtonLogin_Click(object sender, EventArgs e) {
+            StudentUserRepository repository = new StudentUserRepository();
+
             string email = TextBoxEmailSignUp.Text.Trim();
             string password = TextBoxPasswordSignUp.Text.Trim();
             string confirmPassword = TextBoxConfirmPasswordSignUp.Text.Trim();
@@ -80,13 +81,10 @@ namespace Project {
                 MessageBox.Show("Invalid Email or Password Syntax");
                 return;
             }
-
             if (password != confirmPassword) {
                 MessageBox.Show("Passwords do not match!");
                 return;
             }
-
-            StudentUserRepository repository = new StudentUserRepository();
             if (repository.IsUser(email)) {
                 MessageBox.Show("Account already exists");
                 return;

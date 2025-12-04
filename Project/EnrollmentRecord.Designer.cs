@@ -202,6 +202,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "EnrollmentRecord";
             Text = "EnrollmentRecord";
+            Load += EnrollmentRecord_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewEnrollmentRecords).EndInit();
             ResumeLayout(false);
             PerformLayout();

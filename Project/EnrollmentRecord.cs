@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class EnrollmentRecord : Form
-    {
-        public EnrollmentRecord()
-        {
+    public partial class EnrollmentRecord : Form {
+        public EnrollmentRecord() {
             InitializeComponent();
+        }
+
+        private void EnrollmentRecord_Load(object sender, EventArgs e) {
+
         }
     }
 }
