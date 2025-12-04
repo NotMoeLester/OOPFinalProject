@@ -61,7 +61,6 @@ namespace Project
             string password = TextBoxPassword.Text.Trim();
 
             if (!Validator.Email(email) || !Validator.Password(password)) {
-                MessageBox.Show("Invalid Email or Password Syntax");
                 return;
             }
             StudentUserRepository repository = new StudentUserRepository();

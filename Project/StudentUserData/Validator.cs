@@ -27,11 +27,11 @@ namespace Project {
                 return false;
             }
             if (password == newPassword) {
-                MessageBox.Show("New passoword cannot be the same as the old password");
+                MessageBox.Show("New password cannot be the same as the old password");
                 return false;
             }
             if (password.Length < 8 || newPassword.Length < 8) {
-                MessageBox.Show("Passsword must me be atleast 8 characters");
+                MessageBox.Show("Passswords must me be atleast 8 characters");
                 return false;
             }
             if (!password.Any(char.IsLetter) || !password.Any(char.IsDigit) || !password.Any(char.IsUpper) || !password.Any(char.IsLower) || !password.Any(char.IsPunctuation)) {
@@ -42,13 +42,14 @@ namespace Project {
                 MessageBox.Show("New Passsword must contain atleast one Uppercase character|  Lowercase character | Number | Symbol");
                 return false;
             }
-
             return true;
         }
 
-
         public static bool Email(string email) {
-            if (string.IsNullOrEmpty(email)) return false;
+            if (string.IsNullOrEmpty(email)) {
+                MessageBox.Show("Field Empty");
+                return false;
+            }
             if (!(email.Contains('@') && email.Split('@')[1].Contains('.') && email.All(c => char.IsLetterOrDigit(c) || c == '@' || c == '.' || c == '-' || c == '_'))) {
                 return false;
             }
