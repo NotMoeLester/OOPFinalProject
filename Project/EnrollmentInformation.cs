@@ -16,5 +16,19 @@ namespace Project
         {
             InitializeComponent();
         }
+
+        private void ButtonViewSubjectInformation_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            EnrollmentInformation mainForm = new EnrollmentInformation();
+            mainForm.Show();
+        }
+
+        private void ButtonView_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AccountManagement mainForm = new AccountManagement();
+            mainForm.Show();
+        }
     }
 }
