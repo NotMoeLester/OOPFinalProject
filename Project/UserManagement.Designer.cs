@@ -105,6 +105,7 @@
             Controls.Add(dataGridViewUserList);
             Name = "UserManagement";
             Text = "UserManagement";
+            Load += UserManagement_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewUserList).EndInit();
             ResumeLayout(false);
             PerformLayout();
