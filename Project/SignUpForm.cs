@@ -78,7 +78,6 @@ namespace Project {
             string confirmPassword = TextBoxConfirmPasswordSignUp.Text.Trim();
 
             if (!Validator.Email(email) || !Validator.Password(password) || !Validator.Password(confirmPassword)) {
-                MessageBox.Show("Invalid Email or Password Syntax");
                 return;
             }
             if (password != confirmPassword) {
