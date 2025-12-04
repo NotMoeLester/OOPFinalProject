@@ -68,12 +68,12 @@ namespace Project
                 }
                 StudentUserRepository repository = new StudentUserRepository();
                 if (!repository.IsUser(email)) {
-                    MessageBox.Show("Account doesn't exist");
+                    MessageBox.Show("Account doesn't exist", "Please try again!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 StudentUser user = repository.GetUserByEmailAndPassword(email, password);
                 if (user == null) {
-                    MessageBox.Show("Incorrect Password");
+                    MessageBox.Show("Incorrect Password", "Please try again!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
