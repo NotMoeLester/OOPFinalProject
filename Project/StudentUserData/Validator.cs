@@ -20,7 +20,6 @@ namespace Project {
                 MessageBox.Show("Passsword must contain atleast one Uppercase character|  Lowercase character | Number | Symbol");
                 return false;
             }
-
             return true;
         }
 

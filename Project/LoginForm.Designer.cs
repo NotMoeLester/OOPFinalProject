@@ -119,6 +119,7 @@
             // 
             // ComboBoxUser
             // 
+            ComboBoxUser.DropDownStyle = ComboBoxStyle.DropDownList;
             ComboBoxUser.FormattingEnabled = true;
             ComboBoxUser.Items.AddRange(new object[] { "Student", "Administrator" });
             ComboBoxUser.Location = new Point(301, 205);

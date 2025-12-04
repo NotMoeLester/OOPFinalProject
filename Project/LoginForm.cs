@@ -57,29 +57,35 @@ namespace Project
 
         //LOG IN BUTTON=============================================================================
         private void ButtonLogin_Click(object sender, EventArgs e) {
+
+            string usertype = ComboBoxUser.Text;
             string email = TextBoxEmail.Text.Trim();
             string password = TextBoxPassword.Text.Trim();
 
-            if (!Validator.Email(email) || !Validator.Password(password)) {
-                return;
-            }
-            StudentUserRepository repository = new StudentUserRepository();
-            if (!repository.IsUser(email)) {
-                MessageBox.Show("Account doesn't exist");
-                return;
-            }
-            StudentUser user = repository.GetUserByEmailAndPassword(email, password);
-            if (user == null) {
-                MessageBox.Show("Incorrect Password");
-                return;
-            }
+            if (usertype == "Student") {
+                if (!Validator.Email(email) || !Validator.Password(password)) {
+                    return;
+                }
+                StudentUserRepository repository = new StudentUserRepository();
+                if (!repository.IsUser(email)) {
+                    MessageBox.Show("Account doesn't exist");
+                    return;
+                }
+                StudentUser user = repository.GetUserByEmailAndPassword(email, password);
+                if (user == null) {
+                    MessageBox.Show("Incorrect Password");
+                    return;
+                }
 
-            UserEnrollmentRecord mainForm = new UserEnrollmentRecord();
+                //Open main Form-------------------------------------------------
+                UserEnrollmentRecord mainForm = new UserEnrollmentRecord();
+                mainForm.FormClosed += (s, args) => this.Close();
+                this.Hide();
+                mainForm.Show();
 
-            mainForm.FormClosed += (s, args) => this.Close();
-            this.Hide();
-            mainForm.Show();
+            } else if (usertype == "Administrator") {
 
+            }
         }
 
 
