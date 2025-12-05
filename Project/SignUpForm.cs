@@ -79,10 +79,9 @@ namespace Project {
             string password = TextBoxPasswordSignUp.Text.Trim();
             string confirmPassword = TextBoxConfirmPasswordSignUp.Text.Trim();
 
-            if (Validator.Email(email) != string.Empty || Validator.Password(password) != string.Empty || Validator.Password(confirmPassword) != string.Empty) {
+            if (Validator.Email(email) != string.Empty || Validator.Password(password) != string.Empty) {
                 LabelEmailValidation.Text = Validator.Email(email);
                 LabelPasswordValidation.Text = Validator.Password(password);
-                LabelConfirmPasswordValidation.Text = Validator.Password(confirmPassword);
                 return;
             }
             if (password != confirmPassword) {
@@ -94,6 +93,7 @@ namespace Project {
                 return;
             }
 
+            //Add user to database
             StudentUser userToSave = new StudentUser();
             userToSave.Email = email;
             userToSave.Password = password;
