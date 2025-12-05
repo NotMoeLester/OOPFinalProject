@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class UserManagement : Form
-    {
-        public UserManagement()
-        {
+    public partial class UserManagement : Form {
+        public UserManagement() {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
+        private void button3_Click(object sender, EventArgs e) {
 
         }
 
-        private void dataGridViewUserList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        private void dataGridViewUserList_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+
+        }
+
+        private void UserManagement_Load(object sender, EventArgs e) {
 
         }
     }
