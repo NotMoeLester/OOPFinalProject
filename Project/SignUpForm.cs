@@ -79,7 +79,7 @@ namespace Project {
             string password = TextBoxPasswordSignUp.Text.Trim();
             string confirmPassword = TextBoxConfirmPasswordSignUp.Text.Trim();
 
-            if (Validator.Email(email) != string.Empty || Validator.Password(password) != string.Empty  || Validator.Password(confirmPassword) != string.Empty) {
+            if (Validator.Email(email) != string.Empty || Validator.Password(password) != string.Empty || Validator.Password(confirmPassword) != string.Empty) {
                 LabelEmailValidation.Text = Validator.Email(email);
                 LabelPasswordValidation.Text = Validator.Password(password);
                 LabelConfirmPasswordValidation.Text = Validator.Password(confirmPassword);
@@ -90,7 +90,7 @@ namespace Project {
                 return;
             }
             if (repository.IsUser(email)) {
-                MessageBox.Show("Account already exists", "Please try again!",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Account already exists", "Please try again!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -101,9 +101,21 @@ namespace Project {
             bool isSaved = repository.Add(userToSave);
 
             if (isSaved) {
-                MessageBox.Show("Succesfully signed in!", "Successful!",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Succesfully signed in!", "Successful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
+        }
+
+        private void TextBoxEmailSignUp_TextChanged(object sender, EventArgs e) {
+            TextBoxEmailSignUp.Text = string.Empty;
+        }
+
+        private void TextBoxPasswordSignUp_TextChanged(object sender, EventArgs e) {
+            TextBoxPasswordSignUp.Text = string.Empty;
+        }
+
+        private void TextBoxConfirmPasswordSignUp_TextChanged(object sender, EventArgs e) {
+            TextBoxConfirmPasswordSignUp.Text = string.Empty;
         }
     }
 }

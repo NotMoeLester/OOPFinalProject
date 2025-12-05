@@ -55,6 +55,7 @@
             TextBoxEmailSignUp.Size = new Size(230, 23);
             TextBoxEmailSignUp.TabIndex = 15;
             TextBoxEmailSignUp.Text = "Enter Email";
+            TextBoxEmailSignUp.TextChanged += TextBoxEmailSignUp_TextChanged;
             TextBoxEmailSignUp.Enter += TextBoxEmailSignUp_Enter;
             TextBoxEmailSignUp.Leave += TextBoxEmailSignUp_Leave;
             // 
@@ -96,6 +97,7 @@
             TextBoxConfirmPasswordSignUp.Size = new Size(230, 23);
             TextBoxConfirmPasswordSignUp.TabIndex = 22;
             TextBoxConfirmPasswordSignUp.Text = "Enter Password";
+            TextBoxConfirmPasswordSignUp.TextChanged += TextBoxConfirmPasswordSignUp_TextChanged;
             TextBoxConfirmPasswordSignUp.Enter += TextBoxConfirmPasswordSignUp_Enter;
             TextBoxConfirmPasswordSignUp.Leave += TextBoxConfirmPasswordSignUp_Leave;
             // 
@@ -142,35 +144,42 @@
             TextBoxPasswordSignUp.Size = new Size(230, 23);
             TextBoxPasswordSignUp.TabIndex = 16;
             TextBoxPasswordSignUp.Text = "Enter Password";
+            TextBoxPasswordSignUp.TextChanged += TextBoxPasswordSignUp_TextChanged;
             TextBoxPasswordSignUp.Enter += TextBoxPasswordSignUp_Enter;
             TextBoxPasswordSignUp.Leave += TextBoxPasswordSignUp_Leave;
             // 
             // LabelEmailValidation
             // 
             LabelEmailValidation.AutoSize = true;
-            LabelEmailValidation.Location = new Point(537, 155);
+            LabelEmailValidation.Location = new Point(396, 158);
+            LabelEmailValidation.MinimumSize = new Size(300, 0);
             LabelEmailValidation.Name = "LabelEmailValidation";
-            LabelEmailValidation.Size = new Size(38, 15);
+            LabelEmailValidation.Size = new Size(300, 15);
             LabelEmailValidation.TabIndex = 24;
             LabelEmailValidation.Text = "label3";
+            LabelEmailValidation.TextAlign = ContentAlignment.MiddleRight;
             // 
             // LabelPasswordValidation
             // 
             LabelPasswordValidation.AutoSize = true;
-            LabelPasswordValidation.Location = new Point(537, 187);
+            LabelPasswordValidation.Location = new Point(396, 190);
+            LabelPasswordValidation.MinimumSize = new Size(300, 0);
             LabelPasswordValidation.Name = "LabelPasswordValidation";
-            LabelPasswordValidation.Size = new Size(38, 15);
+            LabelPasswordValidation.Size = new Size(300, 15);
             LabelPasswordValidation.TabIndex = 25;
             LabelPasswordValidation.Text = "label4";
+            LabelPasswordValidation.TextAlign = ContentAlignment.MiddleRight;
             // 
             // LabelConfirmPasswordValidation
             // 
             LabelConfirmPasswordValidation.AutoSize = true;
-            LabelConfirmPasswordValidation.Location = new Point(537, 224);
+            LabelConfirmPasswordValidation.Location = new Point(396, 224);
+            LabelConfirmPasswordValidation.MinimumSize = new Size(300, 0);
             LabelConfirmPasswordValidation.Name = "LabelConfirmPasswordValidation";
-            LabelConfirmPasswordValidation.Size = new Size(38, 15);
+            LabelConfirmPasswordValidation.Size = new Size(300, 15);
             LabelConfirmPasswordValidation.TabIndex = 26;
             LabelConfirmPasswordValidation.Text = "label5";
+            LabelConfirmPasswordValidation.TextAlign = ContentAlignment.MiddleRight;
             // 
             // SignUpForm
             // 
