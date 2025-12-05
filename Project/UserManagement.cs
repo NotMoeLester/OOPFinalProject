@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,16 +17,16 @@ namespace Project
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void button3_Click(object sender, EventArgs e) {
 
-        }
-
-        private void dataGridViewUserList_CellContentClick(object sender, DataGridViewCellEventArgs e) {
-
-        }
 
         private void UserManagement_Load(object sender, EventArgs e) {
 
+        }
+
+        private void ButtonView_Click(object sender, EventArgs e) {
+            StudentUserRepository repository = new StudentUserRepository();
+            List<StudentUser> users = repository.GetAll();
+            DataGridViewUserList.DataSource = users;
         }
     }
 }
