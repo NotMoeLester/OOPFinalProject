@@ -86,7 +86,7 @@ namespace Project
                     return;
                 }
 
-                //Open main Form-------------------------------------------------
+                //Open main Form (Login Form - User Enrollment Record)-------------------------------------------------
                 UserEnrollmentRecord mainForm = new UserEnrollmentRecord(email);
                 mainForm.FormClosed += (s, args) => this.Close();
                 this.Hide();
