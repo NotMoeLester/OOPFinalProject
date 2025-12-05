@@ -77,20 +77,22 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 6.75F);
             label2.ForeColor = Color.Navy;
-            label2.Location = new Point(196, 179);
+            label2.Location = new Point(256, 173);
             label2.Name = "label2";
-            label2.Size = new Size(57, 15);
+            label2.Size = new Size(41, 12);
             label2.TabIndex = 21;
             label2.Text = "Confirm :";
             // 
             // LabelPassword
             // 
             LabelPassword.AutoSize = true;
+            LabelPassword.Font = new Font("Segoe UI", 6.75F);
             LabelPassword.ForeColor = Color.Navy;
-            LabelPassword.Location = new Point(190, 133);
+            LabelPassword.Location = new Point(256, 125);
             LabelPassword.Name = "LabelPassword";
-            LabelPassword.Size = new Size(63, 15);
+            LabelPassword.Size = new Size(47, 12);
             LabelPassword.TabIndex = 13;
             LabelPassword.Text = "Password :";
             // 
@@ -99,7 +101,7 @@
             TextBoxConfirmPasswordSignUp.BorderStyle = BorderStyle.None;
             TextBoxConfirmPasswordSignUp.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             TextBoxConfirmPasswordSignUp.ForeColor = Color.Gray;
-            TextBoxConfirmPasswordSignUp.Location = new Point(259, 181);
+            TextBoxConfirmPasswordSignUp.Location = new Point(259, 192);
             TextBoxConfirmPasswordSignUp.Name = "TextBoxConfirmPasswordSignUp";
             TextBoxConfirmPasswordSignUp.Size = new Size(230, 16);
             TextBoxConfirmPasswordSignUp.TabIndex = 22;
@@ -111,10 +113,11 @@
             // LabelName
             // 
             LabelName.AutoSize = true;
+            LabelName.Font = new Font("Segoe UI", 6.75F);
             LabelName.ForeColor = Color.Navy;
-            LabelName.Location = new Point(211, 87);
+            LabelName.Location = new Point(256, 68);
             LabelName.Name = "LabelName";
-            LabelName.Size = new Size(42, 15);
+            LabelName.Size = new Size(31, 12);
             LabelName.TabIndex = 12;
             LabelName.Text = "Email :";
             // 
@@ -122,7 +125,7 @@
             // 
             LinkLabelLogin.AutoSize = true;
             LinkLabelLogin.LinkColor = Color.Gray;
-            LinkLabelLogin.Location = new Point(362, 274);
+            LinkLabelLogin.Location = new Point(362, 295);
             LinkLabelLogin.Name = "LinkLabelLogin";
             LinkLabelLogin.Size = new Size(124, 15);
             LinkLabelLogin.TabIndex = 23;
@@ -136,7 +139,7 @@
             ButtonLogin.FlatStyle = FlatStyle.Flat;
             ButtonLogin.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ButtonLogin.ForeColor = SystemColors.ControlLightLight;
-            ButtonLogin.Location = new Point(256, 230);
+            ButtonLogin.Location = new Point(256, 251);
             ButtonLogin.Name = "ButtonLogin";
             ButtonLogin.Size = new Size(230, 33);
             ButtonLogin.TabIndex = 11;
@@ -149,7 +152,7 @@
             TextBoxPasswordSignUp.BorderStyle = BorderStyle.None;
             TextBoxPasswordSignUp.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             TextBoxPasswordSignUp.ForeColor = Color.Gray;
-            TextBoxPasswordSignUp.Location = new Point(260, 134);
+            TextBoxPasswordSignUp.Location = new Point(260, 145);
             TextBoxPasswordSignUp.Name = "TextBoxPasswordSignUp";
             TextBoxPasswordSignUp.Size = new Size(230, 16);
             TextBoxPasswordSignUp.TabIndex = 16;
@@ -173,7 +176,7 @@
             // 
             LabelPasswordValidation.AutoSize = true;
             LabelPasswordValidation.ForeColor = Color.Red;
-            LabelPasswordValidation.Location = new Point(186, 155);
+            LabelPasswordValidation.Location = new Point(186, 166);
             LabelPasswordValidation.MinimumSize = new Size(300, 0);
             LabelPasswordValidation.Name = "LabelPasswordValidation";
             LabelPasswordValidation.Size = new Size(300, 15);
@@ -184,7 +187,7 @@
             // 
             LabelConfirmPasswordValidation.AutoSize = true;
             LabelConfirmPasswordValidation.ForeColor = Color.Red;
-            LabelConfirmPasswordValidation.Location = new Point(187, 203);
+            LabelConfirmPasswordValidation.Location = new Point(187, 214);
             LabelConfirmPasswordValidation.MinimumSize = new Size(300, 0);
             LabelConfirmPasswordValidation.Name = "LabelConfirmPasswordValidation";
             LabelConfirmPasswordValidation.Size = new Size(300, 15);
@@ -200,14 +203,14 @@
             // 
             // panel2
             // 
-            panel2.Location = new Point(256, 129);
+            panel2.Location = new Point(256, 140);
             panel2.Name = "panel2";
             panel2.Size = new Size(230, 23);
             panel2.TabIndex = 28;
             // 
             // panel3
             // 
-            panel3.Location = new Point(256, 177);
+            panel3.Location = new Point(256, 188);
             panel3.Name = "panel3";
             panel3.Size = new Size(230, 23);
             panel3.TabIndex = 29;
@@ -219,8 +222,6 @@
             BackColor = Color.White;
             ClientSize = new Size(749, 398);
             Controls.Add(LabelConfirmPasswordValidation);
-            Controls.Add(LabelPasswordValidation);
-            Controls.Add(LabelEmailValidation);
             Controls.Add(LogIn);
             Controls.Add(TextBoxPasswordSignUp);
             Controls.Add(ButtonLogin);
@@ -234,6 +235,8 @@
             Controls.Add(panel1);
             Controls.Add(panel2);
             Controls.Add(panel3);
+            Controls.Add(LabelEmailValidation);
+            Controls.Add(LabelPasswordValidation);
             Margin = new Padding(3, 2, 3, 2);
             Name = "SignUpForm";
             Text = "UserSignIn";
