@@ -107,15 +107,15 @@ namespace Project {
         }
 
         private void TextBoxEmailSignUp_TextChanged(object sender, EventArgs e) {
-            TextBoxEmailSignUp.Text = string.Empty;
+            LabelEmailValidation.Text = string.Empty;
         }
 
         private void TextBoxPasswordSignUp_TextChanged(object sender, EventArgs e) {
-            TextBoxPasswordSignUp.Text = string.Empty;
+            LabelPasswordValidation.Text = string.Empty;
         }
 
         private void TextBoxConfirmPasswordSignUp_TextChanged(object sender, EventArgs e) {
-            TextBoxConfirmPasswordSignUp.Text = string.Empty;
+            LabelConfirmPasswordValidation.Text = string.Empty;
         }
     }
 }

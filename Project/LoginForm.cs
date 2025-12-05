@@ -70,9 +70,8 @@ namespace Project
             string password = TextBoxPassword.Text.Trim();
 
             if (usertype == "Student") {
-                if (Validator.Email(email) != string.Empty || Validator.Password(password) != string.Empty) {
+                if (Validator.Email(email) != string.Empty) {
                     LabelEmailValidator.Text = Validator.Email(email);
-                    LabelPasswordValidator.Text = Validator.Password(password);
                     return;
                 }
                 StudentUserRepository repository = new StudentUserRepository();
@@ -80,9 +79,10 @@ namespace Project
                     MessageBox.Show("Account doesn't exist", "Please try again!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+
                 StudentUser user = repository.GetUserByEmailAndPassword(email, password);
                 if (user == null) {
-                    MessageBox.Show("Incorrect Password", "Please try again!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    LabelPasswordValidator.Text = "Incorrect Password";
                     return;
                 }
 
