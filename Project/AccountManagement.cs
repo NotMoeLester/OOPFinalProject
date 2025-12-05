@@ -47,12 +47,12 @@ namespace Project
 
         private void ButtonViewRecords_Click(object sender, EventArgs e)
         {
-            UserEnrollmentRecord registerForm = new UserEnrollmentRecord();
+            //UserEnrollmentRecord Form = new UserEnrollmentRecord();
 
-            registerForm.FormClosed += (s, args) => this.Close();
+            //registerForm.FormClosed += (s, args) => this.Close();
 
-            this.Hide();
-            registerForm.Show();
+            //this.Hide();
+            //registerForm.Show();
         }
 
         private void AccountManagement_Load(object sender, EventArgs e)
