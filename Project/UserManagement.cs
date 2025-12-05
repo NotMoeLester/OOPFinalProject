@@ -36,6 +36,7 @@ namespace Project
             user.FullName = selectedRow.Cells["FullName"].Value?.ToString() ?? "";
             user.Email = selectedRow.Cells["Email"].Value?.ToString() ?? "";
             user.Password = selectedRow.Cells["Password"].Value?.ToString() ?? "";
+            user.Verification = Convert.ToBoolean(selectedRow.Cells["Verification"].Value);
 
             repository.UpdateStudent(user);
             MessageBox.Show("User updated successfully!");
