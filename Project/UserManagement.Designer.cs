@@ -73,6 +73,7 @@
             ButtonCreate.TabIndex = 2;
             ButtonCreate.Text = "Create";
             ButtonCreate.UseVisualStyleBackColor = false;
+            ButtonCreate.Click += ButtonCreate_Click;
             // 
             // ButtonUpdate
             // 
