@@ -70,7 +70,9 @@ namespace Project
             string password = TextBoxPassword.Text.Trim();
 
             if (usertype == "Student") {
-                if (!Validator.Email(email) || !Validator.Password(password)) {
+                if (Validator.Email(email) != string.Empty || Validator.Password(password) != string.Empty) {
+                    LabelEmailValidator.Text = Validator.Email(email);
+                    LabelPasswordValidator.Text = Validator.Password(password);
                     return;
                 }
                 StudentUserRepository repository = new StudentUserRepository();
@@ -109,24 +111,13 @@ namespace Project
             }
         }
 
+        private void TextBoxPassword_TextChanged(object sender, EventArgs e) {
+            LabelPasswordValidator.Text = string.Empty;
+
+        }
+
         private void TextBoxEmail_TextChanged(object sender, EventArgs e) {
-
-        }
-
-        private void ComboBoxUser_SelectedIndexChanged(object sender, EventArgs e) {
-
-        }
-
-        private void LabelName_Click(object sender, EventArgs e) {
-
-        }
-
-        private void LabelPassword_Click(object sender, EventArgs e) {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e) {
-
+            LabelEmailValidator.Text = string.Empty;
         }
     }
 }
