@@ -8,16 +8,16 @@ namespace Project
         StudentUserRepository repository = new StudentUserRepository();
         public LoginForm() {
             InitializeComponent();
-                this.Size = new Size(816, 489);
-                this.StartPosition = FormStartPosition.CenterScreen;
-            }
+            this.Size = new Size(816, 489);
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
 
 
         private void LoginForm_Load(object sender, EventArgs e) {
             ComboBoxUser.SelectedIndex = 0;
 
         }
-        
+
 
 
         //TEXT BOX UI=============================================================================
@@ -114,6 +114,18 @@ namespace Project
         }
 
         private void ComboBoxUser_SelectedIndexChanged(object sender, EventArgs e) {
+
+        }
+
+        private void LabelName_Click(object sender, EventArgs e) {
+
+        }
+
+        private void LabelPassword_Click(object sender, EventArgs e) {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e) {
 
         }
     }

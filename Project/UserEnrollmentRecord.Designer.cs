@@ -42,14 +42,17 @@
             LabelEmailUER = new Label();
             dataGridView1 = new DataGridView();
             ButtonViewSubjectInformation = new Button();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label8
             // 
             label8.AutoSize = true;
+            label8.BackColor = Color.Navy;
             label8.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(587, 79);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(647, 85);
             label8.Name = "label8";
             label8.Size = new Size(169, 41);
             label8.TabIndex = 49;
@@ -58,9 +61,10 @@
             // ButtonView
             // 
             ButtonView.BackColor = Color.Navy;
+            ButtonView.FlatStyle = FlatStyle.Flat;
             ButtonView.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             ButtonView.ForeColor = Color.White;
-            ButtonView.Location = new Point(587, 373);
+            ButtonView.Location = new Point(647, 386);
             ButtonView.Margin = new Padding(3, 4, 3, 4);
             ButtonView.Name = "ButtonView";
             ButtonView.Size = new Size(251, 44);
@@ -72,7 +76,9 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(669, 249);
+            label6.BackColor = Color.Navy;
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(729, 255);
             label6.Name = "label6";
             label6.Size = new Size(75, 20);
             label6.TabIndex = 45;
@@ -81,7 +87,9 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(587, 249);
+            label7.BackColor = Color.Navy;
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(647, 255);
             label7.Name = "label7";
             label7.Size = new Size(82, 20);
             label7.TabIndex = 44;
@@ -90,7 +98,9 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(650, 215);
+            label5.BackColor = Color.Navy;
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(710, 221);
             label5.Name = "label5";
             label5.Size = new Size(98, 20);
             label5.TabIndex = 43;
@@ -99,7 +109,9 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(587, 215);
+            label4.BackColor = Color.Navy;
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(647, 221);
             label4.Name = "label4";
             label4.Size = new Size(61, 20);
             label4.TabIndex = 42;
@@ -108,18 +120,22 @@
             // checkBox3
             // 
             checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(712, 281);
+            checkBox3.BackColor = Color.Navy;
+            checkBox3.ForeColor = Color.White;
+            checkBox3.Location = new Point(772, 287);
             checkBox3.Margin = new Padding(3, 4, 3, 4);
             checkBox3.Name = "checkBox3";
             checkBox3.Size = new Size(93, 24);
             checkBox3.TabIndex = 41;
             checkBox3.Text = "Fully Paid";
-            checkBox3.UseVisualStyleBackColor = true;
+            checkBox3.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(587, 281);
+            label3.BackColor = Color.Navy;
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(647, 287);
             label3.Name = "label3";
             label3.Size = new Size(123, 20);
             label3.TabIndex = 40;
@@ -128,7 +144,9 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(45, 141);
+            label2.BackColor = Color.Navy;
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(105, 147);
             label2.Name = "label2";
             label2.Size = new Size(138, 20);
             label2.TabIndex = 39;
@@ -137,29 +155,35 @@
             // checkBox2
             // 
             checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(734, 177);
+            checkBox2.BackColor = Color.Navy;
+            checkBox2.ForeColor = Color.White;
+            checkBox2.Location = new Point(794, 183);
             checkBox2.Margin = new Padding(3, 4, 3, 4);
             checkBox2.Name = "checkBox2";
             checkBox2.Size = new Size(115, 24);
             checkBox2.TabIndex = 38;
             checkBox2.Text = "Not Enrolled";
-            checkBox2.UseVisualStyleBackColor = true;
+            checkBox2.UseVisualStyleBackColor = false;
             // 
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(647, 177);
+            checkBox1.BackColor = Color.Navy;
+            checkBox1.ForeColor = Color.White;
+            checkBox1.Location = new Point(707, 183);
             checkBox1.Margin = new Padding(3, 4, 3, 4);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(86, 24);
             checkBox1.TabIndex = 37;
             checkBox1.Text = "Enrolled";
-            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.UseVisualStyleBackColor = false;
             // 
             // LabelName
             // 
             LabelName.AutoSize = true;
-            LabelName.Location = new Point(587, 177);
+            LabelName.BackColor = Color.Navy;
+            LabelName.ForeColor = Color.White;
+            LabelName.Location = new Point(647, 183);
             LabelName.Name = "LabelName";
             LabelName.Size = new Size(56, 20);
             LabelName.TabIndex = 36;
@@ -168,8 +192,10 @@
             // LabelEmailUER
             // 
             LabelEmailUER.AutoSize = true;
+            LabelEmailUER.BackColor = Color.Navy;
             LabelEmailUER.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LabelEmailUER.Location = new Point(45, 79);
+            LabelEmailUER.ForeColor = Color.White;
+            LabelEmailUER.Location = new Point(105, 85);
             LabelEmailUER.Name = "LabelEmailUER";
             LabelEmailUER.Size = new Size(95, 41);
             LabelEmailUER.TabIndex = 35;
@@ -178,7 +204,7 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(45, 177);
+            dataGridView1.Location = new Point(105, 183);
             dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
@@ -188,9 +214,10 @@
             // ButtonViewSubjectInformation
             // 
             ButtonViewSubjectInformation.BackColor = Color.Navy;
+            ButtonViewSubjectInformation.FlatStyle = FlatStyle.Flat;
             ButtonViewSubjectInformation.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             ButtonViewSubjectInformation.ForeColor = Color.White;
-            ButtonViewSubjectInformation.Location = new Point(587, 324);
+            ButtonViewSubjectInformation.Location = new Point(647, 330);
             ButtonViewSubjectInformation.Margin = new Padding(3, 4, 3, 4);
             ButtonViewSubjectInformation.Name = "ButtonViewSubjectInformation";
             ButtonViewSubjectInformation.Size = new Size(251, 44);
@@ -198,6 +225,13 @@
             ButtonViewSubjectInformation.Text = "View Subject Information";
             ButtonViewSubjectInformation.UseVisualStyleBackColor = false;
             ButtonViewSubjectInformation.Click += ButtonViewSubjectInformation_Click_1;
+            // 
+            // panel1
+            // 
+            panel1.Location = new Point(-7, 1);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1550, 690);
+            panel1.TabIndex = 51;
             // 
             // UserEnrollmentRecord
             // 
@@ -219,6 +253,7 @@
             Controls.Add(LabelName);
             Controls.Add(LabelEmailUER);
             Controls.Add(dataGridView1);
+            Controls.Add(panel1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "UserEnrollmentRecord";
             Text = "UserEnrollmentRecord";
@@ -245,5 +280,6 @@
         private Label LabelEmailUER;
         private DataGridView dataGridView1;
         private Button ButtonViewSubjectInformation;
+        private Panel panel1;
     }
 }
