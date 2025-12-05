@@ -104,7 +104,7 @@ namespace Project
                 //    return;
                 //}
 
-                UserManagement mainForm = new UserManagement();
+                ApplicationForm mainForm = new ApplicationForm();
                 mainForm.FormClosed += (s, args) => this.Close();
                 this.Hide();
                 mainForm.Show();
