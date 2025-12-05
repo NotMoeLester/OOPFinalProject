@@ -39,12 +39,14 @@
             panel1 = new Panel();
             panel2 = new Panel();
             panel3 = new Panel();
+            panel1.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // LogIn
             // 
             LogIn.AutoSize = true;
-            LogIn.Location = new Point(334, 179);
+            LogIn.Location = new Point(334, 198);
             LogIn.Name = "LogIn";
             LogIn.Size = new Size(0, 15);
             LogIn.TabIndex = 17;
@@ -54,11 +56,11 @@
             TextBoxEmailSignUp.BorderStyle = BorderStyle.None;
             TextBoxEmailSignUp.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             TextBoxEmailSignUp.ForeColor = Color.Gray;
-            TextBoxEmailSignUp.Location = new Point(260, 87);
+            TextBoxEmailSignUp.Location = new Point(3, 3);
             TextBoxEmailSignUp.Name = "TextBoxEmailSignUp";
-            TextBoxEmailSignUp.Size = new Size(230, 16);
+            TextBoxEmailSignUp.Size = new Size(224, 16);
             TextBoxEmailSignUp.TabIndex = 15;
-            TextBoxEmailSignUp.Text = "Enter Email";
+            TextBoxEmailSignUp.Text = " Enter Email";
             TextBoxEmailSignUp.TextChanged += TextBoxEmailSignUp_TextChanged;
             TextBoxEmailSignUp.Enter += TextBoxEmailSignUp_Enter;
             TextBoxEmailSignUp.Leave += TextBoxEmailSignUp_Leave;
@@ -79,7 +81,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 6.75F);
             label2.ForeColor = Color.Navy;
-            label2.Location = new Point(256, 173);
+            label2.Location = new Point(256, 193);
             label2.Name = "label2";
             label2.Size = new Size(41, 12);
             label2.TabIndex = 21;
@@ -90,7 +92,7 @@
             LabelPassword.AutoSize = true;
             LabelPassword.Font = new Font("Segoe UI", 6.75F);
             LabelPassword.ForeColor = Color.Navy;
-            LabelPassword.Location = new Point(256, 125);
+            LabelPassword.Location = new Point(256, 130);
             LabelPassword.Name = "LabelPassword";
             LabelPassword.Size = new Size(47, 12);
             LabelPassword.TabIndex = 13;
@@ -101,11 +103,11 @@
             TextBoxConfirmPasswordSignUp.BorderStyle = BorderStyle.None;
             TextBoxConfirmPasswordSignUp.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             TextBoxConfirmPasswordSignUp.ForeColor = Color.Gray;
-            TextBoxConfirmPasswordSignUp.Location = new Point(259, 192);
+            TextBoxConfirmPasswordSignUp.Location = new Point(3, 4);
             TextBoxConfirmPasswordSignUp.Name = "TextBoxConfirmPasswordSignUp";
-            TextBoxConfirmPasswordSignUp.Size = new Size(230, 16);
+            TextBoxConfirmPasswordSignUp.Size = new Size(224, 16);
             TextBoxConfirmPasswordSignUp.TabIndex = 22;
-            TextBoxConfirmPasswordSignUp.Text = "Enter Password";
+            TextBoxConfirmPasswordSignUp.Text = " Confirm Password";
             TextBoxConfirmPasswordSignUp.TextChanged += TextBoxConfirmPasswordSignUp_TextChanged;
             TextBoxConfirmPasswordSignUp.Enter += TextBoxConfirmPasswordSignUp_Enter;
             TextBoxConfirmPasswordSignUp.Leave += TextBoxConfirmPasswordSignUp_Leave;
@@ -125,7 +127,7 @@
             // 
             LinkLabelLogin.AutoSize = true;
             LinkLabelLogin.LinkColor = Color.Gray;
-            LinkLabelLogin.Location = new Point(362, 295);
+            LinkLabelLogin.Location = new Point(362, 305);
             LinkLabelLogin.Name = "LinkLabelLogin";
             LinkLabelLogin.Size = new Size(124, 15);
             LinkLabelLogin.TabIndex = 23;
@@ -139,7 +141,7 @@
             ButtonLogin.FlatStyle = FlatStyle.Flat;
             ButtonLogin.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ButtonLogin.ForeColor = SystemColors.ControlLightLight;
-            ButtonLogin.Location = new Point(256, 251);
+            ButtonLogin.Location = new Point(256, 263);
             ButtonLogin.Name = "ButtonLogin";
             ButtonLogin.Size = new Size(230, 33);
             ButtonLogin.TabIndex = 11;
@@ -152,11 +154,11 @@
             TextBoxPasswordSignUp.BorderStyle = BorderStyle.None;
             TextBoxPasswordSignUp.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             TextBoxPasswordSignUp.ForeColor = Color.Gray;
-            TextBoxPasswordSignUp.Location = new Point(260, 145);
+            TextBoxPasswordSignUp.Location = new Point(259, 149);
             TextBoxPasswordSignUp.Name = "TextBoxPasswordSignUp";
-            TextBoxPasswordSignUp.Size = new Size(230, 16);
+            TextBoxPasswordSignUp.Size = new Size(224, 16);
             TextBoxPasswordSignUp.TabIndex = 16;
-            TextBoxPasswordSignUp.Text = "Enter Password";
+            TextBoxPasswordSignUp.Text = " Enter Password";
             TextBoxPasswordSignUp.TextChanged += TextBoxPasswordSignUp_TextChanged;
             TextBoxPasswordSignUp.Enter += TextBoxPasswordSignUp_Enter;
             TextBoxPasswordSignUp.Leave += TextBoxPasswordSignUp_Leave;
@@ -176,7 +178,7 @@
             // 
             LabelPasswordValidation.AutoSize = true;
             LabelPasswordValidation.ForeColor = Color.Red;
-            LabelPasswordValidation.Location = new Point(186, 166);
+            LabelPasswordValidation.Location = new Point(186, 171);
             LabelPasswordValidation.MinimumSize = new Size(300, 0);
             LabelPasswordValidation.Name = "LabelPasswordValidation";
             LabelPasswordValidation.Size = new Size(300, 15);
@@ -187,7 +189,7 @@
             // 
             LabelConfirmPasswordValidation.AutoSize = true;
             LabelConfirmPasswordValidation.ForeColor = Color.Red;
-            LabelConfirmPasswordValidation.Location = new Point(187, 214);
+            LabelConfirmPasswordValidation.Location = new Point(187, 233);
             LabelConfirmPasswordValidation.MinimumSize = new Size(300, 0);
             LabelConfirmPasswordValidation.Name = "LabelConfirmPasswordValidation";
             LabelConfirmPasswordValidation.Size = new Size(300, 15);
@@ -196,6 +198,8 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.Gray;
+            panel1.Controls.Add(TextBoxEmailSignUp);
             panel1.Location = new Point(256, 83);
             panel1.Name = "panel1";
             panel1.Size = new Size(230, 23);
@@ -203,14 +207,17 @@
             // 
             // panel2
             // 
-            panel2.Location = new Point(256, 140);
+            panel2.BackColor = Color.Gray;
+            panel2.Location = new Point(256, 145);
             panel2.Name = "panel2";
             panel2.Size = new Size(230, 23);
             panel2.TabIndex = 28;
             // 
             // panel3
             // 
-            panel3.Location = new Point(256, 188);
+            panel3.BackColor = Color.Gray;
+            panel3.Controls.Add(TextBoxConfirmPasswordSignUp);
+            panel3.Location = new Point(256, 207);
             panel3.Name = "panel3";
             panel3.Size = new Size(230, 23);
             panel3.TabIndex = 29;
@@ -225,21 +232,24 @@
             Controls.Add(LogIn);
             Controls.Add(TextBoxPasswordSignUp);
             Controls.Add(ButtonLogin);
-            Controls.Add(TextBoxEmailSignUp);
             Controls.Add(LinkLabelLogin);
             Controls.Add(label1);
             Controls.Add(LabelName);
             Controls.Add(label2);
-            Controls.Add(TextBoxConfirmPasswordSignUp);
             Controls.Add(LabelPassword);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Controls.Add(panel3);
             Controls.Add(LabelEmailValidation);
             Controls.Add(LabelPasswordValidation);
+            FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Margin = new Padding(3, 2, 3, 2);
             Name = "SignUpForm";
             Text = "UserSignIn";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
