@@ -16,21 +16,34 @@ namespace Project {
             _connection = new SQLiteConnection(databasePath);
             _connection.CreateTable<StudentUser>();
         }
+
+        //CREATE
         public bool Add(StudentUser user) {
             _connection.Insert(user);
             return true;
         }
 
+        //READ
         public List<StudentUser> GetAll() {
             return _connection.Table<StudentUser>().ToList();
         }
-
         public StudentUser Get(int id) {
             return _connection.Find<StudentUser>(id);
         }
 
-        public StudentUser GetUserByEmailAndPassword(string email, string password) {
+        //UPDATE
+        public bool UpdateStudent(StudentUser user) {
+            _connection.Update(user);
+            return true;
+        }
 
+        //DELETE
+        public bool DeleteStudent(StudentUser user) {
+            _connection.Delete(user);
+            return true;
+        }
+
+        public StudentUser GetUserByEmailAndPassword(string email, string password) {
             return _connection.Table<StudentUser>().FirstOrDefault(u => u.Email == email && u.Password == password);
         }
 

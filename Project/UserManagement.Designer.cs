@@ -29,7 +29,7 @@
         private void InitializeComponent() {
             DataGridViewUserList = new DataGridView();
             ButtonView = new Button();
-            ButtonEdit = new Button();
+            ButtonCreate = new Button();
             ButtonUpdate = new Button();
             ButtonDelete = new Button();
             label1 = new Label();
@@ -38,6 +38,8 @@
             // 
             // DataGridViewUserList
             // 
+            DataGridViewUserList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DataGridViewUserList.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
             DataGridViewUserList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DataGridViewUserList.Location = new Point(115, 75);
             DataGridViewUserList.Margin = new Padding(3, 4, 3, 4);
@@ -45,12 +47,13 @@
             DataGridViewUserList.RowHeadersWidth = 51;
             DataGridViewUserList.Size = new Size(667, 395);
             DataGridViewUserList.TabIndex = 0;
+            DataGridViewUserList.CellClick += DataGridViewUserList_CellClick_1;
             // 
             // ButtonView
             // 
             ButtonView.BackColor = Color.SteelBlue;
             ButtonView.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ButtonView.Location = new Point(115, 516);
+            ButtonView.Location = new Point(286, 516);
             ButtonView.Margin = new Padding(3, 4, 3, 4);
             ButtonView.Name = "ButtonView";
             ButtonView.Size = new Size(162, 59);
@@ -59,17 +62,17 @@
             ButtonView.UseVisualStyleBackColor = false;
             ButtonView.Click += ButtonView_Click;
             // 
-            // ButtonEdit
+            // ButtonCreate
             // 
-            ButtonEdit.BackColor = Color.SteelBlue;
-            ButtonEdit.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ButtonEdit.Location = new Point(285, 516);
-            ButtonEdit.Margin = new Padding(3, 4, 3, 4);
-            ButtonEdit.Name = "ButtonEdit";
-            ButtonEdit.Size = new Size(162, 59);
-            ButtonEdit.TabIndex = 2;
-            ButtonEdit.Text = "Edit";
-            ButtonEdit.UseVisualStyleBackColor = false;
+            ButtonCreate.BackColor = Color.SteelBlue;
+            ButtonCreate.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ButtonCreate.Location = new Point(115, 516);
+            ButtonCreate.Margin = new Padding(3, 4, 3, 4);
+            ButtonCreate.Name = "ButtonCreate";
+            ButtonCreate.Size = new Size(162, 59);
+            ButtonCreate.TabIndex = 2;
+            ButtonCreate.Text = "Create";
+            ButtonCreate.UseVisualStyleBackColor = false;
             // 
             // ButtonUpdate
             // 
@@ -83,6 +86,7 @@
             ButtonUpdate.TabIndex = 3;
             ButtonUpdate.Text = "Update";
             ButtonUpdate.UseVisualStyleBackColor = false;
+            ButtonUpdate.Click += ButtonUpdate_Click;
             // 
             // ButtonDelete
             // 
@@ -96,6 +100,7 @@
             ButtonDelete.TabIndex = 4;
             ButtonDelete.Text = "Delete";
             ButtonDelete.UseVisualStyleBackColor = false;
+            ButtonDelete.Click += ButtonDelete_Click;
             // 
             // label1
             // 
@@ -112,18 +117,18 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.Navy;
             ClientSize = new Size(914, 600);
             Controls.Add(label1);
             Controls.Add(ButtonDelete);
             Controls.Add(ButtonUpdate);
-            Controls.Add(ButtonEdit);
+            Controls.Add(ButtonCreate);
             Controls.Add(ButtonView);
             Controls.Add(DataGridViewUserList);
             Margin = new Padding(3, 4, 3, 4);
             Name = "UserManagement";
             Text = "UserManagement";
-            Load += UserManagement_Load;
             ((System.ComponentModel.ISupportInitialize)DataGridViewUserList).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -133,7 +138,7 @@
 
         private DataGridView DataGridViewUserList;
         private Button ButtonView;
-        private Button ButtonEdit;
+        private Button ButtonCreate;
         private Button ButtonUpdate;
         private Button ButtonDelete;
         private Label label1;
