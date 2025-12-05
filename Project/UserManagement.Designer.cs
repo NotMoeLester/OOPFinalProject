@@ -27,25 +27,24 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            dataGridViewUserList = new DataGridView();
+            DataGridViewUserList = new DataGridView();
             ButtonView = new Button();
             ButtonEdit = new Button();
             ButtonUpdate = new Button();
             ButtonDelete = new Button();
             label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewUserList).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DataGridViewUserList).BeginInit();
             SuspendLayout();
             // 
-            // dataGridViewUserList
+            // DataGridViewUserList
             // 
-            dataGridViewUserList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewUserList.Location = new Point(115, 75);
-            dataGridViewUserList.Margin = new Padding(3, 4, 3, 4);
-            dataGridViewUserList.Name = "dataGridViewUserList";
-            dataGridViewUserList.RowHeadersWidth = 51;
-            dataGridViewUserList.Size = new Size(667, 395);
-            dataGridViewUserList.TabIndex = 0;
-            dataGridViewUserList.CellContentClick += dataGridViewUserList_CellContentClick;
+            DataGridViewUserList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DataGridViewUserList.Location = new Point(115, 75);
+            DataGridViewUserList.Margin = new Padding(3, 4, 3, 4);
+            DataGridViewUserList.Name = "DataGridViewUserList";
+            DataGridViewUserList.RowHeadersWidth = 51;
+            DataGridViewUserList.Size = new Size(667, 395);
+            DataGridViewUserList.TabIndex = 0;
             // 
             // ButtonView
             // 
@@ -58,6 +57,7 @@
             ButtonView.TabIndex = 1;
             ButtonView.Text = "View";
             ButtonView.UseVisualStyleBackColor = false;
+            ButtonView.Click += ButtonView_Click;
             // 
             // ButtonEdit
             // 
@@ -83,7 +83,6 @@
             ButtonUpdate.TabIndex = 3;
             ButtonUpdate.Text = "Update";
             ButtonUpdate.UseVisualStyleBackColor = false;
-            ButtonUpdate.Click += button3_Click;
             // 
             // ButtonDelete
             // 
@@ -120,19 +119,19 @@
             Controls.Add(ButtonUpdate);
             Controls.Add(ButtonEdit);
             Controls.Add(ButtonView);
-            Controls.Add(dataGridViewUserList);
+            Controls.Add(DataGridViewUserList);
             Margin = new Padding(3, 4, 3, 4);
             Name = "UserManagement";
             Text = "UserManagement";
             Load += UserManagement_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridViewUserList).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DataGridViewUserList).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridViewUserList;
+        private DataGridView DataGridViewUserList;
         private Button ButtonView;
         private Button ButtonEdit;
         private Button ButtonUpdate;

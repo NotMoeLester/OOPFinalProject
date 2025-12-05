@@ -93,18 +93,18 @@ namespace Project
                 mainForm.Show();
 
             } else if (usertype == "Administrator") {
-                AdministratorRepository repository = new AdministratorRepository();
-                if (!repository.IsUser(email)) {
-                    MessageBox.Show("Account doesn't exist", "Please try again!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                AdministratorUser user = repository.GetUserByEmailAndPassword(email, password);
-                if (user == null) {
-                    MessageBox.Show("Incorrect Password", "Please try again!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                //AdministratorRepository repository = new AdministratorRepository();
+                //if (!repository.IsUser(email)) {
+                //    MessageBox.Show("Account doesn't exist", "Please try again!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    return;
+                //}
+                //AdministratorUser user = repository.GetUserByEmailAndPassword(email, password);
+                //if (user == null) {
+                //    MessageBox.Show("Incorrect Password", "Please try again!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    return;
+                //}
 
-                AccountManagement mainForm = new AccountManagement();
+                UserManagement mainForm = new UserManagement();
                 mainForm.FormClosed += (s, args) => this.Close();
                 this.Hide();
                 mainForm.Show();
