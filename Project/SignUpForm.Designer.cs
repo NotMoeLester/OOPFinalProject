@@ -22,8 +22,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             LogIn = new Label();
             TextBoxEmailSignUp = new TextBox();
             label1 = new Label();
@@ -34,6 +33,9 @@
             LinkLabelLogin = new LinkLabel();
             ButtonLogin = new Button();
             TextBoxPasswordSignUp = new TextBox();
+            LabelEmailValidation = new Label();
+            LabelPasswordValidation = new Label();
+            LabelConfirmPasswordValidation = new Label();
             SuspendLayout();
             // 
             // LogIn
@@ -53,7 +55,6 @@
             TextBoxEmailSignUp.Size = new Size(230, 23);
             TextBoxEmailSignUp.TabIndex = 15;
             TextBoxEmailSignUp.Text = "Enter Email";
-            TextBoxEmailSignUp.TextChanged += TextBoxEmailSignUp_TextChanged;
             TextBoxEmailSignUp.Enter += TextBoxEmailSignUp_Enter;
             TextBoxEmailSignUp.Leave += TextBoxEmailSignUp_Leave;
             // 
@@ -144,12 +145,42 @@
             TextBoxPasswordSignUp.Enter += TextBoxPasswordSignUp_Enter;
             TextBoxPasswordSignUp.Leave += TextBoxPasswordSignUp_Leave;
             // 
+            // LabelEmailValidation
+            // 
+            LabelEmailValidation.AutoSize = true;
+            LabelEmailValidation.Location = new Point(537, 155);
+            LabelEmailValidation.Name = "LabelEmailValidation";
+            LabelEmailValidation.Size = new Size(38, 15);
+            LabelEmailValidation.TabIndex = 24;
+            LabelEmailValidation.Text = "label3";
+            // 
+            // LabelPasswordValidation
+            // 
+            LabelPasswordValidation.AutoSize = true;
+            LabelPasswordValidation.Location = new Point(537, 187);
+            LabelPasswordValidation.Name = "LabelPasswordValidation";
+            LabelPasswordValidation.Size = new Size(38, 15);
+            LabelPasswordValidation.TabIndex = 25;
+            LabelPasswordValidation.Text = "label4";
+            // 
+            // LabelConfirmPasswordValidation
+            // 
+            LabelConfirmPasswordValidation.AutoSize = true;
+            LabelConfirmPasswordValidation.Location = new Point(537, 224);
+            LabelConfirmPasswordValidation.Name = "LabelConfirmPasswordValidation";
+            LabelConfirmPasswordValidation.Size = new Size(38, 15);
+            LabelConfirmPasswordValidation.TabIndex = 26;
+            LabelConfirmPasswordValidation.Text = "label5";
+            // 
             // SignUpForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(749, 398);
+            Controls.Add(LabelConfirmPasswordValidation);
+            Controls.Add(LabelPasswordValidation);
+            Controls.Add(LabelEmailValidation);
             Controls.Add(LogIn);
             Controls.Add(TextBoxPasswordSignUp);
             Controls.Add(ButtonLogin);
@@ -163,7 +194,6 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "SignUpForm";
             Text = "UserSignIn";
-            Load += SignUpForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -179,5 +209,8 @@
         private LinkLabel LinkLabelLogin;
         private Button ButtonLogin;
         private TextBox TextBoxPasswordSignUp;
+        private Label LabelEmailValidation;
+        private Label LabelPasswordValidation;
+        private Label LabelConfirmPasswordValidation;
     }
 }

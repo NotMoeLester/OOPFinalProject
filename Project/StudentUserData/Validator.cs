@@ -21,7 +21,7 @@ namespace Project {
         }
 
         public static string Email(string email) {
-            if (string.IsNullOrEmpty(email) || email == "Enter Email") {
+            if (string.IsNullOrEmpty(email) || email == "Enter Email" || email == "Confirm Email") {
                 return "Email Field Empty";
             }
             if (!(email.Contains('@') && email.Split('@')[1].Contains('.') && email.All(c => char.IsLetterOrDigit(c) || c == '@' || c == '.' || c == '-' || c == '_'))) {
