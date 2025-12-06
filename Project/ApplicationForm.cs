@@ -12,6 +12,7 @@ namespace Project {
     public partial class ApplicationForm : Form {
         public ApplicationForm() {
             InitializeComponent();
+            comboBoxContactNumber.SelectedItem = "+63";
         }
 
         private void label2_Click(object sender, EventArgs e) {

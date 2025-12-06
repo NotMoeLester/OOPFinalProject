@@ -58,47 +58,62 @@
             label17 = new Label();
             label18 = new Label();
             comboBoxContactNumber = new ComboBox();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            panel3 = new Panel();
+            panel4 = new Panel();
+            panel5 = new Panel();
+            panel6 = new Panel();
+            panel7 = new Panel();
+            panel8 = new Panel();
+            panel9 = new Panel();
             ((System.ComponentModel.ISupportInitialize)numericUpDownYear).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // textBoxFirstName
             // 
             textBoxFirstName.BackColor = Color.FromArgb(128, 255, 255);
-            textBoxFirstName.Location = new Point(208, 81);
+            textBoxFirstName.BorderStyle = BorderStyle.None;
+            textBoxFirstName.Location = new Point(208, 84);
             textBoxFirstName.Name = "textBoxFirstName";
-            textBoxFirstName.Size = new Size(202, 23);
+            textBoxFirstName.Size = new Size(202, 16);
             textBoxFirstName.TabIndex = 0;
             // 
             // textBoxLastName
             // 
             textBoxLastName.BackColor = Color.FromArgb(128, 255, 255);
-            textBoxLastName.Location = new Point(73, 81);
+            textBoxLastName.BorderStyle = BorderStyle.None;
+            textBoxLastName.Location = new Point(73, 84);
             textBoxLastName.Name = "textBoxLastName";
-            textBoxLastName.Size = new Size(128, 23);
+            textBoxLastName.Size = new Size(128, 16);
             textBoxLastName.TabIndex = 1;
             // 
             // textBoxMI
             // 
             textBoxMI.BackColor = Color.FromArgb(128, 255, 255);
-            textBoxMI.Location = new Point(417, 81);
+            textBoxMI.BorderStyle = BorderStyle.None;
+            textBoxMI.Location = new Point(417, 84);
             textBoxMI.Name = "textBoxMI";
-            textBoxMI.Size = new Size(43, 23);
+            textBoxMI.Size = new Size(43, 16);
             textBoxMI.TabIndex = 2;
             // 
             // textBoxHomeAdress
             // 
             textBoxHomeAdress.BackColor = Color.FromArgb(128, 255, 255);
-            textBoxHomeAdress.Location = new Point(73, 215);
+            textBoxHomeAdress.BorderStyle = BorderStyle.None;
+            textBoxHomeAdress.Location = new Point(73, 218);
             textBoxHomeAdress.Name = "textBoxHomeAdress";
-            textBoxHomeAdress.Size = new Size(593, 23);
+            textBoxHomeAdress.Size = new Size(593, 16);
             textBoxHomeAdress.TabIndex = 4;
             // 
             // textBoxAge
             // 
             textBoxAge.BackColor = Color.FromArgb(128, 255, 255);
-            textBoxAge.Location = new Point(290, 157);
+            textBoxAge.BorderStyle = BorderStyle.None;
+            textBoxAge.Location = new Point(290, 162);
             textBoxAge.Name = "textBoxAge";
-            textBoxAge.Size = new Size(44, 23);
+            textBoxAge.Size = new Size(44, 16);
             textBoxAge.TabIndex = 5;
             // 
             // checkBox1
@@ -129,9 +144,10 @@
             // textBoxContactInformation
             // 
             textBoxContactInformation.BackColor = Color.FromArgb(128, 255, 255);
-            textBoxContactInformation.Location = new Point(528, 157);
+            textBoxContactInformation.BorderStyle = BorderStyle.None;
+            textBoxContactInformation.Location = new Point(528, 162);
             textBoxContactInformation.Name = "textBoxContactInformation";
-            textBoxContactInformation.Size = new Size(138, 23);
+            textBoxContactInformation.Size = new Size(138, 16);
             textBoxContactInformation.TabIndex = 9;
             // 
             // dateTimePickerBirthday
@@ -158,17 +174,19 @@
             // textBoxPrefix
             // 
             textBoxPrefix.BackColor = Color.FromArgb(128, 255, 255);
-            textBoxPrefix.Location = new Point(466, 81);
+            textBoxPrefix.BorderStyle = BorderStyle.None;
+            textBoxPrefix.Location = new Point(466, 84);
             textBoxPrefix.Name = "textBoxPrefix";
-            textBoxPrefix.Size = new Size(75, 23);
+            textBoxPrefix.Size = new Size(75, 16);
             textBoxPrefix.TabIndex = 12;
             // 
             // textBoxPreviousSchool
             // 
             textBoxPreviousSchool.BackColor = Color.FromArgb(128, 255, 255);
-            textBoxPreviousSchool.Location = new Point(426, 346);
+            textBoxPreviousSchool.BorderStyle = BorderStyle.None;
+            textBoxPreviousSchool.Location = new Point(426, 349);
             textBoxPreviousSchool.Name = "textBoxPreviousSchool";
-            textBoxPreviousSchool.Size = new Size(240, 23);
+            textBoxPreviousSchool.Size = new Size(240, 16);
             textBoxPreviousSchool.TabIndex = 13;
             // 
             // label2
@@ -439,6 +457,78 @@
             comboBoxContactNumber.TabIndex = 37;
             comboBoxContactNumber.SelectedIndexChanged += comboBoxContactNumber_SelectedIndexChanged;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(128, 255, 255);
+            panel1.Location = new Point(72, 79);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(130, 25);
+            panel1.TabIndex = 38;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(128, 255, 255);
+            panel2.Controls.Add(panel3);
+            panel2.Location = new Point(208, 79);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(203, 25);
+            panel2.TabIndex = 39;
+            // 
+            // panel3
+            // 
+            panel3.Location = new Point(208, 0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(45, 24);
+            panel3.TabIndex = 39;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.FromArgb(128, 255, 255);
+            panel4.Location = new Point(416, 79);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(45, 25);
+            panel4.TabIndex = 40;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.FromArgb(128, 255, 255);
+            panel5.Location = new Point(466, 79);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(84, 25);
+            panel5.TabIndex = 39;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.FromArgb(128, 255, 255);
+            panel6.Location = new Point(290, 157);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(44, 25);
+            panel6.TabIndex = 41;
+            // 
+            // panel7
+            // 
+            panel7.BackColor = Color.FromArgb(128, 255, 255);
+            panel7.Location = new Point(528, 157);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(138, 25);
+            panel7.TabIndex = 39;
+            // 
+            // panel8
+            // 
+            panel8.BackColor = Color.FromArgb(128, 255, 255);
+            panel8.Location = new Point(73, 213);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(593, 25);
+            panel8.TabIndex = 39;
+            // 
+            // panel9
+            // 
+            panel9.BackColor = Color.FromArgb(128, 255, 255);
+            panel9.Location = new Point(426, 345);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(240, 25);
+            panel9.TabIndex = 39;
+            // 
             // ApplicationForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -480,10 +570,19 @@
             Controls.Add(textBoxMI);
             Controls.Add(textBoxLastName);
             Controls.Add(textBoxFirstName);
+            Controls.Add(panel1);
+            Controls.Add(panel2);
+            Controls.Add(panel5);
+            Controls.Add(panel4);
+            Controls.Add(panel6);
+            Controls.Add(panel7);
+            Controls.Add(panel8);
+            Controls.Add(panel9);
             Name = "ApplicationForm";
             Text = "Application_Form";
             Load += Application_Form_Load;
             ((System.ComponentModel.ISupportInitialize)numericUpDownYear).EndInit();
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -525,5 +624,14 @@
         private Label label17;
         private Label label18;
         private ComboBox comboBoxContactNumber;
+        private Panel panel1;
+        private Panel panel2;
+        private Panel panel3;
+        private Panel panel4;
+        private Panel panel5;
+        private Panel panel6;
+        private Panel panel7;
+        private Panel panel8;
+        private Panel panel9;
     }
 }
