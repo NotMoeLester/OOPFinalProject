@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUpForm));
             LogIn = new Label();
             TextBoxEmailSignUp = new TextBox();
             label1 = new Label();
@@ -39,8 +40,10 @@
             panel1 = new Panel();
             panel2 = new Panel();
             panel3 = new Panel();
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // LogIn
@@ -103,7 +106,7 @@
             TextBoxConfirmPasswordSignUp.BorderStyle = BorderStyle.None;
             TextBoxConfirmPasswordSignUp.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             TextBoxConfirmPasswordSignUp.ForeColor = Color.Gray;
-            TextBoxConfirmPasswordSignUp.Location = new Point(3, 4);
+            TextBoxConfirmPasswordSignUp.Location = new Point(3, 3);
             TextBoxConfirmPasswordSignUp.Name = "TextBoxConfirmPasswordSignUp";
             TextBoxConfirmPasswordSignUp.Size = new Size(224, 16);
             TextBoxConfirmPasswordSignUp.TabIndex = 22;
@@ -198,7 +201,8 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Gray;
+            panel1.BackColor = Color.White;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(TextBoxEmailSignUp);
             panel1.Location = new Point(256, 83);
             panel1.Name = "panel1";
@@ -207,20 +211,33 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.Gray;
+            panel2.BackColor = Color.White;
+            panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Location = new Point(256, 145);
             panel2.Name = "panel2";
             panel2.Size = new Size(230, 23);
             panel2.TabIndex = 28;
+            panel2.Paint += panel2_Paint;
             // 
             // panel3
             // 
-            panel3.BackColor = Color.Gray;
+            panel3.BackColor = Color.White;
+            panel3.BorderStyle = BorderStyle.FixedSingle;
             panel3.Controls.Add(TextBoxConfirmPasswordSignUp);
             panel3.Location = new Point(256, 207);
             panel3.Name = "panel3";
             panel3.Size = new Size(230, 23);
             panel3.TabIndex = 29;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Location = new Point(122, -1);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(500, 403);
+            pictureBox1.TabIndex = 30;
+            pictureBox1.TabStop = false;
             // 
             // SignUpForm
             // 
@@ -242,6 +259,7 @@
             Controls.Add(panel3);
             Controls.Add(LabelEmailValidation);
             Controls.Add(LabelPasswordValidation);
+            Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Margin = new Padding(3, 2, 3, 2);
             Name = "SignUpForm";
@@ -250,6 +268,7 @@
             panel1.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -271,5 +290,6 @@
         private Panel panel1;
         private Panel panel2;
         private Panel panel3;
+        private PictureBox pictureBox1;
     }
 }

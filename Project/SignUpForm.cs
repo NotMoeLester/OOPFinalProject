@@ -117,6 +117,10 @@ namespace Project {
         private void TextBoxConfirmPasswordSignUp_TextChanged(object sender, EventArgs e) {
             LabelConfirmPasswordValidation.Text = string.Empty;
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e) {
+
+        }
     }
 }
 

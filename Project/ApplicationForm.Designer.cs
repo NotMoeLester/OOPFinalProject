@@ -534,7 +534,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Navy;
-            ClientSize = new Size(800, 519);
+            ClientSize = new Size(750, 519);
             Controls.Add(comboBoxContactNumber);
             Controls.Add(label18);
             Controls.Add(label17);

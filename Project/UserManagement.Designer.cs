@@ -27,13 +27,16 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserManagement));
             DataGridViewUserList = new DataGridView();
             ButtonView = new Button();
             ButtonCreate = new Button();
             ButtonUpdate = new Button();
             ButtonDelete = new Button();
             label1 = new Label();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)DataGridViewUserList).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // DataGridViewUserList
@@ -116,6 +119,16 @@
             label1.TabIndex = 5;
             label1.Text = "List of Users";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Location = new Point(587, 330);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(317, 108);
+            pictureBox1.TabIndex = 6;
+            pictureBox1.TabStop = false;
+            // 
             // UserManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -129,9 +142,11 @@
             Controls.Add(ButtonCreate);
             Controls.Add(ButtonView);
             Controls.Add(DataGridViewUserList);
+            Controls.Add(pictureBox1);
             Name = "UserManagement";
             Text = "UserManagement";
             ((System.ComponentModel.ISupportInitialize)DataGridViewUserList).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -144,5 +159,6 @@
         private Button ButtonUpdate;
         private Button ButtonDelete;
         private Label label1;
+        private PictureBox pictureBox1;
     }
 }

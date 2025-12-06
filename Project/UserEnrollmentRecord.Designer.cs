@@ -27,6 +27,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserEnrollmentRecord));
             ButtonView = new Button();
             label6 = new Label();
             label7 = new Label();
@@ -41,7 +42,9 @@
             LabelEmailUER = new Label();
             dataGridView1 = new DataGridView();
             ButtonViewSubjectInformation = new Button();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // ButtonView
@@ -217,12 +220,23 @@
             ButtonViewSubjectInformation.UseVisualStyleBackColor = false;
             ButtonViewSubjectInformation.Click += ButtonViewSubjectInformation_Click_1;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Location = new Point(644, 355);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(179, 71);
+            pictureBox1.TabIndex = 51;
+            pictureBox1.TabStop = false;
+            // 
             // UserEnrollmentRecord
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Navy;
             ClientSize = new Size(859, 564);
+            Controls.Add(pictureBox1);
             Controls.Add(ButtonViewSubjectInformation);
             Controls.Add(ButtonView);
             Controls.Add(label6);
@@ -242,6 +256,7 @@
             Text = "UserEnrollmentRecord";
             Load += UserEnrollmentRecord_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -261,5 +276,6 @@
         private Label LabelEmailUER;
         private DataGridView dataGridView1;
         private Button ButtonViewSubjectInformation;
+        private PictureBox pictureBox1;
     }
 }
