@@ -46,6 +46,7 @@
             // 
             // dataGridViewFinancialReport
             // 
+            dataGridViewFinancialReport.BackgroundColor = Color.White;
             dataGridViewFinancialReport.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewFinancialReport.Location = new Point(60, 131);
             dataGridViewFinancialReport.Name = "dataGridViewFinancialReport";
@@ -69,40 +70,44 @@
             // LabelStatus
             // 
             LabelStatus.AutoSize = true;
+            LabelStatus.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             LabelStatus.ForeColor = Color.White;
-            LabelStatus.Location = new Point(577, 211);
+            LabelStatus.Location = new Point(556, 191);
             LabelStatus.Name = "LabelStatus";
-            LabelStatus.Size = new Size(45, 15);
+            LabelStatus.Size = new Size(48, 15);
             LabelStatus.TabIndex = 7;
             LabelStatus.Text = "Status :";
             // 
             // LabelCourse
             // 
             LabelCourse.AutoSize = true;
+            LabelCourse.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             LabelCourse.ForeColor = Color.White;
-            LabelCourse.Location = new Point(577, 239);
+            LabelCourse.Location = new Point(556, 219);
             LabelCourse.Name = "LabelCourse";
-            LabelCourse.Size = new Size(50, 15);
+            LabelCourse.Size = new Size(51, 15);
             LabelCourse.TabIndex = 13;
             LabelCourse.Text = "Course :";
             // 
             // LabelCourseInfo
             // 
             LabelCourseInfo.AutoSize = true;
+            LabelCourseInfo.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             LabelCourseInfo.ForeColor = Color.White;
-            LabelCourseInfo.Location = new Point(633, 239);
+            LabelCourseInfo.Location = new Point(612, 219);
             LabelCourseInfo.Name = "LabelCourseInfo";
-            LabelCourseInfo.Size = new Size(79, 15);
+            LabelCourseInfo.Size = new Size(81, 15);
             LabelCourseInfo.TabIndex = 14;
             LabelCourseInfo.Text = "Course Name";
             // 
             // LabelYearLevelInfo
             // 
             LabelYearLevelInfo.AutoSize = true;
+            LabelYearLevelInfo.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             LabelYearLevelInfo.ForeColor = Color.White;
-            LabelYearLevelInfo.Location = new Point(648, 265);
+            LabelYearLevelInfo.Location = new Point(627, 245);
             LabelYearLevelInfo.Name = "LabelYearLevelInfo";
-            LabelYearLevelInfo.Size = new Size(59, 15);
+            LabelYearLevelInfo.Size = new Size(64, 15);
             LabelYearLevelInfo.TabIndex = 16;
             LabelYearLevelInfo.Text = "Year Level";
             LabelYearLevelInfo.Click += label6_Click;
@@ -110,50 +115,58 @@
             // LabelYearLevel
             // 
             LabelYearLevel.AutoSize = true;
+            LabelYearLevel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             LabelYearLevel.ForeColor = Color.White;
-            LabelYearLevel.Location = new Point(577, 265);
+            LabelYearLevel.Location = new Point(556, 245);
             LabelYearLevel.Name = "LabelYearLevel";
-            LabelYearLevel.Size = new Size(65, 15);
+            LabelYearLevel.Size = new Size(70, 15);
             LabelYearLevel.TabIndex = 15;
             LabelYearLevel.Text = "Year Level :";
             // 
             // ButtonViewRecords
             // 
-            ButtonViewRecords.Location = new Point(577, 323);
+            ButtonViewRecords.BackColor = Color.Navy;
+            ButtonViewRecords.FlatStyle = FlatStyle.Flat;
+            ButtonViewRecords.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ButtonViewRecords.ForeColor = Color.White;
+            ButtonViewRecords.Location = new Point(556, 303);
             ButtonViewRecords.Name = "ButtonViewRecords";
             ButtonViewRecords.Size = new Size(220, 44);
             ButtonViewRecords.TabIndex = 17;
             ButtonViewRecords.Text = "View Current Enrollment Record";
-            ButtonViewRecords.UseVisualStyleBackColor = true;
+            ButtonViewRecords.UseVisualStyleBackColor = false;
             ButtonViewRecords.Click += ButtonViewRecords_Click;
             // 
             // LabelStatusInfo
             // 
             LabelStatusInfo.AutoSize = true;
+            LabelStatusInfo.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             LabelStatusInfo.ForeColor = Color.White;
-            LabelStatusInfo.Location = new Point(628, 211);
+            LabelStatusInfo.Location = new Point(607, 191);
             LabelStatusInfo.Name = "LabelStatusInfo";
-            LabelStatusInfo.Size = new Size(121, 15);
+            LabelStatusInfo.Size = new Size(126, 15);
             LabelStatusInfo.TabIndex = 18;
             LabelStatusInfo.Text = "Enrolled/Not Enrolled";
             // 
             // LabelDepartmentName
             // 
             LabelDepartmentName.AutoSize = true;
+            LabelDepartmentName.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             LabelDepartmentName.ForeColor = Color.White;
-            LabelDepartmentName.Location = new Point(577, 292);
+            LabelDepartmentName.Location = new Point(556, 272);
             LabelDepartmentName.Name = "LabelDepartmentName";
-            LabelDepartmentName.Size = new Size(76, 15);
+            LabelDepartmentName.Size = new Size(82, 15);
             LabelDepartmentName.TabIndex = 19;
             LabelDepartmentName.Text = "Department :";
             // 
             // LabelDepartmentNameInfo
             // 
             LabelDepartmentNameInfo.AutoSize = true;
+            LabelDepartmentNameInfo.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             LabelDepartmentNameInfo.ForeColor = Color.White;
-            LabelDepartmentNameInfo.Location = new Point(659, 292);
+            LabelDepartmentNameInfo.Location = new Point(638, 272);
             LabelDepartmentNameInfo.Name = "LabelDepartmentNameInfo";
-            LabelDepartmentNameInfo.Size = new Size(105, 15);
+            LabelDepartmentNameInfo.Size = new Size(112, 15);
             LabelDepartmentNameInfo.TabIndex = 20;
             LabelDepartmentNameInfo.Text = "Department Name";
             // 
@@ -163,7 +176,7 @@
             LabelStudentID.BackColor = Color.Navy;
             LabelStudentID.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LabelStudentID.ForeColor = Color.White;
-            LabelStudentID.Location = new Point(614, 131);
+            LabelStudentID.Location = new Point(558, 139);
             LabelStudentID.Name = "LabelStudentID";
             LabelStudentID.Size = new Size(135, 32);
             LabelStudentID.TabIndex = 21;
@@ -172,18 +185,20 @@
             // LabelVerification
             // 
             LabelVerification.AutoSize = true;
+            LabelVerification.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             LabelVerification.ForeColor = Color.White;
-            LabelVerification.Location = new Point(399, 113);
+            LabelVerification.Location = new Point(389, 109);
             LabelVerification.Name = "LabelVerification";
-            LabelVerification.Size = new Size(118, 15);
+            LabelVerification.Size = new Size(128, 15);
             LabelVerification.TabIndex = 22;
             LabelVerification.Text = "Verified/Non-Verified";
             // 
             // LabelEmail
             // 
             LabelEmail.AutoSize = true;
+            LabelEmail.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             LabelEmail.ForeColor = Color.White;
-            LabelEmail.Location = new Point(69, 89);
+            LabelEmail.Location = new Point(60, 89);
             LabelEmail.Name = "LabelEmail";
             LabelEmail.Size = new Size(36, 15);
             LabelEmail.TabIndex = 23;
@@ -209,7 +224,9 @@
             Controls.Add(LabelStatus);
             Controls.Add(LabelNameOfUser);
             Controls.Add(dataGridViewFinancialReport);
+            FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "AccountManagement";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AccountManagement";
             Load += AccountManagement_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewFinancialReport).EndInit();

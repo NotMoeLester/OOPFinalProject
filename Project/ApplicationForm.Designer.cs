@@ -308,7 +308,6 @@
             label11.Size = new Size(87, 19);
             label11.TabIndex = 26;
             label11.Text = "Nationality:";
-            label11.Click += this.label11_Click;
             // 
             // label12
             // 
