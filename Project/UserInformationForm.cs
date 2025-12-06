@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Project {
-    public partial class StudentInformationForm : Form {
-        public StudentInformationForm() {
+    public partial class UserInformationForm : Form {
+        public UserInformationForm() {
             InitializeComponent();
             comboBoxContactNumber.SelectedItem = "+63";
         }

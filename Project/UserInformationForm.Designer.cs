@@ -1,5 +1,5 @@
 ﻿namespace Project {
-    partial class StudentInformationForm {
+    partial class UserInformationForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -526,7 +526,7 @@
             panel9.Size = new Size(240, 25);
             panel9.TabIndex = 39;
             // 
-            // ApplicationForm
+            // StudentInformationForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -575,7 +575,7 @@
             Controls.Add(panel7);
             Controls.Add(panel8);
             Controls.Add(panel9);
-            Name = "ApplicationForm";
+            Name = "StudentInformationForm";
             Text = "Application_Form";
             ((System.ComponentModel.ISupportInitialize)numericUpDownYear).EndInit();
             panel2.ResumeLayout(false);

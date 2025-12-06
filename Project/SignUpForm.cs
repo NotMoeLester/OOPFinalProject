@@ -101,8 +101,13 @@ namespace Project {
             bool isSaved = repository.Add(userToSave);
 
             if (isSaved) {
-                MessageBox.Show("Succesfully signed in!", "Successful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Succesfully signed in!\nProceed to Login?", "Successful!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             }
+
+            LoginForm loginForm = new LoginForm();
+            loginForm.FormClosed += (s, args) => this.Close();
+            this.Hide();
+            loginForm.Show();
 
         }
 

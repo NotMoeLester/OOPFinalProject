@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserEnrollmentRecord));
-            ButtonView = new Button();
+            ButtonViewStudentInformation = new Button();
             label6 = new Label();
             label7 = new Label();
             label5 = new Label();
@@ -47,19 +47,19 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // ButtonView
+            // ButtonViewStudentInformation
             // 
-            ButtonView.BackColor = Color.Navy;
-            ButtonView.FlatStyle = FlatStyle.Flat;
-            ButtonView.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            ButtonView.ForeColor = Color.White;
-            ButtonView.Location = new Point(550, 290);
-            ButtonView.Name = "ButtonView";
-            ButtonView.Size = new Size(220, 33);
-            ButtonView.TabIndex = 46;
-            ButtonView.Text = "View Financial Record";
-            ButtonView.UseVisualStyleBackColor = false;
-            ButtonView.Click += ButtonView_Click;
+            ButtonViewStudentInformation.BackColor = Color.Navy;
+            ButtonViewStudentInformation.FlatStyle = FlatStyle.Flat;
+            ButtonViewStudentInformation.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            ButtonViewStudentInformation.ForeColor = Color.White;
+            ButtonViewStudentInformation.Location = new Point(550, 290);
+            ButtonViewStudentInformation.Name = "ButtonViewStudentInformation";
+            ButtonViewStudentInformation.Size = new Size(220, 33);
+            ButtonViewStudentInformation.TabIndex = 46;
+            ButtonViewStudentInformation.Text = "View Student Information";
+            ButtonViewStudentInformation.UseVisualStyleBackColor = false;
+            ButtonViewStudentInformation.Click += ButtonViewStudentInformation_Click;
             // 
             // label6
             // 
@@ -238,7 +238,7 @@
             ClientSize = new Size(859, 564);
             Controls.Add(pictureBox1);
             Controls.Add(ButtonViewSubjectInformation);
-            Controls.Add(ButtonView);
+            Controls.Add(ButtonViewStudentInformation);
             Controls.Add(label6);
             Controls.Add(label7);
             Controls.Add(label5);
@@ -262,7 +262,7 @@
         }
 
         #endregion
-        private Button ButtonView;
+        private Button ButtonViewStudentInformation;
         private Label label6;
         private Label label7;
         private Label label5;

@@ -40,9 +40,11 @@
             LinkLabelSignUp = new LinkLabel();
             panel1 = new Panel();
             panel2 = new Panel();
+            buttonShowPassword = new Button();
             LabelPasswordValidator = new Label();
             LabelEmailValidator = new Label();
             pictureBox1 = new PictureBox();
+            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -118,7 +120,7 @@
             TextBoxPassword.ForeColor = Color.Gray;
             TextBoxPassword.Location = new Point(265, 192);
             TextBoxPassword.Name = "TextBoxPassword";
-            TextBoxPassword.Size = new Size(229, 16);
+            TextBoxPassword.Size = new Size(194, 16);
             TextBoxPassword.TabIndex = 5;
             TextBoxPassword.Text = "Enter Password";
             TextBoxPassword.TextChanged += TextBoxPassword_TextChanged;
@@ -153,7 +155,7 @@
             LinkLabelSignUp.BackColor = Color.Navy;
             LinkLabelSignUp.ForeColor = Color.White;
             LinkLabelSignUp.LinkColor = Color.White;
-            LinkLabelSignUp.Location = new Point(331, 288);
+            LinkLabelSignUp.Location = new Point(345, 289);
             LinkLabelSignUp.Name = "LinkLabelSignUp";
             LinkLabelSignUp.Size = new Size(149, 15);
             LinkLabelSignUp.TabIndex = 11;
@@ -173,11 +175,23 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(buttonShowPassword);
             panel2.Location = new Point(256, 188);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
             panel2.Size = new Size(239, 24);
             panel2.TabIndex = 15;
+            // 
+            // buttonShowPassword
+            // 
+            buttonShowPassword.BackgroundImage = (Image)resources.GetObject("buttonShowPassword.BackgroundImage");
+            buttonShowPassword.BackgroundImageLayout = ImageLayout.Zoom;
+            buttonShowPassword.Location = new Point(210, 1);
+            buttonShowPassword.Name = "buttonShowPassword";
+            buttonShowPassword.Size = new Size(24, 22);
+            buttonShowPassword.TabIndex = 19;
+            buttonShowPassword.UseVisualStyleBackColor = true;
+            buttonShowPassword.Click += buttonShowPassword_Click;
             // 
             // LabelPasswordValidator
             // 
@@ -241,6 +255,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += LoginForm_Load;
+            panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -263,5 +278,6 @@
         private Label LabelPasswordValidator;
         private Label LabelEmailValidator;
         private PictureBox pictureBox1;
+        private Button buttonShowPassword;
     }
 }

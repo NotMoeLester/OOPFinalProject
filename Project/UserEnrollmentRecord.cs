@@ -20,16 +20,12 @@ namespace Project
             LabelEmailUER.Text = _email;
         }
 
-        private void ButtonView_Click(object sender, EventArgs e) {
-            this.Hide();
-            UserAccountManagement mainForm = new UserAccountManagement();
-            mainForm.Show();
-        }
 
         private void ButtonViewSubjectInformation_Click(object sender, EventArgs e) {
             this.Hide();
-            UserEnrollmentInformation mainForm = new UserEnrollmentInformation();
-            mainForm.Show();
+            UserEnrollmentInformation form = new UserEnrollmentInformation();
+            form.FormClosed += (s, args) => this.Close();
+            form.Show();
         }
 
         private void ButtonViewSubjectInformation_Click_1(object sender, EventArgs e) {
@@ -40,6 +36,13 @@ namespace Project
 
         private void UserEnrollmentRecord_Load(object sender, EventArgs e) {
 
+        }
+
+        private void ButtonViewStudentInformation_Click(object sender, EventArgs e) {
+            this.Hide();
+            UserInformationForm form = new UserInformationForm();
+            form.FormClosed += (s, args) => this.Close();
+            form.Show();
         }
     }
 }
