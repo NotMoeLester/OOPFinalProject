@@ -40,23 +40,24 @@
             // 
             DataGridViewUserList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DataGridViewUserList.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+            DataGridViewUserList.BackgroundColor = Color.White;
             DataGridViewUserList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridViewUserList.Location = new Point(115, 75);
-            DataGridViewUserList.Margin = new Padding(3, 4, 3, 4);
+            DataGridViewUserList.Location = new Point(101, 56);
             DataGridViewUserList.Name = "DataGridViewUserList";
             DataGridViewUserList.RowHeadersWidth = 51;
-            DataGridViewUserList.Size = new Size(667, 395);
+            DataGridViewUserList.Size = new Size(584, 296);
             DataGridViewUserList.TabIndex = 0;
             DataGridViewUserList.CellClick += DataGridViewUserList_CellClick_1;
             // 
             // ButtonView
             // 
-            ButtonView.BackColor = Color.SteelBlue;
+            ButtonView.BackColor = Color.Navy;
+            ButtonView.FlatStyle = FlatStyle.Flat;
             ButtonView.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ButtonView.Location = new Point(286, 516);
-            ButtonView.Margin = new Padding(3, 4, 3, 4);
+            ButtonView.ForeColor = Color.White;
+            ButtonView.Location = new Point(250, 374);
             ButtonView.Name = "ButtonView";
-            ButtonView.Size = new Size(162, 59);
+            ButtonView.Size = new Size(142, 44);
             ButtonView.TabIndex = 1;
             ButtonView.Text = "View";
             ButtonView.UseVisualStyleBackColor = false;
@@ -64,12 +65,13 @@
             // 
             // ButtonCreate
             // 
-            ButtonCreate.BackColor = Color.SteelBlue;
+            ButtonCreate.BackColor = Color.Navy;
+            ButtonCreate.FlatStyle = FlatStyle.Flat;
             ButtonCreate.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ButtonCreate.Location = new Point(115, 516);
-            ButtonCreate.Margin = new Padding(3, 4, 3, 4);
+            ButtonCreate.ForeColor = Color.White;
+            ButtonCreate.Location = new Point(101, 374);
             ButtonCreate.Name = "ButtonCreate";
-            ButtonCreate.Size = new Size(162, 59);
+            ButtonCreate.Size = new Size(142, 44);
             ButtonCreate.TabIndex = 2;
             ButtonCreate.Text = "Create";
             ButtonCreate.UseVisualStyleBackColor = false;
@@ -77,13 +79,13 @@
             // 
             // ButtonUpdate
             // 
-            ButtonUpdate.BackColor = Color.SteelBlue;
+            ButtonUpdate.BackColor = Color.Navy;
+            ButtonUpdate.FlatStyle = FlatStyle.Flat;
             ButtonUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ButtonUpdate.ForeColor = Color.Black;
-            ButtonUpdate.Location = new Point(454, 516);
-            ButtonUpdate.Margin = new Padding(3, 4, 3, 4);
+            ButtonUpdate.ForeColor = Color.White;
+            ButtonUpdate.Location = new Point(397, 374);
             ButtonUpdate.Name = "ButtonUpdate";
-            ButtonUpdate.Size = new Size(162, 59);
+            ButtonUpdate.Size = new Size(142, 44);
             ButtonUpdate.TabIndex = 3;
             ButtonUpdate.Text = "Update";
             ButtonUpdate.UseVisualStyleBackColor = false;
@@ -91,13 +93,13 @@
             // 
             // ButtonDelete
             // 
-            ButtonDelete.BackColor = Color.DarkRed;
+            ButtonDelete.BackColor = Color.Firebrick;
+            ButtonDelete.FlatStyle = FlatStyle.Flat;
             ButtonDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ButtonDelete.ForeColor = Color.White;
-            ButtonDelete.Location = new Point(621, 516);
-            ButtonDelete.Margin = new Padding(3, 4, 3, 4);
+            ButtonDelete.Location = new Point(543, 374);
             ButtonDelete.Name = "ButtonDelete";
-            ButtonDelete.Size = new Size(162, 59);
+            ButtonDelete.Size = new Size(142, 44);
             ButtonDelete.TabIndex = 4;
             ButtonDelete.Text = "Delete";
             ButtonDelete.UseVisualStyleBackColor = false;
@@ -108,26 +110,25 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(115, 28);
+            label1.Location = new Point(101, 21);
             label1.Name = "label1";
-            label1.Size = new Size(189, 41);
+            label1.Size = new Size(153, 32);
             label1.TabIndex = 5;
             label1.Text = "List of Users";
             // 
             // UserManagement
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.Navy;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(800, 450);
             Controls.Add(label1);
             Controls.Add(ButtonDelete);
             Controls.Add(ButtonUpdate);
             Controls.Add(ButtonCreate);
             Controls.Add(ButtonView);
             Controls.Add(DataGridViewUserList);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "UserManagement";
             Text = "UserManagement";
             ((System.ComponentModel.ISupportInitialize)DataGridViewUserList).EndInit();

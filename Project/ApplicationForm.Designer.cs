@@ -23,26 +23,26 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
+            textBoxFirstName = new TextBox();
+            textBoxLastName = new TextBox();
+            textBoxMI = new TextBox();
+            textBoxHomeAdress = new TextBox();
+            textBoxAge = new TextBox();
             checkBox1 = new CheckBox();
             checkBox2 = new CheckBox();
-            textBox8 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
+            textBoxContactInformation = new TextBox();
+            dateTimePickerBirthday = new DateTimePicker();
             label1 = new Label();
-            textBox4 = new TextBox();
-            textBox9 = new TextBox();
+            textBoxPrefix = new TextBox();
+            textBoxPreviousSchool = new TextBox();
             label2 = new Label();
-            checkBox3 = new CheckBox();
+            checkBoxConfirmation = new CheckBox();
             ButtonSubmit = new Button();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
-            comboBox1 = new ComboBox();
+            comboBoxNationality = new ComboBox();
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
@@ -53,47 +53,53 @@
             label14 = new Label();
             label15 = new Label();
             label16 = new Label();
-            comboBox3 = new ComboBox();
-            numericUpDown1 = new NumericUpDown();
+            comboBoxCourseProgram = new ComboBox();
+            numericUpDownYear = new NumericUpDown();
             label17 = new Label();
             label18 = new Label();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            comboBoxContactNumber = new ComboBox();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownYear).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // textBoxFirstName
             // 
-            textBox1.Location = new Point(207, 81);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(202, 23);
-            textBox1.TabIndex = 0;
+            textBoxFirstName.BackColor = Color.FromArgb(128, 255, 255);
+            textBoxFirstName.Location = new Point(208, 81);
+            textBoxFirstName.Name = "textBoxFirstName";
+            textBoxFirstName.Size = new Size(202, 23);
+            textBoxFirstName.TabIndex = 0;
             // 
-            // textBox2
+            // textBoxLastName
             // 
-            textBox2.Location = new Point(73, 81);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(128, 23);
-            textBox2.TabIndex = 1;
+            textBoxLastName.BackColor = Color.FromArgb(128, 255, 255);
+            textBoxLastName.Location = new Point(73, 81);
+            textBoxLastName.Name = "textBoxLastName";
+            textBoxLastName.Size = new Size(128, 23);
+            textBoxLastName.TabIndex = 1;
             // 
-            // textBox3
+            // textBoxMI
             // 
-            textBox3.Location = new Point(417, 81);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(43, 23);
-            textBox3.TabIndex = 2;
+            textBoxMI.BackColor = Color.FromArgb(128, 255, 255);
+            textBoxMI.Location = new Point(417, 81);
+            textBoxMI.Name = "textBoxMI";
+            textBoxMI.Size = new Size(43, 23);
+            textBoxMI.TabIndex = 2;
             // 
-            // textBox5
+            // textBoxHomeAdress
             // 
-            textBox5.Location = new Point(73, 215);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(593, 23);
-            textBox5.TabIndex = 4;
+            textBoxHomeAdress.BackColor = Color.FromArgb(128, 255, 255);
+            textBoxHomeAdress.Location = new Point(73, 215);
+            textBoxHomeAdress.Name = "textBoxHomeAdress";
+            textBoxHomeAdress.Size = new Size(593, 23);
+            textBoxHomeAdress.TabIndex = 4;
             // 
-            // textBox6
+            // textBoxAge
             // 
-            textBox6.Location = new Point(303, 157);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(54, 23);
-            textBox6.TabIndex = 5;
+            textBoxAge.BackColor = Color.FromArgb(128, 255, 255);
+            textBoxAge.Location = new Point(290, 157);
+            textBoxAge.Name = "textBoxAge";
+            textBoxAge.Size = new Size(44, 23);
+            textBoxAge.TabIndex = 5;
             // 
             // checkBox1
             // 
@@ -120,21 +126,22 @@
             checkBox2.Text = "Female";
             checkBox2.UseVisualStyleBackColor = false;
             // 
-            // textBox8
+            // textBoxContactInformation
             // 
-            textBox8.Location = new Point(494, 157);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(172, 23);
-            textBox8.TabIndex = 9;
+            textBoxContactInformation.BackColor = Color.FromArgb(128, 255, 255);
+            textBoxContactInformation.Location = new Point(528, 157);
+            textBoxContactInformation.Name = "textBoxContactInformation";
+            textBoxContactInformation.Size = new Size(138, 23);
+            textBoxContactInformation.TabIndex = 9;
             // 
-            // dateTimePicker1
+            // dateTimePickerBirthday
             // 
-            dateTimePicker1.CalendarFont = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker1.CalendarMonthBackground = Color.White;
-            dateTimePicker1.Location = new Point(73, 157);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(218, 23);
-            dateTimePicker1.TabIndex = 10;
+            dateTimePickerBirthday.CalendarFont = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dateTimePickerBirthday.CalendarMonthBackground = Color.White;
+            dateTimePickerBirthday.Location = new Point(73, 157);
+            dateTimePickerBirthday.Name = "dateTimePickerBirthday";
+            dateTimePickerBirthday.Size = new Size(211, 23);
+            dateTimePickerBirthday.TabIndex = 10;
             // 
             // label1
             // 
@@ -148,19 +155,21 @@
             label1.TabIndex = 11;
             label1.Text = "Student Information";
             // 
-            // textBox4
+            // textBoxPrefix
             // 
-            textBox4.Location = new Point(466, 81);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(75, 23);
-            textBox4.TabIndex = 12;
+            textBoxPrefix.BackColor = Color.FromArgb(128, 255, 255);
+            textBoxPrefix.Location = new Point(466, 81);
+            textBoxPrefix.Name = "textBoxPrefix";
+            textBoxPrefix.Size = new Size(75, 23);
+            textBoxPrefix.TabIndex = 12;
             // 
-            // textBox9
+            // textBoxPreviousSchool
             // 
-            textBox9.Location = new Point(426, 346);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(240, 23);
-            textBox9.TabIndex = 13;
+            textBoxPreviousSchool.BackColor = Color.FromArgb(128, 255, 255);
+            textBoxPreviousSchool.Location = new Point(426, 346);
+            textBoxPreviousSchool.Name = "textBoxPreviousSchool";
+            textBoxPreviousSchool.Size = new Size(240, 23);
+            textBoxPreviousSchool.TabIndex = 13;
             // 
             // label2
             // 
@@ -175,17 +184,17 @@
             label2.Text = "Academic Infortmation";
             label2.Click += label2_Click;
             // 
-            // checkBox3
+            // checkBoxConfirmation
             // 
-            checkBox3.AutoSize = true;
-            checkBox3.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBox3.ForeColor = Color.Gainsboro;
-            checkBox3.Location = new Point(73, 404);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(426, 17);
-            checkBox3.TabIndex = 15;
-            checkBox3.Text = "I confirm that all information provided above is true to best of my knowledge.";
-            checkBox3.UseVisualStyleBackColor = true;
+            checkBoxConfirmation.AutoSize = true;
+            checkBoxConfirmation.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBoxConfirmation.ForeColor = Color.Gainsboro;
+            checkBoxConfirmation.Location = new Point(73, 404);
+            checkBoxConfirmation.Name = "checkBoxConfirmation";
+            checkBoxConfirmation.Size = new Size(426, 17);
+            checkBoxConfirmation.TabIndex = 15;
+            checkBoxConfirmation.Text = "I confirm that all information provided above is true to best of my knowledge.";
+            checkBoxConfirmation.UseVisualStyleBackColor = true;
             // 
             // ButtonSubmit
             // 
@@ -193,7 +202,7 @@
             ButtonSubmit.FlatStyle = FlatStyle.Flat;
             ButtonSubmit.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ButtonSubmit.ForeColor = Color.White;
-            ButtonSubmit.Location = new Point(73, 440);
+            ButtonSubmit.Location = new Point(73, 432);
             ButtonSubmit.Name = "ButtonSubmit";
             ButtonSubmit.Size = new Size(178, 34);
             ButtonSubmit.TabIndex = 16;
@@ -245,14 +254,16 @@
             label6.Text = "Prefix/Suffix";
             label6.Click += label6_Click;
             // 
-            // comboBox1
+            // comboBoxNationality
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Afghan", "Albanian", "Algerian", "American", "Argentinian", "Armenian", "Australian", "Austrian", "Bangladeshi", "Belgian", "Bisaya", "Brazilian", "British", "Bulgarian", "Canadian", "Chilean", "Chinese", "Colombian", "Croatian", "Cuban", "Czech", "Danish", "Dutch", "Egyptian", "English", "Estonian", "Ethiopian", "Filipino", "Finnish", "French", "German", "Greek", "Hungarian", "Icelandic", "Indian", "Indonesian", "Iranian", "Irish", "Israeli", "Italian", "Japanese", "Jordanian", "Kenyan", "Korean", "Latvian", "Lebanese", "Lithuanian", "Malaysian", "Mexican", "Moroccan", "Nepalese", "New Zealander", "Nigerian", "Norwegian", "Pakistani", "Polish", "Portuguese", "Romanian", "Russian", "Saudi", "Scottish", "Serbian", "Singaporean", "Slovak", "Slovenian", "Somali", "South African", "Spanish", "Sri Lankan", "Swedish", "Swiss", "Syrian", "Thai", "Turkish", "Ukrainian", "Uruguayan", "Venezuelan", "Vietnamese", "Welsh", "Zimbabwean" });
-            comboBox1.Location = new Point(367, 157);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 21;
+            comboBoxNationality.BackColor = Color.FromArgb(128, 255, 255);
+            comboBoxNationality.FlatStyle = FlatStyle.Popup;
+            comboBoxNationality.FormattingEnabled = true;
+            comboBoxNationality.Items.AddRange(new object[] { "Afghan", "Albanian", "Algerian", "American", "Argentinian", "Armenian", "Australian", "Austrian", "Bangladeshi", "Belgian", "Bisaya", "Brazilian", "British", "Bulgarian", "Canadian", "Chilean", "Chinese", "Colombian", "Croatian", "Cuban", "Czech", "Danish", "Dutch", "Egyptian", "English", "Estonian", "Ethiopian", "Filipino", "Finnish", "French", "German", "Greek", "Hungarian", "Icelandic", "Indian", "Indonesian", "Iranian", "Irish", "Israeli", "Italian", "Japanese", "Jordanian", "Kenyan", "Korean", "Latvian", "Lebanese", "Lithuanian", "Malaysian", "Mexican", "Moroccan", "Nepalese", "New Zealander", "Nigerian", "Norwegian", "Pakistani", "Polish", "Portuguese", "Romanian", "Russian", "Saudi", "Scottish", "Serbian", "Singaporean", "Slovak", "Slovenian", "Somali", "South African", "Spanish", "Sri Lankan", "Swedish", "Swiss", "Syrian", "Thai", "Turkish", "Ukrainian", "Uruguayan", "Venezuelan", "Vietnamese", "Welsh", "Zimbabwean" });
+            comboBoxNationality.Location = new Point(340, 157);
+            comboBoxNationality.Name = "comboBoxNationality";
+            comboBoxNationality.Size = new Size(121, 23);
+            comboBoxNationality.TabIndex = 21;
             // 
             // label7
             // 
@@ -297,7 +308,7 @@
             label10.BackColor = Color.Navy;
             label10.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             label10.ForeColor = Color.White;
-            label10.Location = new Point(303, 135);
+            label10.Location = new Point(290, 135);
             label10.Name = "label10";
             label10.Size = new Size(44, 19);
             label10.TabIndex = 25;
@@ -309,7 +320,7 @@
             label11.BackColor = Color.Navy;
             label11.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             label11.ForeColor = Color.White;
-            label11.Location = new Point(367, 135);
+            label11.Location = new Point(340, 135);
             label11.Name = "label11";
             label11.Size = new Size(87, 19);
             label11.TabIndex = 26;
@@ -321,7 +332,7 @@
             label12.BackColor = Color.Navy;
             label12.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             label12.ForeColor = Color.White;
-            label12.Location = new Point(494, 135);
+            label12.Location = new Point(476, 135);
             label12.Name = "label12";
             label12.Size = new Size(98, 19);
             label12.TabIndex = 27;
@@ -374,21 +385,24 @@
             label16.TabIndex = 32;
             label16.Text = "Year:";
             // 
-            // comboBox3
+            // comboBoxCourseProgram
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "Bachelor of Arts in Communication (BACOMM)", "Bachelor of Arts in Political Science (AB PolSci)", "Bachelor of Arts in Psychology (AB Psych)", "Bachelor of Arts in Sociology (AB Socio)", "Bachelor of Elementary Education (BEEd)", "Bachelor of Physical Education (BPEd)", "Bachelor of Secondary Education (BSEd)", "Bachelor of Science in Accountancy (BSA)", "Bachelor of Science in Biology (BS Bio)", "Bachelor of Science in Business Administration (BSBA)", "Bachelor of Science in Civil Engineering (BSCE)", "Bachelor of Science in Computer Engineering (BSCpE)", "Bachelor of Science in Computer Science (BSCS)", "Bachelor of Science in Electronics Engineering (BSECE)", "Bachelor of Science in Electrical Engineering (BSEE)", "Bachelor of Science in Entrepreneurship (BSEntrep)", "Bachelor of Science in Human Resource Management (BSHRM)", "Bachelor of Science in Information Systems (BSIS)", "Bachelor of Science in Information Technology (BSIT)", "Bachelor of Science in Marketing Management (BSMM)", "Bachelor of Science in Mechanical Engineering (BSME)", "Bachelor of Science in Medical Technology (BSMT)", "Bachelor of Science in Nursing (BSN)", "Bachelor of Science in Pharmacy (BSP)" });
-            comboBox3.Location = new Point(73, 347);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(211, 23);
-            comboBox3.TabIndex = 33;
+            comboBoxCourseProgram.BackColor = Color.FromArgb(128, 255, 255);
+            comboBoxCourseProgram.FlatStyle = FlatStyle.Popup;
+            comboBoxCourseProgram.FormattingEnabled = true;
+            comboBoxCourseProgram.Items.AddRange(new object[] { "Bachelor of Arts in Communication (BACOMM)", "Bachelor of Arts in Political Science (AB PolSci)", "Bachelor of Arts in Psychology (AB Psych)", "Bachelor of Arts in Sociology (AB Socio)", "Bachelor of Elementary Education (BEEd)", "Bachelor of Physical Education (BPEd)", "Bachelor of Secondary Education (BSEd)", "Bachelor of Science in Accountancy (BSA)", "Bachelor of Science in Biology (BS Bio)", "Bachelor of Science in Business Administration (BSBA)", "Bachelor of Science in Civil Engineering (BSCE)", "Bachelor of Science in Computer Engineering (BSCpE)", "Bachelor of Science in Computer Science (BSCS)", "Bachelor of Science in Electronics Engineering (BSECE)", "Bachelor of Science in Electrical Engineering (BSEE)", "Bachelor of Science in Entrepreneurship (BSEntrep)", "Bachelor of Science in Human Resource Management (BSHRM)", "Bachelor of Science in Information Systems (BSIS)", "Bachelor of Science in Information Technology (BSIT)", "Bachelor of Science in Marketing Management (BSMM)", "Bachelor of Science in Mechanical Engineering (BSME)", "Bachelor of Science in Medical Technology (BSMT)", "Bachelor of Science in Nursing (BSN)", "Bachelor of Science in Pharmacy (BSP)" });
+            comboBoxCourseProgram.Location = new Point(73, 347);
+            comboBoxCourseProgram.Name = "comboBoxCourseProgram";
+            comboBoxCourseProgram.Size = new Size(211, 23);
+            comboBoxCourseProgram.TabIndex = 33;
             // 
-            // numericUpDown1
+            // numericUpDownYear
             // 
-            numericUpDown1.Location = new Point(290, 347);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(57, 23);
-            numericUpDown1.TabIndex = 34;
+            numericUpDownYear.BackColor = Color.FromArgb(128, 255, 255);
+            numericUpDownYear.Location = new Point(290, 347);
+            numericUpDownYear.Name = "numericUpDownYear";
+            numericUpDownYear.Size = new Size(57, 23);
+            numericUpDownYear.TabIndex = 34;
             // 
             // label17
             // 
@@ -413,16 +427,29 @@
             label18.TabIndex = 36;
             label18.Text = "if applicable";
             // 
+            // comboBoxContactNumber
+            // 
+            comboBoxContactNumber.BackColor = Color.FromArgb(128, 255, 255);
+            comboBoxContactNumber.FlatStyle = FlatStyle.Popup;
+            comboBoxContactNumber.FormattingEnabled = true;
+            comboBoxContactNumber.Items.AddRange(new object[] { "+1", "+7", "+20", "+27", "+30", "+31", "+32", "+33", "+34", "+36", "+39", "+40", "+41", "+43", "+44", "+45", "+46", "+47", "+48", "+49", "+51", "+52", "+53", "+54", "+55", "+56", "+57", "+58", "+60", "+61", "+62", "+63", "+64", "+65", "+66", "+81", "+82", "+84", "+86", "+90", "+91", "+92", "+93", "+94", "+95", "+98", "+211", "+212", "+213", "+216", "+218", "+220", "+221", "+222", "+223", "+224", "+225", "+226", "+227", "+228", "+229", "+230", "+231", "+232", "+233", "+234", "+235", "+236", "+237", "+238", "+239", "+240", "+241", "+242", "+243", "+244", "+245", "+246", "+248", "+249", "+250", "+251", "+252", "+253", "+254", "+255", "+256", "+257", "+258", "+260", "+261", "+262", "+263", "+264", "+265", "+266", "+267", "+268", "+269", "+290", "+291", "+297", "+298", "+299", "+350", "+351", "+352", "+353", "+354", "+355", "+356", "+357", "+358", "+359", "+370", "+371", "+372", "+373", "+374", "+375", "+376", "+377", "+378", "+380", "+381", "+382", "+385", "+386", "+387", "+389", "+420", "+421", "+423", "+500", "+501", "+502", "+503", "+504", "+505", "+506", "+507", "+508", "+509", "+590", "+591", "+592", "+593", "+594", "+595", "+596", "+597", "+598", "+599", "+670", "+672", "+673", "+674", "+675", "+676", "+677", "+678", "+679", "+680", "+681", "+682", "+683", "+685", "+686", "+687", "+688", "+689", "+690", "+691", "+692", "+850", "+852", "+853", "+855", "+856", "+870", "+871", "+872", "+873", "+874", "+875", "+876", "+877", "+878", "+879", "+880", "+886", "+960", "+961", "+962", "+963", "+964", "+965", "+966", "+967", "+968", "+970", "+971", "+972", "+973", "+974", "+975", "+976", "+977", "+992", "+993", "+994", "+995", "+996", "+998" });
+            comboBoxContactNumber.Location = new Point(473, 157);
+            comboBoxContactNumber.Name = "comboBoxContactNumber";
+            comboBoxContactNumber.Size = new Size(49, 23);
+            comboBoxContactNumber.TabIndex = 37;
+            comboBoxContactNumber.SelectedIndexChanged += comboBoxContactNumber_SelectedIndexChanged;
+            // 
             // ApplicationForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Navy;
             ClientSize = new Size(800, 519);
+            Controls.Add(comboBoxContactNumber);
             Controls.Add(label18);
             Controls.Add(label17);
-            Controls.Add(numericUpDown1);
-            Controls.Add(comboBox3);
+            Controls.Add(numericUpDownYear);
+            Controls.Add(comboBoxCourseProgram);
             Controls.Add(label16);
             Controls.Add(label15);
             Controls.Add(label14);
@@ -433,56 +460,56 @@
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(label7);
-            Controls.Add(comboBox1);
+            Controls.Add(comboBoxNationality);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(ButtonSubmit);
-            Controls.Add(checkBox3);
+            Controls.Add(checkBoxConfirmation);
             Controls.Add(label2);
-            Controls.Add(textBox9);
-            Controls.Add(textBox4);
+            Controls.Add(textBoxPreviousSchool);
+            Controls.Add(textBoxPrefix);
             Controls.Add(label1);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox8);
+            Controls.Add(dateTimePickerBirthday);
+            Controls.Add(textBoxContactInformation);
             Controls.Add(checkBox2);
             Controls.Add(checkBox1);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxAge);
+            Controls.Add(textBoxHomeAdress);
+            Controls.Add(textBoxMI);
+            Controls.Add(textBoxLastName);
+            Controls.Add(textBoxFirstName);
             Name = "ApplicationForm";
             Text = "Application_Form";
             Load += Application_Form_Load;
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownYear).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox5;
-        private TextBox textBox6;
+        private TextBox textBoxFirstName;
+        private TextBox textBoxLastName;
+        private TextBox textBoxMI;
+        private TextBox textBoxHomeAdress;
+        private TextBox textBoxAge;
         private CheckBox checkBox1;
         private CheckBox checkBox2;
-        private TextBox textBox8;
-        private DateTimePicker dateTimePicker1;
+        private TextBox textBoxContactInformation;
+        private DateTimePicker dateTimePickerBirthday;
         private Label label1;
-        private TextBox textBox4;
-        private TextBox textBox9;
+        private TextBox textBoxPrefix;
+        private TextBox textBoxPreviousSchool;
         private Label label2;
-        private CheckBox checkBox3;
+        private CheckBox checkBoxConfirmation;
         private Button ButtonSubmit;
         private Label label3;
         private Label label4;
         private Label label5;
         private Label label6;
-        private ComboBox comboBox1;
+        private ComboBox comboBoxNationality;
         private Label label7;
         private Label label8;
         private Label label9;
@@ -493,9 +520,10 @@
         private Label label14;
         private Label label15;
         private Label label16;
-        private ComboBox comboBox3;
-        private NumericUpDown numericUpDown1;
+        private ComboBox comboBoxCourseProgram;
+        private NumericUpDown numericUpDownYear;
         private Label label17;
         private Label label18;
+        private ComboBox comboBoxContactNumber;
     }
 }
