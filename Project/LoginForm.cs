@@ -108,18 +108,17 @@ namespace Project
                 //    return;
                 //}
 
-                UserInformationForm mainForm = new UserInformationForm();
+                AdminUserManagement mainForm = new AdminUserManagement();
                 mainForm.FormClosed += (s, args) => this.Close();
                 this.Hide();
                 mainForm.Show();
             }
         }
 
+        //FEEDBACK
         private void TextBoxPassword_TextChanged(object sender, EventArgs e) {
             LabelPasswordValidator.Text = string.Empty;
-
         }
-
         private void TextBoxEmail_TextChanged(object sender, EventArgs e) {
             LabelEmailValidator.Text = string.Empty;
         }

@@ -15,6 +15,7 @@ namespace Project
         public AdminUserManagement() {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            LoadUsers();
         }
 
         //FIELDS
@@ -22,9 +23,20 @@ namespace Project
         private DataGridViewRow selectedRow;
         private int selectedStudentId = -1;
 
+        //CREATE
+        private void ButtonCreate_Click(object sender, EventArgs e) {
+            StudentUser user = new StudentUser();
+            user.FullName = string.Empty;
+            user.Email = string.Empty;
+            user.Password = string.Empty;
+
+            repository.Add(user);
+            LoadUsers();
+        }
+
         //READ
         private void ButtonView_Click(object sender, EventArgs e) {
-            LoadUsers();
+
         }
 
         //UPDATE
@@ -63,16 +75,6 @@ namespace Project
         private void LoadUsers() {
             List<StudentUser> users = repository.GetAll();
             DataGridViewUserList.DataSource = users;
-        }
-
-        private void ButtonCreate_Click(object sender, EventArgs e) {
-            StudentUser user = new StudentUser();
-            user.FullName = string.Empty;
-            user.Email = string.Empty;
-            user.Password = string.Empty;
-
-            repository.Add(user);
-            LoadUsers();
         }
     }
 }
