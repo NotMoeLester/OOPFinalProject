@@ -5,7 +5,7 @@ namespace Project
 {
     public partial class LoginForm : Form {
 
-        private System.Windows.Forms.Timer passwordTimer;
+        private readonly System.Windows.Forms.Timer passwordTimer;
 
         StudentUserRepository repository = new StudentUserRepository();
         public LoginForm() {
@@ -131,7 +131,7 @@ namespace Project
             }
         }
 
-        private void PasswordTimer_Tick(object sender, EventArgs e) {
+        private void PasswordTimer_Tick(object? sender, EventArgs e) {
 
             if (!string.IsNullOrEmpty(TextBoxPassword.Text)) {
                 TextBoxPassword.UseSystemPasswordChar = true;

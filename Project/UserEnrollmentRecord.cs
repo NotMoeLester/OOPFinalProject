@@ -14,7 +14,7 @@ namespace Project
 
         private string _email;
         public UserEnrollmentRecord(string email) {
-            InitializeComponent();
+            InitializeComponent(); 
             this.StartPosition = FormStartPosition.CenterScreen;
             _email = email;
             LabelEmailUER.Text = _email;

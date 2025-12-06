@@ -129,7 +129,7 @@
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
             // 
-            // UserManagement
+            // AdminUserManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -143,8 +143,9 @@
             Controls.Add(ButtonView);
             Controls.Add(DataGridViewUserList);
             Controls.Add(pictureBox1);
-            Name = "UserManagement";
+            Name = "AdminUserManagement";
             Text = "UserManagement";
+            Load += AdminUserManagement_Load;
             ((System.ComponentModel.ISupportInitialize)DataGridViewUserList).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

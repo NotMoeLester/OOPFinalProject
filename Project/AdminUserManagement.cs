@@ -1,32 +1,18 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Project
-{
+﻿namespace Project {
     public partial class AdminUserManagement : Form {
         public AdminUserManagement() {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-            LoadUsers();
         }
 
         //FIELDS
         StudentUserRepository repository = new StudentUserRepository();
-        private DataGridViewRow selectedRow;
+        private DataGridViewRow? selectedRow;
         private int selectedStudentId = -1;
 
         //CREATE
         private void ButtonCreate_Click(object sender, EventArgs e) {
             StudentUser user = new StudentUser();
-            user.FullName = string.Empty;
             user.Email = string.Empty;
             user.Password = string.Empty;
 
@@ -36,7 +22,7 @@ namespace Project
 
         //READ
         private void ButtonView_Click(object sender, EventArgs e) {
-
+            LoadUsers();
         }
 
         //UPDATE
@@ -45,7 +31,6 @@ namespace Project
 
             StudentUser user = repository.Get(selectedStudentId);
 
-            user.FullName = selectedRow.Cells["FullName"].Value?.ToString() ?? "";
             user.Email = selectedRow.Cells["Email"].Value?.ToString() ?? "";
             user.Password = selectedRow.Cells["Password"].Value?.ToString() ?? "";
             user.Verification = Convert.ToBoolean(selectedRow.Cells["Verification"].Value);
@@ -65,7 +50,7 @@ namespace Project
         }
 
         //GET INDEX
-        private void DataGridViewUserList_CellClick_1(object sender, DataGridViewCellEventArgs e) {
+        private void DataGridViewUserList_CellClick_1(object? sender, DataGridViewCellEventArgs e) {
             if (e.RowIndex < 0) return;
             selectedRow = DataGridViewUserList.Rows[e.RowIndex];
             selectedStudentId = Convert.ToInt32(selectedRow.Cells["StudentId"].Value);
@@ -75,6 +60,10 @@ namespace Project
         private void LoadUsers() {
             List<StudentUser> users = repository.GetAll();
             DataGridViewUserList.DataSource = users;
+        }
+
+        private void AdminUserManagement_Load(object sender, EventArgs e) {
+            LoadUsers();
         }
     }
 }

@@ -224,7 +224,7 @@
             ButtonSubmit.Name = "ButtonSubmit";
             ButtonSubmit.Size = new Size(178, 34);
             ButtonSubmit.TabIndex = 16;
-            ButtonSubmit.Text = "Submit";
+            ButtonSubmit.Text = "Confirm";
             ButtonSubmit.UseVisualStyleBackColor = false;
             // 
             // label3
@@ -526,7 +526,7 @@
             panel9.Size = new Size(240, 25);
             panel9.TabIndex = 39;
             // 
-            // StudentInformationForm
+            // UserInformationForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -575,7 +575,7 @@
             Controls.Add(panel7);
             Controls.Add(panel8);
             Controls.Add(panel9);
-            Name = "StudentInformationForm";
+            Name = "UserInformationForm";
             Text = "Application_Form";
             ((System.ComponentModel.ISupportInitialize)numericUpDownYear).EndInit();
             panel2.ResumeLayout(false);

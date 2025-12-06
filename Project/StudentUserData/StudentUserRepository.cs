@@ -12,7 +12,7 @@ namespace Project {
         private readonly SQLiteConnection _connection;
 
         public StudentUserRepository() {
-            string databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "StudentUserData.db");
+            string databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "StudentUserData.db" );
             _connection = new SQLiteConnection(databasePath);
             _connection.CreateTable<StudentUser>();
         }
