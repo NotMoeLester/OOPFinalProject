@@ -1,6 +1,6 @@
 ﻿namespace Project
 {
-    partial class UserManagement
+    partial class AdminUserManagement
     {
         /// <summary>
         /// Required designer variable.
@@ -27,7 +27,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserManagement));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminUserManagement));
             DataGridViewUserList = new DataGridView();
             ButtonView = new Button();
             ButtonCreate = new Button();

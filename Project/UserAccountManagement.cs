@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class AccountManagement : Form
+    public partial class UserAccountManagement : Form
     {
-        public AccountManagement()
+        public UserAccountManagement()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;

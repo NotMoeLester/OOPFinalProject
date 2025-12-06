@@ -22,19 +22,19 @@ namespace Project
 
         private void ButtonView_Click(object sender, EventArgs e) {
             this.Hide();
-            AccountManagement mainForm = new AccountManagement();
+            UserAccountManagement mainForm = new UserAccountManagement();
             mainForm.Show();
         }
 
         private void ButtonViewSubjectInformation_Click(object sender, EventArgs e) {
             this.Hide();
-            EnrollmentInformation mainForm = new EnrollmentInformation();
+            UserEnrollmentInformation mainForm = new UserEnrollmentInformation();
             mainForm.Show();
         }
 
         private void ButtonViewSubjectInformation_Click_1(object sender, EventArgs e) {
             this.Hide();
-            EnrollmentInformation mainForm = new EnrollmentInformation();
+            UserEnrollmentInformation mainForm = new UserEnrollmentInformation();
             mainForm.Show();
         }
 

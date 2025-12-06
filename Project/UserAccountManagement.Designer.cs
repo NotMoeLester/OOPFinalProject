@@ -1,6 +1,6 @@
 ﻿namespace Project
 {
-    partial class AccountManagement
+    partial class UserAccountManagement
     {
         /// <summary>
         /// Required designer variable.
@@ -27,7 +27,6 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            dataGridViewFinancialReport = new DataGridView();
             LabelNameOfUser = new Label();
             LabelStatus = new Label();
             LabelCourse = new Label();
@@ -41,18 +40,7 @@
             LabelStudentID = new Label();
             LabelVerification = new Label();
             LabelEmail = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewFinancialReport).BeginInit();
             SuspendLayout();
-            // 
-            // dataGridViewFinancialReport
-            // 
-            dataGridViewFinancialReport.BackgroundColor = Color.White;
-            dataGridViewFinancialReport.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewFinancialReport.Location = new Point(60, 131);
-            dataGridViewFinancialReport.Name = "dataGridViewFinancialReport";
-            dataGridViewFinancialReport.RowHeadersWidth = 51;
-            dataGridViewFinancialReport.Size = new Size(457, 295);
-            dataGridViewFinancialReport.TabIndex = 0;
             // 
             // LabelNameOfUser
             // 
@@ -204,7 +192,7 @@
             LabelEmail.TabIndex = 23;
             LabelEmail.Text = "Email";
             // 
-            // AccountManagement
+            // UserAccountManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -223,20 +211,16 @@
             Controls.Add(LabelCourse);
             Controls.Add(LabelStatus);
             Controls.Add(LabelNameOfUser);
-            Controls.Add(dataGridViewFinancialReport);
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
-            Name = "AccountManagement";
+            Name = "UserAccountManagement";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AccountManagement";
             Load += AccountManagement_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridViewFinancialReport).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private DataGridView dataGridViewFinancialReport;
         private Label LabelNameOfUser;
         private Label LabelStatus;
         private Label LabelCourse;

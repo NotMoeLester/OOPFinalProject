@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class EnrollmentInformation : Form
+    public partial class UserEnrollmentInformation : Form
     {
-        public EnrollmentInformation()
+        public UserEnrollmentInformation()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -21,14 +21,14 @@ namespace Project
         private void ButtonViewSubjectInformation_Click(object sender, EventArgs e)
         {
             this.Hide();
-            EnrollmentInformation mainForm = new EnrollmentInformation();
+            UserEnrollmentInformation mainForm = new UserEnrollmentInformation();
             mainForm.Show();
         }
 
         private void ButtonView_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AccountManagement mainForm = new AccountManagement();
+            UserAccountManagement mainForm = new UserAccountManagement();
             mainForm.Show();
         }
 

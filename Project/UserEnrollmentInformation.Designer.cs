@@ -1,6 +1,6 @@
 ﻿namespace Project
 {
-    partial class EnrollmentInformation
+    partial class UserEnrollmentInformation
     {
         /// <summary>
         /// Required designer variable.

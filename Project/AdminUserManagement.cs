@@ -11,8 +11,8 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class UserManagement : Form {
-        public UserManagement() {
+    public partial class AdminUserManagement : Form {
+        public AdminUserManagement() {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
         }

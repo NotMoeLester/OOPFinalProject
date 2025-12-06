@@ -12,13 +12,10 @@ namespace Project
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-
         private void LoginForm_Load(object sender, EventArgs e) {
             ComboBoxUser.SelectedIndex = 0;
 
         }
-
-
 
         //TEXT BOX UI=============================================================================
         private void TextBoxEmail_Enter(object sender, EventArgs e) {
@@ -87,7 +84,7 @@ namespace Project
                 }
 
                 //Open main Form (Login Form - User Enrollment Record)-------------------------------------------------
-                UserEnrollmentRecord mainForm = new UserEnrollmentRecord(email);
+                StudentInformationForm mainForm = new StudentInformationForm();
                 mainForm.FormClosed += (s, args) => this.Close();
                 this.Hide();
                 mainForm.Show();
@@ -104,7 +101,7 @@ namespace Project
                 //    return;
                 //}
 
-                ApplicationForm mainForm = new ApplicationForm();
+                StudentInformationForm mainForm = new StudentInformationForm();
                 mainForm.FormClosed += (s, args) => this.Close();
                 this.Hide();
                 mainForm.Show();

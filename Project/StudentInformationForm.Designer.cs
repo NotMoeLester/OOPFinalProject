@@ -1,5 +1,5 @@
 ﻿namespace Project {
-    partial class ApplicationForm {
+    partial class StudentInformationForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -153,11 +153,12 @@
             // dateTimePickerBirthday
             // 
             dateTimePickerBirthday.CalendarFont = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePickerBirthday.CalendarMonthBackground = Color.White;
+            dateTimePickerBirthday.CalendarMonthBackground = Color.FromArgb(128, 255, 255);
             dateTimePickerBirthday.Location = new Point(73, 157);
             dateTimePickerBirthday.Name = "dateTimePickerBirthday";
             dateTimePickerBirthday.Size = new Size(211, 23);
             dateTimePickerBirthday.TabIndex = 10;
+            dateTimePickerBirthday.ValueChanged += dateTimePickerBirthday_ValueChanged;
             // 
             // label1
             // 
@@ -200,7 +201,6 @@
             label2.Size = new Size(206, 26);
             label2.TabIndex = 14;
             label2.Text = "Academic Infortmation";
-            label2.Click += label2_Click;
             // 
             // checkBoxConfirmation
             // 
@@ -270,7 +270,6 @@
             label6.Size = new Size(61, 12);
             label6.TabIndex = 20;
             label6.Text = "Prefix/Suffix";
-            label6.Click += label6_Click;
             // 
             // comboBoxNationality
             // 
@@ -306,7 +305,6 @@
             label8.Size = new Size(37, 19);
             label8.TabIndex = 23;
             label8.Text = "Sex:";
-            label8.Click += label8_Click;
             // 
             // label9
             // 
@@ -455,7 +453,6 @@
             comboBoxContactNumber.Name = "comboBoxContactNumber";
             comboBoxContactNumber.Size = new Size(49, 23);
             comboBoxContactNumber.TabIndex = 37;
-            comboBoxContactNumber.SelectedIndexChanged += comboBoxContactNumber_SelectedIndexChanged;
             // 
             // panel1
             // 
@@ -580,7 +577,6 @@
             Controls.Add(panel9);
             Name = "ApplicationForm";
             Text = "Application_Form";
-            Load += Application_Form_Load;
             ((System.ComponentModel.ISupportInitialize)numericUpDownYear).EndInit();
             panel2.ResumeLayout(false);
             ResumeLayout(false);

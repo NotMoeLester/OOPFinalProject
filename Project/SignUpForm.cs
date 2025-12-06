@@ -21,7 +21,7 @@ namespace Project {
 
         //TEXT BOX UI=============================================================================
         private void TextBoxEmailSignUp_Enter(object sender, EventArgs e) {
-            if (TextBoxEmailSignUp.Text == "Enter Email") {
+            if (TextBoxEmailSignUp.Text == " Enter Email") {
                 TextBoxEmailSignUp.Text = string.Empty;
                 TextBoxEmailSignUp.ForeColor = Color.Black;
                 TextBoxEmailSignUp.Font = new Font("Segoe UI", 9, FontStyle.Regular);
@@ -29,13 +29,13 @@ namespace Project {
         }
         private void TextBoxEmailSignUp_Leave(object sender, EventArgs e) {
             if (TextBoxEmailSignUp.Text == string.Empty) {
-                TextBoxEmailSignUp.Text = "Enter Email";
+                TextBoxEmailSignUp.Text = " Enter Email";
                 TextBoxEmailSignUp.ForeColor = Color.Gray;
                 TextBoxEmailSignUp.Font = new Font("Segoe UI", 9, FontStyle.Italic);
             }
         }
         private void TextBoxPasswordSignUp_Enter(object sender, EventArgs e) {
-            if (TextBoxPasswordSignUp.Text == "Enter Password") {
+            if (TextBoxPasswordSignUp.Text == " Enter Password") {
                 TextBoxPasswordSignUp.Text = string.Empty;
                 TextBoxPasswordSignUp.ForeColor = Color.Black;
                 TextBoxPasswordSignUp.Font = new Font("Segoe UI", 9, FontStyle.Regular);
@@ -43,13 +43,13 @@ namespace Project {
         }
         private void TextBoxPasswordSignUp_Leave(object sender, EventArgs e) {
             if (TextBoxPasswordSignUp.Text == string.Empty) {
-                TextBoxPasswordSignUp.Text = "Enter Password";
+                TextBoxPasswordSignUp.Text = " Enter Password";
                 TextBoxPasswordSignUp.ForeColor = Color.Gray;
                 TextBoxPasswordSignUp.Font = new Font("Segoe UI", 9, FontStyle.Italic);
             }
         }
         private void TextBoxConfirmPasswordSignUp_Enter(object sender, EventArgs e) {
-            if (TextBoxConfirmPasswordSignUp.Text == "Confirm Password") {
+            if (TextBoxConfirmPasswordSignUp.Text == " Confirm Password") {
                 TextBoxConfirmPasswordSignUp.Text = string.Empty;
                 TextBoxConfirmPasswordSignUp.ForeColor = Color.Black;
                 TextBoxConfirmPasswordSignUp.Font = new Font("Segoe UI", 9, FontStyle.Regular);
@@ -57,7 +57,7 @@ namespace Project {
         }
         private void TextBoxConfirmPasswordSignUp_Leave(object sender, EventArgs e) {
             if (TextBoxConfirmPasswordSignUp.Text == string.Empty) {
-                TextBoxConfirmPasswordSignUp.Text = "Confirm Password";
+                TextBoxConfirmPasswordSignUp.Text = " Confirm Password";
                 TextBoxConfirmPasswordSignUp.ForeColor = Color.Gray;
                 TextBoxConfirmPasswordSignUp.Font = new Font("Segoe UI", 9, FontStyle.Italic);
             }
