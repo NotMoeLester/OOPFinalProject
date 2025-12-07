@@ -25,5 +25,9 @@ namespace Project {
 
             textBoxAge.Text = age.ToString();
         }
+
+        private void ButtonSubmit_Click(object sender, EventArgs e) {
+
+        }
     }
 }

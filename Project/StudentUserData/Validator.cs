@@ -21,6 +21,7 @@ namespace Project {
         }
 
         public static string Email(string email) {
+            StudentUserRepository repository = new StudentUserRepository();
             if (string.IsNullOrEmpty(email) || email == "Enter Email" || email == "Confirm Email") {
                 return "Email Field Empty";
             }
@@ -32,5 +33,31 @@ namespace Project {
             }
             return "";
         }
+        public static string ConfirmPassword(string password, string confirmPassword) {
+            if (string.IsNullOrEmpty(confirmPassword) || confirmPassword == "Confirm Password") {
+                return "Password Field Empty";
+            }
+            if (password != confirmPassword) {
+                return "Passwords do not match!";
+            }
+            return "";
+        }
+        public static string EmailSignUp(string email) {
+            StudentUserRepository repository = new StudentUserRepository();
+            if (string.IsNullOrEmpty(email) || email == "Enter Email" || email == "Confirm Email") {
+                return "Email Field Empty";
+            }
+            if (!(email.Contains('@') && email.Split('@')[1].Contains('.') && email.All(c => char.IsLetterOrDigit(c) || c == '@' || c == '.' || c == '-' || c == '_'))) {
+                return "Invalid email syntax";
+            }
+            if (!email.StartsWith("hed-") || !email.EndsWith("@smu.edu.ph")) {
+                return "Use your HED account";
+            }
+            if (repository.IsUser(email)) {
+                return "Account already exists";
+            }
+            return "";
+        }
+
     }
 }

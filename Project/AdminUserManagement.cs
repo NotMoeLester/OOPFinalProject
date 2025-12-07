@@ -13,10 +13,11 @@
         //CREATE
         private void ButtonCreate_Click(object sender, EventArgs e) {
             StudentUser user = new StudentUser();
+            StudentData data = new StudentData();
             user.Email = string.Empty;
             user.Password = string.Empty;
 
-            repository.Add(user);
+            repository.Add(user, data);
             LoadUsers();
         }
 

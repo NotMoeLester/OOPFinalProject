@@ -12,11 +12,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Project {
     public partial class SignUpForm : Form {
-
-        public SignUpForm() {
+        private LoginForm loginForm;
+        public SignUpForm(LoginForm loginForm) {
             InitializeComponent();
             this.Size = new Size(816, 489);
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.loginForm = loginForm;
         }
 
         //TEXT BOX UI=============================================================================
@@ -65,9 +66,7 @@ namespace Project {
 
         //LINK LABEL=============================================================================
         private void LinkLabelLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
-            LoginForm loginForm = new LoginForm();
-            loginForm.FormClosed += (s, args) => this.Close();
-            this.Hide();
+            this.Close();
             loginForm.Show();
         }
 
@@ -79,53 +78,42 @@ namespace Project {
             string password = TextBoxPasswordSignUp.Text.Trim();
             string confirmPassword = TextBoxConfirmPasswordSignUp.Text.Trim();
 
-            if (Validator.Email(email) != string.Empty || Validator.Password(password) != string.Empty) {
+            if (Validator.EmailSignUp(email) != string.Empty || Validator.Password(password) != string.Empty) {
                 LabelEmailValidation.Text = Validator.Email(email);
+                return;
+            }
+            if (Validator.Password(password) != string.Empty || Validator.ConfirmPassword(password, confirmPassword) != string.Empty) {
                 LabelPasswordValidation.Text = Validator.Password(password);
-                return;
+                LabelConfirmPasswordValidation.Text = Validator.ConfirmPassword(password, confirmPassword);
             }
-            if (password != confirmPassword) {
-                LabelConfirmPasswordValidation.Text = "Passwords do not match!";
-                return;
-            }
-            if (repository.IsUser(email)) {
-                MessageBox.Show("Account already exists", "Please try again!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            
 
-            //Add user to database
+            //Add user to database---------------------------------------------------------------------------
             StudentUser userToSave = new StudentUser();
+            StudentData userDataToSave = new StudentData();
             userToSave.Email = email;
             userToSave.Password = password;
 
-            bool isSaved = repository.Add(userToSave);
-
+            bool isSaved = repository.Add(userToSave, userDataToSave);
             if (isSaved) {
                 MessageBox.Show("Succesfully signed in!\nProceed to Login?", "Successful!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                this.Close();
+                loginForm.Show();
+            } else {
+                MessageBox.Show("Unsuccesfull!\nTry Again", "Successful!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             }
-
-            LoginForm loginForm = new LoginForm();
-            loginForm.FormClosed += (s, args) => this.Close();
-            this.Hide();
-            loginForm.Show();
-
         }
 
         private void TextBoxEmailSignUp_TextChanged(object sender, EventArgs e) {
             LabelEmailValidation.Text = string.Empty;
         }
-
         private void TextBoxPasswordSignUp_TextChanged(object sender, EventArgs e) {
             LabelPasswordValidation.Text = string.Empty;
         }
-
         private void TextBoxConfirmPasswordSignUp_TextChanged(object sender, EventArgs e) {
             LabelConfirmPasswordValidation.Text = string.Empty;
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e) {
-
-        }
     }
 }
 
