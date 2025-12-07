@@ -22,6 +22,7 @@ namespace Project {
 
         private void buttonEdit_Click(object sender, EventArgs e) {
             buttonEdit.Enabled = false;
+            checkBoxConfirmation.Enabled = true;
 
             textBoxLastName.ReadOnly = false;
             textBoxFirstName.ReadOnly = false;
@@ -37,7 +38,6 @@ namespace Project {
             comboBoxCourseProgram.Enabled = true;
             numericUpDownYear.Enabled = true;
             textBoxPreviousSchool.ReadOnly = false;
-            ButtonConfirm.Enabled = true;
 
         }
 
@@ -71,7 +71,7 @@ namespace Project {
 
             info.Nationality = comboBoxNationality.Text;
             info.ContactNumber = comboBoxContactNumber.Text;
-            info.ContactInformation = textBoxContactInformation.Text;
+            info.ContactInformation = textBoxContactInformation.Text.All(char.IsDigit) ? textBoxContactInformation.Text : "";
 
             info.Address = textBoxHomeAddress.Text;
 
@@ -89,8 +89,7 @@ namespace Project {
             StudentUserRepository repository = new StudentUserRepository();
             bool isUpdated = repository.UpdateStudentAndStudentData(User);
             if (isUpdated) MessageBox.Show("Info Succesfully Updated!", "Successful!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            ButtonConfirm.Enabled = false;
-
+            checkBoxConfirmation.Enabled = false;
         }
 
         private void UserInformationForm_Load(object sender, EventArgs e) {
@@ -133,6 +132,10 @@ namespace Project {
 
         private void checkBoxConfirmation_CheckedChanged(object sender, EventArgs e) {
             ButtonConfirm.Enabled = true;
+        }
+
+        private void comboBoxContactNumber_SelectedIndexChanged(object sender, EventArgs e) {
+
         }
     }
 }
