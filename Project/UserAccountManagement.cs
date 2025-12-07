@@ -10,22 +10,14 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class UserAccountManagement : Form
-    {
-        public UserAccountManagement()
+    public partial class UserAccountManagement : Form {
+        public StudentUser User;
+
+        public UserAccountManagement(StudentUser user)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
+            User = user;
         }
 
         private void ButtonUndo1_Click(object sender, EventArgs e)
@@ -55,8 +47,7 @@ namespace Project
             //registerForm.Show();
         }
 
-        private void AccountManagement_Load(object sender, EventArgs e)
-        {
+        private void AccountManagement_Load(object sender, EventArgs e) {
 
         }
     }

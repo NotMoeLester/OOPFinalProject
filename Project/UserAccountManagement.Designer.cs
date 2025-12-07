@@ -53,7 +53,6 @@
             LabelNameOfUser.Size = new Size(170, 32);
             LabelNameOfUser.TabIndex = 6;
             LabelNameOfUser.Text = "Name of User";
-            LabelNameOfUser.Click += label1_Click;
             // 
             // LabelStatus
             // 
@@ -98,7 +97,6 @@
             LabelYearLevelInfo.Size = new Size(64, 15);
             LabelYearLevelInfo.TabIndex = 16;
             LabelYearLevelInfo.Text = "Year Level";
-            LabelYearLevelInfo.Click += label6_Click;
             // 
             // LabelYearLevel
             // 

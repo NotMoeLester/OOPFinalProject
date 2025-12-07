@@ -12,25 +12,25 @@ namespace Project
 {
     public partial class UserEnrollmentRecord : Form {
 
-        private string _email;
-        public UserEnrollmentRecord(string email) {
+        private StudentUser User;
+        public UserEnrollmentRecord(StudentUser user) {
             InitializeComponent(); 
             this.StartPosition = FormStartPosition.CenterScreen;
-            _email = email;
-            LabelEmailUER.Text = _email;
+            User = user;
+            LabelEmailUER.Text = User.Email;
         }
 
 
         private void ButtonViewSubjectInformation_Click(object sender, EventArgs e) {
             this.Hide();
-            UserEnrollmentInformation form = new UserEnrollmentInformation();
+            UserEnrollmentInformation form = new UserEnrollmentInformation(User);
             form.FormClosed += (s, args) => this.Close();
             form.Show();
         }
 
         private void ButtonViewSubjectInformation_Click_1(object sender, EventArgs e) {
             this.Hide();
-            UserEnrollmentInformation mainForm = new UserEnrollmentInformation();
+            UserEnrollmentInformation mainForm = new UserEnrollmentInformation(User);
             mainForm.Show();
         }
 
@@ -40,7 +40,7 @@ namespace Project
 
         private void ButtonViewStudentInformation_Click(object sender, EventArgs e) {
             this.Hide();
-            UserInformationForm form = new UserInformationForm();
+            UserInformationForm form = new UserInformationForm(User);
             form.FormClosed += (s, args) => this.Close();
             form.Show();
         }

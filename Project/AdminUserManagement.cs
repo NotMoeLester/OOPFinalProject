@@ -1,4 +1,6 @@
-﻿namespace Project {
+﻿using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+
+namespace Project {
     public partial class AdminUserManagement : Form {
         public AdminUserManagement() {
             InitializeComponent();
@@ -17,7 +19,7 @@
             user.Email = string.Empty;
             user.Password = string.Empty;
 
-            repository.Add(user, data);
+            repository.AddStudentAndStudentData(user, data);
             LoadUsers();
         }
 
@@ -30,13 +32,26 @@
         private void ButtonUpdate_Click(object sender, EventArgs e) {
             if (selectedStudentId == -1 || selectedRow == null) return;
 
+            string email = selectedRow.Cells["Email"].Value?.ToString() ?? "";
+            string password = selectedRow.Cells["Password"].Value?.ToString() ?? "";
+
+            string emailError = Validator.Email(email);
+            string passwordError = Validator.Password(password);
+            if (!string.IsNullOrEmpty(emailError) ) {
+                MessageBox.Show($"Invalid Email: {emailError}", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (!string.IsNullOrEmpty(passwordError)) {
+                MessageBox.Show($"Invalid Password: {passwordError}", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             StudentUser user = repository.Get(selectedStudentId);
-
-            user.Email = selectedRow.Cells["Email"].Value?.ToString() ?? "";
-            user.Password = selectedRow.Cells["Password"].Value?.ToString() ?? "";
+            user.Email = email;
+            user.Password = password;
             user.Verification = Convert.ToBoolean(selectedRow.Cells["Verification"].Value);
+            repository.UpdateStudentAndStudentData(user);
 
-            repository.UpdateStudent(user);
             MessageBox.Show("User updated successfully!");
             LoadUsers();
         }
@@ -45,7 +60,7 @@
         private void ButtonDelete_Click(object sender, EventArgs e) {
             if (selectedStudentId == -1) return;
             StudentUser user = repository.Get(selectedStudentId);
-            bool isDeleted = repository.DeleteStudent(user);
+            bool isDeleted = repository.DeleteStudentAndStudentData(user);
             if (isDeleted) MessageBox.Show("Successfully Removed");
             LoadUsers();
         }

@@ -12,23 +12,25 @@ namespace Project
 {
     public partial class UserEnrollmentInformation : Form
     {
-        public UserEnrollmentInformation()
+        private StudentUser User;
+        public UserEnrollmentInformation(StudentUser user)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            User = user;
         }
 
         private void ButtonViewSubjectInformation_Click(object sender, EventArgs e)
         {
             this.Hide();
-            UserEnrollmentInformation mainForm = new UserEnrollmentInformation();
+            UserEnrollmentInformation mainForm = new UserEnrollmentInformation(User);
             mainForm.Show();
         }
 
         private void ButtonView_Click(object sender, EventArgs e)
         {
             this.Hide();
-            UserAccountManagement mainForm = new UserAccountManagement();
+            UserAccountManagement mainForm = new UserAccountManagement(User);
             mainForm.Show();
         }
 

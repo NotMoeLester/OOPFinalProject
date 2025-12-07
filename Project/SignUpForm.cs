@@ -86,7 +86,7 @@ namespace Project {
                 LabelPasswordValidation.Text = Validator.Password(password);
                 LabelConfirmPasswordValidation.Text = Validator.ConfirmPassword(password, confirmPassword);
             }
-            
+
 
             //Add user to database---------------------------------------------------------------------------
             StudentUser userToSave = new StudentUser();
@@ -94,7 +94,7 @@ namespace Project {
             userToSave.Email = email;
             userToSave.Password = password;
 
-            bool isSaved = repository.Add(userToSave, userDataToSave);
+            bool isSaved = repository.AddStudentAndStudentData(userToSave, userDataToSave);
             if (isSaved) {
                 MessageBox.Show("Succesfully signed in!\nProceed to Login?", "Successful!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 this.Close();
@@ -114,6 +114,9 @@ namespace Project {
             LabelConfirmPasswordValidation.Text = string.Empty;
         }
 
+        private void SignUpForm_Load(object sender, EventArgs e) {
+
+        }
     }
 }
 

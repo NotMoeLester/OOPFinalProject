@@ -19,7 +19,7 @@ namespace Project {
         }
 
         //CREATE USER ACC
-        public bool Add(StudentUser user, StudentData profile) {
+        public bool AddStudentAndStudentData(StudentUser user, StudentData profile) {
             _connection.Insert(user);
             profile.StudentId = user.StudentId;
             _connection.Insert(profile); 
@@ -35,13 +35,15 @@ namespace Project {
         }
 
         //UPDATE USER ACC
-        public bool UpdateStudent(StudentUser user) {
+        public bool UpdateStudentAndStudentData(StudentUser user) {
             _connection.Update(user);
+            if (user.UserInfo != null)
+                _connection.Update(user.UserInfo);
             return true;
         }
 
         //DELETE USER ACC
-        public bool DeleteStudent(StudentUser user) {
+        public bool DeleteStudentAndStudentData(StudentUser user) {
             _connection.Delete(user);
             DeleteStudentData(user.StudentId);
             return true;
@@ -66,8 +68,7 @@ namespace Project {
 
         //=============================================================================================================
         //STUDENT DATA
-
-        //READ USER DATA
+        // READ USER DATA
         public StudentUser GetStudentData(int studentId) {
             var user = _connection.Find<StudentUser>(studentId);
             if (user != null) {
@@ -75,12 +76,14 @@ namespace Project {
             }
             return user;
         }
-
-        //UPDATE USER DATA
-        public bool UpdateStudentData(StudentData data) {
-            _connection.Update(data);
-            return true;
+        public StudentUser GetFullStudentUser(string email, string password) {
+            var user = GetUserByEmailAndPassword(email, password);
+            if (user != null) {
+                user.UserInfo = GetStudentData(user.StudentId)?.UserInfo ?? new StudentData();
+            }
+            return user;
         }
+
 
         //DELETE USER DATA
         public bool DeleteStudentData(int studentId) {

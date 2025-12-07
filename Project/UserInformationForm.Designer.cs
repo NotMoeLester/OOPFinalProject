@@ -26,18 +26,18 @@
             textBoxFirstName = new TextBox();
             textBoxLastName = new TextBox();
             textBoxMI = new TextBox();
-            textBoxHomeAdress = new TextBox();
+            textBoxHomeAddress = new TextBox();
             textBoxAge = new TextBox();
-            checkBox1 = new CheckBox();
-            checkBox2 = new CheckBox();
+            checkBoxMale = new CheckBox();
+            checkBoxFemale = new CheckBox();
             textBoxContactInformation = new TextBox();
             dateTimePickerBirthday = new DateTimePicker();
             label1 = new Label();
-            textBoxPrefix = new TextBox();
+            textBoxPrefixSuffix = new TextBox();
             textBoxPreviousSchool = new TextBox();
             label2 = new Label();
             checkBoxConfirmation = new CheckBox();
-            ButtonSubmit = new Button();
+            ButtonConfirm = new Button();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
@@ -67,8 +67,10 @@
             panel7 = new Panel();
             panel8 = new Panel();
             panel9 = new Panel();
+            buttonEdit = new Button();
             ((System.ComponentModel.ISupportInitialize)numericUpDownYear).BeginInit();
             panel2.SuspendLayout();
+            panel7.SuspendLayout();
             SuspendLayout();
             // 
             // textBoxFirstName
@@ -78,6 +80,7 @@
             textBoxFirstName.Location = new Point(238, 112);
             textBoxFirstName.Margin = new Padding(3, 4, 3, 4);
             textBoxFirstName.Name = "textBoxFirstName";
+            textBoxFirstName.ReadOnly = true;
             textBoxFirstName.Size = new Size(231, 20);
             textBoxFirstName.TabIndex = 0;
             // 
@@ -88,6 +91,7 @@
             textBoxLastName.Location = new Point(83, 112);
             textBoxLastName.Margin = new Padding(3, 4, 3, 4);
             textBoxLastName.Name = "textBoxLastName";
+            textBoxLastName.ReadOnly = true;
             textBoxLastName.Size = new Size(146, 20);
             textBoxLastName.TabIndex = 1;
             // 
@@ -98,76 +102,84 @@
             textBoxMI.Location = new Point(477, 112);
             textBoxMI.Margin = new Padding(3, 4, 3, 4);
             textBoxMI.Name = "textBoxMI";
+            textBoxMI.ReadOnly = true;
             textBoxMI.Size = new Size(49, 20);
             textBoxMI.TabIndex = 2;
             // 
-            // textBoxHomeAdress
+            // textBoxHomeAddress
             // 
-            textBoxHomeAdress.BackColor = Color.FromArgb(128, 255, 255);
-            textBoxHomeAdress.BorderStyle = BorderStyle.None;
-            textBoxHomeAdress.Location = new Point(83, 291);
-            textBoxHomeAdress.Margin = new Padding(3, 4, 3, 4);
-            textBoxHomeAdress.Name = "textBoxHomeAdress";
-            textBoxHomeAdress.Size = new Size(678, 20);
-            textBoxHomeAdress.TabIndex = 4;
+            textBoxHomeAddress.BackColor = Color.FromArgb(128, 255, 255);
+            textBoxHomeAddress.BorderStyle = BorderStyle.None;
+            textBoxHomeAddress.Location = new Point(83, 291);
+            textBoxHomeAddress.Margin = new Padding(3, 4, 3, 4);
+            textBoxHomeAddress.Name = "textBoxHomeAddress";
+            textBoxHomeAddress.ReadOnly = true;
+            textBoxHomeAddress.Size = new Size(678, 20);
+            textBoxHomeAddress.TabIndex = 4;
             // 
             // textBoxAge
             // 
             textBoxAge.BackColor = Color.FromArgb(128, 255, 255);
             textBoxAge.BorderStyle = BorderStyle.None;
+            textBoxAge.Enabled = false;
             textBoxAge.Location = new Point(331, 216);
             textBoxAge.Margin = new Padding(3, 4, 3, 4);
             textBoxAge.Name = "textBoxAge";
             textBoxAge.Size = new Size(50, 20);
             textBoxAge.TabIndex = 5;
             // 
-            // checkBox1
+            // checkBoxMale
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Font = new Font("Segoe UI", 8F);
-            checkBox1.ForeColor = Color.White;
-            checkBox1.Location = new Point(635, 116);
-            checkBox1.Margin = new Padding(3, 4, 3, 4);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(61, 23);
-            checkBox1.TabIndex = 7;
-            checkBox1.Text = "Male";
-            checkBox1.UseVisualStyleBackColor = true;
+            checkBoxMale.AutoSize = true;
+            checkBoxMale.Enabled = false;
+            checkBoxMale.Font = new Font("Segoe UI", 8F);
+            checkBoxMale.ForeColor = Color.White;
+            checkBoxMale.Location = new Point(635, 116);
+            checkBoxMale.Margin = new Padding(3, 4, 3, 4);
+            checkBoxMale.Name = "checkBoxMale";
+            checkBoxMale.Size = new Size(61, 23);
+            checkBoxMale.TabIndex = 7;
+            checkBoxMale.Text = "Male";
+            checkBoxMale.UseVisualStyleBackColor = true;
+            checkBoxMale.CheckedChanged += checkBoxMale_CheckedChanged;
             // 
-            // checkBox2
+            // checkBoxFemale
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.BackColor = Color.Navy;
-            checkBox2.Font = new Font("Segoe UI", 8F);
-            checkBox2.ForeColor = Color.White;
-            checkBox2.Location = new Point(699, 116);
-            checkBox2.Margin = new Padding(3, 4, 3, 4);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(74, 23);
-            checkBox2.TabIndex = 8;
-            checkBox2.Text = "Female";
-            checkBox2.UseVisualStyleBackColor = false;
+            checkBoxFemale.AutoSize = true;
+            checkBoxFemale.BackColor = Color.Navy;
+            checkBoxFemale.Enabled = false;
+            checkBoxFemale.Font = new Font("Segoe UI", 8F);
+            checkBoxFemale.ForeColor = Color.White;
+            checkBoxFemale.Location = new Point(699, 116);
+            checkBoxFemale.Margin = new Padding(3, 4, 3, 4);
+            checkBoxFemale.Name = "checkBoxFemale";
+            checkBoxFemale.Size = new Size(74, 23);
+            checkBoxFemale.TabIndex = 8;
+            checkBoxFemale.Text = "Female";
+            checkBoxFemale.UseVisualStyleBackColor = false;
+            checkBoxFemale.CheckedChanged += checkBoxFemale_CheckedChanged;
             // 
             // textBoxContactInformation
             // 
             textBoxContactInformation.BackColor = Color.FromArgb(128, 255, 255);
             textBoxContactInformation.BorderStyle = BorderStyle.None;
-            textBoxContactInformation.Location = new Point(603, 216);
+            textBoxContactInformation.Location = new Point(-6, 8);
             textBoxContactInformation.Margin = new Padding(3, 4, 3, 4);
             textBoxContactInformation.Name = "textBoxContactInformation";
-            textBoxContactInformation.Size = new Size(158, 20);
+            textBoxContactInformation.ReadOnly = true;
+            textBoxContactInformation.Size = new Size(225, 20);
             textBoxContactInformation.TabIndex = 9;
             // 
             // dateTimePickerBirthday
             // 
             dateTimePickerBirthday.CalendarFont = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dateTimePickerBirthday.CalendarMonthBackground = Color.FromArgb(128, 255, 255);
+            dateTimePickerBirthday.Enabled = false;
             dateTimePickerBirthday.Location = new Point(83, 209);
             dateTimePickerBirthday.Margin = new Padding(3, 4, 3, 4);
             dateTimePickerBirthday.Name = "dateTimePickerBirthday";
             dateTimePickerBirthday.Size = new Size(241, 27);
             dateTimePickerBirthday.TabIndex = 10;
-            dateTimePickerBirthday.ValueChanged += dateTimePickerBirthday_ValueChanged;
             // 
             // label1
             // 
@@ -181,15 +193,16 @@
             label1.TabIndex = 11;
             label1.Text = "Student Information";
             // 
-            // textBoxPrefix
+            // textBoxPrefixSuffix
             // 
-            textBoxPrefix.BackColor = Color.FromArgb(128, 255, 255);
-            textBoxPrefix.BorderStyle = BorderStyle.None;
-            textBoxPrefix.Location = new Point(533, 112);
-            textBoxPrefix.Margin = new Padding(3, 4, 3, 4);
-            textBoxPrefix.Name = "textBoxPrefix";
-            textBoxPrefix.Size = new Size(86, 20);
-            textBoxPrefix.TabIndex = 12;
+            textBoxPrefixSuffix.BackColor = Color.FromArgb(128, 255, 255);
+            textBoxPrefixSuffix.BorderStyle = BorderStyle.None;
+            textBoxPrefixSuffix.Location = new Point(533, 112);
+            textBoxPrefixSuffix.Margin = new Padding(3, 4, 3, 4);
+            textBoxPrefixSuffix.Name = "textBoxPrefixSuffix";
+            textBoxPrefixSuffix.ReadOnly = true;
+            textBoxPrefixSuffix.Size = new Size(86, 20);
+            textBoxPrefixSuffix.TabIndex = 12;
             // 
             // textBoxPreviousSchool
             // 
@@ -198,6 +211,7 @@
             textBoxPreviousSchool.Location = new Point(487, 465);
             textBoxPreviousSchool.Margin = new Padding(3, 4, 3, 4);
             textBoxPreviousSchool.Name = "textBoxPreviousSchool";
+            textBoxPreviousSchool.ReadOnly = true;
             textBoxPreviousSchool.Size = new Size(274, 20);
             textBoxPreviousSchool.TabIndex = 13;
             // 
@@ -216,6 +230,7 @@
             // checkBoxConfirmation
             // 
             checkBoxConfirmation.AutoSize = true;
+            checkBoxConfirmation.Enabled = false;
             checkBoxConfirmation.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             checkBoxConfirmation.ForeColor = Color.Gainsboro;
             checkBoxConfirmation.Location = new Point(83, 539);
@@ -225,21 +240,23 @@
             checkBoxConfirmation.TabIndex = 15;
             checkBoxConfirmation.Text = "I confirm that all information provided above is true to best of my knowledge.";
             checkBoxConfirmation.UseVisualStyleBackColor = true;
+            checkBoxConfirmation.CheckedChanged += checkBoxConfirmation_CheckedChanged;
             // 
-            // ButtonSubmit
+            // ButtonConfirm
             // 
-            ButtonSubmit.BackColor = Color.Navy;
-            ButtonSubmit.FlatStyle = FlatStyle.Flat;
-            ButtonSubmit.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ButtonSubmit.ForeColor = Color.White;
-            ButtonSubmit.Location = new Point(83, 576);
-            ButtonSubmit.Margin = new Padding(3, 4, 3, 4);
-            ButtonSubmit.Name = "ButtonSubmit";
-            ButtonSubmit.Size = new Size(203, 45);
-            ButtonSubmit.TabIndex = 16;
-            ButtonSubmit.Text = "Confirm";
-            ButtonSubmit.UseVisualStyleBackColor = false;
-            ButtonSubmit.Click += ButtonSubmit_Click;
+            ButtonConfirm.BackColor = Color.Navy;
+            ButtonConfirm.Enabled = false;
+            ButtonConfirm.FlatStyle = FlatStyle.Flat;
+            ButtonConfirm.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ButtonConfirm.ForeColor = Color.White;
+            ButtonConfirm.Location = new Point(301, 576);
+            ButtonConfirm.Margin = new Padding(3, 4, 3, 4);
+            ButtonConfirm.Name = "ButtonConfirm";
+            ButtonConfirm.Size = new Size(203, 45);
+            ButtonConfirm.TabIndex = 16;
+            ButtonConfirm.Text = "Confirm";
+            ButtonConfirm.UseVisualStyleBackColor = false;
+            ButtonConfirm.Click += ButtonConfirm_Click;
             // 
             // label3
             // 
@@ -288,6 +305,7 @@
             // comboBoxNationality
             // 
             comboBoxNationality.BackColor = Color.FromArgb(128, 255, 255);
+            comboBoxNationality.Enabled = false;
             comboBoxNationality.FlatStyle = FlatStyle.Popup;
             comboBoxNationality.FormattingEnabled = true;
             comboBoxNationality.Items.AddRange(new object[] { "Afghan", "Albanian", "Algerian", "American", "Argentinian", "Armenian", "Australian", "Austrian", "Bangladeshi", "Belgian", "Bisaya", "Brazilian", "British", "Bulgarian", "Canadian", "Chilean", "Chinese", "Colombian", "Croatian", "Cuban", "Czech", "Danish", "Dutch", "Egyptian", "English", "Estonian", "Ethiopian", "Filipino", "Finnish", "French", "German", "Greek", "Hungarian", "Icelandic", "Indian", "Indonesian", "Iranian", "Irish", "Israeli", "Italian", "Japanese", "Jordanian", "Kenyan", "Korean", "Latvian", "Lebanese", "Lithuanian", "Malaysian", "Mexican", "Moroccan", "Nepalese", "New Zealander", "Nigerian", "Norwegian", "Pakistani", "Polish", "Portuguese", "Romanian", "Russian", "Saudi", "Scottish", "Serbian", "Singaporean", "Slovak", "Slovenian", "Somali", "South African", "Spanish", "Sri Lankan", "Swedish", "Swiss", "Syrian", "Thai", "Turkish", "Ukrainian", "Uruguayan", "Venezuelan", "Vietnamese", "Welsh", "Zimbabwean" });
@@ -419,9 +437,10 @@
             // comboBoxCourseProgram
             // 
             comboBoxCourseProgram.BackColor = Color.FromArgb(128, 255, 255);
+            comboBoxCourseProgram.Enabled = false;
             comboBoxCourseProgram.FlatStyle = FlatStyle.Popup;
             comboBoxCourseProgram.FormattingEnabled = true;
-            comboBoxCourseProgram.Items.AddRange(new object[] { "Bachelor of Arts in Communication (BACOMM)", "Bachelor of Arts in Political Science (AB PolSci)", "Bachelor of Arts in Psychology (AB Psych)", "Bachelor of Arts in Sociology (AB Socio)", "Bachelor of Elementary Education (BEEd)", "Bachelor of Physical Education (BPEd)", "Bachelor of Secondary Education (BSEd)", "Bachelor of Science in Accountancy (BSA)", "Bachelor of Science in Biology (BS Bio)", "Bachelor of Science in Business Administration (BSBA)", "Bachelor of Science in Civil Engineering (BSCE)", "Bachelor of Science in Computer Engineering (BSCpE)", "Bachelor of Science in Computer Science (BSCS)", "Bachelor of Science in Electronics Engineering (BSECE)", "Bachelor of Science in Electrical Engineering (BSEE)", "Bachelor of Science in Entrepreneurship (BSEntrep)", "Bachelor of Science in Human Resource Management (BSHRM)", "Bachelor of Science in Information Systems (BSIS)", "Bachelor of Science in Information Technology (BSIT)", "Bachelor of Science in Marketing Management (BSMM)", "Bachelor of Science in Mechanical Engineering (BSME)", "Bachelor of Science in Medical Technology (BSMT)", "Bachelor of Science in Nursing (BSN)", "Bachelor of Science in Pharmacy (BSP)" });
+            comboBoxCourseProgram.Items.AddRange(new object[] { "BA in Communication", "AB in Political Science", "AB in Psychology", "AB in Sociology", "BEEd in Elementary Education", "BPEd in Physical Education", "BSEd in Secondary Education", "BS in Accountancy", "BS in Biology", "BS in Business Administration", "BS in Civil Engineering", "BS in Computer Engineering", "BS in Computer Science", "BS in Electronics Engineering", "BS in Electrical Engineering", "BS in Entrepreneurship", "BS in Human Resource Management", "BS in Information Systems", "BS in Information Technology", "BS in Marketing Management", "BS in Mechanical Engineering", "BS in Medical Technology", "BS in Nursing", "BS in Pharmacy" });
             comboBoxCourseProgram.Location = new Point(83, 463);
             comboBoxCourseProgram.Margin = new Padding(3, 4, 3, 4);
             comboBoxCourseProgram.Name = "comboBoxCourseProgram";
@@ -431,6 +450,7 @@
             // numericUpDownYear
             // 
             numericUpDownYear.BackColor = Color.FromArgb(128, 255, 255);
+            numericUpDownYear.Enabled = false;
             numericUpDownYear.Location = new Point(331, 463);
             numericUpDownYear.Margin = new Padding(3, 4, 3, 4);
             numericUpDownYear.Name = "numericUpDownYear";
@@ -463,6 +483,7 @@
             // comboBoxContactNumber
             // 
             comboBoxContactNumber.BackColor = Color.FromArgb(128, 255, 255);
+            comboBoxContactNumber.Enabled = false;
             comboBoxContactNumber.FlatStyle = FlatStyle.Popup;
             comboBoxContactNumber.FormattingEnabled = true;
             comboBoxContactNumber.Items.AddRange(new object[] { "+1", "+7", "+20", "+27", "+30", "+31", "+32", "+33", "+34", "+36", "+39", "+40", "+41", "+43", "+44", "+45", "+46", "+47", "+48", "+49", "+51", "+52", "+53", "+54", "+55", "+56", "+57", "+58", "+60", "+61", "+62", "+63", "+64", "+65", "+66", "+81", "+82", "+84", "+86", "+90", "+91", "+92", "+93", "+94", "+95", "+98", "+211", "+212", "+213", "+216", "+218", "+220", "+221", "+222", "+223", "+224", "+225", "+226", "+227", "+228", "+229", "+230", "+231", "+232", "+233", "+234", "+235", "+236", "+237", "+238", "+239", "+240", "+241", "+242", "+243", "+244", "+245", "+246", "+248", "+249", "+250", "+251", "+252", "+253", "+254", "+255", "+256", "+257", "+258", "+260", "+261", "+262", "+263", "+264", "+265", "+266", "+267", "+268", "+269", "+290", "+291", "+297", "+298", "+299", "+350", "+351", "+352", "+353", "+354", "+355", "+356", "+357", "+358", "+359", "+370", "+371", "+372", "+373", "+374", "+375", "+376", "+377", "+378", "+380", "+381", "+382", "+385", "+386", "+387", "+389", "+420", "+421", "+423", "+500", "+501", "+502", "+503", "+504", "+505", "+506", "+507", "+508", "+509", "+590", "+591", "+592", "+593", "+594", "+595", "+596", "+597", "+598", "+599", "+670", "+672", "+673", "+674", "+675", "+676", "+677", "+678", "+679", "+680", "+681", "+682", "+683", "+685", "+686", "+687", "+688", "+689", "+690", "+691", "+692", "+850", "+852", "+853", "+855", "+856", "+870", "+871", "+872", "+873", "+874", "+875", "+876", "+877", "+878", "+879", "+880", "+886", "+960", "+961", "+962", "+963", "+964", "+965", "+966", "+967", "+968", "+970", "+971", "+972", "+973", "+974", "+975", "+976", "+977", "+992", "+993", "+994", "+995", "+996", "+998" });
@@ -529,10 +550,11 @@
             // panel7
             // 
             panel7.BackColor = Color.FromArgb(128, 255, 255);
-            panel7.Location = new Point(603, 209);
+            panel7.Controls.Add(textBoxContactInformation);
+            panel7.Location = new Point(539, 209);
             panel7.Margin = new Padding(3, 4, 3, 4);
             panel7.Name = "panel7";
-            panel7.Size = new Size(158, 33);
+            panel7.Size = new Size(222, 33);
             panel7.TabIndex = 39;
             // 
             // panel8
@@ -550,8 +572,23 @@
             panel9.Location = new Point(487, 460);
             panel9.Margin = new Padding(3, 4, 3, 4);
             panel9.Name = "panel9";
-            panel9.Size = new Size(274, 33);
+            panel9.Size = new Size(274, 32);
             panel9.TabIndex = 39;
+            // 
+            // buttonEdit
+            // 
+            buttonEdit.BackColor = Color.Navy;
+            buttonEdit.FlatStyle = FlatStyle.Flat;
+            buttonEdit.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonEdit.ForeColor = Color.White;
+            buttonEdit.Location = new Point(82, 576);
+            buttonEdit.Margin = new Padding(3, 4, 3, 4);
+            buttonEdit.Name = "buttonEdit";
+            buttonEdit.Size = new Size(203, 45);
+            buttonEdit.TabIndex = 42;
+            buttonEdit.Text = "Edit";
+            buttonEdit.UseVisualStyleBackColor = false;
+            buttonEdit.Click += buttonEdit_Click;
             // 
             // UserInformationForm
             // 
@@ -559,6 +596,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Navy;
             ClientSize = new Size(857, 692);
+            Controls.Add(buttonEdit);
             Controls.Add(comboBoxContactNumber);
             Controls.Add(label18);
             Controls.Add(label17);
@@ -579,18 +617,17 @@
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(ButtonSubmit);
+            Controls.Add(ButtonConfirm);
             Controls.Add(checkBoxConfirmation);
             Controls.Add(label2);
             Controls.Add(textBoxPreviousSchool);
-            Controls.Add(textBoxPrefix);
+            Controls.Add(textBoxPrefixSuffix);
             Controls.Add(label1);
             Controls.Add(dateTimePickerBirthday);
-            Controls.Add(textBoxContactInformation);
-            Controls.Add(checkBox2);
-            Controls.Add(checkBox1);
+            Controls.Add(checkBoxFemale);
+            Controls.Add(checkBoxMale);
             Controls.Add(textBoxAge);
-            Controls.Add(textBoxHomeAdress);
+            Controls.Add(textBoxHomeAddress);
             Controls.Add(textBoxMI);
             Controls.Add(textBoxLastName);
             Controls.Add(textBoxFirstName);
@@ -605,8 +642,11 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "UserInformationForm";
             Text = "Application_Form";
+            Load += UserInformationForm_Load;
             ((System.ComponentModel.ISupportInitialize)numericUpDownYear).EndInit();
             panel2.ResumeLayout(false);
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -616,18 +656,18 @@
         private TextBox textBoxFirstName;
         private TextBox textBoxLastName;
         private TextBox textBoxMI;
-        private TextBox textBoxHomeAdress;
+        private TextBox textBoxHomeAddress;
         private TextBox textBoxAge;
-        private CheckBox checkBox1;
-        private CheckBox checkBox2;
+        private CheckBox checkBoxMale;
+        private CheckBox checkBoxFemale;
         private TextBox textBoxContactInformation;
         private DateTimePicker dateTimePickerBirthday;
         private Label label1;
-        private TextBox textBoxPrefix;
+        private TextBox textBoxPrefixSuffix;
         private TextBox textBoxPreviousSchool;
         private Label label2;
         private CheckBox checkBoxConfirmation;
-        private Button ButtonSubmit;
+        private Button ButtonConfirm;
         private Label label3;
         private Label label4;
         private Label label5;
@@ -657,5 +697,6 @@
         private Panel panel7;
         private Panel panel8;
         private Panel panel9;
+        private Button buttonEdit;
     }
 }

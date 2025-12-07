@@ -219,7 +219,6 @@
             ButtonViewSubjectInformation.TabIndex = 50;
             ButtonViewSubjectInformation.Text = "View Subject Information";
             ButtonViewSubjectInformation.UseVisualStyleBackColor = false;
-            ButtonViewSubjectInformation.Click += ButtonViewSubjectInformation_Click_1;
             // 
             // pictureBox1
             // 
@@ -255,7 +254,6 @@
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "UserAccount";
             Text = "UserEnrollmentRecord";
-            Load += UserEnrollmentRecord_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
