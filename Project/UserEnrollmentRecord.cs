@@ -14,7 +14,7 @@ namespace Project
 
         private StudentUser User;
         public UserEnrollmentRecord(StudentUser user) {
-            InitializeComponent(); 
+            InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             User = user;
             LabelEmailUER.Text = User.Email;
@@ -43,6 +43,10 @@ namespace Project
             UserInformationForm form = new UserInformationForm(User);
             form.FormClosed += (s, args) => this.Close();
             form.Show();
+        }
+
+        private void LabelEmailUER_Click(object sender, EventArgs e) {
+
         }
     }
 }

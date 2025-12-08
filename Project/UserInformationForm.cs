@@ -15,6 +15,7 @@ namespace Project {
         public StudentUser User;
         public UserInformationForm(StudentUser user) {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             comboBoxContactNumber.SelectedItem = "+63";
             comboBoxNationality.SelectedItem = "Filipino";
             User = user;
@@ -127,7 +128,7 @@ namespace Project {
             checkBoxFemale.Checked = false;
         }
         private void checkBoxFemale_CheckedChanged(object sender, EventArgs e) {
-             checkBoxMale.Checked = false;
+            checkBoxMale.Checked = false;
         }
 
         private void checkBoxConfirmation_CheckedChanged(object sender, EventArgs e) {
@@ -138,7 +139,6 @@ namespace Project {
             textBoxContactInformation.Text = $"{comboBoxContactNumber.Text}{textBoxContactInformation.Text}";
 
         }
-
     }
 }
 

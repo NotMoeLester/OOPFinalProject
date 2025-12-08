@@ -192,9 +192,9 @@
             LabelEmailUER.ForeColor = Color.White;
             LabelEmailUER.Location = new Point(60, 57);
             LabelEmailUER.Name = "LabelEmailUER";
-            LabelEmailUER.Size = new Size(76, 32);
+            LabelEmailUER.Size = new Size(81, 32);
             LabelEmailUER.TabIndex = 35;
-            LabelEmailUER.Text = "Email";
+            LabelEmailUER.Text = "Name";
             LabelEmailUER.Click += LabelEmailUER_Click;
             // 
             // dataGridView1
