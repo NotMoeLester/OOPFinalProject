@@ -44,9 +44,5 @@ namespace Project
             form.FormClosed += (s, args) => this.Close();
             form.Show();
         }
-
-        private void LabelEmailUER_Click(object sender, EventArgs e) {
-
-        }
     }
 }

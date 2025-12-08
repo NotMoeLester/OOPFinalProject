@@ -166,6 +166,7 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.ForeColor = Color.Black;
             panel1.Location = new Point(256, 131);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";

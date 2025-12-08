@@ -46,9 +46,5 @@ namespace Project
             //this.Hide();
             //registerForm.Show();
         }
-
-        private void AccountManagement_Load(object sender, EventArgs e) {
-
-        }
     }
 }

@@ -29,20 +29,23 @@
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserEnrollmentRecord));
             ButtonViewStudentInformation = new Button();
-            label6 = new Label();
+            LabelYearLevel = new Label();
             label7 = new Label();
-            label5 = new Label();
+            LabelCourseName = new Label();
             label4 = new Label();
-            checkBox3 = new CheckBox();
             label3 = new Label();
             label2 = new Label();
-            checkBox2 = new CheckBox();
-            checkBox1 = new CheckBox();
+            CheckBoxStatusNotEnrolled = new CheckBox();
+            CheckBoxStatusEnrolled = new CheckBox();
             LabelName = new Label();
             LabelEmailUER = new Label();
             dataGridView1 = new DataGridView();
             ButtonViewSubjectInformation = new Button();
             pictureBox1 = new PictureBox();
+            LabelFullNameUER = new Label();
+            LabelContactNumberUER = new Label();
+            LabelStudentID = new Label();
+            LabelDepartmentName = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -61,17 +64,17 @@
             ButtonViewStudentInformation.UseVisualStyleBackColor = false;
             ButtonViewStudentInformation.Click += ButtonViewStudentInformation_Click;
             // 
-            // label6
+            // LabelYearLevel
             // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.Navy;
-            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(623, 221);
-            label6.Name = "label6";
-            label6.Size = new Size(64, 15);
-            label6.TabIndex = 45;
-            label6.Text = "Year Level";
+            LabelYearLevel.AutoSize = true;
+            LabelYearLevel.BackColor = Color.Navy;
+            LabelYearLevel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            LabelYearLevel.ForeColor = Color.White;
+            LabelYearLevel.Location = new Point(623, 221);
+            LabelYearLevel.Name = "LabelYearLevel";
+            LabelYearLevel.Size = new Size(64, 15);
+            LabelYearLevel.TabIndex = 45;
+            LabelYearLevel.Text = "Year Level";
             // 
             // label7
             // 
@@ -85,17 +88,17 @@
             label7.TabIndex = 44;
             label7.Text = "Year Level :";
             // 
-            // label5
+            // LabelCourseName
             // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Navy;
-            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(604, 196);
-            label5.Name = "label5";
-            label5.Size = new Size(81, 15);
-            label5.TabIndex = 43;
-            label5.Text = "Course Name";
+            LabelCourseName.AutoSize = true;
+            LabelCourseName.BackColor = Color.Navy;
+            LabelCourseName.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            LabelCourseName.ForeColor = Color.White;
+            LabelCourseName.Location = new Point(604, 196);
+            LabelCourseName.Name = "LabelCourseName";
+            LabelCourseName.Size = new Size(81, 15);
+            LabelCourseName.TabIndex = 43;
+            LabelCourseName.Text = "Course Name";
             // 
             // label4
             // 
@@ -109,19 +112,6 @@
             label4.TabIndex = 42;
             label4.Text = "Course :";
             // 
-            // checkBox3
-            // 
-            checkBox3.AutoSize = true;
-            checkBox3.BackColor = Color.Navy;
-            checkBox3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            checkBox3.ForeColor = Color.White;
-            checkBox3.Location = new Point(667, 245);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(77, 19);
-            checkBox3.TabIndex = 41;
-            checkBox3.Text = "Fully Paid";
-            checkBox3.UseVisualStyleBackColor = false;
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -130,47 +120,47 @@
             label3.ForeColor = Color.White;
             label3.Location = new Point(549, 245);
             label3.Name = "label3";
-            label3.Size = new Size(102, 15);
+            label3.Size = new Size(82, 15);
             label3.TabIndex = 40;
-            label3.Text = "Financial Report :";
+            label3.Text = "Department :";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Navy;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(68, 119);
+            label2.Font = new Font("Segoe UI", 8F, FontStyle.Bold);
+            label2.ForeColor = Color.WhiteSmoke;
+            label2.Location = new Point(59, 145);
             label2.Name = "label2";
-            label2.Size = new Size(116, 15);
+            label2.Size = new Size(133, 13);
             label2.TabIndex = 39;
-            label2.Text = "Enrollment Records";
+            label2.Text = "ENROLLMENT RECORDS";
             // 
-            // checkBox2
+            // CheckBoxStatusNotEnrolled
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.BackColor = Color.Navy;
-            checkBox2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            checkBox2.ForeColor = Color.White;
-            checkBox2.Location = new Point(685, 167);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(95, 19);
-            checkBox2.TabIndex = 38;
-            checkBox2.Text = "Not Enrolled";
-            checkBox2.UseVisualStyleBackColor = false;
+            CheckBoxStatusNotEnrolled.AutoSize = true;
+            CheckBoxStatusNotEnrolled.BackColor = Color.Navy;
+            CheckBoxStatusNotEnrolled.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            CheckBoxStatusNotEnrolled.ForeColor = Color.White;
+            CheckBoxStatusNotEnrolled.Location = new Point(685, 167);
+            CheckBoxStatusNotEnrolled.Name = "CheckBoxStatusNotEnrolled";
+            CheckBoxStatusNotEnrolled.Size = new Size(95, 19);
+            CheckBoxStatusNotEnrolled.TabIndex = 38;
+            CheckBoxStatusNotEnrolled.Text = "Not Enrolled";
+            CheckBoxStatusNotEnrolled.UseVisualStyleBackColor = false;
             // 
-            // checkBox1
+            // CheckBoxStatusEnrolled
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.BackColor = Color.Navy;
-            checkBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            checkBox1.ForeColor = Color.White;
-            checkBox1.Location = new Point(607, 167);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(71, 19);
-            checkBox1.TabIndex = 37;
-            checkBox1.Text = "Enrolled";
-            checkBox1.UseVisualStyleBackColor = false;
+            CheckBoxStatusEnrolled.AutoSize = true;
+            CheckBoxStatusEnrolled.BackColor = Color.Navy;
+            CheckBoxStatusEnrolled.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            CheckBoxStatusEnrolled.ForeColor = Color.White;
+            CheckBoxStatusEnrolled.Location = new Point(607, 167);
+            CheckBoxStatusEnrolled.Name = "CheckBoxStatusEnrolled";
+            CheckBoxStatusEnrolled.Size = new Size(71, 19);
+            CheckBoxStatusEnrolled.TabIndex = 37;
+            CheckBoxStatusEnrolled.Text = "Enrolled";
+            CheckBoxStatusEnrolled.UseVisualStyleBackColor = false;
             // 
             // LabelName
             // 
@@ -188,14 +178,13 @@
             // 
             LabelEmailUER.AutoSize = true;
             LabelEmailUER.BackColor = Color.Navy;
-            LabelEmailUER.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LabelEmailUER.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             LabelEmailUER.ForeColor = Color.White;
-            LabelEmailUER.Location = new Point(59, 87);
+            LabelEmailUER.Location = new Point(59, 115);
             LabelEmailUER.Name = "LabelEmailUER";
-            LabelEmailUER.Size = new Size(76, 32);
+            LabelEmailUER.Size = new Size(36, 15);
             LabelEmailUER.TabIndex = 35;
             LabelEmailUER.Text = "Email";
-            LabelEmailUER.Click += LabelEmailUER_Click;
             // 
             // dataGridView1
             // 
@@ -231,30 +220,81 @@
             pictureBox1.TabIndex = 51;
             pictureBox1.TabStop = false;
             // 
+            // LabelFullNameUER
+            // 
+            LabelFullNameUER.AutoSize = true;
+            LabelFullNameUER.BackColor = Color.Navy;
+            LabelFullNameUER.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LabelFullNameUER.ForeColor = Color.White;
+            LabelFullNameUER.Location = new Point(59, 83);
+            LabelFullNameUER.Name = "LabelFullNameUER";
+            LabelFullNameUER.Size = new Size(129, 32);
+            LabelFullNameUER.TabIndex = 52;
+            LabelFullNameUER.Text = "Full Name";
+            // 
+            // LabelContactNumberUER
+            // 
+            LabelContactNumberUER.AutoSize = true;
+            LabelContactNumberUER.BackColor = Color.Navy;
+            LabelContactNumberUER.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            LabelContactNumberUER.ForeColor = Color.White;
+            LabelContactNumberUER.Location = new Point(256, 115);
+            LabelContactNumberUER.Name = "LabelContactNumberUER";
+            LabelContactNumberUER.Size = new Size(99, 15);
+            LabelContactNumberUER.TabIndex = 53;
+            LabelContactNumberUER.Text = "Contact Number";
+            // 
+            // LabelStudentID
+            // 
+            LabelStudentID.AutoSize = true;
+            LabelStudentID.BackColor = Color.Navy;
+            LabelStudentID.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LabelStudentID.ForeColor = Color.White;
+            LabelStudentID.Location = new Point(588, 101);
+            LabelStudentID.Name = "LabelStudentID";
+            LabelStudentID.Size = new Size(135, 32);
+            LabelStudentID.TabIndex = 54;
+            LabelStudentID.Text = "Student ID";
+            // 
+            // LabelDepartmentName
+            // 
+            LabelDepartmentName.AutoSize = true;
+            LabelDepartmentName.BackColor = Color.Navy;
+            LabelDepartmentName.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            LabelDepartmentName.ForeColor = Color.White;
+            LabelDepartmentName.Location = new Point(637, 245);
+            LabelDepartmentName.Name = "LabelDepartmentName";
+            LabelDepartmentName.Size = new Size(112, 15);
+            LabelDepartmentName.TabIndex = 55;
+            LabelDepartmentName.Text = "Department Name";
+            // 
             // UserEnrollmentRecord
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Navy;
             ClientSize = new Size(859, 564);
+            Controls.Add(LabelDepartmentName);
+            Controls.Add(LabelStudentID);
+            Controls.Add(LabelContactNumberUER);
+            Controls.Add(LabelFullNameUER);
             Controls.Add(pictureBox1);
             Controls.Add(ButtonViewSubjectInformation);
             Controls.Add(ButtonViewStudentInformation);
-            Controls.Add(label6);
+            Controls.Add(LabelYearLevel);
             Controls.Add(label7);
-            Controls.Add(label5);
+            Controls.Add(LabelCourseName);
             Controls.Add(label4);
-            Controls.Add(checkBox3);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(checkBox2);
-            Controls.Add(checkBox1);
+            Controls.Add(CheckBoxStatusNotEnrolled);
+            Controls.Add(CheckBoxStatusEnrolled);
             Controls.Add(LabelName);
             Controls.Add(LabelEmailUER);
             Controls.Add(dataGridView1);
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "UserEnrollmentRecord";
-            Text = "UserEnrollmentRecord";
+            Text = " User Enrollment Record";
             Load += UserEnrollmentRecord_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -264,19 +304,22 @@
 
         #endregion
         private Button ButtonViewStudentInformation;
-        private Label label6;
+        private Label LabelYearLevel;
         private Label label7;
-        private Label label5;
+        private Label LabelCourseName;
         private Label label4;
-        private CheckBox checkBox3;
         private Label label3;
         private Label label2;
-        private CheckBox checkBox2;
-        private CheckBox checkBox1;
+        private CheckBox CheckBoxStatusNotEnrolled;
+        private CheckBox CheckBoxStatusEnrolled;
         private Label LabelName;
         private Label LabelEmailUER;
         private DataGridView dataGridView1;
         private Button ButtonViewSubjectInformation;
         private PictureBox pictureBox1;
+        private Label LabelFullNameUER;
+        private Label LabelContactNumberUER;
+        private Label LabelStudentID;
+        private Label LabelDepartmentName;
     }
 }

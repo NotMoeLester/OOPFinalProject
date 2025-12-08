@@ -213,7 +213,6 @@
             Name = "UserAccountManagement";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AccountManagement";
-            Load += AccountManagement_Load;
             ResumeLayout(false);
             PerformLayout();
         }
