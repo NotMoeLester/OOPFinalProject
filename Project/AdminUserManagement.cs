@@ -50,6 +50,14 @@ namespace Project {
             user.Email = email;
             user.Password = password;
             user.Verification = Convert.ToBoolean(selectedRow.Cells["Verification"].Value);
+
+            user.FullName = selectedRow.Cells["FullName"].Value?.ToString() ?? "";
+            user.ContactNumber = selectedRow.Cells["ContactNumber"].Value?.ToString() ?? "";
+            user.Course = selectedRow.Cells["Course"].Value?.ToString() ?? "";
+            user.Department = selectedRow.Cells["Department"].Value?.ToString() ?? "";
+            user.YearLevel = Convert.ToInt32(selectedRow.Cells["YearLevel"].Value);
+            user.IsEnrolled = Convert.ToBoolean(selectedRow.Cells["IsEnrolled"].Value);
+
             repository.UpdateStudentAndStudentData(user);
 
             MessageBox.Show("User updated successfully!");
@@ -90,6 +98,22 @@ namespace Project {
 
         private void DataGridViewUserList_CellContentClick(object sender, DataGridViewCellEventArgs e) {
 
+        }
+
+     
+        private void ButtonViewAccountInformation_Click_1(object sender, EventArgs e) {
+            if (selectedStudentId == -1) {
+                MessageBox.Show("Please select a user first.", "No Selection",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            StudentUser? user = repository.GetStudentData(selectedStudentId);
+
+            if (user != null) {
+                ViewAccountDialog dialog = new ViewAccountDialog(user);
+                dialog.ShowDialog();
+            }
         }
     }
 }

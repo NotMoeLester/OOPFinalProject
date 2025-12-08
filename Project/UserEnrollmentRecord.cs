@@ -18,6 +18,13 @@ namespace Project
             this.StartPosition = FormStartPosition.CenterScreen;
             User = user;
             LabelEmailUER.Text = User.Email;
+            LabelFullNameUER.Text = User.FullName;
+            LabelContactNumberUER.Text = User.ContactNumber;
+            LabelYearLevel.Text = User.YearLevel.ToString();
+            LabelCourseName.Text = User.Course;
+            LabelStudentID.Text = User.StudentId.ToString();
+            LabelDepartmentName.Text = User.Department;
+
         }
 
 

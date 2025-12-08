@@ -36,7 +36,7 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             ButtonBack = new Button();
-            button1 = new Button();
+            ButtonViewAccountInformation = new Button();
             ((System.ComponentModel.ISupportInitialize)DataGridViewUserList).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -143,15 +143,16 @@
             ButtonBack.UseVisualStyleBackColor = true;
             ButtonBack.Click += ButtonBack_Click;
             // 
-            // button1
+            // ButtonViewAccountInformation
             // 
-            button1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(498, 18);
-            button1.Name = "button1";
-            button1.Size = new Size(143, 31);
-            button1.TabIndex = 8;
-            button1.Text = "View Account";
-            button1.UseVisualStyleBackColor = true;
+            ButtonViewAccountInformation.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ButtonViewAccountInformation.Location = new Point(432, 18);
+            ButtonViewAccountInformation.Name = "ButtonViewAccountInformation";
+            ButtonViewAccountInformation.Size = new Size(209, 31);
+            ButtonViewAccountInformation.TabIndex = 8;
+            ButtonViewAccountInformation.Text = "View Account Information";
+            ButtonViewAccountInformation.UseVisualStyleBackColor = true;
+            ButtonViewAccountInformation.Click += ButtonViewAccountInformation_Click_1;
             // 
             // AdminUserManagement
             // 
@@ -160,7 +161,7 @@
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.Navy;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            Controls.Add(ButtonViewAccountInformation);
             Controls.Add(ButtonBack);
             Controls.Add(label1);
             Controls.Add(ButtonDelete);
@@ -188,6 +189,6 @@
         private Label label1;
         private PictureBox pictureBox1;
         private Button ButtonBack;
-        private Button button1;
+        private Button ButtonViewAccountInformation;
     }
 }

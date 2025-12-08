@@ -18,7 +18,7 @@ namespace Project {
         public bool Verification { get; set; } = false;
         public string Course { get; set; } = string.Empty;
         public string Department { get; set; } = string.Empty;
-        public int YearLevel { get; set; } = 0;
+        public int YearLevel { get; set; } = 0 ;
         public bool IsEnrolled { get; set; } = false;
 
         [Ignore]
