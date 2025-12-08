@@ -23,14 +23,14 @@ namespace Project
 
         private void ButtonViewSubjectInformation_Click(object sender, EventArgs e) {
             this.Hide();
-            UserEnrollmentInformation form = new UserEnrollmentInformation(User);
+            XXXUserEnrollmentInformation form = new XXXUserEnrollmentInformation(User);
             form.FormClosed += (s, args) => this.Close();
             form.Show();
         }
 
         private void ButtonViewSubjectInformation_Click_1(object sender, EventArgs e) {
             this.Hide();
-            UserEnrollmentInformation mainForm = new UserEnrollmentInformation(User);
+            XXXUserEnrollmentInformation mainForm = new XXXUserEnrollmentInformation(User);
             mainForm.Show();
         }
 

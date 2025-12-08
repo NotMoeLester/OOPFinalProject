@@ -1,6 +1,6 @@
 ﻿namespace Project
 {
-    partial class UserAccountManagement
+    partial class XXXUserAccountManagement
     {
         /// <summary>
         /// Required designer variable.

@@ -254,6 +254,7 @@
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "UserAccount";
             Text = "UserEnrollmentRecord";
+            Load += UserAccount_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

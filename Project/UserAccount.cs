@@ -18,13 +18,13 @@ namespace Project
             this.StartPosition = FormStartPosition.CenterScreen;
             this.User = user;
             LabelEmailUER.Text = user.Email;
-            
+
         }
 
 
         private void ButtonViewSubjectInformation_Click(object sender, EventArgs e) {
             this.Hide();
-            UserEnrollmentInformation form = new UserEnrollmentInformation(User);
+            XXXUserEnrollmentInformation form = new XXXUserEnrollmentInformation(User);
             form.FormClosed += (s, args) => this.Close();
             form.Show();
         }
@@ -38,6 +38,10 @@ namespace Project
         }
 
         private void LabelEmailUER_Click(object sender, EventArgs e) {
+
+        }
+
+        private void UserAccount_Load(object sender, EventArgs e) {
 
         }
     }

@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class UserEnrollmentInformation : Form
+    public partial class XXXUserEnrollmentInformation : Form
     {
         private StudentUser User;
-        public UserEnrollmentInformation(StudentUser user)
+        public XXXUserEnrollmentInformation(StudentUser user)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -23,14 +23,14 @@ namespace Project
         private void ButtonViewSubjectInformation_Click(object sender, EventArgs e)
         {
             this.Hide();
-            UserEnrollmentInformation mainForm = new UserEnrollmentInformation(User);
+            XXXUserEnrollmentInformation mainForm = new XXXUserEnrollmentInformation(User);
             mainForm.Show();
         }
 
         private void ButtonView_Click(object sender, EventArgs e)
         {
             this.Hide();
-            UserAccountManagement mainForm = new UserAccountManagement(User);
+            XXXUserAccountManagement mainForm = new XXXUserAccountManagement(User);
             mainForm.Show();
         }
 
