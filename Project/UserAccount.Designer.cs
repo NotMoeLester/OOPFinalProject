@@ -53,7 +53,7 @@
             ButtonViewStudentInformation.FlatStyle = FlatStyle.Flat;
             ButtonViewStudentInformation.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             ButtonViewStudentInformation.ForeColor = Color.White;
-            ButtonViewStudentInformation.Location = new Point(60, 364);
+            ButtonViewStudentInformation.Location = new Point(60, 446);
             ButtonViewStudentInformation.Name = "ButtonViewStudentInformation";
             ButtonViewStudentInformation.Size = new Size(220, 33);
             ButtonViewStudentInformation.TabIndex = 46;
@@ -67,7 +67,7 @@
             label6.BackColor = Color.Navy;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(134, 265);
+            label6.Location = new Point(134, 347);
             label6.Name = "label6";
             label6.Size = new Size(64, 15);
             label6.TabIndex = 45;
@@ -79,7 +79,7 @@
             label7.BackColor = Color.Navy;
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(60, 265);
+            label7.Location = new Point(60, 347);
             label7.Name = "label7";
             label7.Size = new Size(70, 15);
             label7.TabIndex = 44;
@@ -91,7 +91,7 @@
             label5.BackColor = Color.Navy;
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(115, 239);
+            label5.Location = new Point(115, 321);
             label5.Name = "label5";
             label5.Size = new Size(81, 15);
             label5.TabIndex = 43;
@@ -103,7 +103,7 @@
             label4.BackColor = Color.Navy;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(60, 239);
+            label4.Location = new Point(60, 321);
             label4.Name = "label4";
             label4.Size = new Size(51, 15);
             label4.TabIndex = 42;
@@ -115,7 +115,7 @@
             checkBox3.BackColor = Color.Navy;
             checkBox3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             checkBox3.ForeColor = Color.White;
-            checkBox3.Location = new Point(178, 289);
+            checkBox3.Location = new Point(178, 371);
             checkBox3.Name = "checkBox3";
             checkBox3.Size = new Size(77, 19);
             checkBox3.TabIndex = 41;
@@ -128,7 +128,7 @@
             label3.BackColor = Color.Navy;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(60, 289);
+            label3.Location = new Point(60, 371);
             label3.Name = "label3";
             label3.Size = new Size(102, 15);
             label3.TabIndex = 40;
@@ -152,7 +152,7 @@
             checkBox2.BackColor = Color.Navy;
             checkBox2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             checkBox2.ForeColor = Color.White;
-            checkBox2.Location = new Point(196, 211);
+            checkBox2.Location = new Point(196, 293);
             checkBox2.Name = "checkBox2";
             checkBox2.Size = new Size(95, 19);
             checkBox2.TabIndex = 38;
@@ -165,7 +165,7 @@
             checkBox1.BackColor = Color.Navy;
             checkBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             checkBox1.ForeColor = Color.White;
-            checkBox1.Location = new Point(118, 211);
+            checkBox1.Location = new Point(118, 293);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(71, 19);
             checkBox1.TabIndex = 37;
@@ -178,7 +178,7 @@
             LabelName.BackColor = Color.Navy;
             LabelName.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             LabelName.ForeColor = Color.White;
-            LabelName.Location = new Point(60, 211);
+            LabelName.Location = new Point(60, 293);
             LabelName.Name = "LabelName";
             LabelName.Size = new Size(48, 15);
             LabelName.TabIndex = 36;
@@ -204,7 +204,7 @@
             dataGridView1.Location = new Point(60, 131);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(718, 40);
+            dataGridView1.Size = new Size(718, 143);
             dataGridView1.TabIndex = 34;
             // 
             // ButtonViewSubjectInformation
@@ -213,7 +213,7 @@
             ButtonViewSubjectInformation.FlatStyle = FlatStyle.Flat;
             ButtonViewSubjectInformation.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             ButtonViewSubjectInformation.ForeColor = Color.White;
-            ButtonViewSubjectInformation.Location = new Point(60, 322);
+            ButtonViewSubjectInformation.Location = new Point(60, 404);
             ButtonViewSubjectInformation.Name = "ButtonViewSubjectInformation";
             ButtonViewSubjectInformation.Size = new Size(220, 33);
             ButtonViewSubjectInformation.TabIndex = 50;
@@ -224,7 +224,7 @@
             // 
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(150, 426);
+            pictureBox1.Location = new Point(668, 404);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(179, 71);
             pictureBox1.TabIndex = 51;
