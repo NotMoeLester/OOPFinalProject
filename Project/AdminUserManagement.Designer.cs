@@ -35,6 +35,7 @@
             ButtonDelete = new Button();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            ButtonBack = new Button();
             ((System.ComponentModel.ISupportInitialize)DataGridViewUserList).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -113,7 +114,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(101, 21);
+            label1.Location = new Point(325, 21);
             label1.Name = "label1";
             label1.Size = new Size(153, 32);
             label1.TabIndex = 5;
@@ -129,6 +130,17 @@
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
             // 
+            // ButtonBack
+            // 
+            ButtonBack.BackgroundImage = Properties.Resources.left;
+            ButtonBack.BackgroundImageLayout = ImageLayout.Zoom;
+            ButtonBack.Location = new Point(12, 12);
+            ButtonBack.Name = "ButtonBack";
+            ButtonBack.Size = new Size(38, 32);
+            ButtonBack.TabIndex = 7;
+            ButtonBack.UseVisualStyleBackColor = true;
+            ButtonBack.Click += ButtonBack_Click;
+            // 
             // AdminUserManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -136,6 +148,7 @@
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.Navy;
             ClientSize = new Size(800, 450);
+            Controls.Add(ButtonBack);
             Controls.Add(label1);
             Controls.Add(ButtonDelete);
             Controls.Add(ButtonUpdate);
@@ -145,7 +158,6 @@
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "AdminUserManagement";
-            Text = "UserManagement";
             Load += AdminUserManagement_Load;
             ((System.ComponentModel.ISupportInitialize)DataGridViewUserList).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -162,5 +174,6 @@
         private Button ButtonDelete;
         private Label label1;
         private PictureBox pictureBox1;
+        private Button ButtonBack;
     }
 }

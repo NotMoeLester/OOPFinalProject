@@ -37,7 +37,7 @@ namespace Project {
 
             string emailError = Validator.Email(email);
             string passwordError = Validator.Password(password);
-            if (!string.IsNullOrEmpty(emailError) ) {
+            if (!string.IsNullOrEmpty(emailError)) {
                 MessageBox.Show($"Invalid Email: {emailError}", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -80,6 +80,12 @@ namespace Project {
 
         private void AdminUserManagement_Load(object sender, EventArgs e) {
             LoadUsers();
+        }
+
+        private void ButtonBack_Click(object sender, EventArgs e) {
+
+           this.Close();
+
         }
     }
 }

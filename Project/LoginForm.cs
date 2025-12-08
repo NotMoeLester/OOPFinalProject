@@ -6,6 +6,7 @@ namespace Project
     public partial class LoginForm : Form {
 
         private readonly System.Windows.Forms.Timer passwordTimer;
+       
 
         StudentUserRepository repository = new StudentUserRepository();
         public LoginForm() {
@@ -15,6 +16,7 @@ namespace Project
             passwordTimer = new System.Windows.Forms.Timer();
             passwordTimer.Interval = 1000;
             passwordTimer.Tick += PasswordTimer_Tick;
+          
         }
 
         private void LoginForm_Load(object sender, EventArgs e) {
@@ -99,14 +101,14 @@ namespace Project
                 this.Hide();
                 mainForm.Show();
 
-            //ADMINISTRATOR USER LOGIN=========================================================================
+                //ADMINISTRATOR USER LOGIN=========================================================================
             } else if (usertype == "Administrator") {
-                AdminUserManagement mainForm = new AdminUserManagement();
-                mainForm.FormClosed += (s, args) => this.Close();
+                AdminUserManagement adminForm = new AdminUserManagement();
                 this.Hide();
-                mainForm.Show();
+                adminForm.FormClosed += (s, args) => this.Show();
+                adminForm.Show();
             }
-        }
+            }
 
         //FEEDBACK FOR EMAIL & PASSWORD
         private void TextBoxPassword_TextChanged(object sender, EventArgs e) {
