@@ -26,8 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             dataGridView1 = new DataGridView();
             button2 = new Button();
             button1 = new Button();
@@ -143,7 +142,7 @@
             ButtonView.UseVisualStyleBackColor = false;
             ButtonView.Click += ButtonView_Click;
             // 
-            // EnrollmentInformation
+            // UserEnrollmentInformation
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -158,7 +157,8 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(dataGridView1);
-            Name = "EnrollmentInformation";
+            FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            Name = "UserEnrollmentInformation";
             Text = "EnrollmentInformation";
             Load += EnrollmentInformation_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

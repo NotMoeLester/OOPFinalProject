@@ -127,7 +127,7 @@ namespace Project {
             checkBoxFemale.Checked = false;
         }
         private void checkBoxFemale_CheckedChanged(object sender, EventArgs e) {
-            checkBoxMale.Checked = false;
+             checkBoxMale.Checked = false;
         }
 
         private void checkBoxConfirmation_CheckedChanged(object sender, EventArgs e) {
@@ -135,7 +135,10 @@ namespace Project {
         }
 
         private void comboBoxContactNumber_SelectedIndexChanged(object sender, EventArgs e) {
+            textBoxContactInformation.Text = $"{comboBoxContactNumber.Text}{textBoxContactInformation.Text}";
 
         }
+
     }
 }
+

@@ -143,6 +143,7 @@
             Controls.Add(ButtonView);
             Controls.Add(DataGridViewUserList);
             Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "AdminUserManagement";
             Text = "UserManagement";
             Load += AdminUserManagement_Load;
