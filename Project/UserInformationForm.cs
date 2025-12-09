@@ -39,12 +39,17 @@ namespace Project {
             comboBoxCourseProgram.Enabled = true;
             numericUpDownYear.Enabled = true;
             textBoxPreviousSchool.ReadOnly = false;
-
         }
 
         private void ButtonConfirm_Click(object sender, EventArgs e) {
-            buttonEdit.Enabled = true;
 
+            if (checkBoxConfirmation.Checked == false) {
+                MessageBox.Show("Please confirm that the information provided above is true.",
+                    "Confirmation Required", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            buttonEdit.Enabled = true;
             textBoxLastName.ReadOnly = true;
             textBoxFirstName.ReadOnly = true;
             textBoxMI.ReadOnly = true;
@@ -60,85 +65,158 @@ namespace Project {
             numericUpDownYear.Enabled = false;
             textBoxPreviousSchool.ReadOnly = true;
 
+            if (User.UserInfo == null) {
+                User.UserInfo = new StudentData();
+            }
+
             var info = User.UserInfo;
 
-            info.FirstName = textBoxFirstName.Text;
-            info.MiddleInitial = textBoxMI.Text;
-            info.LastName = textBoxLastName.Text;
-            info.PrefixSuffix = textBoxPrefixSuffix.Text;
-
+            info.FirstName = textBoxFirstName.Text.Trim();
+            info.MiddleInitial = textBoxMI.Text.Trim();
+            info.LastName = textBoxLastName.Text.Trim();
+            info.PrefixSuffix = textBoxPrefixSuffix.Text.Trim();
             info.Sex = checkBoxMale.Checked ? "Male" : "Female";
             info.BirthDay = dateTimePickerBirthday.Value;
-
             info.Nationality = comboBoxNationality.Text;
             info.ContactNumber = comboBoxContactNumber.Text;
-            info.ContactInformation = textBoxContactInformation.Text.All(char.IsDigit) ? textBoxContactInformation.Text : "";
+            string contactInfo = textBoxContactInformation.Text.Trim();
+            if (contactInfo.StartsWith(comboBoxContactNumber.Text)) {
+                contactInfo = contactInfo.Substring(comboBoxContactNumber.Text.Length);
+            }
+            info.ContactInformation = contactInfo.All(char.IsDigit) ? contactInfo : "";
 
-            info.Address = textBoxHomeAddress.Text;
+            info.Address = textBoxHomeAddress.Text.Trim();
 
             info.Course = comboBoxCourseProgram.Text;
             info.YearLevel = (int)numericUpDownYear.Value;
-            info.PreviousSchool = textBoxPreviousSchool.Text;
+
+            info.PreviousSchool = textBoxPreviousSchool.Text.Trim();
+
+            string fullName = "";
+            if (!string.IsNullOrEmpty(info.FirstName)) {
+                fullName = info.FirstName;
+            }
+            if (!string.IsNullOrEmpty(info.MiddleInitial)) {
+                fullName += " " + info.MiddleInitial + ".";
+            }
+            if (!string.IsNullOrEmpty(info.LastName)) {
+                fullName += " " + info.LastName;
+            }
+            if (!string.IsNullOrEmpty(info.PrefixSuffix)) {
+                fullName += " " + info.PrefixSuffix;
+            }
+            User.FullName = fullName.Trim();
+
+            User.ContactNumber = info.ContactNumber + info.ContactInformation;
+            User.Course = info.Course;
+            User.YearLevel = info.YearLevel;
+            User.Department = GetDepartmentFromCourse(info.Course);
 
             User.UserInfo = info;
 
-
-            if (checkBoxConfirmation.Checked == false) {
-                MessageBox.Show("Please confirm that the information provided above is true.", "Confirmation Required", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
             StudentUserRepository repository = new StudentUserRepository();
             bool isUpdated = repository.UpdateStudentAndStudentData(User);
-            if (isUpdated) MessageBox.Show("Info Succesfully Updated!", "Successful!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            checkBoxConfirmation.Enabled = false;
+
+            if (isUpdated) {
+                MessageBox.Show("Info Successfully Updated!", "Successful!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                checkBoxConfirmation.Enabled = false;
+                checkBoxConfirmation.Checked = false;
+            } else {
+                MessageBox.Show("Failed to update information. Please try again.", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                buttonEdit.Enabled = false;
+                checkBoxConfirmation.Enabled = true;
+            }
         }
 
+        private string GetDepartmentFromCourse(string course) {
+            if (string.IsNullOrEmpty(course)) return "";
+
+
+            if (course.Contains("Civil Engineering") || course.Contains("Computer Engineering") || course.Contains("Electronics Engineering") || course.Contains("Electrical Engineering") || course.Contains("Mechanical Engineering") || course.Contains("Architecture") || course.Contains("Computer Science") || course.Contains("Information Technology") || course.Contains("Information Systems")) {
+                return "School of Engineering, Architecture and Information Technology";
+
+            } else if (course.Contains("Elementary Education") || course.Contains("Physical Education") || course.Contains("Secondary Education") || course.Contains("Communication") || course.Contains("Political Science") || course.Contains("Psychology") || course.Contains("Sociology")) {
+                return "School of Teacher Education and Humanities";
+
+            } else if (course.Contains("Accountancy") || course.Contains("Business Administration") || course.Contains("Entrepreneurship") || course.Contains("Human Resource Management") || course.Contains("Marketing Management")) {
+                return "School of Accountancy and Business";
+
+            } else if (course.Contains("Biology") || course.Contains("Medical Technology") || course.Contains("Nursing") || course.Contains("Pharmacy")) {
+                return "School of Health and Natural Sciences";
+
+            } else if (course.Contains("Law") || course.Contains("Juris Doctor") || course.Contains("JD")) {
+                return "College of Law";
+            }
+            return "General Studies";
+        }
         private void UserInformationForm_Load(object sender, EventArgs e) {
             loadInfo();
         }
 
         private void loadInfo() {
+            if (User.UserInfo == null) {
+                User.UserInfo = new StudentData();
+            }
 
             var info = User.UserInfo;
-            textBoxLastName.Text = info.LastName;
-            textBoxFirstName.Text = info.FirstName;
-            textBoxMI.Text = info.MiddleInitial;
-            textBoxPrefixSuffix.Text = info.PrefixSuffix;
+
+            textBoxLastName.Text = info.LastName ?? "";
+            textBoxFirstName.Text = info.FirstName ?? "";
+            textBoxMI.Text = info.MiddleInitial ?? "";
+            textBoxPrefixSuffix.Text = info.PrefixSuffix ?? "";
 
             checkBoxMale.Checked = info.Sex == "Male";
             checkBoxFemale.Checked = info.Sex == "Female";
 
-            if (info.BirthDay > dateTimePickerBirthday.MinDate)
+            if (info.BirthDay > dateTimePickerBirthday.MinDate && info.BirthDay < DateTime.Now)
                 dateTimePickerBirthday.Value = info.BirthDay;
             else
-                dateTimePickerBirthday.Value = DateTime.Today;
+                dateTimePickerBirthday.Value = DateTime.Today.AddYears(-18);
 
             textBoxAge.Text = info.Age.ToString();
-            comboBoxNationality.SelectedItem = info.Nationality;
-            comboBoxContactNumber.SelectedItem = info.ContactNumber;
-            textBoxContactInformation.Text = info.ContactInformation;
-            textBoxHomeAddress.Text = info.Address;
-            comboBoxCourseProgram.SelectedItem = info.Course;
-            numericUpDownYear.Value = info.YearLevel;
-            textBoxPreviousSchool.Text = info.PreviousSchool;
+
+            if (!string.IsNullOrEmpty(info.Nationality))
+                comboBoxNationality.SelectedItem = info.Nationality;
+
+            if (!string.IsNullOrEmpty(info.ContactNumber))
+                comboBoxContactNumber.SelectedItem = info.ContactNumber;
+
+            textBoxContactInformation.Text = info.ContactInformation ?? "";
+            textBoxHomeAddress.Text = info.Address ?? "";
+
+            if (!string.IsNullOrEmpty(info.Course))
+                comboBoxCourseProgram.SelectedItem = info.Course;
+
+            if (info.YearLevel > 0)
+                numericUpDownYear.Value = info.YearLevel;
+
+            textBoxPreviousSchool.Text = info.PreviousSchool ?? "";
+
             ButtonConfirm.Enabled = false;
         }
 
         private void checkBoxMale_CheckedChanged(object sender, EventArgs e) {
-            checkBoxFemale.Checked = false;
+            if (checkBoxMale.Checked)
+                checkBoxFemale.Checked = false;
         }
+
         private void checkBoxFemale_CheckedChanged(object sender, EventArgs e) {
-            checkBoxMale.Checked = false;
+            if (checkBoxFemale.Checked)
+                checkBoxMale.Checked = false;
         }
 
         private void checkBoxConfirmation_CheckedChanged(object sender, EventArgs e) {
-            ButtonConfirm.Enabled = true;
+            ButtonConfirm.Enabled = checkBoxConfirmation.Checked;
         }
 
         private void comboBoxContactNumber_SelectedIndexChanged(object sender, EventArgs e) {
-            textBoxContactInformation.Text = $"{comboBoxContactNumber.Text}{textBoxContactInformation.Text}";
-
+            if (!textBoxContactInformation.Text.StartsWith(comboBoxContactNumber.Text)) {
+                string existingNumber = textBoxContactInformation.Text.Replace("+63", "")
+                    .Replace("+1", "").Replace("+", "").Trim();
+                textBoxContactInformation.Text = existingNumber;
+            }
         }
     }
 }
-

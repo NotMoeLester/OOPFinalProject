@@ -91,28 +91,31 @@ namespace Project {
         }
 
         private void ButtonBack_Click(object sender, EventArgs e) {
-
             this.Close();
-
         }
 
         private void DataGridViewUserList_CellContentClick(object sender, DataGridViewCellEventArgs e) {
 
         }
 
-     
         private void ButtonViewAccountInformation_Click_1(object sender, EventArgs e) {
             if (selectedStudentId == -1) {
                 MessageBox.Show("Please select a user first.", "No Selection",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
             StudentUser? user = repository.GetStudentData(selectedStudentId);
 
             if (user != null) {
+                if (user.UserInfo == null) {
+                    user.UserInfo = new StudentData();
+                }
+
                 ViewAccountDialog dialog = new ViewAccountDialog(user);
                 dialog.ShowDialog();
+            } else {
+                MessageBox.Show("Unable to load student information.", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
