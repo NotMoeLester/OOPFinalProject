@@ -62,16 +62,18 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label1.ForeColor = Color.Beige;
             label1.Location = new Point(33, 32);
             label1.Name = "label1";
-            label1.Size = new Size(68, 15);
+            label1.Size = new Size(74, 15);
             label1.TabIndex = 0;
             label1.Text = "Student ID :";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label2.ForeColor = Color.Beige;
             label2.Location = new Point(33, 57);
             label2.Name = "label2";
@@ -82,150 +84,165 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label3.ForeColor = Color.Beige;
             label3.Location = new Point(33, 80);
             label3.Name = "label3";
-            label3.Size = new Size(63, 15);
+            label3.Size = new Size(65, 15);
             label3.TabIndex = 2;
             label3.Text = "Password :";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label4.ForeColor = Color.Beige;
             label4.Location = new Point(31, 106);
             label4.Name = "label4";
-            label4.Size = new Size(72, 15);
+            label4.Size = new Size(77, 15);
             label4.TabIndex = 3;
             label4.Text = "Verification :";
             // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label5.ForeColor = Color.Beige;
             label5.Location = new Point(33, 159);
             label5.Name = "label5";
-            label5.Size = new Size(69, 15);
+            label5.Size = new Size(71, 15);
             label5.TabIndex = 4;
             label5.Text = "Last Name :";
             // 
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label6.ForeColor = Color.Beige;
             label6.Location = new Point(33, 185);
             label6.Name = "label6";
-            label6.Size = new Size(73, 15);
+            label6.Size = new Size(76, 15);
             label6.TabIndex = 5;
             label6.Text = "First Name : ";
             // 
             // label7
             // 
             label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label7.ForeColor = Color.Beige;
             label7.Location = new Point(33, 209);
             label7.Name = "label7";
-            label7.Size = new Size(85, 15);
+            label7.Size = new Size(88, 15);
             label7.TabIndex = 6;
             label7.Text = "Middle Initial : ";
             // 
             // label8
             // 
             label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label8.ForeColor = Color.Beige;
             label8.Location = new Point(33, 235);
             label8.Name = "label8";
-            label8.Size = new Size(76, 15);
+            label8.Size = new Size(86, 15);
             label8.TabIndex = 7;
             label8.Text = "Suffix/Prefix :";
             // 
             // label9
             // 
             label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label9.ForeColor = Color.Beige;
             label9.Location = new Point(34, 259);
             label9.Name = "label9";
-            label9.Size = new Size(30, 15);
+            label9.Size = new Size(34, 15);
             label9.TabIndex = 8;
             label9.Text = "Sex :";
             // 
             // label10
             // 
             label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label10.ForeColor = Color.Beige;
             label10.Location = new Point(33, 282);
             label10.Name = "label10";
-            label10.Size = new Size(57, 15);
+            label10.Size = new Size(60, 15);
             label10.TabIndex = 9;
             label10.Text = "Birthday :";
             // 
             // label11
             // 
             label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label11.ForeColor = Color.Beige;
             label11.Location = new Point(33, 302);
             label11.Name = "label11";
-            label11.Size = new Size(34, 15);
+            label11.Size = new Size(35, 15);
             label11.TabIndex = 10;
             label11.Text = "Age :";
             // 
             // label12
             // 
             label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label12.ForeColor = Color.Beige;
             label12.Location = new Point(33, 328);
             label12.Name = "label12";
-            label12.Size = new Size(71, 15);
+            label12.Size = new Size(73, 15);
             label12.TabIndex = 11;
             label12.Text = "Nationality :";
             // 
             // label13
             // 
             label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label13.ForeColor = Color.Beige;
             label13.Location = new Point(31, 353);
             label13.Name = "label13";
-            label13.Size = new Size(102, 15);
+            label13.Size = new Size(105, 15);
             label13.TabIndex = 12;
             label13.Text = "Contact Number :";
             // 
             // label14
             // 
             label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label14.ForeColor = Color.Beige;
             label14.Location = new Point(33, 378);
             label14.Name = "label14";
-            label14.Size = new Size(91, 15);
+            label14.Size = new Size(94, 15);
             label14.TabIndex = 13;
             label14.Text = "Home Address :";
             // 
             // label15
             // 
             label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label15.ForeColor = Color.Beige;
             label15.Location = new Point(33, 420);
             label15.Name = "label15";
-            label15.Size = new Size(50, 15);
+            label15.Size = new Size(51, 15);
             label15.TabIndex = 14;
             label15.Text = "Course :";
             // 
             // label16
             // 
             label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label16.ForeColor = Color.Beige;
             label16.Location = new Point(33, 447);
             label16.Name = "label16";
-            label16.Size = new Size(65, 15);
+            label16.Size = new Size(70, 15);
             label16.TabIndex = 15;
             label16.Text = "Year Level :";
             // 
             // label17
             // 
             label17.AutoSize = true;
+            label17.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label17.ForeColor = Color.Beige;
             label17.Location = new Point(33, 475);
             label17.Name = "label17";
-            label17.Size = new Size(97, 15);
+            label17.Size = new Size(101, 15);
             label17.TabIndex = 16;
             label17.Text = "Previous School :";
             // 
@@ -233,7 +250,7 @@
             // 
             labelStudentID.AutoSize = true;
             labelStudentID.ForeColor = Color.White;
-            labelStudentID.Location = new Point(107, 32);
+            labelStudentID.Location = new Point(109, 32);
             labelStudentID.Name = "labelStudentID";
             labelStudentID.Size = new Size(18, 15);
             labelStudentID.TabIndex = 17;
@@ -283,7 +300,7 @@
             // 
             labelFirstName.AutoSize = true;
             labelFirstName.ForeColor = Color.White;
-            labelFirstName.Location = new Point(107, 185);
+            labelFirstName.Location = new Point(112, 185);
             labelFirstName.Name = "labelFirstName";
             labelFirstName.Size = new Size(64, 15);
             labelFirstName.TabIndex = 22;
@@ -303,7 +320,7 @@
             // 
             labelPrefixSuffix.AutoSize = true;
             labelPrefixSuffix.ForeColor = Color.White;
-            labelPrefixSuffix.Location = new Point(115, 235);
+            labelPrefixSuffix.Location = new Point(125, 235);
             labelPrefixSuffix.Name = "labelPrefixSuffix";
             labelPrefixSuffix.Size = new Size(70, 15);
             labelPrefixSuffix.TabIndex = 24;
@@ -313,7 +330,7 @@
             // 
             labelSex.AutoSize = true;
             labelSex.ForeColor = Color.White;
-            labelSex.Location = new Point(70, 259);
+            labelSex.Location = new Point(71, 259);
             labelSex.Name = "labelSex";
             labelSex.Size = new Size(76, 15);
             labelSex.TabIndex = 25;
@@ -323,7 +340,7 @@
             // 
             labelBirthday.AutoSize = true;
             labelBirthday.ForeColor = Color.White;
-            labelBirthday.Location = new Point(96, 282);
+            labelBirthday.Location = new Point(97, 282);
             labelBirthday.Name = "labelBirthday";
             labelBirthday.Size = new Size(73, 15);
             labelBirthday.TabIndex = 26;
@@ -333,7 +350,7 @@
             // 
             labelAge.AutoSize = true;
             labelAge.ForeColor = Color.White;
-            labelAge.Location = new Point(70, 302);
+            labelAge.Location = new Point(72, 302);
             labelAge.Name = "labelAge";
             labelAge.Size = new Size(28, 15);
             labelAge.TabIndex = 27;
@@ -343,7 +360,7 @@
             // 
             labelNationality.AutoSize = true;
             labelNationality.ForeColor = Color.White;
-            labelNationality.Location = new Point(108, 328);
+            labelNationality.Location = new Point(109, 328);
             labelNationality.Name = "labelNationality";
             labelNationality.Size = new Size(65, 15);
             labelNationality.TabIndex = 28;
@@ -353,7 +370,7 @@
             // 
             labelContactNumber.AutoSize = true;
             labelContactNumber.ForeColor = Color.White;
-            labelContactNumber.Location = new Point(136, 353);
+            labelContactNumber.Location = new Point(139, 353);
             labelContactNumber.Name = "labelContactNumber";
             labelContactNumber.Size = new Size(76, 15);
             labelContactNumber.TabIndex = 29;
@@ -363,7 +380,7 @@
             // 
             labelAddress.AutoSize = true;
             labelAddress.ForeColor = Color.White;
-            labelAddress.Location = new Point(130, 378);
+            labelAddress.Location = new Point(132, 378);
             labelAddress.Name = "labelAddress";
             labelAddress.Size = new Size(49, 15);
             labelAddress.TabIndex = 30;
@@ -373,7 +390,7 @@
             // 
             labelCourse.AutoSize = true;
             labelCourse.ForeColor = Color.White;
-            labelCourse.Location = new Point(89, 420);
+            labelCourse.Location = new Point(83, 420);
             labelCourse.Name = "labelCourse";
             labelCourse.Size = new Size(79, 15);
             labelCourse.TabIndex = 31;
@@ -393,7 +410,7 @@
             // 
             labelPreviousSchool.AutoSize = true;
             labelPreviousSchool.ForeColor = Color.White;
-            labelPreviousSchool.Location = new Point(130, 475);
+            labelPreviousSchool.Location = new Point(135, 475);
             labelPreviousSchool.Name = "labelPreviousSchool";
             labelPreviousSchool.Size = new Size(114, 15);
             labelPreviousSchool.TabIndex = 33;

@@ -57,7 +57,7 @@
             // 
             // ButtonView
             // 
-            ButtonView.BackColor = Color.Navy;
+            ButtonView.BackColor = Color.DodgerBlue;
             ButtonView.FlatStyle = FlatStyle.Flat;
             ButtonView.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ButtonView.ForeColor = Color.White;
@@ -65,13 +65,13 @@
             ButtonView.Name = "ButtonView";
             ButtonView.Size = new Size(142, 44);
             ButtonView.TabIndex = 1;
-            ButtonView.Text = "View";
+            ButtonView.Text = "🔄 Refresh List";
             ButtonView.UseVisualStyleBackColor = false;
             ButtonView.Click += ButtonView_Click;
             // 
             // ButtonCreate
             // 
-            ButtonCreate.BackColor = Color.Navy;
+            ButtonCreate.BackColor = Color.Green;
             ButtonCreate.FlatStyle = FlatStyle.Flat;
             ButtonCreate.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ButtonCreate.ForeColor = Color.White;
@@ -79,13 +79,13 @@
             ButtonCreate.Name = "ButtonCreate";
             ButtonCreate.Size = new Size(142, 44);
             ButtonCreate.TabIndex = 2;
-            ButtonCreate.Text = "Create";
+            ButtonCreate.Text = "+ Add New User";
             ButtonCreate.UseVisualStyleBackColor = false;
             ButtonCreate.Click += ButtonCreate_Click;
             // 
             // ButtonUpdate
             // 
-            ButtonUpdate.BackColor = Color.Navy;
+            ButtonUpdate.BackColor = Color.Orange;
             ButtonUpdate.FlatStyle = FlatStyle.Flat;
             ButtonUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ButtonUpdate.ForeColor = Color.White;
@@ -93,7 +93,7 @@
             ButtonUpdate.Name = "ButtonUpdate";
             ButtonUpdate.Size = new Size(142, 44);
             ButtonUpdate.TabIndex = 3;
-            ButtonUpdate.Text = "Update";
+            ButtonUpdate.Text = "✎ Update Selected";
             ButtonUpdate.UseVisualStyleBackColor = false;
             ButtonUpdate.Click += ButtonUpdate_Click;
             // 
@@ -107,7 +107,7 @@
             ButtonDelete.Name = "ButtonDelete";
             ButtonDelete.Size = new Size(142, 44);
             ButtonDelete.TabIndex = 4;
-            ButtonDelete.Text = "Delete";
+            ButtonDelete.Text = "🗑 Delete Selected";
             ButtonDelete.UseVisualStyleBackColor = false;
             ButtonDelete.Click += ButtonDelete_Click;
             // 
