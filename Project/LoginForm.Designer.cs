@@ -50,8 +50,7 @@
             // 
             // ButtonLogin
             // 
-            ButtonLogin.BackColor = Color.DarkBlue;
-            ButtonLogin.FlatStyle = FlatStyle.Flat;
+            ButtonLogin.BackColor = Color.MidnightBlue;
             ButtonLogin.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ButtonLogin.ForeColor = SystemColors.ControlLightLight;
             ButtonLogin.Location = new Point(256, 244);
@@ -225,7 +224,7 @@
             // 
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(122, -1);
+            pictureBox1.Location = new Point(128, -1);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(500, 403);
             pictureBox1.TabIndex = 18;

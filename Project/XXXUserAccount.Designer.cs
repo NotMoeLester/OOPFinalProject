@@ -1,6 +1,6 @@
 ﻿namespace Project
 {
-    partial class UserAccount
+    partial class XXXUserAccount
     {
         /// <summary>
         /// Required designer variable.
@@ -27,7 +27,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserAccount));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XXXUserAccount));
             ButtonViewStudentInformation = new Button();
             label6 = new Label();
             label7 = new Label();
