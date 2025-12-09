@@ -68,6 +68,7 @@
             panel8 = new Panel();
             panel9 = new Panel();
             buttonEdit = new Button();
+            ButtonBack = new Button();
             ((System.ComponentModel.ISupportInitialize)numericUpDownYear).BeginInit();
             panel2.SuspendLayout();
             panel7.SuspendLayout();
@@ -566,12 +567,24 @@
             buttonEdit.UseVisualStyleBackColor = false;
             buttonEdit.Click += buttonEdit_Click;
             // 
+            // ButtonBack
+            // 
+            ButtonBack.BackgroundImage = Properties.Resources.left;
+            ButtonBack.BackgroundImageLayout = ImageLayout.Zoom;
+            ButtonBack.Location = new Point(628, 21);
+            ButtonBack.Name = "ButtonBack";
+            ButtonBack.Size = new Size(38, 32);
+            ButtonBack.TabIndex = 43;
+            ButtonBack.UseVisualStyleBackColor = true;
+            ButtonBack.Click += ButtonBack_Click;
+            // 
             // UserInformationForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Navy;
             ClientSize = new Size(750, 519);
+            Controls.Add(ButtonBack);
             Controls.Add(buttonEdit);
             Controls.Add(label18);
             Controls.Add(label17);
@@ -673,5 +686,6 @@
         private Panel panel8;
         private Panel panel9;
         private Button buttonEdit;
+        private Button ButtonBack;
     }
 }

@@ -79,7 +79,7 @@ namespace Project {
             string confirmPassword = TextBoxConfirmPasswordSignUp.Text.Trim();
 
             if (Validator.EmailSignUp(email) != string.Empty || Validator.Password(password) != string.Empty) {
-                LabelEmailValidation.Text = Validator.Email(email);
+                LabelEmailValidation.Text = Validator.EmailSignUp(email);
                 return;
             }
             if (Validator.Password(password) != string.Empty || Validator.ConfirmPassword(password, confirmPassword) != string.Empty) {
@@ -96,7 +96,7 @@ namespace Project {
 
             bool isSaved = repository.AddStudentAndStudentData(userToSave, userDataToSave);
             if (isSaved) {
-                MessageBox.Show("Succesfully signed in!\nProceed to Login?", "Successful!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                MessageBox.Show("Succesfully signed in!\nProceed to Login?", "Successful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
                 loginForm.Show();
             } else {
