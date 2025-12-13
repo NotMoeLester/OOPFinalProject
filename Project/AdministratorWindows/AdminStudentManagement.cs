@@ -2,12 +2,11 @@
 using Project.StudentClassModels;
 using Project.SubjectManagement;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Project {
     public partial class AdminStudentManagement : Form {
 
-        StudentRepository repository = new StudentRepository();
+        private StudentRepository repository = new StudentRepository();
         private DataGridViewRow? selectedRow;
         private int selectedStudentId = -1;
 

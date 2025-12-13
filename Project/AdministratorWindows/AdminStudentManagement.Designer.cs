@@ -53,7 +53,6 @@
             DataGridViewUserList.Size = new Size(667, 395);
             DataGridViewUserList.TabIndex = 0;
             DataGridViewUserList.CellClick += DataGridViewUserList_CellClick_1;
-
             //
             // ButtonView
             // 
