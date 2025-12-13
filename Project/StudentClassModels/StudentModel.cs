@@ -1,4 +1,5 @@
-﻿using SQLite;
+﻿using Project.StudentClassModels;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,18 +13,18 @@ namespace Project {
         public int StudentId { get; set; }
 
         public string Email { get; set; } = string.Empty;
-        public string FullName { get; set; } = string.Empty;
-        public string ContactNumber { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;
         public bool Verification { get; set; } = false;
-        public string Course { get; set; } = string.Empty;
-        public string Department { get; set; } = string.Empty;
-        public int YearLevel { get; set; } = 0 ;
         public bool IsEnrolled { get; set; } = false;
 
         [Ignore]
         [Browsable(false)]
-        public StudentData UserInfo { get; set; } = new StudentData();
+        public StudentInformationModel StudentInformation { get; set; } = new StudentInformationModel();
+
+        [Ignore]
+        [Browsable(false)]
+        public SubjectModel StudentSubject { get; set; } = new SubjectModel();
+
 
         public StudentModel() { 
         

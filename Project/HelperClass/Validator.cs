@@ -21,7 +21,7 @@ namespace Project.HelperClass {
         }
 
         public static string Email(string email) {
-            StudentUserRepository repository = new StudentUserRepository();
+            StudentRepository repository = new StudentRepository();
             if (string.IsNullOrEmpty(email) || email == "Enter Email" || email == "Confirm Email") {
                 return "Email Field Empty";
             }
@@ -43,7 +43,7 @@ namespace Project.HelperClass {
             return "";
         }
         public static string EmailSignUp(string email) {
-            StudentUserRepository repository = new StudentUserRepository();
+            StudentRepository repository = new StudentRepository();
             if (string.IsNullOrEmpty(email) || email == "Enter Email" || email == "Confirm Email") {
                 return "Email Field Empty";
             }

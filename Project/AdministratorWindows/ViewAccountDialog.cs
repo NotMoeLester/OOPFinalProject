@@ -11,30 +11,35 @@ using System.Windows.Forms;
 
 namespace Project {
     public partial class ViewAccountDialog : Form {
-        private StudentModel _user;
+        private StudentModel Student;
 
-        public ViewAccountDialog(StudentModel user) {
+        public ViewAccountDialog(StudentModel student) {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterParent;
-            _user = user;
+            Student = student;
             LoadUserDetails();
         }
 
         private void LoadUserDetails() {
             // USER ACCOUNT==================================
-            labelStudentID.Text = _user.StudentId.ToString();
-            labelEmail.Text = string.IsNullOrEmpty(_user.Email) ? "Not set" : _user.Email;
-            labelPassword.Text = string.IsNullOrEmpty(_user.Password) ? "Not set" : new string('*', _user.Password.Length);
-            labelVerification.Text = _user.Verification ? "Verified" : "Not Verified";
+            labelStudentID.Text = Student.StudentId.ToString();
+            labelEmail.Text = string.IsNullOrEmpty(Student.Email) ? "Not set" : Student.Email;
+            labelPassword.Text = string.IsNullOrEmpty(Student.Password) ? "Not set" : new string('*', Student.Password.Length);
+            labelVerification.Text = Student.Verification ? "Verified" : "Not Verified";
 
             // STUDENT PERSONAL INFO==================================
-            if (_user.UserInfo != null) {
-                var info = _user.UserInfo;
+            if (Student.StudentInformation != null) {
+                var info = Student.StudentInformation;
 
                 labelFirstName.Text = string.IsNullOrEmpty(info.FirstName) ? "Not filled" : info.FirstName;
-                labelMiddleInitial.Text = string.IsNullOrEmpty(info.MiddleInitial) ? "N/A" : info.MiddleInitial;
+                labelMiddleName.Text = string.IsNullOrEmpty(info.MiddleName) ? "N/A" : info.MiddleName;
                 labelLastName.Text = string.IsNullOrEmpty(info.LastName) ? "Not filled" : info.LastName;
-                labelPrefixSuffix.Text = string.IsNullOrEmpty(info.PrefixSuffix) ? "N/A" : info.PrefixSuffix;
+
+                string prefix = info.Prefix;
+                string suffix = info.Suffix;
+                labelPrefix.Text = string.IsNullOrEmpty(info.Prefix) ? "N/A" : info.Prefix;
+                labelSuffix.Text = string.IsNullOrEmpty(info.Suffix) ? "N/A" : info.Suffix;
+
                 labelSex.Text = string.IsNullOrEmpty(info.Sex) ? "Not specified" : info.Sex;
 
                 if (info.BirthDay > DateTime.MinValue && info.BirthDay < DateTime.Now)
@@ -44,26 +49,21 @@ namespace Project {
 
                 labelAge.Text = info.Age > 0 ? info.Age.ToString() : "N/A";
                 labelNationality.Text = string.IsNullOrEmpty(info.Nationality) ? "Not specified" : info.Nationality;
-
-                string fullContactNumber = "";
-                if (!string.IsNullOrEmpty(info.ContactNumber)) {
-                    fullContactNumber = info.ContactNumber;
-                }
-                if (!string.IsNullOrEmpty(info.ContactInformation)) {
-                    fullContactNumber += info.ContactInformation;
-                }
-                labelContactNumber.Text = string.IsNullOrEmpty(fullContactNumber.Trim()) ? "Not provided" : fullContactNumber;
                 labelAddress.Text = string.IsNullOrEmpty(info.Address) ? "Not provided" : info.Address;
-                string department = GetDepartmentFromCourse(info.Course);
-                labelDepartment.Text = string.IsNullOrEmpty(department) ? "Not specified" : department;
+                labelContactNumber.Text = string.IsNullOrEmpty(info.ContactNumber.Trim()) ? "Not provided" : info.ContactNumber;
+
+                labelSchool.Text = string.IsNullOrEmpty(info.School) ? "Not specified" : info.School;
+                labelDepartment.Text = string.IsNullOrEmpty(info.Department) ? "Not specified" : info.Department;
                 labelCourse.Text = string.IsNullOrEmpty(info.Course) ? "Not enrolled" : info.Course;
                 labelYearLevel.Text = info.YearLevel > 0 ? info.YearLevel.ToString() : "N/A";
                 labelPreviousSchool.Text = string.IsNullOrEmpty(info.PreviousSchool) ? "Not provided" : info.PreviousSchool;
+
             } else {
                 labelFirstName.Text = "Not filled";
-                labelMiddleInitial.Text = "N/A";
+                labelMiddleName.Text = "N/A";
                 labelLastName.Text = "Not filled";
-                labelPrefixSuffix.Text = "N/A";
+                labelPrefix.Text = "N/A";
+                labelSuffix.Text = "N/A";
                 labelSex.Text = "Not specified";
                 labelBirthday.Text = "Not set";
                 labelAge.Text = "N/A";
@@ -75,20 +75,19 @@ namespace Project {
                 labelYearLevel.Text = "N/A";
                 labelPreviousSchool.Text = "Not provided";
 
-
             }
         }
         private string GetDepartmentFromCourse(string course) {
             if (string.IsNullOrEmpty(course)) return "";
 
 
-            if (course.Contains("Civil Engineering") ||course.Contains("Computer Engineering") || course.Contains("Electronics Engineering") || course.Contains("Electrical Engineering") ||course.Contains("Mechanical Engineering") || course.Contains("Architecture") ||course.Contains("Computer Science") || course.Contains("Information Technology") || course.Contains("Information Systems")) {
+            if (course.Contains("Civil Engineering") || course.Contains("Computer Engineering") || course.Contains("Electronics Engineering") || course.Contains("Electrical Engineering") || course.Contains("Mechanical Engineering") || course.Contains("Architecture") || course.Contains("Computer Science") || course.Contains("Information Technology") || course.Contains("Information Systems")) {
                 return "School of Engineering, Architecture and Information Technology";
 
-            } else if (course.Contains("Elementary Education") ||course.Contains("Physical Education") ||course.Contains("Secondary Education") || course.Contains("Communication") || course.Contains("Political Science") || course.Contains("Psychology") ||course.Contains("Sociology")) {
+            } else if (course.Contains("Elementary Education") || course.Contains("Physical Education") || course.Contains("Secondary Education") || course.Contains("Communication") || course.Contains("Political Science") || course.Contains("Psychology") || course.Contains("Sociology")) {
                 return "School of Teacher Education and Humanities";
 
-            } else if (course.Contains("Accountancy") || course.Contains("Business Administration") || course.Contains("Entrepreneurship") ||course.Contains("Human Resource Management") || course.Contains("Marketing Management")) {
+            } else if (course.Contains("Accountancy") || course.Contains("Business Administration") || course.Contains("Entrepreneurship") || course.Contains("Human Resource Management") || course.Contains("Marketing Management")) {
                 return "School of Accountancy and Business";
 
             } else if (course.Contains("Biology") || course.Contains("Medical Technology") || course.Contains("Nursing") || course.Contains("Pharmacy")) {
@@ -98,6 +97,10 @@ namespace Project {
                 return "College of Law";
             }
             return "General Studies";
+        }
+
+        private void labelSuffix_Click(object sender, EventArgs e) {
+
         }
     }
 }

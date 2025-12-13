@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
 using Project.HelperClass;
+using Project.StudentClassModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,15 +14,20 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Project {
     public partial class SignUpForm : Form {
-        private LoginForm loginForm;
+        private LoginForm LoginForm;
+
+        //CONSTRUCTOR==========================================================================
+        #region
         public SignUpForm(LoginForm loginForm) {
             InitializeComponent();
             this.Size = new Size(816, 489);
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.loginForm = loginForm;
+            LoginForm = loginForm;
         }
+        #endregion
 
         //TEXT BOX UI=============================================================================
+        #region
         private void TextBoxEmailSignUp_Enter(object sender, EventArgs e) {
             if (TextBoxEmailSignUp.Text == " Enter Email") {
                 TextBoxEmailSignUp.Text = string.Empty;
@@ -64,16 +70,20 @@ namespace Project {
                 TextBoxConfirmPasswordSignUp.Font = new Font("Segoe UI", 9, FontStyle.Italic);
             }
         }
+        #endregion
 
         //LINK LABEL=============================================================================
+        #region
         private void LinkLabelLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             this.Close();
-            loginForm.Show();
+            LoginForm.Show();
         }
+        #endregion
 
-        //BUTTON LOGIN=============================================================================
-        private void ButtonLogin_Click(object sender, EventArgs e) {
-            StudentUserRepository repository = new StudentUserRepository();
+        //BUTTON SIGNUP=============================================================================
+        #region
+        private void ButtonSignUp_Click(object sender, EventArgs e) {
+            StudentRepository repository = new StudentRepository();
 
             string email = TextBoxEmailSignUp.Text.Trim();
             string password = TextBoxPasswordSignUp.Text.Trim();
@@ -86,25 +96,30 @@ namespace Project {
             if (Validator.Password(password) != string.Empty || Validator.ConfirmPassword(password, confirmPassword) != string.Empty) {
                 LabelPasswordValidation.Text = Validator.Password(password);
                 LabelConfirmPasswordValidation.Text = Validator.ConfirmPassword(password, confirmPassword);
+                return;
             }
 
-
             //Add user to database---------------------------------------------------------------------------
-            StudentModel userToSave = new StudentModel();
-            StudentData userDataToSave = new StudentData();
+            var userToSave = new StudentModel();
+            var userDataToSave = new StudentInformationModel();
+            var userSubjectsToSave = new StudentSubjectsModel();
+
             userToSave.Email = email;
             userToSave.Password = password;
 
-            bool isSaved = repository.AddStudentAndStudentData(userToSave, userDataToSave);
+            bool isSaved = repository.AddStudent(userToSave, userDataToSave, userSubjectsToSave);
             if (isSaved) {
                 MessageBox.Show("Succesfully signed in!\nProceed to Login?", "Successful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
-                loginForm.Show();
+                LoginForm.Show();
             } else {
                 MessageBox.Show("Unsuccesfull!\nTry Again", "Successful!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             }
         }
+        #endregion
 
+        //LABEL FEEDBACK RESET =======================================================================
+        #region
         private void TextBoxEmailSignUp_TextChanged(object sender, EventArgs e) {
             LabelEmailValidation.Text = string.Empty;
         }
@@ -114,10 +129,7 @@ namespace Project {
         private void TextBoxConfirmPasswordSignUp_TextChanged(object sender, EventArgs e) {
             LabelConfirmPasswordValidation.Text = string.Empty;
         }
-
-        private void SignUpForm_Load(object sender, EventArgs e) {
-
-        }
+        #endregion
     }
 }
 
