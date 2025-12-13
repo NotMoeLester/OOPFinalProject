@@ -12,8 +12,8 @@ namespace Project
 {
     public partial class UserEnrollmentRecord : Form {
 
-        private StudentUser User;
-        public UserEnrollmentRecord(StudentUser user) {
+        private StudentModel User;
+        public UserEnrollmentRecord(StudentModel user) {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             User = user;

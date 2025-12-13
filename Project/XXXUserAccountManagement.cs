@@ -11,9 +11,9 @@ using System.Windows.Forms;
 namespace Project
 {
     public partial class XXXUserAccountManagement : Form {
-        public StudentUser User;
+        public StudentModel User;
 
-        public XXXUserAccountManagement(StudentUser user)
+        public XXXUserAccountManagement(StudentModel user)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;

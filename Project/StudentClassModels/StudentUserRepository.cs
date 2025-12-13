@@ -14,12 +14,12 @@ namespace Project {
         public StudentUserRepository() {
             string databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "StudentUserData.db" );
             _connection = new SQLiteConnection(databasePath);
-            _connection.CreateTable<StudentUser>();
+            _connection.CreateTable<StudentModel>();
             _connection.CreateTable<StudentData>();
         }
 
         //CREATE USER ACC
-        public bool AddStudentAndStudentData(StudentUser user, StudentData profile) {
+        public bool AddStudentAndStudentData(StudentModel user, StudentData profile) {
             _connection.Insert(user);
             profile.StudentId = user.StudentId;
             _connection.Insert(profile); 
@@ -27,15 +27,15 @@ namespace Project {
         }
 
         //READ USER ACC
-        public List<StudentUser> GetAll() {
-            return _connection.Table<StudentUser>().ToList();
+        public List<StudentModel> GetAll() {
+            return _connection.Table<StudentModel>().ToList();
         }
-        public StudentUser Get(int id) {
-            return _connection.Find<StudentUser>(id);
+        public StudentModel Get(int id) {
+            return _connection.Find<StudentModel>(id);
         }
 
         //UPDATE USER ACC
-        public bool UpdateStudentAndStudentData(StudentUser user) {
+        public bool UpdateStudentAndStudentData(StudentModel user) {
             _connection.Update(user);
             if (user.UserInfo != null)
                 _connection.Update(user.UserInfo);
@@ -43,40 +43,40 @@ namespace Project {
         }
 
         //DELETE USER ACC
-        public bool DeleteStudentAndStudentData(StudentUser user) {
+        public bool DeleteStudentAndStudentData(StudentModel user) {
             _connection.Delete(user);
             DeleteStudentData(user.StudentId);
             return true;
         }
 
         //CHECK IF PASSWORD MATCH
-        public StudentUser GetUserByEmailAndPassword(string email, string password) {
-            return _connection.Table<StudentUser>().FirstOrDefault(u => u.Email == email && u.Password == password);
+        public StudentModel GetUserByEmailAndPassword(string email, string password) {
+            return _connection.Table<StudentModel>().FirstOrDefault(u => u.Email == email && u.Password == password);
         }
 
         //CHECK IF CURRENTLY USER
         public bool IsUser(string email) {
-            StudentUser user = _connection.Table<StudentUser>().FirstOrDefault(u => u.Email == email);
+            StudentModel user = _connection.Table<StudentModel>().FirstOrDefault(u => u.Email == email);
             return user != null;
         }
 
         //CHECK IF USER ACCOUNT IS VALIDATED
         public bool IsAccoundValid(string email) {
-            StudentUser user = _connection.Table<StudentUser>().FirstOrDefault(u => u.Email == email);
+            StudentModel user = _connection.Table<StudentModel>().FirstOrDefault(u => u.Email == email);
             return user != null && user.Verification;
         }
 
         //=============================================================================================================
         //STUDENT DATA
         // READ USER DATA
-        public StudentUser GetStudentData(int studentId) {
-            var user = _connection.Find<StudentUser>(studentId);
+        public StudentModel GetStudentData(int studentId) {
+            var user = _connection.Find<StudentModel>(studentId);
             if (user != null) {
                 user.UserInfo = _connection.Table<StudentData>().FirstOrDefault(d => d.StudentId == studentId);
             }
             return user;
         }
-        public StudentUser GetFullStudentUser(string email, string password) {
+        public StudentModel GetFullStudentUser(string email, string password) {
             var user = GetUserByEmailAndPassword(email, password);
             if (user != null) {
                 user.UserInfo = GetStudentData(user.StudentId)?.UserInfo ?? new StudentData();

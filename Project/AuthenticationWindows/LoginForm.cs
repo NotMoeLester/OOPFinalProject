@@ -1,5 +1,6 @@
 
 using Project.AdministratorUserData;
+using Project.HelperClass;
 
 namespace Project
 {
@@ -83,7 +84,7 @@ namespace Project
                     MessageBox.Show("Account doesn't exist", "Please try again!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                StudentUser user = repository.GetUserByEmailAndPassword(email, password);
+                StudentModel user = repository.GetUserByEmailAndPassword(email, password);
                 if (user == null) {
                     LabelPasswordValidator.Text = "Incorrect Password";
                     return;

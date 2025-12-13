@@ -1,4 +1,5 @@
-﻿using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+﻿using Project.HelperClass;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Project {
     public partial class AdminUserManagement : Form {
@@ -14,7 +15,7 @@ namespace Project {
 
         //CREATE
         private void ButtonCreate_Click(object sender, EventArgs e) {
-            StudentUser user = new StudentUser();
+            StudentModel user = new StudentModel();
             StudentData data = new StudentData();
             user.Email = string.Empty;
             user.Password = string.Empty;
@@ -46,7 +47,7 @@ namespace Project {
                 return;
             }
 
-            StudentUser user = repository.Get(selectedStudentId);
+            StudentModel user = repository.Get(selectedStudentId);
             user.Email = email;
             user.Password = password;
             user.Verification = Convert.ToBoolean(selectedRow.Cells["Verification"].Value);
@@ -67,7 +68,7 @@ namespace Project {
         //DELETE
         private void ButtonDelete_Click(object sender, EventArgs e) {
             if (selectedStudentId == -1) return;
-            StudentUser user = repository.Get(selectedStudentId);
+            StudentModel user = repository.Get(selectedStudentId);
             bool isDeleted = repository.DeleteStudentAndStudentData(user);
             if (isDeleted) MessageBox.Show("Successfully Removed");
             LoadUsers();
@@ -82,7 +83,7 @@ namespace Project {
 
         //LOAD USERS
         private void LoadUsers() {
-            List<StudentUser> users = repository.GetAll();
+            List<StudentModel> users = repository.GetAll();
             DataGridViewUserList.DataSource = users;
         }
 
@@ -104,7 +105,7 @@ namespace Project {
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            StudentUser? user = repository.GetStudentData(selectedStudentId);
+            StudentModel? user = repository.GetStudentData(selectedStudentId);
 
             if (user != null) {
                 if (user.UserInfo == null) {

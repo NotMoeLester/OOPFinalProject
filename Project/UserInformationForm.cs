@@ -12,8 +12,8 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Project {
     public partial class UserInformationForm : Form {
-        public StudentUser User;
-        public UserInformationForm(StudentUser user) {
+        public StudentModel User;
+        public UserInformationForm(StudentModel user) {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             comboBoxContactNumber.SelectedItem = "+63";

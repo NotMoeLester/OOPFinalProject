@@ -12,8 +12,8 @@ namespace Project
 {
     public partial class XXXUserAccount : Form {
 
-        private StudentUser User;
-        public XXXUserAccount(StudentUser user) {
+        private StudentModel User;
+        public XXXUserAccount(StudentModel user) {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             this.User = user;

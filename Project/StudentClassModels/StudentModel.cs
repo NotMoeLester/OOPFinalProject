@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Project {
-    public class StudentUser {
+    public class StudentModel {
         [PrimaryKey, AutoIncrement]
         public int StudentId { get; set; }
 
@@ -25,7 +25,7 @@ namespace Project {
         [Browsable(false)]
         public StudentData UserInfo { get; set; } = new StudentData();
 
-        public StudentUser() { 
+        public StudentModel() { 
         
         
         }

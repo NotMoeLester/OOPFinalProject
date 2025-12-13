@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Project {
     public partial class ViewAccountDialog : Form {
-        private StudentUser _user;
+        private StudentModel _user;
 
-        public ViewAccountDialog(StudentUser user) {
+        public ViewAccountDialog(StudentModel user) {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterParent;
             _user = user;

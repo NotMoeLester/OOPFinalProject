@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Project {
+namespace Project.HelperClass {
     internal class Validator {
         public static string Password(string password) {
             if (string.IsNullOrEmpty(password) || password == "Enter Password") {

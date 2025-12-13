@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
+using Project.HelperClass;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -89,7 +90,7 @@ namespace Project {
 
 
             //Add user to database---------------------------------------------------------------------------
-            StudentUser userToSave = new StudentUser();
+            StudentModel userToSave = new StudentModel();
             StudentData userDataToSave = new StudentData();
             userToSave.Email = email;
             userToSave.Password = password;
