@@ -130,6 +130,7 @@ namespace Project {
             List<StudentModel> students = repository.GetAll();
             DataGridViewUserList.DataSource = students;
 
+            DataGridViewUserList.Columns["StudentId"].MinimumWidth = 150;
             DataGridViewUserList.Columns["Email"].MinimumWidth = 200;
             DataGridViewUserList.Columns["Password"].MinimumWidth = 200;
         }

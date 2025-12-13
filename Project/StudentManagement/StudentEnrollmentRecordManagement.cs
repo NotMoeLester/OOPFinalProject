@@ -37,7 +37,8 @@ namespace Project
 
         private void ButtonViewSubjectInformation_Click_1(object sender, EventArgs e) {
             this.Hide();
-            StudentSubjectManagement mainForm = new StudentSubjectManagement(User);
+            var mainForm = new StudentSubjectManagement(User);
+            mainForm.FormClosed += (s, args) => this.Close();
             mainForm.Show();
         }
 

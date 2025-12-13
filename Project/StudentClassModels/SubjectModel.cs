@@ -12,8 +12,8 @@ namespace Project.StudentClassModels {
         public SubjectModel() {
 
         }
-        public string Subject { get; set; }
         public string Code { get; set; }
+        public string Subject { get; set; }
         public int Unit { get; set; }
         public string Schedule { get; set; }
         public string Room { get; set; }

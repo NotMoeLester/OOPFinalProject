@@ -22,8 +22,18 @@ namespace Project.SubjectManagement {
             var availableSubjects = subjectAvailable.GetSubjectsForCourse(Student.StudentInformation.Course);
             dataGridViewAvailableSubjects.DataSource = availableSubjects;
 
+            dataGridViewAvailableSubjects.Columns["Code"].MinimumWidth = 100;
+            dataGridViewAvailableSubjects.Columns["Subject"].MinimumWidth = 300;
+            dataGridViewAvailableSubjects.Columns["Unit"].MinimumWidth = 50;
+            dataGridViewAvailableSubjects.Columns["Schedule"].MinimumWidth = 250;
+            dataGridViewAvailableSubjects.Columns["Room"].MinimumWidth = 100;
+            dataGridViewAvailableSubjects.Columns["Instructor"].MinimumWidth = 200;
+
+
         }
 
+        private void ButtonAdd_Click(object sender, EventArgs e) {
 
+        }
     }
 }
