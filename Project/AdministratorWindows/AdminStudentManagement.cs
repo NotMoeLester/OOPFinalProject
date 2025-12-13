@@ -128,11 +128,11 @@ namespace Project {
         //LOAD USERS =======================================================
         #region
         private void LoadUsers() {
-            DataGridViewUserList.Columns["Email"].MinimumWidth = 200;
-            DataGridViewUserList.Columns["Password"].MinimumWidth = 200;
-
             List<StudentModel> students = repository.GetAll();
             DataGridViewUserList.DataSource = students;
+
+            DataGridViewUserList.Columns["Email"].MinimumWidth = 200;
+            DataGridViewUserList.Columns["Password"].MinimumWidth = 200;
         }
 
         private void AdminUserManagement_Load(object sender, EventArgs e) {

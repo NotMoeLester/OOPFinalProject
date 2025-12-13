@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.AdministratorClassModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,8 +11,17 @@ using System.Windows.Forms;
 
 namespace Project.SubjectManagement {
     public partial class StudentSubjectManagement : Form {
-        public StudentSubjectManagement() {
+        private StudentModel Student;
+        public StudentSubjectManagement(StudentModel student) {
             InitializeComponent();
+            Student = student;
+        }
+
+        private void StudentSubjectManagement_Load(object sender, EventArgs e) {
+            SubjectAvailable subjectAvailable = new SubjectAvailable("BSIT");
+            var availableSubjects = subjectAvailable.GetAvailableSubject();
+            dataGridViewAvailableSubjects.DataSource = availableSubjects;
+
         }
 
 

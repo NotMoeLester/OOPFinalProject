@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.SubjectManagement;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,7 +37,7 @@ namespace Project
 
         private void ButtonViewSubjectInformation_Click_1(object sender, EventArgs e) {
             this.Hide();
-            XXXUserEnrollmentInformation mainForm = new XXXUserEnrollmentInformation(User);
+            StudentSubjectManagement mainForm = new StudentSubjectManagement(User);
             mainForm.Show();
         }
 
