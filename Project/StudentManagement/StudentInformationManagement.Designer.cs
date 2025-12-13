@@ -1,5 +1,5 @@
 ﻿namespace Project {
-    partial class UserInformationForm {
+    partial class StudentInformationManagement {
         /// <summary>
         /// Required designer variable.
         /// </summary>

@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class UserEnrollmentRecord : Form {
+    public partial class StudentEnrollmentRecordManagement : Form {
 
         private StudentModel User;
-        public UserEnrollmentRecord(StudentModel user) {
+        public StudentEnrollmentRecordManagement(StudentModel user) {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             User = user;
@@ -47,7 +47,7 @@ namespace Project
 
         private void ButtonViewStudentInformation_Click(object sender, EventArgs e) {
             this.Hide();
-            UserInformationForm form = new UserInformationForm(User);
+            StudentInformationManagement form = new StudentInformationManagement(User);
             form.FormClosed += (s, args) => this.Close();
             form.Show();
         }

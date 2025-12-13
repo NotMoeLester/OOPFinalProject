@@ -1,6 +1,6 @@
 ﻿namespace Project
 {
-    partial class UserEnrollmentRecord
+    partial class StudentEnrollmentRecordManagement
     {
         /// <summary>
         /// Required designer variable.
@@ -27,7 +27,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserEnrollmentRecord));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentEnrollmentRecordManagement));
             ButtonViewStudentInformation = new Button();
             LabelYearLevel = new Label();
             label7 = new Label();

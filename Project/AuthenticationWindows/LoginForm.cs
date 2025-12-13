@@ -97,7 +97,7 @@ namespace Project
                 user.UserInfo = repository.GetStudentData(user.StudentId)?.UserInfo ?? new StudentData();
 
                 //Open main Form (Login Form - User Account)-------------------------------------------------
-                UserEnrollmentRecord mainForm = new UserEnrollmentRecord(user);
+                StudentEnrollmentRecordManagement mainForm = new StudentEnrollmentRecordManagement(user);
                 mainForm.FormClosed += (s, args) => this.Close();
                 this.Hide();
                 mainForm.Show();
