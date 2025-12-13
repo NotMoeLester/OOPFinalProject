@@ -13,5 +13,17 @@ namespace Project.SubjectManagement {
         public StudentSubjectManagement() {
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, EventArgs e) {
+
+        }
+
+        private void StudentSubjectManagement_Load(object sender, EventArgs e) {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+
+        }
     }
 }
