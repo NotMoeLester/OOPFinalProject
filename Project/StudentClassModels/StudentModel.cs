@@ -23,8 +23,7 @@ namespace Project {
 
         [Ignore]
         [Browsable(false)]
-        public SubjectModel StudentSubject { get; set; } = new SubjectModel();
-
+        public StudentSubjectsModel StudentSubject { get; set; } = new StudentSubjectsModel();
 
         public StudentModel() { 
         

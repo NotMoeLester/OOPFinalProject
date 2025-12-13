@@ -75,7 +75,7 @@ namespace Project {
             var info = User.StudentInformation;
 
             info.FirstName = textBoxFirstName.Text.Trim();
-            info.MiddleName = textBoxMI.Text.Trim();
+            info.MiddleName = textBoxMI.Text.Trim();   
             info.LastName = textBoxLastName.Text.Trim();
             info.Suffix = textBoxPrefixSuffix.Text.Trim();
 
@@ -100,7 +100,7 @@ namespace Project {
 
             User.StudentInformation = info;
 
-            bool isUpdated = repository.UpdateStudentAndStudentData(User);
+            bool isUpdated = repository.UpdateStudentAndStudentData(User, User.StudentInformation, User.StudentSubject);
 
             if (isUpdated) {
                 MessageBox.Show("Info Successfully Updated!", "Successful!",

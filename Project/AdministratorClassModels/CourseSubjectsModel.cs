@@ -7,8 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Project.AdministratorClassModels {
-    public class SubjectAvailable {
-        public SubjectAvailable () {
+    public class CourseSubjectsModel {
+        public CourseSubjectsModel () {
         }
 
         public List<SubjectModel> GetSubjectsForCourse(string course) {

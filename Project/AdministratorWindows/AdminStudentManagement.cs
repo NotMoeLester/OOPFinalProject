@@ -81,12 +81,15 @@ namespace Project {
             }
 
             StudentModel student = repository.Get(selectedStudentId);
+            var studentInformation = student.StudentInformation ?? new StudentInformationModel();
+            var studentSubjectsInformation = student.StudentSubject ?? new StudentSubjectsModel();
+
             student.Email = email;
             student.Password = password;
             student.Verification = Convert.ToBoolean(selectedRow.Cells["Verification"].Value);
             student.IsEnrolled = Convert.ToBoolean(selectedRow.Cells["IsEnrolled"].Value);
 
-            repository.UpdateStudentAndStudentData(student);
+            repository.UpdateStudentAndStudentData(student, studentInformation, studentSubjectsInformation);
             ResetSelected();
             MessageBox.Show("Student updated successfully!");
             LoadUsers();
@@ -106,6 +109,7 @@ namespace Project {
             ResetSelected();
             if (isDeleted) MessageBox.Show("Successfully Removed");
             LoadUsers();
+            SetCellSizes();
         }
         #endregion
 
@@ -129,14 +133,18 @@ namespace Project {
         private void LoadUsers() {
             List<StudentModel> students = repository.GetAll();
             DataGridViewUserList.DataSource = students;
-
+        }
+        private void SetCellSizes() {
             DataGridViewUserList.Columns["StudentId"].MinimumWidth = 150;
             DataGridViewUserList.Columns["Email"].MinimumWidth = 200;
             DataGridViewUserList.Columns["Password"].MinimumWidth = 200;
+            DataGridViewUserList.Columns["Verification"].MinimumWidth = 50;
+            DataGridViewUserList.Columns["IsEnrolled"].MinimumWidth = 50;
         }
 
         private void AdminUserManagement_Load(object sender, EventArgs e) {
             LoadUsers();
+            SetCellSizes();
         }
 
         private void ButtonBack_Click(object sender, EventArgs e) {

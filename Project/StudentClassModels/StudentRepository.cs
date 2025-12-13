@@ -21,33 +21,71 @@ namespace Project {
         }
 
         //CREATE
-        public bool AddStudent(StudentModel student, StudentInformationModel studentInformation, StudentSubjectsModel studentSubjet ) {
+        #region
+        public bool AddStudent(StudentModel student, StudentInformationModel studentInformation, StudentSubjectsModel studentSubject) {
             _connection.Insert(student);
 
             studentInformation.StudentId = student.StudentId;
-            studentSubjet.StudentId = student.StudentId;
+            studentSubject.StudentId = student.StudentId;
 
             _connection.Insert(studentInformation); 
-            _connection.Insert(studentSubjet);
+            _connection.Insert(studentSubject);
 
             return true;
         }
+        #endregion
 
         //READ
+        #region
         public List<StudentModel> GetAll() {
             return _connection.Table<StudentModel>().ToList();
         }
         public StudentModel Get(int id) {
             return _connection.Find<StudentModel>(id);
         }
+        public StudentModel GetStudentData(int studentId) {
+            var student = _connection.Find<StudentModel>(studentId);
+            if (student != null) {
+                student.StudentInformation = _connection.Table<StudentInformationModel>().FirstOrDefault(d => d.StudentId == studentId);
+            }
+            return student;
+        }
+        public StudentModel GetFullStudentUser(string email, string password) {
+            var student = GetUserByEmailAndPassword(email, password);
+            if (student != null) {
+                student.StudentInformation = GetStudentData(student.StudentId)?.StudentInformation ?? new StudentInformationModel();
+            }
+            return student;
+        }
+        public List<SubjectModel> GetStudentSubjects(int studentId) {
+            var studentSubjects = _connection.Table<StudentSubjectsModel>().FirstOrDefault(s => s.StudentId == studentId);
+            if (studentSubjects != null) {
+                return studentSubjects.Subjects;
+            }
+            return new List<SubjectModel>();
+        }
+
+        #endregion  
 
         //UPDATE USER ACC
-        public bool UpdateStudentAndStudentData(StudentModel student) {
+        public bool UpdateStudentAndStudentData(StudentModel student, StudentInformationModel studentInformation, StudentSubjectsModel studentSubject) {
+            student.StudentInformation = studentInformation;
+            student.StudentSubject = studentSubject;
             _connection.Update(student);
             if (student.StudentInformation != null) {
                 _connection.Update(student.StudentInformation);
+                _connection.Update(studentSubject);
             }
             return true;
+        }
+        public bool UpdateStudentSubjects(int studentId, List<SubjectModel> subjects) {
+            var studentSubjects = _connection.Table<StudentSubjectsModel>().FirstOrDefault(s => s.StudentId == studentId);
+            if (studentSubjects != null) {
+                studentSubjects.Subjects = subjects;
+                _connection.Update(studentSubjects);
+                return true;
+            }
+            return false;
         }
 
         //DELETE USER ACC ====================================================================================================
@@ -72,7 +110,8 @@ namespace Project {
         }
         #endregion
 
-        //CHECK IF PASSWORD MATCH ============================================================================================
+        //CHECK CREDENTIALS ============================================================================================
+        #region
         public StudentModel GetUserByEmailAndPassword(string email, string password) {
             return _connection.Table<StudentModel>().FirstOrDefault(u => u.Email == email && u.Password == password);
         }
@@ -88,28 +127,6 @@ namespace Project {
             StudentModel user = _connection.Table<StudentModel>().FirstOrDefault(u => u.Email == email);
             return user != null && user.Verification;
         }
-
-        //=============================================================================================================
-
-
-        // READ USER DATA
-        public StudentModel GetStudentData(int studentId) {
-            var user = _connection.Find<StudentModel>(studentId);
-            if (user != null) {
-                user.StudentInformation = _connection.Table<StudentInformationModel>().FirstOrDefault(d => d.StudentId == studentId);
-            }
-            return user;
-        }
-        public StudentModel GetFullStudentUser(string email, string password) {
-            var user = GetUserByEmailAndPassword(email, password);
-            if (user != null) {
-                user.StudentInformation = GetStudentData(user.StudentId)?.StudentInformation ?? new StudentInformationModel();
-            }
-            return user;
-        }
-
-
-        //DELETE USER DATA
-
+        #endregion
     }
 }
