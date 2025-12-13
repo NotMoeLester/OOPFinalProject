@@ -54,7 +54,7 @@
             DataGridViewUserList.TabIndex = 0;
             DataGridViewUserList.CellClick += DataGridViewUserList_CellClick_1;
 
-            // 
+            //
             // ButtonView
             // 
             ButtonView.BackColor = Color.DodgerBlue;

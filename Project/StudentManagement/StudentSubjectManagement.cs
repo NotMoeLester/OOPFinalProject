@@ -18,8 +18,8 @@ namespace Project.SubjectManagement {
         }
 
         private void StudentSubjectManagement_Load(object sender, EventArgs e) {
-            SubjectAvailable subjectAvailable = new SubjectAvailable("BSIT");
-            var availableSubjects = subjectAvailable.GetAvailableSubject();
+            SubjectAvailable subjectAvailable = new SubjectAvailable();
+            var availableSubjects = subjectAvailable.GetSubjectsForCourse(Student.StudentInformation.Course);
             dataGridViewAvailableSubjects.DataSource = availableSubjects;
 
         }
