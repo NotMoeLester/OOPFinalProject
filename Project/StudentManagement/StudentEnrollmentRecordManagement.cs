@@ -1,4 +1,5 @@
-﻿using Project.SubjectManagement;
+﻿using Project.StudentClassModels;
+using Project.SubjectManagement;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,8 @@ namespace Project {
     public partial class StudentEnrollmentRecordManagement : Form {
 
         private StudentModel User;
+        private StudentRepository repository = new StudentRepository();
+
         public StudentEnrollmentRecordManagement(StudentModel user) {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -33,10 +36,6 @@ namespace Project {
             form.Show();
         }
 
-        private void RefreshInformation() {
-            LoadInformation();
-        }
-
         private void LoadInformation() {
             LabelEmailUER.Text = User.Email;
             LabelFullNameUER.Text = User.StudentInformation.FullName ?? "Student Name";
@@ -45,17 +44,20 @@ namespace Project {
             LabelCourseName.Text = User.StudentInformation.Course ?? "Course";
             LabelStudentID.Text = User.StudentId.ToString();
             LabelDepartmentName.Text = User.StudentInformation.Department;
+            LoadEnrolledSubjects();
+        }
+
+        private void LoadEnrolledSubjects() {
+            var enrolledSubjects = repository.GetStudentSubjects(User.StudentId);
+            dataGridView1.DataSource = new BindingList<SubjectModel>(enrolledSubjects);
+        }
+
+        private void RefreshInformation() {
+            LoadInformation();
         }
 
         private void StudentEnrollmentRecordManagement_Load(object sender, EventArgs e) {
             LoadInformation();
-        }
-
-        private void buttoneksit_Click(object sender, EventArgs e) {
-            this.Hide();
-            LoginForm loginForm = new LoginForm();
-            loginForm.FormClosed += (s, args) => Application.Exit();
-            loginForm.Show();
         }
     }
 }

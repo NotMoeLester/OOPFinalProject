@@ -79,6 +79,11 @@ namespace Project.SubjectManagement {
             var selectedRow = dataGridViewEnrolledSubjects.SelectedRows[0];
             var subject = (SubjectModel)selectedRow.DataBoundItem;
 
+            var result = MessageBox.Show($"Are you sure you want to drop {subject.Subject}?", "Confirm Drop", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.No)
+                return;
+
             enrolledSubjects.Remove(subject);
             UpdateTotalUnitsFromStudent();
             UpdateStatus();
@@ -136,7 +141,6 @@ namespace Project.SubjectManagement {
             enrolledSubjects = new BindingList<SubjectModel>(enrolledSubjectList);
             dataGridViewEnrolledSubjects.DataSource = enrolledSubjects;
 
-            // Keep a copy for change detection
             originalSubjects = enrolledSubjectList.Select(s => new SubjectModel { Code = s.Code, Subject = s.Subject, Unit = s.Unit, Schedule = s.Schedule, Room = s.Room, Instructor = s.Instructor, IsEnrolled = s.IsEnrolled }).ToList();
 
             Student.StudentSubject = new StudentSubjectsModel { StudentId = Student.StudentId, Subjects = enrolledSubjects.ToList() };

@@ -52,7 +52,7 @@
             ButtonAdd.BackColor = Color.Teal;
             ButtonAdd.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ButtonAdd.ForeColor = Color.White;
-            ButtonAdd.Location = new Point(330, 406);
+            ButtonAdd.Location = new Point(330, 458);
             ButtonAdd.Name = "ButtonAdd";
             ButtonAdd.Size = new Size(102, 32);
             ButtonAdd.TabIndex = 0;
@@ -70,7 +70,7 @@
             dataGridViewAvailableSubjects.ReadOnly = true;
             dataGridViewAvailableSubjects.RowHeadersWidth = 51;
             dataGridViewAvailableSubjects.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewAvailableSubjects.Size = new Size(630, 107);
+            dataGridViewAvailableSubjects.Size = new Size(630, 134);
             dataGridViewAvailableSubjects.TabIndex = 1;
             dataGridViewAvailableSubjects.CellContentClick += dataGridViewAvailableSubjects_CellContentClick;
             // 
@@ -144,11 +144,11 @@
             // 
             dataGridViewEnrolledSubjects.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewEnrolledSubjects.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewEnrolledSubjects.Location = new Point(74, 282);
+            dataGridViewEnrolledSubjects.Location = new Point(74, 301);
             dataGridViewEnrolledSubjects.Name = "dataGridViewEnrolledSubjects";
             dataGridViewEnrolledSubjects.RowHeadersWidth = 51;
             dataGridViewEnrolledSubjects.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewEnrolledSubjects.Size = new Size(630, 107);
+            dataGridViewEnrolledSubjects.Size = new Size(630, 140);
             dataGridViewEnrolledSubjects.TabIndex = 11;
             dataGridViewEnrolledSubjects.CellContentClick += dataGridViewEnrolledSubjects_CellContentClick;
             // 
@@ -157,7 +157,7 @@
             ButtonDrop.BackColor = Color.FromArgb(192, 0, 0);
             ButtonDrop.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ButtonDrop.ForeColor = Color.White;
-            ButtonDrop.Location = new Point(452, 406);
+            ButtonDrop.Location = new Point(452, 458);
             ButtonDrop.Name = "ButtonDrop";
             ButtonDrop.Size = new Size(102, 32);
             ButtonDrop.TabIndex = 12;
@@ -170,7 +170,7 @@
             ButtonSave.BackColor = Color.Green;
             ButtonSave.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ButtonSave.ForeColor = Color.White;
-            ButtonSave.Location = new Point(576, 406);
+            ButtonSave.Location = new Point(576, 458);
             ButtonSave.Name = "ButtonSave";
             ButtonSave.Size = new Size(128, 32);
             ButtonSave.TabIndex = 13;
@@ -182,7 +182,7 @@
             // 
             label5.AutoSize = true;
             label5.ForeColor = Color.LimeGreen;
-            label5.Location = new Point(74, 410);
+            label5.Location = new Point(74, 462);
             label5.Name = "label5";
             label5.Size = new Size(83, 15);
             label5.TabIndex = 14;
@@ -193,7 +193,7 @@
             LabelTotalUnits.AutoSize = true;
             LabelTotalUnits.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LabelTotalUnits.ForeColor = Color.LawnGreen;
-            LabelTotalUnits.Location = new Point(172, 409);
+            LabelTotalUnits.Location = new Point(172, 461);
             LabelTotalUnits.Name = "LabelTotalUnits";
             LabelTotalUnits.Size = new Size(26, 15);
             LabelTotalUnits.TabIndex = 15;
@@ -215,7 +215,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             label7.ForeColor = Color.Khaki;
-            label7.Location = new Point(557, 260);
+            label7.Location = new Point(557, 279);
             label7.Name = "label7";
             label7.Size = new Size(147, 19);
             label7.TabIndex = 17;
@@ -281,7 +281,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Navy;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 516);
             Controls.Add(ButtonBack);
             Controls.Add(LabelStatus);
             Controls.Add(LabelSchoolYear);

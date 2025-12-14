@@ -280,7 +280,6 @@
             buttoneksit.TabIndex = 56;
             buttoneksit.Text = "Log Out";
             buttoneksit.UseVisualStyleBackColor = false;
-            buttoneksit.Click += buttoneksit_Click;
             // 
             // StudentEnrollmentRecordManagement
             // 
