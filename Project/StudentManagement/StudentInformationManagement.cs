@@ -134,10 +134,7 @@ namespace Project {
             checkBoxMale.Checked = info.Sex == "Male";
             checkBoxFemale.Checked = info.Sex == "Female";
 
-            if (info.BirthDay > dateTimePickerBirthday.MinDate && info.BirthDay < DateTime.Now)
-                dateTimePickerBirthday.Value = info.BirthDay;
-            else
-                dateTimePickerBirthday.Value = DateTime.Today.AddYears(-18);
+            dateTimePickerBirthday.Value = (info.BirthDay > dateTimePickerBirthday.MinDate && info.BirthDay < DateTime.Now) ? info.BirthDay : DateTime.Today.AddYears(-18);
 
             textBoxAge.Text = info.Age.ToString();
 
@@ -153,8 +150,7 @@ namespace Project {
             if (!string.IsNullOrEmpty(info.Course))
                 comboBoxCourseProgram.SelectedItem = info.Course;
 
-            if (info.YearLevel > 0)
-                numericUpDownYear.Value = info.YearLevel;
+            numericUpDownYear.Value = (info.YearLevel.HasValue && info.YearLevel.Value > 0) ? info.YearLevel.Value : numericUpDownYear.Minimum;
 
             textBoxPreviousSchool.Text = info.PreviousSchool ?? "";
 

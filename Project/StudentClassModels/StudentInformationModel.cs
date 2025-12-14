@@ -11,30 +11,31 @@ namespace Project {
         [PrimaryKey]
         public int StudentId { get; set; }
 
-        public string FirstName { get; set; } = string.Empty;
-        public string MiddleName { get; set; } = string.Empty;
-        public string LastName { get; set; } = string.Empty;
-        public string Prefix {  get; set; } = string.Empty;
-        public string Suffix { get; set; } = string.Empty;
-        public string FullName { get { return GetName(Prefix, FirstName, MiddleName, LastName, Suffix); } }
+        public string? FirstName { get; set; } = string.Empty;
+        public string? MiddleName { get; set; } = string.Empty;
+        public string? LastName { get; set; } = string.Empty;
+        public string? Prefix {  get; set; } = string.Empty;
+        public string? Suffix { get; set; } = string.Empty;
+        public string? FullName { get { return GetName(Prefix, FirstName, MiddleName, LastName, Suffix); } }
 
 
-        public string Sex { get; set; } = string.Empty;
+        public string? Sex { get; set; } = string.Empty;
         public DateTime BirthDay { get; set; }
-        public string Nationality { get; set; } = string.Empty;
-        public string Address { get; set; } = string.Empty;
+        public string? Nationality { get; set; } = string.Empty;
+        public string? Address { get; set; } = string.Empty;
 
 
-        public string ContactCountryCode { get; set; } = string.Empty;
-        public string ContactInformation { get; set; } = string.Empty;
-        public string ContactNumber { get { return GetContactNumber(ContactCountryCode, ContactInformation); } }
+        public string? ContactCountryCode { get; set; } = string.Empty;
+        public string? ContactInformation { get; set; } = string.Empty;
+        public string? ContactNumber { get { return GetContactNumber(ContactCountryCode, ContactInformation); } }
 
 
-        public string Course { get; set; } = string.Empty;
-        public int YearLevel { get; set; }
-        public string Department { get { return GetDepartment(Course); } }
-        public string School { get { return GetSchool(Course); } }
-        public string PreviousSchool { get; set; } = string.Empty;
+        public string? Course { get; set; } = string.Empty;
+        public int? TotalUnits { get; set; } = 0;
+        public int? YearLevel { get; set; } = 0;
+        public string? Department { get { return GetDepartment(Course); } }
+        public string? School { get { return GetSchool(Course); } }
+        public string? PreviousSchool { get; set; } = string.Empty;
 
 
         [Ignore]
@@ -50,17 +51,18 @@ namespace Project {
             return age;
         }
 
-        private string GetName(string firstName, string middleName, string lastName, string prefix, string suffix) {
-            string name = prefix + " " + firstName + " " + middleName + " " + lastName + " " + suffix;
-            return name;
+        private string GetName(string? prefix, string? firstName, string? middleName, string? lastName, string? suffix) {
+            string name = (prefix ?? "") + " " + (firstName ?? "") + " " + (middleName ?? "") + " " + (lastName ?? "") + " " + (suffix ?? "");
+            return name.Trim();
         }
 
-        private string GetContactNumber(string contactCountryCode, string contactInformation) {
-            string contactNumber = contactCountryCode + contactInformation;
+        private string GetContactNumber(string? contactCountryCode, string? contactInformation) {
+            string contactNumber = (contactCountryCode ?? "") + (contactInformation ?? "");
             return contactNumber;
         }
 
-        private string GetSchool(string course) {
+        private string GetSchool(string? course) {
+            course = course ?? "";
             if (string.IsNullOrEmpty(course)) return "";
             if (course.Contains("BS in Civil Engineering") || course.Contains("BS in Computer Engineering") || course.Contains("BS in Electronics Engineering") || course.Contains("BS in Electrical Engineering") || course.Contains("BS in Mechanical Engineering") || course.Contains("BS in Architecture") || course.Contains("BS in Computer Science") || course.Contains("BS in Information Technology") || course.Contains("BS in Information Systems")) { return "School of Engineering, Architecture and Information Technology"; } 
             else if (course.Contains("BEEd in Elementary Education") || course.Contains("BPEd in Physical Education") || course.Contains("BA in Communication") || course.Contains("AB in Political Science") || course.Contains("AB in Psychology") || course.Contains("AB in Sociology")) { return "School of Teacher Education and Humanities"; } 
@@ -70,7 +72,8 @@ namespace Project {
             return "General Studies";
         }
 
-        private string GetDepartment(string course) {
+        private string GetDepartment(string? course) {
+            course = course ?? "";
             if (string.IsNullOrEmpty(course)) return "";
             if (course.Contains("BS in Civil Engineering") || course.Contains("BS in Electronics Engineering") || course.Contains("BS in Electrical Engineering") || course.Contains("BS in Mechanical Engineering")) { return "Department of Engineering"; } 
             else if (course.Contains("BS in Architecture")) { return "Department of Architechture"; } 

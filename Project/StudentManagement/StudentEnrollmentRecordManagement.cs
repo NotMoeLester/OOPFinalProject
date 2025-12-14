@@ -19,10 +19,10 @@ namespace Project
             this.StartPosition = FormStartPosition.CenterScreen;
             User = user;
             LabelEmailUER.Text = User.Email;
-            LabelFullNameUER.Text = User.StudentInformation.FullName;
-            LabelContactNumberUER.Text = User.StudentInformation.ContactNumber;
-            LabelYearLevel.Text = User.StudentInformation.YearLevel.ToString();
-            LabelCourseName.Text = User.StudentInformation.Course;
+            LabelFullNameUER.Text = User.StudentInformation.FullName ?? "Student Name";
+            LabelContactNumberUER.Text = User.StudentInformation.ContactNumber ?? "COntact Number";
+            LabelYearLevel.Text = User.StudentInformation.YearLevel.ToString() ?? "Year Level";
+            LabelCourseName.Text = User.StudentInformation.Course ?? "Course";
             LabelStudentID.Text = User.StudentId.ToString();
             LabelDepartmentName.Text = User.StudentInformation.Department;
         }

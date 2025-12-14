@@ -42,6 +42,7 @@
             LabelCourse = new Label();
             LabelSchoolYear = new Label();
             LabelStatus = new Label();
+            ButtonBack = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewAvailableSubjects).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewEnrolledSubjects).BeginInit();
             SuspendLayout();
@@ -145,6 +146,7 @@
             dataGridViewEnrolledSubjects.Location = new Point(74, 282);
             dataGridViewEnrolledSubjects.Name = "dataGridViewEnrolledSubjects";
             dataGridViewEnrolledSubjects.RowHeadersWidth = 51;
+            dataGridViewEnrolledSubjects.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewEnrolledSubjects.Size = new Size(630, 107);
             dataGridViewEnrolledSubjects.TabIndex = 11;
             // 
@@ -261,12 +263,24 @@
             LabelStatus.TabIndex = 21;
             LabelStatus.Text = "Enrolled/Not Enrolled";
             // 
+            // ButtonBack
+            // 
+            ButtonBack.BackgroundImage = Properties.Resources.left;
+            ButtonBack.BackgroundImageLayout = ImageLayout.Zoom;
+            ButtonBack.Location = new Point(666, 12);
+            ButtonBack.Name = "ButtonBack";
+            ButtonBack.Size = new Size(38, 32);
+            ButtonBack.TabIndex = 44;
+            ButtonBack.UseVisualStyleBackColor = true;
+            ButtonBack.Click += ButtonBack_Click;
+            // 
             // StudentSubjectManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Navy;
             ClientSize = new Size(800, 450);
+            Controls.Add(ButtonBack);
             Controls.Add(LabelStatus);
             Controls.Add(LabelSchoolYear);
             Controls.Add(LabelCourse);
@@ -316,5 +330,6 @@
         private Label LabelCourse;
         private Label LabelSchoolYear;
         private Label LabelStatus;
+        private Button ButtonBack;
     }
 }

@@ -43,17 +43,17 @@ namespace Project {
         public StudentModel Get(int id) {
             return _connection.Find<StudentModel>(id);
         }
-        public StudentModel GetStudentData(int studentId) {
+        public StudentModel? GetStudentData(int studentId) {
             var student = _connection.Find<StudentModel>(studentId);
             if (student != null) {
-                student.StudentInformation = _connection.Table<StudentInformationModel>().FirstOrDefault(d => d.StudentId == studentId);
+                student.StudentInformation = _connection.Table<StudentInformationModel>().FirstOrDefault(d => d.StudentId == studentId) ?? new StudentInformationModel();
             }
             return student;
         }
-        public StudentModel GetFullStudentUser(string email, string password) {
+        public StudentModel? GetFullStudentUser(string email, string password) {
             var student = GetUserByEmailAndPassword(email, password);
             if (student != null) {
-                student.StudentInformation = GetStudentData(student.StudentId)?.StudentInformation ?? new StudentInformationModel();
+                student.StudentInformation = GetStudentData(student.StudentId)?.StudentInformation ?? new StudentInformationModel() ?? new StudentInformationModel();
             }
             return student;
         }
@@ -128,5 +128,6 @@ namespace Project {
             return user != null && user.Verification;
         }
         #endregion
+
     }
 }

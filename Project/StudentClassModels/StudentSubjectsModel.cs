@@ -14,8 +14,8 @@ namespace Project.StudentClassModels {
 
         [Ignore]
         public List<SubjectModel> Subjects {
-            get => string.IsNullOrEmpty(SubjectsJson) ? new List<SubjectModel>() : JsonConvert.DeserializeObject<List<SubjectModel>>(SubjectsJson);
-            set => SubjectsJson = JsonConvert.SerializeObject(value);
+            get => string.IsNullOrEmpty(SubjectsJson) ? new List<SubjectModel>() : JsonConvert.DeserializeObject<List<SubjectModel>>(SubjectsJson) ?? new List<SubjectModel>();
+            set => SubjectsJson = JsonConvert.SerializeObject(value ?? new List<SubjectModel>());
         }
     }
 }

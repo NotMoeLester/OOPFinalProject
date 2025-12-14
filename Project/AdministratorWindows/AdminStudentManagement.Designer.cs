@@ -29,7 +29,7 @@
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminStudentManagement));
             DataGridViewUserList = new DataGridView();
-            ButtonView = new Button();
+            ButtonRefresh = new Button();
             ButtonCreate = new Button();
             ButtonUpdate = new Button();
             ButtonDelete = new Button();
@@ -55,19 +55,19 @@
             DataGridViewUserList.TabIndex = 0;
             DataGridViewUserList.CellClick += DataGridViewUserList_CellClick_1;
             // 
-            // ButtonView
+            // ButtonRefresh
             // 
-            ButtonView.BackColor = Color.DodgerBlue;
-            ButtonView.FlatStyle = FlatStyle.Flat;
-            ButtonView.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ButtonView.ForeColor = Color.White;
-            ButtonView.Location = new Point(250, 374);
-            ButtonView.Name = "ButtonView";
-            ButtonView.Size = new Size(142, 44);
-            ButtonView.TabIndex = 1;
-            ButtonView.Text = "🔄 Refresh List";
-            ButtonView.UseVisualStyleBackColor = false;
-            ButtonView.Click += ButtonView_Click;
+            ButtonRefresh.BackColor = Color.DodgerBlue;
+            ButtonRefresh.FlatStyle = FlatStyle.Flat;
+            ButtonRefresh.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ButtonRefresh.ForeColor = Color.White;
+            ButtonRefresh.Location = new Point(250, 374);
+            ButtonRefresh.Name = "ButtonRefresh";
+            ButtonRefresh.Size = new Size(142, 44);
+            ButtonRefresh.TabIndex = 1;
+            ButtonRefresh.Text = "🔄 Refresh List";
+            ButtonRefresh.UseVisualStyleBackColor = false;
+            ButtonRefresh.Click += ButtonRefresh_Click;
             // 
             // ButtonCreate
             // 
@@ -167,7 +167,7 @@
             Controls.Add(ButtonDelete);
             Controls.Add(ButtonUpdate);
             Controls.Add(ButtonCreate);
-            Controls.Add(ButtonView);
+            Controls.Add(ButtonRefresh);
             Controls.Add(DataGridViewUserList);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
@@ -182,7 +182,7 @@
         #endregion
 
         private DataGridView DataGridViewUserList;
-        private Button ButtonView;
+        private Button ButtonRefresh;
         private Button ButtonCreate;
         private Button ButtonUpdate;
         private Button ButtonDelete;

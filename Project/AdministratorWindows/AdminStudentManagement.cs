@@ -35,7 +35,7 @@ namespace Project {
 
         //READ =======================================================
         #region
-        private void ButtonView_Click(object sender, EventArgs e) {
+        private void ButtonRefresh_Click(object sender, EventArgs e) {
             LoadUsers();
         }
 
@@ -113,7 +113,7 @@ namespace Project {
         }
         #endregion
 
-        //GET RESET INDEX =======================================================
+        //GET & RESET INDEX ===============================================
         #region
         private void DataGridViewUserList_CellClick_1(object? sender, DataGridViewCellEventArgs e) {
             if (e.RowIndex < 0) return;
@@ -151,6 +151,7 @@ namespace Project {
             this.Close();
         }
         #endregion
+
 
     }
 }
