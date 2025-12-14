@@ -72,6 +72,7 @@
             dataGridViewAvailableSubjects.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewAvailableSubjects.Size = new Size(630, 107);
             dataGridViewAvailableSubjects.TabIndex = 1;
+            dataGridViewAvailableSubjects.CellContentClick += dataGridViewAvailableSubjects_CellContentClick;
             // 
             // LabelStudentID
             // 
@@ -149,6 +150,7 @@
             dataGridViewEnrolledSubjects.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewEnrolledSubjects.Size = new Size(630, 107);
             dataGridViewEnrolledSubjects.TabIndex = 11;
+            dataGridViewEnrolledSubjects.CellContentClick += dataGridViewEnrolledSubjects_CellContentClick;
             // 
             // ButtonDrop
             // 
@@ -300,6 +302,7 @@
             Controls.Add(LabelStudentID);
             Controls.Add(dataGridViewAvailableSubjects);
             Controls.Add(ButtonAdd);
+            FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "StudentSubjectManagement";
             Text = "StudentSubjectManagement";
             Load += StudentSubjectManagement_Load;

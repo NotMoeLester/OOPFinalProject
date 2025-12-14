@@ -30,7 +30,8 @@ namespace Project {
 
             textBoxLastName.ReadOnly = false;
             textBoxFirstName.ReadOnly = false;
-            textBoxMI.ReadOnly = false;
+            textBoxMiddleName.ReadOnly = false;
+            textBoxPrefix.ReadOnly = false;
             textBoxSuffix.ReadOnly = false;
             checkBoxFemale.Enabled = true;
             checkBoxMale.Enabled = true;
@@ -55,7 +56,8 @@ namespace Project {
             buttonEdit.Enabled = true;
             textBoxLastName.ReadOnly = true;
             textBoxFirstName.ReadOnly = true;
-            textBoxMI.ReadOnly = true;
+            textBoxMiddleName.ReadOnly = true;
+            textBoxPrefix.ReadOnly = true;
             textBoxSuffix.ReadOnly = true;
             checkBoxFemale.Enabled = false;
             checkBoxMale.Enabled = false;
@@ -75,7 +77,7 @@ namespace Project {
             var info = User.StudentInformation;
 
             info.FirstName = textBoxFirstName.Text.Trim();
-            info.MiddleName = textBoxMI.Text.Trim();   
+            info.MiddleName = textBoxMiddleName.Text.Trim();
             info.LastName = textBoxLastName.Text.Trim();
             info.Suffix = textBoxSuffix.Text.Trim();
 
@@ -128,7 +130,7 @@ namespace Project {
 
             textBoxLastName.Text = info.LastName ?? "";
             textBoxFirstName.Text = info.FirstName ?? "";
-            textBoxMI.Text = info.MiddleName ?? "";
+            textBoxMiddleName.Text = info.MiddleName ?? "";
             textBoxSuffix.Text = info.Suffix ?? "";
 
             checkBoxMale.Checked = info.Sex == "Male";
@@ -177,6 +179,10 @@ namespace Project {
                     .Replace("+1", "").Replace("+", "").Trim();
                 textBoxContactInformation.Text = existingNumber;
             }
+        }
+
+        private void ButtonBack_Click(object sender, EventArgs e) {
+            this.Close();
         }
     }
 }

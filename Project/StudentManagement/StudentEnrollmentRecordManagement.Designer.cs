@@ -46,6 +46,7 @@
             LabelContactNumberUER = new Label();
             LabelStudentID = new Label();
             LabelDepartmentName = new Label();
+            buttoneksit = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -195,7 +196,6 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(457, 295);
             dataGridView1.TabIndex = 34;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // ButtonViewSubjectInformation
             // 
@@ -215,7 +215,7 @@
             // 
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(643, 385);
+            pictureBox1.Location = new Point(637, 368);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(179, 71);
             pictureBox1.TabIndex = 51;
@@ -269,17 +269,30 @@
             LabelDepartmentName.TabIndex = 55;
             LabelDepartmentName.Text = "Department Name";
             // 
-            // UserEnrollmentRecord
+            // buttoneksit
+            // 
+            buttoneksit.BackColor = Color.Firebrick;
+            buttoneksit.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttoneksit.ForeColor = Color.White;
+            buttoneksit.Location = new Point(549, 426);
+            buttoneksit.Name = "buttoneksit";
+            buttoneksit.Size = new Size(220, 30);
+            buttoneksit.TabIndex = 56;
+            buttoneksit.Text = "Log Out";
+            buttoneksit.UseVisualStyleBackColor = false;
+            buttoneksit.Click += buttoneksit_Click;
+            // 
+            // StudentEnrollmentRecordManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Navy;
             ClientSize = new Size(859, 564);
+            Controls.Add(buttoneksit);
             Controls.Add(LabelDepartmentName);
             Controls.Add(LabelStudentID);
             Controls.Add(LabelContactNumberUER);
             Controls.Add(LabelFullNameUER);
-            Controls.Add(pictureBox1);
             Controls.Add(ButtonViewSubjectInformation);
             Controls.Add(ButtonViewStudentInformation);
             Controls.Add(LabelYearLevel);
@@ -293,10 +306,11 @@
             Controls.Add(LabelName);
             Controls.Add(LabelEmailUER);
             Controls.Add(dataGridView1);
+            Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
-            Name = "UserEnrollmentRecord";
+            Name = "StudentEnrollmentRecordManagement";
             Text = " User Enrollment Record";
-            Load += UserEnrollmentRecord_Load;
+            Load += StudentEnrollmentRecordManagement_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -322,5 +336,6 @@
         private Label LabelContactNumberUER;
         private Label LabelStudentID;
         private Label LabelDepartmentName;
+        private Button buttoneksit;
     }
 }

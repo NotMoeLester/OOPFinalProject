@@ -35,8 +35,6 @@ namespace Project {
                 labelMiddleName.Text = string.IsNullOrEmpty(info.MiddleName) ? "N/A" : info.MiddleName;
                 labelLastName.Text = string.IsNullOrEmpty(info.LastName) ? "Not filled" : info.LastName;
 
-                string prefix = info.Prefix;
-                string suffix = info.Suffix;
                 labelPrefix.Text = string.IsNullOrEmpty(info.Prefix) ? "N/A" : info.Prefix;
                 labelSuffix.Text = string.IsNullOrEmpty(info.Suffix) ? "N/A" : info.Suffix;
 
@@ -76,31 +74,6 @@ namespace Project {
                 labelPreviousSchool.Text = "Not provided";
 
             }
-        }
-        private string GetDepartmentFromCourse(string course) {
-            if (string.IsNullOrEmpty(course)) return "";
-
-
-            if (course.Contains("Civil Engineering") || course.Contains("Computer Engineering") || course.Contains("Electronics Engineering") || course.Contains("Electrical Engineering") || course.Contains("Mechanical Engineering") || course.Contains("Architecture") || course.Contains("Computer Science") || course.Contains("Information Technology") || course.Contains("Information Systems")) {
-                return "School of Engineering, Architecture and Information Technology";
-
-            } else if (course.Contains("Elementary Education") || course.Contains("Physical Education") || course.Contains("Secondary Education") || course.Contains("Communication") || course.Contains("Political Science") || course.Contains("Psychology") || course.Contains("Sociology")) {
-                return "School of Teacher Education and Humanities";
-
-            } else if (course.Contains("Accountancy") || course.Contains("Business Administration") || course.Contains("Entrepreneurship") || course.Contains("Human Resource Management") || course.Contains("Marketing Management")) {
-                return "School of Accountancy and Business";
-
-            } else if (course.Contains("Biology") || course.Contains("Medical Technology") || course.Contains("Nursing") || course.Contains("Pharmacy")) {
-                return "School of Health and Natural Sciences";
-
-            } else if (course.Contains("Law") || course.Contains("Juris Doctor") || course.Contains("JD")) {
-                return "College of Law";
-            }
-            return "General Studies";
-        }
-
-        private void labelSuffix_Click(object sender, EventArgs e) {
-
         }
     }
 }

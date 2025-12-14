@@ -25,7 +25,7 @@
         private void InitializeComponent() {
             textBoxFirstName = new TextBox();
             textBoxLastName = new TextBox();
-            textBoxMI = new TextBox();
+            textBoxMiddleName = new TextBox();
             textBoxHomeAddress = new TextBox();
             textBoxAge = new TextBox();
             checkBoxMale = new CheckBox();
@@ -98,15 +98,15 @@
             textBoxLastName.Size = new Size(122, 16);
             textBoxLastName.TabIndex = 1;
             // 
-            // textBoxMI
+            // textBoxMiddleName
             // 
-            textBoxMI.BackColor = Color.FromArgb(128, 255, 255);
-            textBoxMI.BorderStyle = BorderStyle.None;
-            textBoxMI.Location = new Point(3, 5);
-            textBoxMI.Name = "textBoxMI";
-            textBoxMI.ReadOnly = true;
-            textBoxMI.Size = new Size(81, 16);
-            textBoxMI.TabIndex = 2;
+            textBoxMiddleName.BackColor = Color.FromArgb(128, 255, 255);
+            textBoxMiddleName.BorderStyle = BorderStyle.None;
+            textBoxMiddleName.Location = new Point(3, 5);
+            textBoxMiddleName.Name = "textBoxMiddleName";
+            textBoxMiddleName.ReadOnly = true;
+            textBoxMiddleName.Size = new Size(81, 16);
+            textBoxMiddleName.TabIndex = 2;
             // 
             // textBoxHomeAddress
             // 
@@ -510,7 +510,7 @@
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(128, 255, 255);
-            panel4.Controls.Add(textBoxMI);
+            panel4.Controls.Add(textBoxMiddleName);
             panel4.Location = new Point(371, 79);
             panel4.Name = "panel4";
             panel4.Size = new Size(87, 25);
@@ -581,6 +581,7 @@
             ButtonBack.Size = new Size(38, 32);
             ButtonBack.TabIndex = 43;
             ButtonBack.UseVisualStyleBackColor = true;
+            ButtonBack.Click += ButtonBack_Click;
             // 
             // label19
             // 
@@ -680,7 +681,7 @@
 
         private TextBox textBoxFirstName;
         private TextBox textBoxLastName;
-        private TextBox textBoxMI;
+        private TextBox textBoxMiddleName;
         private TextBox textBoxHomeAddress;
         private TextBox textBoxAge;
         private CheckBox checkBoxMale;

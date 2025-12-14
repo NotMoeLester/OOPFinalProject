@@ -126,7 +126,7 @@
             // 
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(587, 330);
+            pictureBox1.Location = new Point(587, 336);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(317, 108);
             pictureBox1.TabIndex = 6;
@@ -134,19 +134,22 @@
             // 
             // ButtonBack
             // 
-            ButtonBack.BackgroundImage = Properties.Resources.left;
+            ButtonBack.BackColor = Color.Firebrick;
             ButtonBack.BackgroundImageLayout = ImageLayout.Zoom;
-            ButtonBack.Location = new Point(647, 18);
+            ButtonBack.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ButtonBack.ForeColor = Color.White;
+            ButtonBack.Location = new Point(584, 18);
             ButtonBack.Name = "ButtonBack";
-            ButtonBack.Size = new Size(38, 32);
+            ButtonBack.Size = new Size(101, 32);
             ButtonBack.TabIndex = 7;
-            ButtonBack.UseVisualStyleBackColor = true;
+            ButtonBack.Text = "😺 Log Owt";
+            ButtonBack.UseVisualStyleBackColor = false;
             ButtonBack.Click += ButtonBack_Click;
             // 
             // ButtonViewAccountInformation
             // 
             ButtonViewAccountInformation.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ButtonViewAccountInformation.Location = new Point(432, 18);
+            ButtonViewAccountInformation.Location = new Point(369, 18);
             ButtonViewAccountInformation.Name = "ButtonViewAccountInformation";
             ButtonViewAccountInformation.Size = new Size(209, 31);
             ButtonViewAccountInformation.TabIndex = 8;

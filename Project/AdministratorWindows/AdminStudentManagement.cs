@@ -52,8 +52,11 @@ namespace Project {
                     student.StudentInformation = new StudentInformationModel();
                 }
 
-                var dialog = new ViewAccountDialog(student);
-                dialog.ShowDialog();
+                var form = new ViewAccountDialog(student);
+                form.FormClosed += (s, args) => this.Show();
+                this.Hide();
+                form.Show();
+
             } else {
                 MessageBox.Show("Unable to load student information.", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);

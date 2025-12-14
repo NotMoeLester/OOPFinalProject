@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;  
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -26,9 +26,22 @@ namespace Project.SubjectManagement {
         }
 
         private void StudentSubjectManagement_Load(object sender, EventArgs e) {
+            LoadStudentInformation();
             LoadAvailableSubjects();
             LoadEnrolledSubjects();
             ResetSizes();
+        }
+
+        private void LoadStudentInformation() {
+            LabelStudentID.Text = Student.StudentId.ToString();
+            LabelStudentName.Text = Student.StudentInformation?.FullName ?? "Student Name";
+            LabelSchool.Text = Student.StudentInformation?.Department ?? "Department";
+            string course = Student.StudentInformation?.Course ?? "Course";
+            string yearLevel = Student.StudentInformation?.YearLevel?.ToString() ?? "0";
+            LabelCourse.Text = $"{course} - Year {yearLevel}";
+            LabelSchoolYear.Text = "S.Y. 2025-2026";
+            bool isEnrolled = Student.StudentSubject?.Subjects?.Any() ?? false;
+            LabelStatus.Text = isEnrolled ? "Enrolled" : "Not Enrolled";
         }
 
         //ADD SUBJECT ===============================================================================
@@ -50,6 +63,7 @@ namespace Project.SubjectManagement {
 
             enrolledSubjects.Add(subject);
             UpdateTotalUnitsFromStudent();
+            UpdateStatus();
         }
         #endregion
 
@@ -67,6 +81,7 @@ namespace Project.SubjectManagement {
 
             enrolledSubjects.Remove(subject);
             UpdateTotalUnitsFromStudent();
+            UpdateStatus();
 
             MessageBox.Show($"Successfully dropped {subject.Subject}.");
         }
@@ -79,7 +94,9 @@ namespace Project.SubjectManagement {
 
             repository.UpdateStudentAndStudentData(Student, Student.StudentInformation, Student.StudentSubject);
 
-            originalSubjects = enrolledSubjects.Select(s => new SubjectModel {Code = s.Code, Subject = s.Subject, Unit = s.Unit, Schedule = s.Schedule, Room = s.Room, Instructor = s.Instructor, IsEnrolled = s.IsEnrolled }).ToList();
+            originalSubjects = enrolledSubjects.Select(s => new SubjectModel { Code = s.Code, Subject = s.Subject, Unit = s.Unit, Schedule = s.Schedule, Room = s.Room, Instructor = s.Instructor, IsEnrolled = s.IsEnrolled }).ToList();
+
+            UpdateStatus();
 
             MessageBox.Show("Subjects and total units updated successfully!");
         }
@@ -120,9 +137,9 @@ namespace Project.SubjectManagement {
             dataGridViewEnrolledSubjects.DataSource = enrolledSubjects;
 
             // Keep a copy for change detection
-            originalSubjects = enrolledSubjectList.Select(s => new SubjectModel { Code = s.Code, Subject = s.Subject, Unit = s.Unit, Schedule = s.Schedule, Room = s.Room, Instructor = s.Instructor, IsEnrolled = s.IsEnrolled}).ToList();
+            originalSubjects = enrolledSubjectList.Select(s => new SubjectModel { Code = s.Code, Subject = s.Subject, Unit = s.Unit, Schedule = s.Schedule, Room = s.Room, Instructor = s.Instructor, IsEnrolled = s.IsEnrolled }).ToList();
 
-            Student.StudentSubject = new StudentSubjectsModel {StudentId = Student.StudentId, Subjects = enrolledSubjects.ToList() };
+            Student.StudentSubject = new StudentSubjectsModel { StudentId = Student.StudentId, Subjects = enrolledSubjects.ToList() };
 
             enrolledSubjects.ListChanged += (s, e) => { Student.StudentSubject.Subjects = enrolledSubjects.ToList(); UpdateTotalUnitsFromStudent(); };
 
@@ -136,7 +153,12 @@ namespace Project.SubjectManagement {
             Student.StudentInformation.TotalUnits = totalUnits;
 
             if (LabelTotalUnits != null)
-                LabelTotalUnits.Text = $"Total Units: {totalUnits}";
+                LabelTotalUnits.Text = $"{totalUnits}";
+        }
+
+        private void UpdateStatus() {
+            bool isEnrolled = enrolledSubjects.Any();
+            LabelStatus.Text = isEnrolled ? "Enrolled" : "Not Enrolled";
         }
 
         private void ButtonBack_Click(object sender, EventArgs e) {
@@ -148,6 +170,14 @@ namespace Project.SubjectManagement {
                     return;
             }
             this.Close();
+        }
+
+        private void dataGridViewAvailableSubjects_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+
+        }
+
+        private void dataGridViewEnrolledSubjects_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+
         }
     }
 }

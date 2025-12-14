@@ -9,8 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Project
-{
+namespace Project {
     public partial class StudentEnrollmentRecordManagement : Form {
 
         private StudentModel User;
@@ -18,6 +17,27 @@ namespace Project
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             User = user;
+        }
+
+        private void ButtonViewSubjectInformation_Click_1(object sender, EventArgs e) {
+            this.Hide();
+            var form = new StudentSubjectManagement(User);
+            form.FormClosed += (s, args) => { this.Show(); RefreshInformation(); };
+            form.Show();
+        }
+
+        private void ButtonViewStudentInformation_Click(object sender, EventArgs e) {
+            this.Hide();
+            StudentInformationManagement form = new StudentInformationManagement(User);
+            form.FormClosed += (s, args) => { this.Show(); RefreshInformation(); };
+            form.Show();
+        }
+
+        private void RefreshInformation() {
+            LoadInformation();
+        }
+
+        private void LoadInformation() {
             LabelEmailUER.Text = User.Email;
             LabelFullNameUER.Text = User.StudentInformation.FullName ?? "Student Name";
             LabelContactNumberUER.Text = User.StudentInformation.ContactNumber ?? "COntact Number";
@@ -27,34 +47,15 @@ namespace Project
             LabelDepartmentName.Text = User.StudentInformation.Department;
         }
 
+        private void StudentEnrollmentRecordManagement_Load(object sender, EventArgs e) {
+            LoadInformation();
+        }
 
-        private void ButtonViewSubjectInformation_Click(object sender, EventArgs e) {
+        private void buttoneksit_Click(object sender, EventArgs e) {
             this.Hide();
-            XXXUserEnrollmentInformation form = new XXXUserEnrollmentInformation(User);
-            form.FormClosed += (s, args) => this.Close();
-            form.Show();
-        }
-
-        private void ButtonViewSubjectInformation_Click_1(object sender, EventArgs e) {
-            this.Hide();
-            var mainForm = new StudentSubjectManagement(User);
-            mainForm.FormClosed += (s, args) => this.Close();
-            mainForm.Show();
-        }
-
-        private void UserEnrollmentRecord_Load(object sender, EventArgs e) {
-
-        }
-
-        private void ButtonViewStudentInformation_Click(object sender, EventArgs e) {
-            this.Hide();
-            StudentInformationManagement form = new StudentInformationManagement(User);
-            form.FormClosed += (s, args) => this.Close();
-            form.Show();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) {
-
+            LoginForm loginForm = new LoginForm();
+            loginForm.FormClosed += (s, args) => Application.Exit();
+            loginForm.Show();
         }
     }
 }
