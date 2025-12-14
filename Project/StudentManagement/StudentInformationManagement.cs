@@ -31,7 +31,7 @@ namespace Project {
             textBoxLastName.ReadOnly = false;
             textBoxFirstName.ReadOnly = false;
             textBoxMI.ReadOnly = false;
-            textBoxPrefixSuffix.ReadOnly = false;
+            textBoxSuffix.ReadOnly = false;
             checkBoxFemale.Enabled = true;
             checkBoxMale.Enabled = true;
             dateTimePickerBirthday.Enabled = true;
@@ -56,7 +56,7 @@ namespace Project {
             textBoxLastName.ReadOnly = true;
             textBoxFirstName.ReadOnly = true;
             textBoxMI.ReadOnly = true;
-            textBoxPrefixSuffix.ReadOnly = true;
+            textBoxSuffix.ReadOnly = true;
             checkBoxFemale.Enabled = false;
             checkBoxMale.Enabled = false;
             dateTimePickerBirthday.Enabled = false;
@@ -77,7 +77,7 @@ namespace Project {
             info.FirstName = textBoxFirstName.Text.Trim();
             info.MiddleName = textBoxMI.Text.Trim();   
             info.LastName = textBoxLastName.Text.Trim();
-            info.Suffix = textBoxPrefixSuffix.Text.Trim();
+            info.Suffix = textBoxSuffix.Text.Trim();
 
             info.Sex = checkBoxMale.Checked ? "Male" : "Female";
             info.BirthDay = dateTimePickerBirthday.Value;
@@ -129,7 +129,7 @@ namespace Project {
             textBoxLastName.Text = info.LastName ?? "";
             textBoxFirstName.Text = info.FirstName ?? "";
             textBoxMI.Text = info.MiddleName ?? "";
-            textBoxPrefixSuffix.Text = info.Suffix ?? "";
+            textBoxSuffix.Text = info.Suffix ?? "";
 
             checkBoxMale.Checked = info.Sex == "Male";
             checkBoxFemale.Checked = info.Sex == "Female";
