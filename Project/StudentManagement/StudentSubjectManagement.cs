@@ -40,7 +40,8 @@ namespace Project.SubjectManagement {
             string yearLevel = Student.StudentInformation?.YearLevel?.ToString() ?? "0";
             LabelCourse.Text = $"{course} - Year {yearLevel}";
             LabelSchoolYear.Text = "S.Y. 2025-2026";
-            bool isEnrolled = Student.StudentSubject?.Subjects?.Any() ?? false;
+            var enrolledSubjectList = repository.GetStudentSubjects(Student.StudentId);
+            bool isEnrolled = enrolledSubjectList.Any();
             LabelStatus.Text = isEnrolled ? "Enrolled" : "Not Enrolled";
         }
 

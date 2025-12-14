@@ -45,6 +45,10 @@ namespace Project {
             LabelStudentID.Text = User.StudentId.ToString();
             LabelDepartmentName.Text = User.StudentInformation.Department;
             LoadEnrolledSubjects();
+            var enrolledSubjects = repository.GetStudentSubjects(User.StudentId);
+            bool isEnrolled = enrolledSubjects.Any();
+            CheckBoxStatusEnrolled.Checked = isEnrolled;
+            CheckBoxStatusNotEnrolled.Checked = !isEnrolled;
         }
 
         private void LoadEnrolledSubjects() {
@@ -58,6 +62,10 @@ namespace Project {
 
         private void StudentEnrollmentRecordManagement_Load(object sender, EventArgs e) {
             LoadInformation();
+        }
+
+        private void label2_Click(object sender, EventArgs e) {
+
         }
     }
 }

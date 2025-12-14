@@ -133,9 +133,10 @@
             label2.ForeColor = Color.WhiteSmoke;
             label2.Location = new Point(59, 145);
             label2.Name = "label2";
-            label2.Size = new Size(133, 13);
+            label2.Size = new Size(117, 13);
             label2.TabIndex = 39;
-            label2.Text = "ENROLLMENT RECORDS";
+            label2.Text = "ENROLLED SUBJECTS";
+            label2.Click += label2_Click;
             // 
             // CheckBoxStatusNotEnrolled
             // 
