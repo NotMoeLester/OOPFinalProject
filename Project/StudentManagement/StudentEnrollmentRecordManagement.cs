@@ -70,10 +70,7 @@ namespace Project {
         }
 
         private void ButtonLogout_Click_1(object sender, EventArgs e) {
-            LoginForm loginForm = new LoginForm();
-            this.Hide();
-            loginForm.FormClosed += (s, args) => this.Close();
-            loginForm.Show();
+            this.Close();
         }
 
         #region

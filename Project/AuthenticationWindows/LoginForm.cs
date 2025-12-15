@@ -64,8 +64,8 @@ namespace Project {
 
                 //Open main Form (Login Form - User Account)-------------------------------------------------
                 StudentEnrollmentRecordManagement mainForm = new StudentEnrollmentRecordManagement(student);
-                mainForm.FormClosed += (s, args) => this.Close();
                 this.Hide();
+                mainForm.FormClosed += (s, args) => this.Show();
                 mainForm.Show();
 
                 //ADMINISTRATOR USER LOGIN=========================================================================
