@@ -145,6 +145,7 @@
             // 
             CheckBoxStatusNotEnrolled.AutoSize = true;
             CheckBoxStatusNotEnrolled.BackColor = Color.Navy;
+            CheckBoxStatusNotEnrolled.Enabled = false;
             CheckBoxStatusNotEnrolled.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             CheckBoxStatusNotEnrolled.ForeColor = Color.White;
             CheckBoxStatusNotEnrolled.Location = new Point(685, 126);
@@ -153,11 +154,13 @@
             CheckBoxStatusNotEnrolled.TabIndex = 38;
             CheckBoxStatusNotEnrolled.Text = "Not Enrolled";
             CheckBoxStatusNotEnrolled.UseVisualStyleBackColor = false;
+            CheckBoxStatusNotEnrolled.CheckedChanged += CheckBoxStatusNotEnrolled_CheckedChanged;
             // 
             // CheckBoxStatusEnrolled
             // 
             CheckBoxStatusEnrolled.AutoSize = true;
             CheckBoxStatusEnrolled.BackColor = Color.Navy;
+            CheckBoxStatusEnrolled.Enabled = false;
             CheckBoxStatusEnrolled.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             CheckBoxStatusEnrolled.ForeColor = Color.White;
             CheckBoxStatusEnrolled.Location = new Point(607, 126);
@@ -272,6 +275,7 @@
             LabelDepartmentName.Size = new Size(112, 15);
             LabelDepartmentName.TabIndex = 55;
             LabelDepartmentName.Text = "Department Name";
+            LabelDepartmentName.Click += LabelDepartmentName_Click;
             // 
             // ButtonLogout
             // 
@@ -311,7 +315,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Navy;
-            ClientSize = new Size(822, 464);
+            ClientSize = new Size(972, 464);
             Controls.Add(ButtonLogout);
             Controls.Add(LabelDepartmentName);
             Controls.Add(LabelStudentID);

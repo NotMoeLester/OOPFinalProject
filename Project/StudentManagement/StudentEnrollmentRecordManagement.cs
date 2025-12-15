@@ -88,6 +88,13 @@ namespace Project {
         }
         #endregion
 
+        private void LabelDepartmentName_Click(object sender, EventArgs e) {
+
+        }
+
+        private void CheckBoxStatusNotEnrolled_CheckedChanged(object sender, EventArgs e) {
+
+        }
     }
 
 }
