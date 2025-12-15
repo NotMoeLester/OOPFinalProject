@@ -26,7 +26,8 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminStudentManagement));
             DataGridViewUserList = new DataGridView();
             ButtonRefresh = new Button();
@@ -142,7 +143,7 @@
             ButtonBack.Name = "ButtonBack";
             ButtonBack.Size = new Size(101, 32);
             ButtonBack.TabIndex = 7;
-            ButtonBack.Text = "😺 Log Owt";
+            ButtonBack.Text = "😺 Log Out";
             ButtonBack.UseVisualStyleBackColor = false;
             ButtonBack.Click += ButtonBack_Click;
             // 

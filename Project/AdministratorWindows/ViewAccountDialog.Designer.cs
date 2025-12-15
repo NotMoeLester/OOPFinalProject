@@ -22,7 +22,8 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -331,7 +332,7 @@
             labelSuffix.ForeColor = Color.White;
             labelSuffix.Location = new Point(82, 240);
             labelSuffix.Name = "labelSuffix";
-            labelSuffix.Size = new Size(111, 15);
+            labelSuffix.Size = new Size(112, 15);
             labelSuffix.TabIndex = 24;
             labelSuffix.Text = "Suffix (if applicable)";
             // 
@@ -496,7 +497,7 @@
             labelPrefix.ForeColor = Color.White;
             labelPrefix.Location = new Point(84, 217);
             labelPrefix.Name = "labelPrefix";
-            labelPrefix.Size = new Size(111, 15);
+            labelPrefix.Size = new Size(112, 15);
             labelPrefix.TabIndex = 40;
             labelPrefix.Text = "Prefix (if applicable)";
             // 
