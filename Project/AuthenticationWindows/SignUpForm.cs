@@ -89,13 +89,15 @@ namespace Project {
             string password = TextBoxPasswordSignUp.Text.Trim();
             string confirmPassword = TextBoxConfirmPasswordSignUp.Text.Trim();
 
-            if (Validator.EmailSignUp(email) != string.Empty || Validator.Password(password) != string.Empty) {
-                LabelEmailValidation.Text = Validator.EmailSignUp(email);
-                return;
-            }
-            if (Validator.Password(password) != string.Empty || Validator.ConfirmPassword(password, confirmPassword) != string.Empty) {
-                LabelPasswordValidation.Text = Validator.Password(password);
-                LabelConfirmPasswordValidation.Text = Validator.ConfirmPassword(password, confirmPassword);
+            string emailError = Validator.EmailSignUp(email);
+            string passwordError = Validator.Password(password);
+            string confirmPasswordError = Validator.ConfirmPassword(password, confirmPassword);
+
+            LabelEmailValidation.Text = emailError;
+            LabelPasswordValidation.Text = passwordError;
+            LabelConfirmPasswordValidation.Text = confirmPasswordError;
+
+            if (emailError != string.Empty || passwordError != string.Empty || confirmPasswordError != string.Empty) {
                 return;
             }
 

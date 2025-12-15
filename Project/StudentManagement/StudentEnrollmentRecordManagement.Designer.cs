@@ -140,7 +140,6 @@
             label2.Size = new Size(117, 13);
             label2.TabIndex = 39;
             label2.Text = "ENROLLED SUBJECTS";
-            label2.Click += label2_Click;
             // 
             // CheckBoxStatusNotEnrolled
             // 
