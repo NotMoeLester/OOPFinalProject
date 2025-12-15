@@ -17,6 +17,7 @@ namespace Project.StudentClassModels {
         public string? Schedule { get; set; }
         public string? Room { get; set; }
         public string? Instructor { get; set; }
+        [Ignore]
         public bool IsEnrolled { get; set; }
 
         public bool CheckUnits(int units) {

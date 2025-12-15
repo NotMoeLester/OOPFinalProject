@@ -153,10 +153,8 @@ namespace Project.SubjectManagement {
         private void UpdateTotalUnitsFromStudent() {
             if (Student?.StudentInformation == null || Student.StudentSubject == null)
                 return;
-
             int totalUnits = Student.StudentSubject.Subjects?.Sum(s => s.Unit) ?? 0;
             Student.StudentInformation.TotalUnits = totalUnits;
-
             if (LabelTotalUnits != null)
                 LabelTotalUnits.Text = $"{totalUnits}";
         }
@@ -175,14 +173,6 @@ namespace Project.SubjectManagement {
                     return;
             }
             this.Close();
-        }
-
-        private void dataGridViewAvailableSubjects_CellContentClick(object sender, DataGridViewCellEventArgs e) {
-
-        }
-
-        private void dataGridViewEnrolledSubjects_CellContentClick(object sender, DataGridViewCellEventArgs e) {
-
         }
     }
 }

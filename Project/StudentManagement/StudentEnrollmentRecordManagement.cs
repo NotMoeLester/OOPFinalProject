@@ -57,7 +57,7 @@ namespace Project {
 
         private void LoadEnrolledSubjects() {
             var enrolledSubjects = repository.GetStudentSubjects(User.StudentId);
-            dataGridView1.DataSource = new BindingList<SubjectModel>(enrolledSubjects);
+            dataGridViewEnrolledSubjects.DataSource = new BindingList<SubjectModel>(enrolledSubjects);
         }
 
         private void RefreshInformation() {
@@ -66,18 +66,32 @@ namespace Project {
 
         private void StudentEnrollmentRecordManagement_Load(object sender, EventArgs e) {
             LoadInformation();
+            ResetSizes();
         }
 
-        private void label2_Click(object sender, EventArgs e) {
+        private void ButtonLogout_Click_1(object sender, EventArgs e) {
+            this.Close();
+        }
+
+        #region
+        public void ResetSizes() {
+            //Adjust Available Subjects DataGridView Columns
+            dataGridViewEnrolledSubjects.Columns["Code"].MinimumWidth = 100;
+            dataGridViewEnrolledSubjects.Columns["Subject"].MinimumWidth = 300;
+            dataGridViewEnrolledSubjects.Columns["Unit"].MinimumWidth = 50;
+            dataGridViewEnrolledSubjects.Columns["Schedule"].MinimumWidth = 250;
+            dataGridViewEnrolledSubjects.Columns["Room"].MinimumWidth = 100;
+            dataGridViewEnrolledSubjects.Columns["Instructor"].MinimumWidth = 200;
+        }
+        #endregion
+
+        private void LabelDepartmentName_Click(object sender, EventArgs e) {
 
         }
 
-        private void buttoneksit_Click(object sender, EventArgs e) {
-            LoginForm loginForm = new LoginForm();
-            this.Hide();
-            loginForm.FormClosed += (s, args) => this.Close();
-            loginForm.Show();
+        private void CheckBoxStatusNotEnrolled_CheckedChanged(object sender, EventArgs e) {
+
         }
     }
-    
+
 }

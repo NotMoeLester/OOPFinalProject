@@ -37,10 +37,14 @@ namespace Project {
 
             //STUDENT USER LOGIN=========================================================================
             if (usertype == "Student") {
-                if (Validator.Email(email) != string.Empty) {
-                    LabelEmailValidator.Text = Validator.Email(email);
-                    return;
-                }
+
+
+                string emailError = Validator.EmailSignUp(email);
+                string passwordError = Validator.Password(password);
+
+                LabelEmailValidator.Text = emailError;
+                LabelPasswordValidator.Text = passwordError;
+
                 StudentRepository repository = new StudentRepository();
                 if (!repository.IsUser(email)) {
                     MessageBox.Show("Account doesn't exist", "Please try again!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -60,8 +64,8 @@ namespace Project {
 
                 //Open main Form (Login Form - User Account)-------------------------------------------------
                 StudentEnrollmentRecordManagement mainForm = new StudentEnrollmentRecordManagement(student);
-                mainForm.FormClosed += (s, args) => this.Close();
                 this.Hide();
+                mainForm.FormClosed += (s, args) => this.Show();
                 mainForm.Show();
 
                 //ADMINISTRATOR USER LOGIN=========================================================================
