@@ -39,17 +39,17 @@
             CheckBoxStatusEnrolled = new CheckBox();
             LabelName = new Label();
             LabelEmailUER = new Label();
-            dataGridView1 = new DataGridView();
+            dataGridViewEnrolledSubjects = new DataGridView();
             ButtonViewSubjectInformation = new Button();
             pictureBox1 = new PictureBox();
             LabelFullNameUER = new Label();
             LabelContactNumberUER = new Label();
             LabelStudentID = new Label();
             LabelDepartmentName = new Label();
-            buttoneksit = new Button();
+            ButtonLogout = new Button();
             pictureBox5 = new PictureBox();
             pictureBox2 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewEnrolledSubjects).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -191,15 +191,15 @@
             LabelEmailUER.TabIndex = 35;
             LabelEmailUER.Text = "Email";
             // 
-            // dataGridView1
+            // dataGridViewEnrolledSubjects
             // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(59, 120);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(457, 295);
-            dataGridView1.TabIndex = 34;
+            dataGridViewEnrolledSubjects.BackgroundColor = Color.White;
+            dataGridViewEnrolledSubjects.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewEnrolledSubjects.Location = new Point(59, 120);
+            dataGridViewEnrolledSubjects.Name = "dataGridViewEnrolledSubjects";
+            dataGridViewEnrolledSubjects.RowHeadersWidth = 51;
+            dataGridViewEnrolledSubjects.Size = new Size(457, 295);
+            dataGridViewEnrolledSubjects.TabIndex = 34;
             // 
             // ButtonViewSubjectInformation
             // 
@@ -273,18 +273,18 @@
             LabelDepartmentName.TabIndex = 55;
             LabelDepartmentName.Text = "Department Name";
             // 
-            // buttoneksit
+            // ButtonLogout
             // 
-            buttoneksit.BackColor = Color.Firebrick;
-            buttoneksit.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            buttoneksit.ForeColor = Color.White;
-            buttoneksit.Location = new Point(549, 385);
-            buttoneksit.Name = "buttoneksit";
-            buttoneksit.Size = new Size(220, 30);
-            buttoneksit.TabIndex = 56;
-            buttoneksit.Text = "Log Out";
-            buttoneksit.UseVisualStyleBackColor = false;
-            buttoneksit.Click += buttoneksit_Click;
+            ButtonLogout.BackColor = Color.Firebrick;
+            ButtonLogout.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ButtonLogout.ForeColor = Color.White;
+            ButtonLogout.Location = new Point(549, 385);
+            ButtonLogout.Name = "ButtonLogout";
+            ButtonLogout.Size = new Size(220, 30);
+            ButtonLogout.TabIndex = 56;
+            ButtonLogout.Text = "Log Out";
+            ButtonLogout.UseVisualStyleBackColor = false;
+            ButtonLogout.Click += ButtonLogout_Click_1;
             // 
             // pictureBox5
             // 
@@ -312,7 +312,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Navy;
             ClientSize = new Size(822, 464);
-            Controls.Add(buttoneksit);
+            Controls.Add(ButtonLogout);
             Controls.Add(LabelDepartmentName);
             Controls.Add(LabelStudentID);
             Controls.Add(LabelContactNumberUER);
@@ -329,7 +329,7 @@
             Controls.Add(CheckBoxStatusEnrolled);
             Controls.Add(LabelName);
             Controls.Add(LabelEmailUER);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridViewEnrolledSubjects);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox2);
@@ -337,7 +337,7 @@
             Name = "StudentEnrollmentRecordManagement";
             Text = " User Enrollment Record";
             Load += StudentEnrollmentRecordManagement_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewEnrolledSubjects).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -357,14 +357,14 @@
         private CheckBox CheckBoxStatusEnrolled;
         private Label LabelName;
         private Label LabelEmailUER;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewEnrolledSubjects;
         private Button ButtonViewSubjectInformation;
         private PictureBox pictureBox1;
         private Label LabelFullNameUER;
         private Label LabelContactNumberUER;
         private Label LabelStudentID;
         private Label LabelDepartmentName;
-        private Button buttoneksit;
+        private Button ButtonLogout;
         private PictureBox pictureBox5;
         private PictureBox pictureBox2;
     }

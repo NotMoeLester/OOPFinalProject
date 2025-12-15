@@ -81,7 +81,6 @@
             dataGridViewAvailableSubjects.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewAvailableSubjects.Size = new Size(630, 134);
             dataGridViewAvailableSubjects.TabIndex = 1;
-            dataGridViewAvailableSubjects.CellContentClick += dataGridViewAvailableSubjects_CellContentClick;
             // 
             // LabelStudentID
             // 
@@ -159,7 +158,6 @@
             dataGridViewEnrolledSubjects.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewEnrolledSubjects.Size = new Size(630, 140);
             dataGridViewEnrolledSubjects.TabIndex = 11;
-            dataGridViewEnrolledSubjects.CellContentClick += dataGridViewEnrolledSubjects_CellContentClick;
             // 
             // ButtonDrop
             // 
