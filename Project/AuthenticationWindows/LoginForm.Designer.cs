@@ -44,8 +44,10 @@
             LabelPasswordValidator = new Label();
             LabelEmailValidator = new Label();
             pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // ButtonLogin
@@ -53,7 +55,7 @@
             ButtonLogin.BackColor = Color.MidnightBlue;
             ButtonLogin.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ButtonLogin.ForeColor = SystemColors.ControlLightLight;
-            ButtonLogin.Location = new Point(256, 244);
+            ButtonLogin.Location = new Point(266, 279);
             ButtonLogin.Name = "ButtonLogin";
             ButtonLogin.Size = new Size(239, 33);
             ButtonLogin.TabIndex = 0;
@@ -67,7 +69,7 @@
             LabelName.BackColor = Color.Navy;
             LabelName.Font = new Font("Segoe UI", 7.8F);
             LabelName.ForeColor = Color.White;
-            LabelName.Location = new Point(256, 116);
+            LabelName.Location = new Point(266, 151);
             LabelName.Name = "LabelName";
             LabelName.Size = new Size(40, 13);
             LabelName.TabIndex = 1;
@@ -79,7 +81,7 @@
             LabelPassword.BackColor = Color.Navy;
             LabelPassword.Font = new Font("Segoe UI", 7.8F);
             LabelPassword.ForeColor = Color.White;
-            LabelPassword.Location = new Point(256, 173);
+            LabelPassword.Location = new Point(266, 208);
             LabelPassword.Name = "LabelPassword";
             LabelPassword.Size = new Size(62, 13);
             LabelPassword.TabIndex = 2;
@@ -91,7 +93,7 @@
             label1.BackColor = Color.Navy;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(256, 26);
+            label1.Location = new Point(266, 61);
             label1.Name = "label1";
             label1.Size = new Size(144, 32);
             label1.TabIndex = 3;
@@ -103,7 +105,7 @@
             TextBoxEmail.Cursor = Cursors.IBeam;
             TextBoxEmail.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             TextBoxEmail.ForeColor = Color.Gray;
-            TextBoxEmail.Location = new Point(265, 136);
+            TextBoxEmail.Location = new Point(275, 171);
             TextBoxEmail.Name = "TextBoxEmail";
             TextBoxEmail.Size = new Size(229, 16);
             TextBoxEmail.TabIndex = 4;
@@ -117,7 +119,7 @@
             TextBoxPassword.BorderStyle = BorderStyle.None;
             TextBoxPassword.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             TextBoxPassword.ForeColor = Color.Gray;
-            TextBoxPassword.Location = new Point(265, 192);
+            TextBoxPassword.Location = new Point(275, 227);
             TextBoxPassword.Name = "TextBoxPassword";
             TextBoxPassword.Size = new Size(194, 16);
             TextBoxPassword.TabIndex = 5;
@@ -131,7 +133,7 @@
             ComboBoxUser.DropDownStyle = ComboBoxStyle.DropDownList;
             ComboBoxUser.FormattingEnabled = true;
             ComboBoxUser.Items.AddRange(new object[] { "Student", "Administrator" });
-            ComboBoxUser.Location = new Point(256, 84);
+            ComboBoxUser.Location = new Point(266, 119);
             ComboBoxUser.Name = "ComboBoxUser";
             ComboBoxUser.Size = new Size(238, 23);
             ComboBoxUser.TabIndex = 8;
@@ -142,7 +144,7 @@
             label2.BackColor = Color.Navy;
             label2.Font = new Font("Segoe UI", 7F);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(256, 70);
+            label2.Location = new Point(266, 105);
             label2.Name = "label2";
             label2.Size = new Size(60, 12);
             label2.TabIndex = 9;
@@ -154,7 +156,7 @@
             LinkLabelSignUp.BackColor = Color.Navy;
             LinkLabelSignUp.ForeColor = Color.White;
             LinkLabelSignUp.LinkColor = Color.White;
-            LinkLabelSignUp.Location = new Point(345, 289);
+            LinkLabelSignUp.Location = new Point(355, 324);
             LinkLabelSignUp.Name = "LinkLabelSignUp";
             LinkLabelSignUp.Size = new Size(149, 15);
             LinkLabelSignUp.TabIndex = 11;
@@ -166,7 +168,7 @@
             // 
             panel1.BackColor = Color.White;
             panel1.ForeColor = Color.Black;
-            panel1.Location = new Point(256, 131);
+            panel1.Location = new Point(266, 166);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
             panel1.Size = new Size(239, 24);
@@ -176,7 +178,7 @@
             // 
             panel2.BackColor = Color.White;
             panel2.Controls.Add(buttonShowPassword);
-            panel2.Location = new Point(256, 188);
+            panel2.Location = new Point(266, 223);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
             panel2.Size = new Size(239, 24);
@@ -199,7 +201,7 @@
             LabelPasswordValidator.AutoSize = true;
             LabelPasswordValidator.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             LabelPasswordValidator.ForeColor = Color.Firebrick;
-            LabelPasswordValidator.Location = new Point(232, 214);
+            LabelPasswordValidator.Location = new Point(242, 249);
             LabelPasswordValidator.MinimumSize = new Size(262, 0);
             LabelPasswordValidator.Name = "LabelPasswordValidator";
             LabelPasswordValidator.Size = new Size(262, 15);
@@ -212,7 +214,7 @@
             LabelEmailValidator.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             LabelEmailValidator.ForeColor = Color.Firebrick;
             LabelEmailValidator.ImageAlign = ContentAlignment.MiddleRight;
-            LabelEmailValidator.Location = new Point(232, 157);
+            LabelEmailValidator.Location = new Point(242, 192);
             LabelEmailValidator.MinimumSize = new Size(262, 0);
             LabelEmailValidator.Name = "LabelEmailValidator";
             LabelEmailValidator.RightToLeft = RightToLeft.No;
@@ -224,11 +226,22 @@
             // 
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(128, -1);
+            pictureBox1.Location = new Point(138, 34);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(500, 403);
             pictureBox1.TabIndex = 18;
             pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.White;
+            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
+            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox2.Location = new Point(-173, 0);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(981, 50);
+            pictureBox2.TabIndex = 19;
+            pictureBox2.TabStop = false;
             // 
             // LoginForm
             // 
@@ -237,6 +250,7 @@
             BackColor = Color.Navy;
             CancelButton = ButtonLogin;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox2);
             Controls.Add(LabelEmailValidator);
             Controls.Add(LabelPasswordValidator);
             Controls.Add(LinkLabelSignUp);
@@ -258,6 +272,7 @@
             Load += LoginForm_Load;
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -280,5 +295,6 @@
         private Label LabelEmailValidator;
         private PictureBox pictureBox1;
         private Button buttonShowPassword;
+        private PictureBox pictureBox2;
     }
 }

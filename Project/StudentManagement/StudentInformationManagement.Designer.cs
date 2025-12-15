@@ -82,7 +82,7 @@
             // 
             textBoxFirstName.BackColor = Color.FromArgb(128, 255, 255);
             textBoxFirstName.BorderStyle = BorderStyle.None;
-            textBoxFirstName.Location = new Point(211, 84);
+            textBoxFirstName.Location = new Point(211, 95);
             textBoxFirstName.Name = "textBoxFirstName";
             textBoxFirstName.ReadOnly = true;
             textBoxFirstName.Size = new Size(154, 16);
@@ -92,7 +92,7 @@
             // 
             textBoxLastName.BackColor = Color.FromArgb(128, 255, 255);
             textBoxLastName.BorderStyle = BorderStyle.None;
-            textBoxLastName.Location = new Point(76, 84);
+            textBoxLastName.Location = new Point(76, 95);
             textBoxLastName.Name = "textBoxLastName";
             textBoxLastName.ReadOnly = true;
             textBoxLastName.Size = new Size(122, 16);
@@ -112,7 +112,7 @@
             // 
             textBoxHomeAddress.BackColor = Color.FromArgb(128, 255, 255);
             textBoxHomeAddress.BorderStyle = BorderStyle.None;
-            textBoxHomeAddress.Location = new Point(76, 218);
+            textBoxHomeAddress.Location = new Point(76, 229);
             textBoxHomeAddress.Name = "textBoxHomeAddress";
             textBoxHomeAddress.ReadOnly = true;
             textBoxHomeAddress.Size = new Size(587, 16);
@@ -123,7 +123,7 @@
             textBoxAge.BackColor = Color.FromArgb(128, 255, 255);
             textBoxAge.BorderStyle = BorderStyle.None;
             textBoxAge.Enabled = false;
-            textBoxAge.Location = new Point(293, 161);
+            textBoxAge.Location = new Point(293, 172);
             textBoxAge.Name = "textBoxAge";
             textBoxAge.Size = new Size(38, 16);
             textBoxAge.TabIndex = 5;
@@ -134,7 +134,7 @@
             checkBoxMale.Enabled = false;
             checkBoxMale.Font = new Font("Segoe UI", 8F);
             checkBoxMale.ForeColor = Color.White;
-            checkBoxMale.Location = new Point(556, 83);
+            checkBoxMale.Location = new Point(556, 94);
             checkBoxMale.Name = "checkBoxMale";
             checkBoxMale.Size = new Size(51, 17);
             checkBoxMale.TabIndex = 7;
@@ -149,7 +149,7 @@
             checkBoxFemale.Enabled = false;
             checkBoxFemale.Font = new Font("Segoe UI", 8F);
             checkBoxFemale.ForeColor = Color.White;
-            checkBoxFemale.Location = new Point(604, 83);
+            checkBoxFemale.Location = new Point(604, 94);
             checkBoxFemale.Name = "checkBoxFemale";
             checkBoxFemale.Size = new Size(62, 17);
             checkBoxFemale.TabIndex = 8;
@@ -172,7 +172,7 @@
             dateTimePickerBirthday.CalendarFont = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dateTimePickerBirthday.CalendarMonthBackground = Color.FromArgb(128, 255, 255);
             dateTimePickerBirthday.Enabled = false;
-            dateTimePickerBirthday.Location = new Point(73, 157);
+            dateTimePickerBirthday.Location = new Point(73, 168);
             dateTimePickerBirthday.Name = "dateTimePickerBirthday";
             dateTimePickerBirthday.Size = new Size(211, 23);
             dateTimePickerBirthday.TabIndex = 10;
@@ -183,7 +183,7 @@
             label1.BackColor = Color.Navy;
             label1.Font = new Font("Impact", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(73, 18);
+            label1.Location = new Point(73, 29);
             label1.Name = "label1";
             label1.Size = new Size(210, 29);
             label1.TabIndex = 11;
@@ -193,7 +193,7 @@
             // 
             textBoxSuffix.BackColor = Color.FromArgb(128, 255, 255);
             textBoxSuffix.BorderStyle = BorderStyle.None;
-            textBoxSuffix.Location = new Point(513, 84);
+            textBoxSuffix.Location = new Point(513, 95);
             textBoxSuffix.Name = "textBoxSuffix";
             textBoxSuffix.ReadOnly = true;
             textBoxSuffix.Size = new Size(33, 16);
@@ -203,7 +203,7 @@
             // 
             textBoxPreviousSchool.BackColor = Color.FromArgb(128, 255, 255);
             textBoxPreviousSchool.BorderStyle = BorderStyle.None;
-            textBoxPreviousSchool.Location = new Point(429, 349);
+            textBoxPreviousSchool.Location = new Point(429, 360);
             textBoxPreviousSchool.Name = "textBoxPreviousSchool";
             textBoxPreviousSchool.ReadOnly = true;
             textBoxPreviousSchool.Size = new Size(234, 16);
@@ -215,7 +215,7 @@
             label2.BackColor = Color.Navy;
             label2.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(73, 288);
+            label2.Location = new Point(73, 299);
             label2.Name = "label2";
             label2.Size = new Size(206, 26);
             label2.TabIndex = 14;
@@ -227,7 +227,7 @@
             checkBoxConfirmation.Enabled = false;
             checkBoxConfirmation.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             checkBoxConfirmation.ForeColor = Color.Gainsboro;
-            checkBoxConfirmation.Location = new Point(73, 404);
+            checkBoxConfirmation.Location = new Point(73, 415);
             checkBoxConfirmation.Name = "checkBoxConfirmation";
             checkBoxConfirmation.Size = new Size(426, 17);
             checkBoxConfirmation.TabIndex = 15;
@@ -242,7 +242,7 @@
             ButtonConfirm.FlatStyle = FlatStyle.Flat;
             ButtonConfirm.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ButtonConfirm.ForeColor = Color.White;
-            ButtonConfirm.Location = new Point(263, 432);
+            ButtonConfirm.Location = new Point(263, 443);
             ButtonConfirm.Name = "ButtonConfirm";
             ButtonConfirm.Size = new Size(178, 34);
             ButtonConfirm.TabIndex = 16;
@@ -255,7 +255,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Cambria", 8.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Gainsboro;
-            label3.Location = new Point(113, 106);
+            label3.Location = new Point(113, 117);
             label3.Name = "label3";
             label3.Size = new Size(54, 12);
             label3.TabIndex = 17;
@@ -266,7 +266,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Cambria", 8.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Gainsboro;
-            label4.Location = new Point(254, 107);
+            label4.Location = new Point(254, 118);
             label4.Name = "label4";
             label4.Size = new Size(55, 12);
             label4.TabIndex = 18;
@@ -277,7 +277,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Cambria", 8.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Gainsboro;
-            label5.Location = new Point(382, 107);
+            label5.Location = new Point(382, 118);
             label5.Name = "label5";
             label5.Size = new Size(66, 12);
             label5.TabIndex = 19;
@@ -288,7 +288,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Cambria", 8.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.Gainsboro;
-            label6.Location = new Point(468, 107);
+            label6.Location = new Point(468, 118);
             label6.Name = "label6";
             label6.Size = new Size(31, 12);
             label6.TabIndex = 20;
@@ -301,7 +301,7 @@
             comboBoxNationality.FlatStyle = FlatStyle.Popup;
             comboBoxNationality.FormattingEnabled = true;
             comboBoxNationality.Items.AddRange(new object[] { "Afghan", "Albanian", "Algerian", "American", "Argentinian", "Armenian", "Australian", "Austrian", "Bangladeshi", "Belgian", "Bisaya", "Brazilian", "British", "Bulgarian", "Canadian", "Chilean", "Chinese", "Colombian", "Croatian", "Cuban", "Czech", "Danish", "Dutch", "Egyptian", "English", "Estonian", "Ethiopian", "Filipino", "Finnish", "French", "German", "Greek", "Hungarian", "Icelandic", "Indian", "Indonesian", "Iranian", "Irish", "Israeli", "Italian", "Japanese", "Jordanian", "Kenyan", "Korean", "Latvian", "Lebanese", "Lithuanian", "Malaysian", "Mexican", "Moroccan", "Nepalese", "New Zealander", "Nigerian", "Norwegian", "Pakistani", "Polish", "Portuguese", "Romanian", "Russian", "Saudi", "Scottish", "Serbian", "Singaporean", "Slovak", "Slovenian", "Somali", "South African", "Spanish", "Sri Lankan", "Swedish", "Swiss", "Syrian", "Thai", "Turkish", "Ukrainian", "Uruguayan", "Venezuelan", "Vietnamese", "Welsh", "Zimbabwean" });
-            comboBoxNationality.Location = new Point(340, 157);
+            comboBoxNationality.Location = new Point(340, 168);
             comboBoxNationality.Name = "comboBoxNationality";
             comboBoxNationality.Size = new Size(121, 23);
             comboBoxNationality.TabIndex = 21;
@@ -312,7 +312,7 @@
             label7.BackColor = Color.Navy;
             label7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(73, 59);
+            label7.Location = new Point(73, 70);
             label7.Name = "label7";
             label7.Size = new Size(75, 17);
             label7.TabIndex = 22;
@@ -324,7 +324,7 @@
             label8.BackColor = Color.Navy;
             label8.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(556, 57);
+            label8.Location = new Point(556, 68);
             label8.Name = "label8";
             label8.Size = new Size(37, 19);
             label8.TabIndex = 23;
@@ -336,7 +336,7 @@
             label9.BackColor = Color.Navy;
             label9.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             label9.ForeColor = Color.White;
-            label9.Location = new Point(72, 135);
+            label9.Location = new Point(72, 146);
             label9.Name = "label9";
             label9.Size = new Size(98, 19);
             label9.TabIndex = 24;
@@ -348,7 +348,7 @@
             label10.BackColor = Color.Navy;
             label10.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             label10.ForeColor = Color.White;
-            label10.Location = new Point(290, 135);
+            label10.Location = new Point(290, 146);
             label10.Name = "label10";
             label10.Size = new Size(44, 19);
             label10.TabIndex = 25;
@@ -360,7 +360,7 @@
             label11.BackColor = Color.Navy;
             label11.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             label11.ForeColor = Color.White;
-            label11.Location = new Point(340, 135);
+            label11.Location = new Point(340, 146);
             label11.Name = "label11";
             label11.Size = new Size(87, 19);
             label11.TabIndex = 26;
@@ -372,7 +372,7 @@
             label12.BackColor = Color.Navy;
             label12.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             label12.ForeColor = Color.White;
-            label12.Location = new Point(476, 135);
+            label12.Location = new Point(476, 146);
             label12.Name = "label12";
             label12.Size = new Size(98, 19);
             label12.TabIndex = 27;
@@ -384,7 +384,7 @@
             label13.BackColor = Color.Navy;
             label13.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             label13.ForeColor = Color.White;
-            label13.Location = new Point(73, 193);
+            label13.Location = new Point(73, 204);
             label13.Name = "label13";
             label13.Size = new Size(112, 19);
             label13.TabIndex = 28;
@@ -395,7 +395,7 @@
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 8.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label14.ForeColor = Color.Gainsboro;
-            label14.Location = new Point(72, 241);
+            label14.Location = new Point(72, 252);
             label14.Name = "label14";
             label14.Size = new Size(434, 13);
             label14.TabIndex = 29;
@@ -407,7 +407,7 @@
             label15.BackColor = Color.Navy;
             label15.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             label15.ForeColor = Color.White;
-            label15.Location = new Point(73, 325);
+            label15.Location = new Point(73, 336);
             label15.Name = "label15";
             label15.Size = new Size(125, 19);
             label15.TabIndex = 30;
@@ -419,7 +419,7 @@
             label16.BackColor = Color.Navy;
             label16.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             label16.ForeColor = Color.White;
-            label16.Location = new Point(290, 325);
+            label16.Location = new Point(290, 336);
             label16.Name = "label16";
             label16.Size = new Size(44, 19);
             label16.TabIndex = 32;
@@ -432,7 +432,7 @@
             comboBoxCourseProgram.FlatStyle = FlatStyle.Popup;
             comboBoxCourseProgram.FormattingEnabled = true;
             comboBoxCourseProgram.Items.AddRange(new object[] { "AB in Political Science", "AB in Psychology", "AB in Sociology", "BA in Communication", "Bachelor of Laws", "BEEd in Elementary Education", "BPEd in Physical Education", "BS in Accountancy", "BS in Architecture", "BS in Biology", "BS in Business Administration", "BS in Civil Engineering", "BS in Computer Engineering", "BS in Computer Science", "BS in Electrical Engineering", "BS in Electronics Engineering", "BS in Entrepreneurship", "BS in Human Resource Management", "BS in Information Systems", "BS in Information Technology", "BS in Marketing Management", "BS in Mechanical Engineering", "BS in Medical Technology", "BS in Nursing", "BS in Pharmacy", "Juris Doctor" });
-            comboBoxCourseProgram.Location = new Point(73, 347);
+            comboBoxCourseProgram.Location = new Point(73, 358);
             comboBoxCourseProgram.Name = "comboBoxCourseProgram";
             comboBoxCourseProgram.Size = new Size(211, 23);
             comboBoxCourseProgram.TabIndex = 33;
@@ -441,7 +441,7 @@
             // 
             numericUpDownYear.BackColor = Color.FromArgb(128, 255, 255);
             numericUpDownYear.Enabled = false;
-            numericUpDownYear.Location = new Point(290, 347);
+            numericUpDownYear.Location = new Point(290, 358);
             numericUpDownYear.Name = "numericUpDownYear";
             numericUpDownYear.Size = new Size(57, 23);
             numericUpDownYear.TabIndex = 34;
@@ -452,7 +452,7 @@
             label17.BackColor = Color.Navy;
             label17.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             label17.ForeColor = Color.White;
-            label17.Location = new Point(426, 325);
+            label17.Location = new Point(426, 336);
             label17.Name = "label17";
             label17.Size = new Size(120, 19);
             label17.TabIndex = 35;
@@ -463,7 +463,7 @@
             label18.AutoSize = true;
             label18.Font = new Font("Segoe UI", 8.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label18.ForeColor = Color.Gainsboro;
-            label18.Location = new Point(604, 372);
+            label18.Location = new Point(604, 383);
             label18.Name = "label18";
             label18.Size = new Size(65, 13);
             label18.TabIndex = 36;
@@ -486,7 +486,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(128, 255, 255);
-            panel1.Location = new Point(72, 79);
+            panel1.Location = new Point(72, 90);
             panel1.Name = "panel1";
             panel1.Size = new Size(130, 25);
             panel1.TabIndex = 38;
@@ -495,7 +495,7 @@
             // 
             panel2.BackColor = Color.FromArgb(128, 255, 255);
             panel2.Controls.Add(panel3);
-            panel2.Location = new Point(208, 79);
+            panel2.Location = new Point(208, 90);
             panel2.Name = "panel2";
             panel2.Size = new Size(157, 25);
             panel2.TabIndex = 39;
@@ -511,7 +511,7 @@
             // 
             panel4.BackColor = Color.FromArgb(128, 255, 255);
             panel4.Controls.Add(textBoxMiddleName);
-            panel4.Location = new Point(371, 79);
+            panel4.Location = new Point(371, 90);
             panel4.Name = "panel4";
             panel4.Size = new Size(87, 25);
             panel4.TabIndex = 40;
@@ -519,7 +519,7 @@
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(128, 255, 255);
-            panel5.Location = new Point(510, 79);
+            panel5.Location = new Point(510, 90);
             panel5.Name = "panel5";
             panel5.Size = new Size(40, 25);
             panel5.TabIndex = 39;
@@ -527,7 +527,7 @@
             // panel6
             // 
             panel6.BackColor = Color.FromArgb(128, 255, 255);
-            panel6.Location = new Point(290, 156);
+            panel6.Location = new Point(290, 167);
             panel6.Name = "panel6";
             panel6.Size = new Size(44, 25);
             panel6.TabIndex = 41;
@@ -537,7 +537,7 @@
             panel7.BackColor = Color.FromArgb(128, 255, 255);
             panel7.Controls.Add(textBoxContactInformation);
             panel7.Controls.Add(comboBoxContactCountryCode);
-            panel7.Location = new Point(472, 156);
+            panel7.Location = new Point(472, 167);
             panel7.Name = "panel7";
             panel7.Size = new Size(194, 25);
             panel7.TabIndex = 39;
@@ -545,7 +545,7 @@
             // panel8
             // 
             panel8.BackColor = Color.FromArgb(128, 255, 255);
-            panel8.Location = new Point(73, 213);
+            panel8.Location = new Point(73, 224);
             panel8.Name = "panel8";
             panel8.Size = new Size(593, 25);
             panel8.TabIndex = 39;
@@ -553,7 +553,7 @@
             // panel9
             // 
             panel9.BackColor = Color.FromArgb(128, 255, 255);
-            panel9.Location = new Point(426, 345);
+            panel9.Location = new Point(426, 356);
             panel9.Name = "panel9";
             panel9.Size = new Size(240, 24);
             panel9.TabIndex = 39;
@@ -564,7 +564,7 @@
             buttonEdit.FlatStyle = FlatStyle.Flat;
             buttonEdit.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonEdit.ForeColor = Color.White;
-            buttonEdit.Location = new Point(72, 432);
+            buttonEdit.Location = new Point(72, 443);
             buttonEdit.Name = "buttonEdit";
             buttonEdit.Size = new Size(178, 34);
             buttonEdit.TabIndex = 42;
@@ -576,7 +576,7 @@
             // 
             ButtonBack.BackgroundImage = Properties.Resources.left;
             ButtonBack.BackgroundImageLayout = ImageLayout.Zoom;
-            ButtonBack.Location = new Point(628, 21);
+            ButtonBack.Location = new Point(628, 32);
             ButtonBack.Name = "ButtonBack";
             ButtonBack.Size = new Size(38, 32);
             ButtonBack.TabIndex = 43;
@@ -588,7 +588,7 @@
             label19.AutoSize = true;
             label19.Font = new Font("Cambria", 8.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label19.ForeColor = Color.Gainsboro;
-            label19.Location = new Point(515, 107);
+            label19.Location = new Point(515, 118);
             label19.Name = "label19";
             label19.Size = new Size(30, 12);
             label19.TabIndex = 45;
@@ -598,7 +598,7 @@
             // 
             textBoxPrefix.BackColor = Color.FromArgb(128, 255, 255);
             textBoxPrefix.BorderStyle = BorderStyle.None;
-            textBoxPrefix.Location = new Point(468, 84);
+            textBoxPrefix.Location = new Point(468, 95);
             textBoxPrefix.Name = "textBoxPrefix";
             textBoxPrefix.ReadOnly = true;
             textBoxPrefix.Size = new Size(33, 16);
@@ -607,7 +607,7 @@
             // panel10
             // 
             panel10.BackColor = Color.FromArgb(128, 255, 255);
-            panel10.Location = new Point(464, 79);
+            panel10.Location = new Point(464, 90);
             panel10.Name = "panel10";
             panel10.Size = new Size(40, 25);
             panel10.TabIndex = 46;
@@ -617,7 +617,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Navy;
-            ClientSize = new Size(750, 519);
+            ClientSize = new Size(738, 519);
             Controls.Add(label19);
             Controls.Add(textBoxPrefix);
             Controls.Add(panel10);

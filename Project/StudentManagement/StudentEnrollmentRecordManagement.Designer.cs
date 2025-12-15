@@ -57,7 +57,7 @@
             ButtonViewStudentInformation.FlatStyle = FlatStyle.Flat;
             ButtonViewStudentInformation.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             ButtonViewStudentInformation.ForeColor = Color.White;
-            ButtonViewStudentInformation.Location = new Point(549, 320);
+            ButtonViewStudentInformation.Location = new Point(549, 279);
             ButtonViewStudentInformation.Name = "ButtonViewStudentInformation";
             ButtonViewStudentInformation.Size = new Size(220, 33);
             ButtonViewStudentInformation.TabIndex = 46;
@@ -71,7 +71,7 @@
             LabelYearLevel.BackColor = Color.Navy;
             LabelYearLevel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             LabelYearLevel.ForeColor = Color.White;
-            LabelYearLevel.Location = new Point(623, 221);
+            LabelYearLevel.Location = new Point(623, 180);
             LabelYearLevel.Name = "LabelYearLevel";
             LabelYearLevel.Size = new Size(64, 15);
             LabelYearLevel.TabIndex = 45;
@@ -83,7 +83,7 @@
             label7.BackColor = Color.Navy;
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(549, 221);
+            label7.Location = new Point(549, 180);
             label7.Name = "label7";
             label7.Size = new Size(70, 15);
             label7.TabIndex = 44;
@@ -95,7 +95,7 @@
             LabelCourseName.BackColor = Color.Navy;
             LabelCourseName.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             LabelCourseName.ForeColor = Color.White;
-            LabelCourseName.Location = new Point(604, 196);
+            LabelCourseName.Location = new Point(604, 155);
             LabelCourseName.Name = "LabelCourseName";
             LabelCourseName.Size = new Size(81, 15);
             LabelCourseName.TabIndex = 43;
@@ -107,7 +107,7 @@
             label4.BackColor = Color.Navy;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(549, 196);
+            label4.Location = new Point(549, 155);
             label4.Name = "label4";
             label4.Size = new Size(51, 15);
             label4.TabIndex = 42;
@@ -119,7 +119,7 @@
             label3.BackColor = Color.Navy;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(549, 245);
+            label3.Location = new Point(549, 204);
             label3.Name = "label3";
             label3.Size = new Size(82, 15);
             label3.TabIndex = 40;
@@ -131,7 +131,7 @@
             label2.BackColor = Color.Navy;
             label2.Font = new Font("Segoe UI", 8F, FontStyle.Bold);
             label2.ForeColor = Color.WhiteSmoke;
-            label2.Location = new Point(59, 145);
+            label2.Location = new Point(59, 104);
             label2.Name = "label2";
             label2.Size = new Size(117, 13);
             label2.TabIndex = 39;
@@ -144,7 +144,7 @@
             CheckBoxStatusNotEnrolled.BackColor = Color.Navy;
             CheckBoxStatusNotEnrolled.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             CheckBoxStatusNotEnrolled.ForeColor = Color.White;
-            CheckBoxStatusNotEnrolled.Location = new Point(685, 167);
+            CheckBoxStatusNotEnrolled.Location = new Point(685, 126);
             CheckBoxStatusNotEnrolled.Name = "CheckBoxStatusNotEnrolled";
             CheckBoxStatusNotEnrolled.Size = new Size(95, 19);
             CheckBoxStatusNotEnrolled.TabIndex = 38;
@@ -157,7 +157,7 @@
             CheckBoxStatusEnrolled.BackColor = Color.Navy;
             CheckBoxStatusEnrolled.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             CheckBoxStatusEnrolled.ForeColor = Color.White;
-            CheckBoxStatusEnrolled.Location = new Point(607, 167);
+            CheckBoxStatusEnrolled.Location = new Point(607, 126);
             CheckBoxStatusEnrolled.Name = "CheckBoxStatusEnrolled";
             CheckBoxStatusEnrolled.Size = new Size(71, 19);
             CheckBoxStatusEnrolled.TabIndex = 37;
@@ -170,7 +170,7 @@
             LabelName.BackColor = Color.Navy;
             LabelName.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             LabelName.ForeColor = Color.White;
-            LabelName.Location = new Point(549, 167);
+            LabelName.Location = new Point(549, 126);
             LabelName.Name = "LabelName";
             LabelName.Size = new Size(48, 15);
             LabelName.TabIndex = 36;
@@ -182,7 +182,7 @@
             LabelEmailUER.BackColor = Color.Navy;
             LabelEmailUER.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             LabelEmailUER.ForeColor = Color.White;
-            LabelEmailUER.Location = new Point(59, 115);
+            LabelEmailUER.Location = new Point(59, 74);
             LabelEmailUER.Name = "LabelEmailUER";
             LabelEmailUER.Size = new Size(36, 15);
             LabelEmailUER.TabIndex = 35;
@@ -192,7 +192,7 @@
             // 
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(59, 161);
+            dataGridView1.Location = new Point(59, 120);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(457, 295);
@@ -204,7 +204,7 @@
             ButtonViewSubjectInformation.FlatStyle = FlatStyle.Flat;
             ButtonViewSubjectInformation.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             ButtonViewSubjectInformation.ForeColor = Color.White;
-            ButtonViewSubjectInformation.Location = new Point(549, 278);
+            ButtonViewSubjectInformation.Location = new Point(549, 237);
             ButtonViewSubjectInformation.Name = "ButtonViewSubjectInformation";
             ButtonViewSubjectInformation.Size = new Size(220, 33);
             ButtonViewSubjectInformation.TabIndex = 50;
@@ -216,7 +216,7 @@
             // 
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(637, 368);
+            pictureBox1.Location = new Point(637, 327);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(179, 71);
             pictureBox1.TabIndex = 51;
@@ -228,7 +228,7 @@
             LabelFullNameUER.BackColor = Color.Navy;
             LabelFullNameUER.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LabelFullNameUER.ForeColor = Color.White;
-            LabelFullNameUER.Location = new Point(59, 83);
+            LabelFullNameUER.Location = new Point(59, 42);
             LabelFullNameUER.Name = "LabelFullNameUER";
             LabelFullNameUER.Size = new Size(129, 32);
             LabelFullNameUER.TabIndex = 52;
@@ -240,7 +240,7 @@
             LabelContactNumberUER.BackColor = Color.Navy;
             LabelContactNumberUER.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             LabelContactNumberUER.ForeColor = Color.White;
-            LabelContactNumberUER.Location = new Point(256, 115);
+            LabelContactNumberUER.Location = new Point(256, 74);
             LabelContactNumberUER.Name = "LabelContactNumberUER";
             LabelContactNumberUER.Size = new Size(99, 15);
             LabelContactNumberUER.TabIndex = 53;
@@ -252,7 +252,7 @@
             LabelStudentID.BackColor = Color.Navy;
             LabelStudentID.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LabelStudentID.ForeColor = Color.White;
-            LabelStudentID.Location = new Point(588, 101);
+            LabelStudentID.Location = new Point(588, 60);
             LabelStudentID.Name = "LabelStudentID";
             LabelStudentID.Size = new Size(135, 32);
             LabelStudentID.TabIndex = 54;
@@ -264,7 +264,7 @@
             LabelDepartmentName.BackColor = Color.Navy;
             LabelDepartmentName.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             LabelDepartmentName.ForeColor = Color.White;
-            LabelDepartmentName.Location = new Point(637, 245);
+            LabelDepartmentName.Location = new Point(637, 204);
             LabelDepartmentName.Name = "LabelDepartmentName";
             LabelDepartmentName.Size = new Size(112, 15);
             LabelDepartmentName.TabIndex = 55;
@@ -275,7 +275,7 @@
             buttoneksit.BackColor = Color.Firebrick;
             buttoneksit.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttoneksit.ForeColor = Color.White;
-            buttoneksit.Location = new Point(549, 426);
+            buttoneksit.Location = new Point(549, 385);
             buttoneksit.Name = "buttoneksit";
             buttoneksit.Size = new Size(220, 30);
             buttoneksit.TabIndex = 56;
@@ -287,7 +287,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Navy;
-            ClientSize = new Size(859, 564);
+            ClientSize = new Size(822, 464);
             Controls.Add(buttoneksit);
             Controls.Add(LabelDepartmentName);
             Controls.Add(LabelStudentID);

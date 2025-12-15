@@ -526,7 +526,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Navy;
-            ClientSize = new Size(655, 567);
+            ClientSize = new Size(746, 567);
             Controls.Add(label23);
             Controls.Add(labelSchool);
             Controls.Add(labelPrefix);
