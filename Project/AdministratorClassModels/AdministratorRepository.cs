@@ -12,20 +12,19 @@ namespace Project.AdministratorUserData {
         public AdministratorRepository() {
             string databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "AdministratorUserData.db");
             _connection = new SQLiteConnection(databasePath);
-            _connection.CreateTable<AdministratorUser>();
+            _connection.CreateTable<AdministratorModel>();
         }
-        public bool Add(AdministratorUser user) {
+        public bool Add(AdministratorModel user) {
             _connection.Insert(user);
             return true;
         }
 
-        public AdministratorUser GetUserByEmailAndPassword(string email, string password) {
-
-            return _connection.Table<AdministratorUser>().FirstOrDefault(u => u.Email == email && u.Password == password);
+        public AdministratorModel GetUserByEmailAndPassword(string email, string password) {
+            return _connection.Table<AdministratorModel>().FirstOrDefault(u => u.Email == email && u.Password == password);
         }
 
         public bool IsUser(string email) {
-            AdministratorUser user = _connection.Table<AdministratorUser>().FirstOrDefault(u => u.Email == email);
+            AdministratorModel user = _connection.Table<AdministratorModel>().FirstOrDefault(u => u.Email == email);
             return user != null;
         }
 

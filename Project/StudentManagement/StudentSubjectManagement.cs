@@ -32,19 +32,6 @@ namespace Project.SubjectManagement {
             ResetSizes();
         }
 
-        private void LoadStudentInformation() {
-            LabelStudentID.Text = Student.StudentId.ToString();
-            LabelStudentName.Text = Student.StudentInformation?.FullName ?? "Student Name";
-            LabelSchool.Text = Student.StudentInformation?.Department ?? "Department";
-            string course = Student.StudentInformation?.Course ?? "Course";
-            string yearLevel = Student.StudentInformation?.YearLevel?.ToString() ?? "0";
-            LabelCourse.Text = $"{course} - Year {yearLevel}";
-            LabelSchoolYear.Text = "S.Y. 2025-2026";
-            var enrolledSubjectList = repository.GetStudentSubjects(Student.StudentId);
-            bool isEnrolled = enrolledSubjectList.Any();
-            LabelStatus.Text = isEnrolled ? "Enrolled" : "Not Enrolled";
-        }
-
         //ADD SUBJECT ===============================================================================
         #region
         private void ButtonAdd_Click(object sender, EventArgs e) {
@@ -61,6 +48,9 @@ namespace Project.SubjectManagement {
                 MessageBox.Show("You are already enrolled in this subject.");
                 return;
             }
+
+            // Set IsEnrolled to true when adding
+            subject.IsEnrolled = true;
 
             enrolledSubjects.Add(subject);
             UpdateTotalUnitsFromStudent();
@@ -85,6 +75,9 @@ namespace Project.SubjectManagement {
             if (result == DialogResult.No)
                 return;
 
+            // Set IsEnrolled to false when dropping
+            subject.IsEnrolled = false;
+
             enrolledSubjects.Remove(subject);
             UpdateTotalUnitsFromStudent();
             UpdateStatus();
@@ -96,6 +89,9 @@ namespace Project.SubjectManagement {
         //SAVE TO DATABASE ===============================================================================
         #region
         private void ButtonSave_Click(object sender, EventArgs e) {
+            // Update Student.StudentSubject.Subjects to trigger JSON serialization
+            Student.StudentSubject.Subjects = enrolledSubjects.ToList();
+
             repository.UpdateStudentSubjects(Student.StudentId, enrolledSubjects.ToList());
 
             repository.UpdateStudentAndStudentData(Student, Student.StudentInformation, Student.StudentSubject);
@@ -108,7 +104,7 @@ namespace Project.SubjectManagement {
         }
         #endregion
 
-        //RESET DATAGRIDVIEW COLUMN SIZES
+        //RESET DATAGRIDVIEW COLUMN SIZES ===============================================================================
         #region
         public void ResetSizes() {
             //Adjust Available Subjects DataGridView Columns
@@ -126,9 +122,11 @@ namespace Project.SubjectManagement {
             dataGridViewEnrolledSubjects.Columns["Schedule"].MinimumWidth = 250;
             dataGridViewEnrolledSubjects.Columns["Room"].MinimumWidth = 100;
             dataGridViewEnrolledSubjects.Columns["Instructor"].MinimumWidth = 200;
-            #endregion
         }
+        #endregion
 
+        //LOAD SUBJECTS ===============================================================================
+        #region
         private void LoadAvailableSubjects() {
             AdmininistratorCourseSubjectsModel subjectAvailable = new AdmininistratorCourseSubjectsModel();
             string course = Student?.StudentInformation?.Course ?? "";
@@ -150,6 +148,36 @@ namespace Project.SubjectManagement {
 
             UpdateTotalUnitsFromStudent();
         }
+        private void LoadStudentInformation() {
+            LabelStudentID.Text = Student.StudentId.ToString();
+            LabelStudentName.Text = Student.StudentInformation?.FullName ?? "Student Name";
+            LabelSchool.Text = Student.StudentInformation?.Department ?? "Department";
+            string course = Student.StudentInformation?.Course ?? "Course";
+            string yearLevel = Student.StudentInformation?.YearLevel?.ToString() ?? "0";
+            LabelCourse.Text = $"{course} - Year {yearLevel}";
+            LabelSchoolYear.Text = "S.Y. 2025-2026";
+            var enrolledSubjectList = repository.GetStudentSubjects(Student.StudentId);
+            bool isEnrolled = enrolledSubjectList.Any();
+            LabelStatus.Text = isEnrolled ? "Enrolled" : "Not Enrolled";
+        }
+        #endregion
+
+        // BACK BUTTON ===============================================================================
+        #region
+        private void ButtonBack_Click(object sender, EventArgs e) {
+            bool hasChanges = !enrolledSubjects.Select(s => s.Code).SequenceEqual(originalSubjects.Select(s => s.Code));
+
+            if (hasChanges) {
+                var result = MessageBox.Show("You have unsaved changes. Do you want to exit and discard changes?", "Unsaved Changes", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.No)
+                    return;
+            }
+            this.Close();
+        }
+        #endregion
+
+        //UPDATE ===============================================================================
+        #region
         private void UpdateTotalUnitsFromStudent() {
             if (Student?.StudentInformation == null || Student.StudentSubject == null)
                 return;
@@ -163,16 +191,6 @@ namespace Project.SubjectManagement {
             bool isEnrolled = enrolledSubjects.Any();
             LabelStatus.Text = isEnrolled ? "Enrolled" : "Not Enrolled";
         }
-
-        private void ButtonBack_Click(object sender, EventArgs e) {
-            bool hasChanges = !enrolledSubjects.Select(s => s.Code).SequenceEqual(originalSubjects.Select(s => s.Code));
-
-            if (hasChanges) {
-                var result = MessageBox.Show("You have unsaved changes. Do you want to exit and discard changes?", "Unsaved Changes", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (result == DialogResult.No)
-                    return;
-            }
-            this.Close();
-        }
+        #endregion
     }
 }

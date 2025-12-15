@@ -20,8 +20,18 @@ namespace Project {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             User = user;
+
+            CheckBoxStatusEnrolled.Enabled = false;
+            CheckBoxStatusNotEnrolled.Enabled = false;
         }
 
+        private void StudentEnrollmentRecordManagement_Load(object sender, EventArgs e) {
+            LoadInformation();
+            ResetSizes();
+        }
+
+        // VIEW ===================================================================
+        #region
         private void ButtonViewSubjectInformation_Click_1(object sender, EventArgs e) {
             this.Hide();
             var form = new StudentSubjectManagement(User);
@@ -35,11 +45,10 @@ namespace Project {
             form.FormClosed += (s, args) => { this.Show(); RefreshInformation(); };
             form.Show();
         }
+        #endregion
 
-        private void ButtonLogout_Click(object sender, EventArgs e) {
-
-        }
-
+        //LOAD INFO ===================================================================
+        #region
         private void LoadInformation() {
             LabelEmailUER.Text = User.Email;
             LabelFullNameUER.Text = User.StudentInformation.FullName ?? "Student Name";
@@ -63,16 +72,17 @@ namespace Project {
         private void RefreshInformation() {
             LoadInformation();
         }
+        #endregion
 
-        private void StudentEnrollmentRecordManagement_Load(object sender, EventArgs e) {
-            LoadInformation();
-            ResetSizes();
-        }
 
+        // BACK ===================================================================
+        #region
         private void ButtonLogout_Click_1(object sender, EventArgs e) {
             this.Close();
         }
+        #endregion
 
+        // RESET DATA GRID VIEW ===================================================================
         #region
         public void ResetSizes() {
             //Adjust Available Subjects DataGridView Columns
@@ -84,14 +94,6 @@ namespace Project {
             dataGridViewEnrolledSubjects.Columns["Instructor"].MinimumWidth = 200;
         }
         #endregion
-
-        private void LabelDepartmentName_Click(object sender, EventArgs e) {
-
-        }
-
-        private void CheckBoxStatusNotEnrolled_CheckedChanged(object sender, EventArgs e) {
-
-        }
     }
 
 }

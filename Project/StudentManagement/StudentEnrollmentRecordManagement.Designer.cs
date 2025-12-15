@@ -49,6 +49,9 @@
             ButtonLogout = new Button();
             pictureBox5 = new PictureBox();
             pictureBox2 = new PictureBox();
+            label1 = new Label();
+            label5 = new Label();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridViewEnrolledSubjects).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -145,7 +148,6 @@
             // 
             CheckBoxStatusNotEnrolled.AutoSize = true;
             CheckBoxStatusNotEnrolled.BackColor = Color.Navy;
-            CheckBoxStatusNotEnrolled.Enabled = false;
             CheckBoxStatusNotEnrolled.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             CheckBoxStatusNotEnrolled.ForeColor = Color.White;
             CheckBoxStatusNotEnrolled.Location = new Point(685, 126);
@@ -154,13 +156,11 @@
             CheckBoxStatusNotEnrolled.TabIndex = 38;
             CheckBoxStatusNotEnrolled.Text = "Not Enrolled";
             CheckBoxStatusNotEnrolled.UseVisualStyleBackColor = false;
-            CheckBoxStatusNotEnrolled.CheckedChanged += CheckBoxStatusNotEnrolled_CheckedChanged;
             // 
             // CheckBoxStatusEnrolled
             // 
             CheckBoxStatusEnrolled.AutoSize = true;
             CheckBoxStatusEnrolled.BackColor = Color.Navy;
-            CheckBoxStatusEnrolled.Enabled = false;
             CheckBoxStatusEnrolled.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             CheckBoxStatusEnrolled.ForeColor = Color.White;
             CheckBoxStatusEnrolled.Location = new Point(607, 126);
@@ -188,7 +188,7 @@
             LabelEmailUER.BackColor = Color.Navy;
             LabelEmailUER.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             LabelEmailUER.ForeColor = Color.White;
-            LabelEmailUER.Location = new Point(59, 74);
+            LabelEmailUER.Location = new Point(99, 74);
             LabelEmailUER.Name = "LabelEmailUER";
             LabelEmailUER.Size = new Size(36, 15);
             LabelEmailUER.TabIndex = 35;
@@ -200,7 +200,9 @@
             dataGridViewEnrolledSubjects.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewEnrolledSubjects.Location = new Point(59, 120);
             dataGridViewEnrolledSubjects.Name = "dataGridViewEnrolledSubjects";
+            dataGridViewEnrolledSubjects.ReadOnly = true;
             dataGridViewEnrolledSubjects.RowHeadersWidth = 51;
+            dataGridViewEnrolledSubjects.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewEnrolledSubjects.Size = new Size(457, 295);
             dataGridViewEnrolledSubjects.TabIndex = 34;
             // 
@@ -246,7 +248,7 @@
             LabelContactNumberUER.BackColor = Color.Navy;
             LabelContactNumberUER.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             LabelContactNumberUER.ForeColor = Color.White;
-            LabelContactNumberUER.Location = new Point(256, 74);
+            LabelContactNumberUER.Location = new Point(323, 74);
             LabelContactNumberUER.Name = "LabelContactNumberUER";
             LabelContactNumberUER.Size = new Size(99, 15);
             LabelContactNumberUER.TabIndex = 53;
@@ -258,7 +260,7 @@
             LabelStudentID.BackColor = Color.Navy;
             LabelStudentID.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LabelStudentID.ForeColor = Color.White;
-            LabelStudentID.Location = new Point(588, 60);
+            LabelStudentID.Location = new Point(604, 57);
             LabelStudentID.Name = "LabelStudentID";
             LabelStudentID.Size = new Size(135, 32);
             LabelStudentID.TabIndex = 54;
@@ -275,7 +277,6 @@
             LabelDepartmentName.Size = new Size(112, 15);
             LabelDepartmentName.TabIndex = 55;
             LabelDepartmentName.Text = "Department Name";
-            LabelDepartmentName.Click += LabelDepartmentName_Click;
             // 
             // ButtonLogout
             // 
@@ -310,12 +311,51 @@
             pictureBox2.TabIndex = 58;
             pictureBox2.TabStop = false;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Navy;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(549, 57);
+            label1.Name = "label1";
+            label1.Size = new Size(54, 32);
+            label1.TabIndex = 59;
+            label1.Text = "ID: ";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.Navy;
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(59, 74);
+            label5.Name = "label5";
+            label5.Size = new Size(36, 15);
+            label5.TabIndex = 60;
+            label5.Text = "Email";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.Navy;
+            label6.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(52, 19);
+            label6.Name = "label6";
+            label6.Size = new Size(88, 32);
+            label6.TabIndex = 61;
+            label6.Text = " Name";
+            // 
             // StudentEnrollmentRecordManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Navy;
             ClientSize = new Size(972, 464);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label1);
             Controls.Add(ButtonLogout);
             Controls.Add(LabelDepartmentName);
             Controls.Add(LabelStudentID);
@@ -371,5 +411,8 @@
         private Button ButtonLogout;
         private PictureBox pictureBox5;
         private PictureBox pictureBox2;
+        private Label label1;
+        private Label label5;
+        private Label label6;
     }
 }

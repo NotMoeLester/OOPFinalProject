@@ -23,7 +23,12 @@ namespace Project {
             comboBoxNationality.SelectedItem = "Filipino";
             User = user;
         }
+        private void UserInformationForm_Load(object sender, EventArgs e) {
+            loadInfo();
+        }
 
+        //EDIT ===============================================================================
+        #region
         private void buttonEdit_Click(object sender, EventArgs e) {
             buttonEdit.Enabled = false;
             checkBoxConfirmation.Enabled = true;
@@ -44,7 +49,10 @@ namespace Project {
             numericUpDownYear.Enabled = true;
             textBoxPreviousSchool.ReadOnly = false;
         }
+        #endregion
 
+        // CONFIRM ===============================================================================
+        #region
         private void ButtonConfirm_Click(object sender, EventArgs e) {
 
             if (checkBoxConfirmation.Checked == false) {
@@ -116,11 +124,10 @@ namespace Project {
                 checkBoxConfirmation.Enabled = true;
             }
         }
+        #endregion
 
-        private void UserInformationForm_Load(object sender, EventArgs e) {
-            loadInfo();
-        }
-
+        // LOAD INFO ===============================================================================
+        #region
         private void loadInfo() {
             if (User.StudentInformation == null) {
                 User.StudentInformation = new StudentInformationModel();
@@ -158,21 +165,21 @@ namespace Project {
 
             ButtonConfirm.Enabled = false;
         }
+        #endregion
 
+        // USER INTERACTION ===============================================================================
+        #region
         private void checkBoxMale_CheckedChanged(object sender, EventArgs e) {
             if (checkBoxMale.Checked)
                 checkBoxFemale.Checked = false;
         }
-
         private void checkBoxFemale_CheckedChanged(object sender, EventArgs e) {
             if (checkBoxFemale.Checked)
                 checkBoxMale.Checked = false;
         }
-
         private void checkBoxConfirmation_CheckedChanged(object sender, EventArgs e) {
             ButtonConfirm.Enabled = checkBoxConfirmation.Checked;
         }
-
         private void comboBoxContactNumber_SelectedIndexChanged(object sender, EventArgs e) {
             if (!textBoxContactInformation.Text.StartsWith(comboBoxContactCountryCode.Text)) {
                 string existingNumber = textBoxContactInformation.Text.Replace("+63", "")
@@ -180,9 +187,13 @@ namespace Project {
                 textBoxContactInformation.Text = existingNumber;
             }
         }
+        #endregion
 
+        // BACK ===============================================================================
+        #region
         private void ButtonBack_Click(object sender, EventArgs e) {
             this.Close();
         }
+        #endregion
     }
 }
