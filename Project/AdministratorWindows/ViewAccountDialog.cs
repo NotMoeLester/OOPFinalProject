@@ -10,25 +10,32 @@ using System.Windows.Forms;
 
 
 namespace Project {
-    public partial class ViewAccountDialog : Form {
+    public partial class ViewAccountDialog : Form
+    {
         private StudentModel Student;
 
-        public ViewAccountDialog(StudentModel student) {
+        public ViewAccountDialog(StudentModel student)
+        {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterParent;
             Student = student;
             LoadUserDetails();
         }
 
-        private void LoadUserDetails() {
+        private void LoadUserDetails()
+        {
             // USER ACCOUNT==================================
+            #region
             labelStudentID.Text = Student.StudentId.ToString();
             labelEmail.Text = string.IsNullOrEmpty(Student.Email) ? "Not set" : Student.Email;
             labelPassword.Text = string.IsNullOrEmpty(Student.Password) ? "Not set" : new string('*', Student.Password.Length);
             labelVerification.Text = Student.Verification ? "Verified" : "Not Verified";
+            #endregion
 
             // STUDENT PERSONAL INFO==================================
-            if (Student.StudentInformation != null) {
+            #region
+            if (Student.StudentInformation != null)
+            {
                 var info = Student.StudentInformation;
 
                 labelFirstName.Text = string.IsNullOrEmpty(info.FirstName) ? "Not filled" : info.FirstName;
@@ -56,7 +63,9 @@ namespace Project {
                 labelYearLevel.Text = info.YearLevel > 0 ? info.YearLevel.ToString() : "N/A";
                 labelPreviousSchool.Text = string.IsNullOrEmpty(info.PreviousSchool) ? "Not provided" : info.PreviousSchool;
 
-            } else {
+            }
+            else
+            {
                 labelFirstName.Text = "Not filled";
                 labelMiddleName.Text = "N/A";
                 labelLastName.Text = "Not filled";
@@ -72,8 +81,8 @@ namespace Project {
                 labelCourse.Text = "Not enrolled";
                 labelYearLevel.Text = "N/A";
                 labelPreviousSchool.Text = "Not provided";
-
             }
+            #endregion
         }
     }
 }
