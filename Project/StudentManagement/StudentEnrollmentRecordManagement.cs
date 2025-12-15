@@ -36,6 +36,10 @@ namespace Project {
             form.Show();
         }
 
+        private void ButtonLogout_Click(object sender, EventArgs e) {
+
+        }
+
         private void LoadInformation() {
             LabelEmailUER.Text = User.Email;
             LabelFullNameUER.Text = User.StudentInformation.FullName ?? "Student Name";
@@ -66,6 +70,12 @@ namespace Project {
 
         private void label2_Click(object sender, EventArgs e) {
 
+        }
+
+        private void buttoneksit_Click(object sender, EventArgs e) {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Close();
         }
     }
 }

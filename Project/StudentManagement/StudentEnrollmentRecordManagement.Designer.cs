@@ -47,8 +47,12 @@
             LabelStudentID = new Label();
             LabelDepartmentName = new Label();
             buttoneksit = new Button();
+            pictureBox5 = new PictureBox();
+            pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // ButtonViewStudentInformation
@@ -281,6 +285,27 @@
             buttoneksit.TabIndex = 56;
             buttoneksit.Text = "Log Out";
             buttoneksit.UseVisualStyleBackColor = false;
+            buttoneksit.Click += buttoneksit_Click;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.BackgroundImage = (Image)resources.GetObject("pictureBox5.BackgroundImage");
+            pictureBox5.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox5.Location = new Point(-14, 327);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(175, 136);
+            pictureBox5.TabIndex = 57;
+            pictureBox5.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
+            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox2.Location = new Point(368, 34);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(175, 136);
+            pictureBox2.TabIndex = 58;
+            pictureBox2.TabStop = false;
             // 
             // StudentEnrollmentRecordManagement
             // 
@@ -307,12 +332,16 @@
             Controls.Add(LabelEmailUER);
             Controls.Add(dataGridView1);
             Controls.Add(pictureBox1);
+            Controls.Add(pictureBox5);
+            Controls.Add(pictureBox2);
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "StudentEnrollmentRecordManagement";
             Text = " User Enrollment Record";
             Load += StudentEnrollmentRecordManagement_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -337,5 +366,7 @@
         private Label LabelStudentID;
         private Label LabelDepartmentName;
         private Button buttoneksit;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox2;
     }
 }

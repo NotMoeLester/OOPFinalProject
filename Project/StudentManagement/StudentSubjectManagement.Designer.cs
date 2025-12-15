@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentSubjectManagement));
             ButtonAdd = new Button();
             dataGridViewAvailableSubjects = new DataGridView();
             LabelStudentID = new Label();
@@ -43,8 +44,16 @@
             LabelSchoolYear = new Label();
             LabelStatus = new Label();
             ButtonBack = new Button();
+            pictureBox5 = new PictureBox();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridViewAvailableSubjects).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewEnrolledSubjects).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // ButtonAdd
@@ -276,6 +285,46 @@
             ButtonBack.UseVisualStyleBackColor = true;
             ButtonBack.Click += ButtonBack_Click;
             // 
+            // pictureBox5
+            // 
+            pictureBox5.BackgroundImage = (Image)resources.GetObject("pictureBox5.BackgroundImage");
+            pictureBox5.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox5.Location = new Point(-34, 263);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(175, 136);
+            pictureBox5.TabIndex = 45;
+            pictureBox5.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Location = new Point(648, 404);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(175, 136);
+            pictureBox1.TabIndex = 46;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
+            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox2.Location = new Point(529, -21);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(175, 136);
+            pictureBox2.TabIndex = 47;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
+            pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox3.Location = new Point(401, 60);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(175, 136);
+            pictureBox3.TabIndex = 49;
+            pictureBox3.TabStop = false;
+            // 
             // StudentSubjectManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -302,12 +351,20 @@
             Controls.Add(LabelStudentID);
             Controls.Add(dataGridViewAvailableSubjects);
             Controls.Add(ButtonAdd);
+            Controls.Add(pictureBox5);
+            Controls.Add(pictureBox1);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox3);
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "StudentSubjectManagement";
             Text = "StudentSubjectManagement";
             Load += StudentSubjectManagement_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewAvailableSubjects).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewEnrolledSubjects).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -334,5 +391,9 @@
         private Label LabelSchoolYear;
         private Label LabelStatus;
         private Button ButtonBack;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }
