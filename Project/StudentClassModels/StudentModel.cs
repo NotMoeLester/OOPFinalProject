@@ -14,7 +14,6 @@ namespace Project {
         public int StudentId { get; set; }
 
         public bool Verification { get; set; } = false;
-        public bool IsEnrolled { get; set; } = false;
 
         [Ignore]
         [Browsable(false)]

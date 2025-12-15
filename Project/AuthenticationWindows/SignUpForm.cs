@@ -86,12 +86,12 @@ namespace Project {
             StudentRepository repository = new StudentRepository();
 
             string email = TextBoxEmailSignUp.Text.Trim();
-            string password = TextBoxPasswordSignUp.Text.Trim();
-            string confirmPassword = TextBoxConfirmPasswordSignUp.Text.Trim();
+            string password = TextBoxPasswordSignUp.Text.Trim().ToLower();
+            string confirmPassword = TextBoxConfirmPasswordSignUp.Text.Trim().ToLower();
 
-            string emailError = Validator.EmailSignUp(email);
-            string passwordError = Validator.Password(password);
-            string confirmPasswordError = Validator.ConfirmPassword(password, confirmPassword);
+            string emailError = Validation.EmailSignUp(email);
+            string passwordError = Validation.Password(password);
+            string confirmPasswordError = Validation.ConfirmPassword(password, confirmPassword);
 
             LabelEmailValidation.Text = emailError;
             LabelPasswordValidation.Text = passwordError;

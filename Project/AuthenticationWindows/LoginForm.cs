@@ -32,37 +32,32 @@ namespace Project
 
         //LOG IN BUTTON====================================================================================
         #region
-        private void ButtonLogin_Click(object sender, EventArgs e)
-        {
+        private void ButtonLogin_Click(object sender, EventArgs e){
 
             string usertype = ComboBoxUser.Text;
             string email = TextBoxEmail.Text.Trim();
             string password = TextBoxPassword.Text.Trim();
 
             //STUDENT USER LOGIN=========================================================================
-            if (usertype == "Student")
-            {
+            if (usertype == "Student") {
 
-                string emailError = Validator.Email(email);
-                string passwordError = Validator.Password(password);
+                string emailError = Validation.Email(email);
+                string passwordError = Validation.Password(password);
 
                 LabelEmailValidator.Text = emailError;
                 LabelPasswordValidator.Text = passwordError;
 
                 StudentRepository repository = new StudentRepository();
-                if (!repository.IsUser(email))
-                {
+                if (!repository.IsUser(email)) {
                     MessageBox.Show("Account doesn't exist", "Please try again!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 StudentModel student = repository.GetUserByEmailAndPassword(email, password);
-                if (student == null)
-                {
+                if (student == null) {
                     LabelPasswordValidator.Text = "Incorrect Password";
                     return;
                 }
-                if (!student.Verification)
-                {
+                if (!student.Verification) {
                     MessageBox.Show("Account is not yet verified", "Contact Admin!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
@@ -76,12 +71,9 @@ namespace Project
                 mainForm.Show();
 
                 //ADMINISTRATOR USER LOGIN=========================================================================
-            }
-            else if (usertype == "Administrator")
-            {
+            } else if (usertype == "Administrator") {
                 // Validate admin credentials
-                if (email != "AdminJD" || password != "123456789")
-                {
+                if (email != "AdminJD" || password != "123456789") {
                     MessageBox.Show("Invalid administrator credentials", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
@@ -96,8 +88,7 @@ namespace Project
 
         //LINK LABEL=======================================================================================
         #region
-        private void LinkLabelSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        private void LinkLabelSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             SignUpForm signUpForm = new SignUpForm(this);
             this.Enabled = false;
             this.Hide();

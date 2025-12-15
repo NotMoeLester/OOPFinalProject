@@ -1,7 +1,9 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
+using Project.HelperClass;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -55,28 +57,19 @@ namespace Project {
         #region
         private void ButtonConfirm_Click(object sender, EventArgs e) {
 
-            if (checkBoxConfirmation.Checked == false) {
-                MessageBox.Show("Please confirm that the information provided above is true.",
-                    "Confirmation Required", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            bool hasError = HasError();
+
+            if (hasError) {
+                MessageBox.Show("Please fill out all fields.", "Information Required", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
-            buttonEdit.Enabled = true;
-            textBoxLastName.ReadOnly = true;
-            textBoxFirstName.ReadOnly = true;
-            textBoxMiddleName.ReadOnly = true;
-            textBoxPrefix.ReadOnly = true;
-            textBoxSuffix.ReadOnly = true;
-            checkBoxFemale.Enabled = false;
-            checkBoxMale.Enabled = false;
-            dateTimePickerBirthday.Enabled = false;
-            comboBoxNationality.Enabled = false;
-            comboBoxContactCountryCode.Enabled = false;
-            textBoxContactInformation.ReadOnly = true;
-            textBoxHomeAddress.ReadOnly = true;
-            comboBoxCourseProgram.Enabled = false;
-            numericUpDownYear.Enabled = false;
-            textBoxPreviousSchool.ReadOnly = true;
+            if (checkBoxConfirmation.Checked == false) {
+                MessageBox.Show("Please confirm that the information provided above is true.", "Confirmation Required", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            LockFields();
 
             if (User.StudentInformation == null) {
                 User.StudentInformation = new StudentInformationModel();
@@ -187,6 +180,9 @@ namespace Project {
                 textBoxContactInformation.Text = existingNumber;
             }
         }
+        private void textBoxContactInformation_TextChanged(object sender, EventArgs e) {
+            labelContactInformationValidator.Text = String.Empty;
+        }
         #endregion
 
         // BACK ===============================================================================
@@ -195,5 +191,46 @@ namespace Project {
             this.Close();
         }
         #endregion
+
+        //CHANGE STATE
+        #region
+        private void LockFields() {
+            buttonEdit.Enabled = true;
+            textBoxLastName.ReadOnly = true;
+            textBoxFirstName.ReadOnly = true;
+            textBoxMiddleName.ReadOnly = true;
+            textBoxPrefix.ReadOnly = true;
+            textBoxSuffix.ReadOnly = true;
+            checkBoxFemale.Enabled = false;
+            checkBoxMale.Enabled = false;
+            dateTimePickerBirthday.Enabled = false;
+            comboBoxNationality.Enabled = false;
+            comboBoxContactCountryCode.Enabled = false;
+            textBoxContactInformation.ReadOnly = true;
+            textBoxHomeAddress.ReadOnly = true;
+            comboBoxCourseProgram.Enabled = false;
+            numericUpDownYear.Enabled = false;
+            textBoxPreviousSchool.ReadOnly = true;
+        }
+        #endregion
+
+        //HAS ERROR
+        #region
+        private bool HasError() {
+            string firstNameError = Validation.StringEmpty(textBoxFirstName.Text);
+            string lastNameError = Validation.StringEmpty(textBoxLastName.Text);
+            string contactInformationError = Validation.ContactNumber(textBoxContactInformation.Text);
+            string homeAddressError = Validation.StringEmpty(textBoxHomeAddress.Text);
+
+            string courseError = Validation.StringEmpty(comboBoxCourseProgram.Text);
+
+            if (firstNameError != String.Empty || lastNameError != String.Empty || contactInformationError != String.Empty || homeAddressError != String.Empty)
+                return true;
+
+            return false;
+        }
+        #endregion
+
+
     }
 }

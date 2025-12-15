@@ -73,8 +73,8 @@ namespace Project {
             string email = selectedRow.Cells["Email"].Value?.ToString() ?? "";
             string password = selectedRow.Cells["Password"].Value?.ToString() ?? "";
 
-            string emailError = Validator.Email(email);
-            string passwordError = Validator.Password(password);
+            string emailError = Validation.Email(email);
+            string passwordError = Validation.Password(password);
             if (!string.IsNullOrEmpty(emailError)) {
                 MessageBox.Show($"Invalid Email: {emailError}", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -91,7 +91,6 @@ namespace Project {
             student.Email = email;
             student.Password = password;
             student.Verification = Convert.ToBoolean(selectedRow.Cells["Verification"].Value);
-            student.IsEnrolled = Convert.ToBoolean(selectedRow.Cells["IsEnrolled"].Value);
 
             repository.UpdateStudentAndStudentData(student, studentInformation, studentSubjectsInformation);
             ResetSelected();
@@ -143,7 +142,6 @@ namespace Project {
             DataGridViewUserList.Columns["Email"].MinimumWidth = 200;
             DataGridViewUserList.Columns["Password"].MinimumWidth = 200;
             DataGridViewUserList.Columns["Verification"].MinimumWidth = 50;
-            DataGridViewUserList.Columns["IsEnrolled"].MinimumWidth = 50;
         }
         #endregion
 

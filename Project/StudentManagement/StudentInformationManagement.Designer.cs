@@ -76,6 +76,7 @@
             pictureBox5 = new PictureBox();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
+            labelContactInformationValidator = new Label();
             ((System.ComponentModel.ISupportInitialize)numericUpDownYear).BeginInit();
             panel2.SuspendLayout();
             panel4.SuspendLayout();
@@ -173,6 +174,7 @@
             textBoxContactInformation.ReadOnly = true;
             textBoxContactInformation.Size = new Size(136, 16);
             textBoxContactInformation.TabIndex = 9;
+            textBoxContactInformation.TextChanged += textBoxContactInformation_TextChanged;
             // 
             // dateTimePickerBirthday
             // 
@@ -649,12 +651,24 @@
             pictureBox2.TabIndex = 49;
             pictureBox2.TabStop = false;
             // 
+            // labelContactInformationValidator
+            // 
+            labelContactInformationValidator.AutoSize = true;
+            labelContactInformationValidator.ForeColor = Color.White;
+            labelContactInformationValidator.Location = new Point(466, 194);
+            labelContactInformationValidator.MinimumSize = new Size(200, 0);
+            labelContactInformationValidator.Name = "labelContactInformationValidator";
+            labelContactInformationValidator.Size = new Size(200, 15);
+            labelContactInformationValidator.TabIndex = 50;
+            labelContactInformationValidator.TextAlign = ContentAlignment.MiddleRight;
+            // 
             // StudentInformationManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Navy;
             ClientSize = new Size(738, 519);
+            Controls.Add(labelContactInformationValidator);
             Controls.Add(pictureBox2);
             Controls.Add(label19);
             Controls.Add(textBoxPrefix);
@@ -774,5 +788,6 @@
         private PictureBox pictureBox5;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private Label labelContactInformationValidator;
     }
 }

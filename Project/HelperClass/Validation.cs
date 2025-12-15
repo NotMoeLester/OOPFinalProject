@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Project.HelperClass {
-    internal class Validator {
+    internal class Validation {
         public static string Password(string password) {
             if (string.IsNullOrEmpty(password) || password == "Enter Password") {
                 return "Password Field Empty";
@@ -67,8 +67,13 @@ namespace Project.HelperClass {
                 return "Contact Number should only be numeric";
             }
             return "";
-
         }
 
+        public static string StringEmpty(string prompt) { 
+            if (string.IsNullOrEmpty(prompt)) {
+                return "Field cannot be empty";
+            }
+            return "";
+        }
     }
 }
