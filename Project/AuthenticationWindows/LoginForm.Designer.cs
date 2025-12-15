@@ -207,7 +207,7 @@
             // 
             LabelPasswordValidator.AutoSize = true;
             LabelPasswordValidator.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            LabelPasswordValidator.ForeColor = Color.Firebrick;
+            LabelPasswordValidator.ForeColor = Color.Red;
             LabelPasswordValidator.Location = new Point(242, 258);
             LabelPasswordValidator.MinimumSize = new Size(262, 0);
             LabelPasswordValidator.Name = "LabelPasswordValidator";
@@ -219,7 +219,7 @@
             // 
             LabelEmailValidator.AutoSize = true;
             LabelEmailValidator.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            LabelEmailValidator.ForeColor = Color.Firebrick;
+            LabelEmailValidator.ForeColor = Color.Red;
             LabelEmailValidator.ImageAlign = ContentAlignment.MiddleRight;
             LabelEmailValidator.Location = new Point(242, 201);
             LabelEmailValidator.MinimumSize = new Size(262, 0);
