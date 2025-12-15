@@ -74,8 +74,10 @@ namespace Project {
 
         private void buttoneksit_Click(object sender, EventArgs e) {
             LoginForm loginForm = new LoginForm();
+            this.Hide();
+            loginForm.FormClosed += (s, args) => this.Close();
             loginForm.Show();
-            this.Close();
         }
     }
+    
 }
