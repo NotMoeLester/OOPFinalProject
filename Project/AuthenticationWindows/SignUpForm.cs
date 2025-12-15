@@ -109,7 +109,7 @@ namespace Project {
 
             bool isSaved = repository.AddStudent(userToSave, userDataToSave, userSubjectsToSave);
             if (isSaved) {
-                MessageBox.Show("Succesfully signed in!\nProceed to Login?", "Successful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Succesfully signed in!\nWaiting for Admin Verification.\nProceed to Login?", "Successful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
                 LoginForm.Show();
             } else {

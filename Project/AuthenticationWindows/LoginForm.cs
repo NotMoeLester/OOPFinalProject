@@ -79,7 +79,10 @@ namespace Project {
         private void LinkLabelSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             SignUpForm signUpForm = new SignUpForm(this);
             this.Enabled = false;
+            this.Hide();
+            signUpForm.FormClosed += (s, args) => this.Show();
             signUpForm.FormClosed += (s, args) => this.Enabled = true;
+
             signUpForm.Show();
         }
         #endregion
