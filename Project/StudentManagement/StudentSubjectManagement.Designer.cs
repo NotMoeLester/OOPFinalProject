@@ -201,11 +201,11 @@
             LabelTotalUnits.AutoSize = true;
             LabelTotalUnits.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LabelTotalUnits.ForeColor = Color.LawnGreen;
-            LabelTotalUnits.Location = new Point(172, 461);
+            LabelTotalUnits.Location = new Point(158, 462);
             LabelTotalUnits.Name = "LabelTotalUnits";
-            LabelTotalUnits.Size = new Size(26, 15);
+            LabelTotalUnits.Size = new Size(31, 15);
             LabelTotalUnits.TabIndex = 15;
-            LabelTotalUnits.Text = "/29";
+            LabelTotalUnits.Text = "Unit";
             // 
             // label6
             // 
