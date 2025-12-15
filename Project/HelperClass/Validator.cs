@@ -59,7 +59,15 @@ namespace Project.HelperClass {
             return "";
         }
         public static string ContactNumber(string num) {
-            if (string.IsNullOrEmpty)
+            num = num.Trim();
+            if (string.IsNullOrEmpty(num)) {
+                return "Contact Number Field cannot be empty";
+            }
+            if (!num.All(char.IsDigit)) {
+                return "Contact Number should only be numeric";
+            }
+            return "";
+
         }
 
     }
