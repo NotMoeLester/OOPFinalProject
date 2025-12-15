@@ -1,4 +1,5 @@
-﻿using Project.StudentClassModels;
+﻿using Project.GeneralModel;
+using Project.StudentClassModels;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -8,12 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Project {
-    public class StudentModel {
+    public class StudentModel : UserModel {
         [PrimaryKey, AutoIncrement]
         public int StudentId { get; set; }
 
-        public string Email { get; set; } = string.Empty;
-        public string Password { get; set; } = string.Empty;
         public bool Verification { get; set; } = false;
         public bool IsEnrolled { get; set; } = false;
 

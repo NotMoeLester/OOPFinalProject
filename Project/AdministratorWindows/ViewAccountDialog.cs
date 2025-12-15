@@ -10,20 +10,17 @@ using System.Windows.Forms;
 
 
 namespace Project {
-    public partial class ViewAccountDialog : Form
-    {
+    public partial class ViewAccountDialog : Form {
         private StudentModel Student;
 
-        public ViewAccountDialog(StudentModel student)
-        {
+        public ViewAccountDialog(StudentModel student) {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterParent;
             Student = student;
             LoadUserDetails();
         }
 
-        private void LoadUserDetails()
-        {
+        private void LoadUserDetails() {
             // USER ACCOUNT==================================
             #region
             labelStudentID.Text = Student.StudentId.ToString();

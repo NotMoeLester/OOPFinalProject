@@ -10,13 +10,14 @@ namespace Project {
         private DataGridViewRow? selectedRow;
         private int selectedStudentId = -1;
 
-        //CONSTRUCTOR =======================================================
-        #region
         public AdminStudentManagement() {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
         }
-        #endregion
+        private void AdminUserManagement_Load(object sender, EventArgs e) {
+            LoadUsers();
+            SetCellSizes();
+        }
 
         //CREATE =======================================================
         #region
@@ -144,17 +145,14 @@ namespace Project {
             DataGridViewUserList.Columns["Verification"].MinimumWidth = 50;
             DataGridViewUserList.Columns["IsEnrolled"].MinimumWidth = 50;
         }
+        #endregion
 
-        private void AdminUserManagement_Load(object sender, EventArgs e) {
-            LoadUsers();
-            SetCellSizes();
-        }
-
+        //BACK =======================================================
+        #region
         private void ButtonBack_Click(object sender, EventArgs e) {
             this.Close();
         }
         #endregion
-
 
     }
 }
