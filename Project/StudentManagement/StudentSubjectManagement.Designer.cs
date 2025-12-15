@@ -154,6 +154,7 @@
             dataGridViewEnrolledSubjects.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewEnrolledSubjects.Location = new Point(74, 301);
             dataGridViewEnrolledSubjects.Name = "dataGridViewEnrolledSubjects";
+            dataGridViewEnrolledSubjects.ReadOnly = true;
             dataGridViewEnrolledSubjects.RowHeadersWidth = 51;
             dataGridViewEnrolledSubjects.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewEnrolledSubjects.Size = new Size(630, 140);
@@ -191,7 +192,7 @@
             label5.ForeColor = Color.LimeGreen;
             label5.Location = new Point(74, 462);
             label5.Name = "label5";
-            label5.Size = new Size(83, 15);
+            label5.Size = new Size(80, 15);
             label5.TabIndex = 14;
             label5.Text = "TOTAL UNITS :";
             // 

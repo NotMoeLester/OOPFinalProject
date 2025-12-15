@@ -38,8 +38,7 @@ namespace Project {
             //STUDENT USER LOGIN=========================================================================
             if (usertype == "Student") {
 
-
-                string emailError = Validator.EmailSignUp(email);
+                string emailError = Validator.Email(email);
                 string passwordError = Validator.Password(password);
 
                 LabelEmailValidator.Text = emailError;

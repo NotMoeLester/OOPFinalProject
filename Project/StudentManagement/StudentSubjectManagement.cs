@@ -62,6 +62,9 @@ namespace Project.SubjectManagement {
                 return;
             }
 
+            // Set IsEnrolled to true when adding
+            subject.IsEnrolled = true;
+
             enrolledSubjects.Add(subject);
             UpdateTotalUnitsFromStudent();
             UpdateStatus();
@@ -85,6 +88,9 @@ namespace Project.SubjectManagement {
             if (result == DialogResult.No)
                 return;
 
+            // Set IsEnrolled to false when dropping
+            subject.IsEnrolled = false;
+
             enrolledSubjects.Remove(subject);
             UpdateTotalUnitsFromStudent();
             UpdateStatus();
@@ -96,6 +102,9 @@ namespace Project.SubjectManagement {
         //SAVE TO DATABASE ===============================================================================
         #region
         private void ButtonSave_Click(object sender, EventArgs e) {
+            // Update Student.StudentSubject.Subjects to trigger JSON serialization
+            Student.StudentSubject.Subjects = enrolledSubjects.ToList();
+
             repository.UpdateStudentSubjects(Student.StudentId, enrolledSubjects.ToList());
 
             repository.UpdateStudentAndStudentData(Student, Student.StudentInformation, Student.StudentSubject);
@@ -126,8 +135,8 @@ namespace Project.SubjectManagement {
             dataGridViewEnrolledSubjects.Columns["Schedule"].MinimumWidth = 250;
             dataGridViewEnrolledSubjects.Columns["Room"].MinimumWidth = 100;
             dataGridViewEnrolledSubjects.Columns["Instructor"].MinimumWidth = 200;
-            #endregion
         }
+        #endregion
 
         private void LoadAvailableSubjects() {
             AdmininistratorCourseSubjectsModel subjectAvailable = new AdmininistratorCourseSubjectsModel();

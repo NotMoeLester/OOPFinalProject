@@ -20,6 +20,11 @@ namespace Project {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             User = user;
+
+            CheckBoxStatusEnrolled.Enabled = false;
+            CheckBoxStatusNotEnrolled.Enabled = false;
+            CheckBoxStatusEnrolled.ForeColor = Color.White;
+            CheckBoxStatusNotEnrolled.ForeColor = Color.White;
         }
 
         private void ButtonViewSubjectInformation_Click_1(object sender, EventArgs e) {
@@ -84,14 +89,6 @@ namespace Project {
             dataGridViewEnrolledSubjects.Columns["Instructor"].MinimumWidth = 200;
         }
         #endregion
-
-        private void LabelDepartmentName_Click(object sender, EventArgs e) {
-
-        }
-
-        private void CheckBoxStatusNotEnrolled_CheckedChanged(object sender, EventArgs e) {
-
-        }
     }
 
 }
