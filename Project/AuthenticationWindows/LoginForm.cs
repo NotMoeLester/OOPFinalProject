@@ -1,42 +1,47 @@
-
 using Project.AdministratorUserData;
 using Project.HelperClass;
 
-namespace Project {
-    public partial class LoginForm : Form {
+namespace Project
+{
+    public partial class LoginForm : Form
+    {
 
         private readonly System.Windows.Forms.Timer passwordTimer;
         private StudentRepository repository = new StudentRepository();
 
         //CONSTRUCTOR====================================================================================
         #region
-        public LoginForm() {
+        public LoginForm()
+        {
             InitializeComponent();
             this.Size = new Size(816, 489);
             this.StartPosition = FormStartPosition.CenterScreen;
             passwordTimer = new System.Windows.Forms.Timer();
             passwordTimer.Interval = 1000;
-            passwordTimer.Tick += PasswordTimer_Tick; 
+            passwordTimer.Tick += PasswordTimer_Tick;
         }
         #endregion
 
         //LOAD =========================================================================================
         #region
-        private void LoginForm_Load(object sender, EventArgs e) {
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
             ComboBoxUser.SelectedIndex = 0;
         }
         #endregion
 
         //LOG IN BUTTON====================================================================================
         #region
-        private void ButtonLogin_Click(object sender, EventArgs e) {
+        private void ButtonLogin_Click(object sender, EventArgs e)
+        {
 
             string usertype = ComboBoxUser.Text;
             string email = TextBoxEmail.Text.Trim();
             string password = TextBoxPassword.Text.Trim();
 
             //STUDENT USER LOGIN=========================================================================
-            if (usertype == "Student") {
+            if (usertype == "Student")
+            {
 
                 string emailError = Validator.Email(email);
                 string passwordError = Validator.Password(password);
@@ -45,16 +50,19 @@ namespace Project {
                 LabelPasswordValidator.Text = passwordError;
 
                 StudentRepository repository = new StudentRepository();
-                if (!repository.IsUser(email)) {
+                if (!repository.IsUser(email))
+                {
                     MessageBox.Show("Account doesn't exist", "Please try again!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 StudentModel student = repository.GetUserByEmailAndPassword(email, password);
-                if (student == null) {
+                if (student == null)
+                {
                     LabelPasswordValidator.Text = "Incorrect Password";
                     return;
                 }
-                if (!student.Verification) {
+                if (!student.Verification)
+                {
                     MessageBox.Show("Account is not yet verified", "Contact Admin!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
@@ -68,7 +76,16 @@ namespace Project {
                 mainForm.Show();
 
                 //ADMINISTRATOR USER LOGIN=========================================================================
-            } else if (usertype == "Administrator") {
+            }
+            else if (usertype == "Administrator")
+            {
+                // Validate admin credentials
+                if (email != "AdminJD" || password != "123456789")
+                {
+                    MessageBox.Show("Invalid administrator credentials", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 AdminStudentManagement adminForm = new AdminStudentManagement();
                 this.Hide();
                 adminForm.FormClosed += (s, args) => this.Show();
@@ -79,7 +96,8 @@ namespace Project {
 
         //LINK LABEL=======================================================================================
         #region
-        private void LinkLabelSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+        private void LinkLabelSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
             SignUpForm signUpForm = new SignUpForm(this);
             this.Enabled = false;
             this.Hide();
@@ -92,30 +110,38 @@ namespace Project {
 
         //TEXT BOX USER INTERACTION ========================================================================
         #region
-        private void TextBoxEmail_Enter(object sender, EventArgs e) {
-            if (TextBoxEmail.Text == "Enter Email") {
+        private void TextBoxEmail_Enter(object sender, EventArgs e)
+        {
+            if (TextBoxEmail.Text == "Enter Email")
+            {
                 TextBoxEmail.Text = string.Empty;
                 TextBoxEmail.ForeColor = Color.Black;
                 TextBoxEmail.Font = new Font("Segoe UI", 9, FontStyle.Regular);
             }
         }
-        private void TextBoxEmail_Leave(object sender, EventArgs e) {
-            if (TextBoxEmail.Text == string.Empty) {
+        private void TextBoxEmail_Leave(object sender, EventArgs e)
+        {
+            if (TextBoxEmail.Text == string.Empty)
+            {
                 TextBoxEmail.Text = "Enter Email";
                 TextBoxEmail.ForeColor = Color.Gray;
                 TextBoxEmail.Font = new Font("Segoe UI", 9, FontStyle.Italic);
             }
         }
-        private void TextBoxPassword_Enter(object sender, EventArgs e) {
-            if (TextBoxPassword.Text == "Enter Password") {
+        private void TextBoxPassword_Enter(object sender, EventArgs e)
+        {
+            if (TextBoxPassword.Text == "Enter Password")
+            {
                 TextBoxPassword.Text = string.Empty;
                 TextBoxPassword.UseSystemPasswordChar = true;
                 TextBoxPassword.ForeColor = Color.Black;
                 TextBoxPassword.Font = new Font("Segoe UI", 9, FontStyle.Regular);
             }
         }
-        private void TextBoxPassword_Leave(object sender, EventArgs e) {
-            if (TextBoxPassword.Text == string.Empty) {
+        private void TextBoxPassword_Leave(object sender, EventArgs e)
+        {
+            if (TextBoxPassword.Text == string.Empty)
+            {
                 TextBoxPassword.Text = "Enter Password";
                 TextBoxPassword.UseSystemPasswordChar = false;
                 TextBoxPassword.ForeColor = Color.Gray;
@@ -126,20 +152,26 @@ namespace Project {
 
         //FEEDBACK FOR EMAIL & PASSWORD =====================================================================
         #region
-        private void TextBoxPassword_TextChanged(object sender, EventArgs e) {
+        private void TextBoxPassword_TextChanged(object sender, EventArgs e)
+        {
             LabelPasswordValidator.Text = string.Empty;
         }
-        private void TextBoxEmail_TextChanged(object sender, EventArgs e) {
+        private void TextBoxEmail_TextChanged(object sender, EventArgs e)
+        {
             LabelEmailValidator.Text = string.Empty;
         }
-        private void buttonShowPassword_Click(object sender, EventArgs e) {
-            if (!string.IsNullOrEmpty(TextBoxPassword.Text)) {
+        private void buttonShowPassword_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(TextBoxPassword.Text))
+            {
                 TextBoxPassword.UseSystemPasswordChar = false;
                 passwordTimer.Start();
             }
         }
-        private void PasswordTimer_Tick(object? sender, EventArgs e) {
-            if (!string.IsNullOrEmpty(TextBoxPassword.Text)) {
+        private void PasswordTimer_Tick(object? sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(TextBoxPassword.Text))
+            {
                 TextBoxPassword.UseSystemPasswordChar = true;
             }
             passwordTimer.Stop();
